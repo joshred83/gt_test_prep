@@ -16,15 +16,15 @@ These tools were created to support active learning through self-testing, which 
 
 ## Additional Resources
 
-# Network Science
+### Network Science
 - [Yi Xiang Low's Course Notes](https://lowyx.com/posts/gt-networkscience-notes/) for CS 7280 Network Science
 - [Course Book: A-L. Barabási, Network Science, 2015](https://networksciencebook.com/) for CS 7280 Network Science
 - [Official Course Website for CS 7280 Network Science](https://omscs.gatech.edu/cs-7280-network-science)
 
-# Deep Learning
+### Deep Learning
 
 
-# Computational Data Analytics
+### Computational Data Analytics
 
 ## Usage
 
