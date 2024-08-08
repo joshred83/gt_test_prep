@@ -22,9 +22,10 @@ These tools were created to support active learning through self-testing, which 
 - [Official Course Website for CS 7280 Network Science](https://omscs.gatech.edu/cs-7280-network-science)
 
 ### Deep Learning
-
+- TBD
 
 ### Computational Data Analytics
+- TBD
 
 ## Usage
 
@@ -34,8 +35,8 @@ These apps are designed to be used online. To customize or run them locally, fol
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/gderiddershanghai/CS7280_Review_Helper.git
-    cd CS7280_Review_Helper
+    git clone https://github.com/gderiddershanghai/gt_test_prep.git
+    cd gt_test_prep
     ```
 
 2. Install the required packages:
