@@ -1,394 +1,340 @@
-lowxy_lecture_notes_question_1 = {
-    'question': "What is the primary focus of Network Science?",
+module_1_lecture_transcripts_question_1 = {
+    'question': "What is the primary goal of machine learning as described in the lecture?",
     'options_list': [
-        'The study of physical computer networks',
-        'The study of the architecture of complex systems through their interconnected components',
-        'The development of new algorithms for graph theory',
-        'The study of social behaviors in isolated communities'
+        'To store and retrieve large datasets',
+        'To process data and extract useful information',
+        'To create complex mathematical models for academic purposes',
+        'To perform manual calculations on large data'
     ],
-    'correct_answer': 'The study of the architecture of complex systems through their interconnected components',
-    'explanation': "Network Science focuses on understanding the architecture of complex systems by examining how their components are interconnected.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'To process data and extract useful information',
+    'explanation': "The primary goal of machine learning is to optimize data processing to extract useful information, such as making predictions or classifications.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_2 = {
-    'question': "Which of the following is NOT a characteristic of complex systems?",
+module_1_lecture_transcripts_question_2 = {
+    'question': "Which of the following applications is related to the task of clustering?",
     'options_list': [
-        'Many and heterogeneous components',
-        'Components that interact through trivial networks',
-        'Non-linear interactions between components',
-        'Highly specific interconnections between components'
+        'Classifying emails as spam',
+        'Organizing images based on similarities',
+        'Predicting weather conditions',
+        'Recommending products to users'
     ],
-    'correct_answer': 'Components that interact through trivial networks',
-    'explanation': "Complex systems are characterized by non-trivial interactions, many heterogeneous components, and highly specific interconnections.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'Organizing images based on similarities',
+    'explanation': "Clustering involves organizing data, such as images, into groups based on similarities.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_3 = {
-    'question': "What is the difference between a trivial network and a complex network?",
+module_1_lecture_transcripts_question_3 = {
+    'question': "In the context of community detection in social networks, what does an 'edge' typically represent?",
     'options_list': [
-        'Trivial networks have specific interconnection patterns, while complex networks have random patterns.',
-        'Trivial networks are regular or random, while complex networks have highly variable interconnection patterns.',
-        'Trivial networks are only found in biological systems, while complex networks are found in technological systems.',
-        'There is no difference; both are types of complex networks.'
+        'A specific user in the network',
+        'A connection between two users',
+        'A distinct community within the network',
+        'The total number of users in the network'
     ],
-    'correct_answer': 'Trivial networks are regular or random, while complex networks have highly variable interconnection patterns.',
-    'explanation': "Trivial networks have regular or random structures, while complex networks feature highly variable interconnections specific to each node.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'A connection between two users',
+    'explanation': "An 'edge' in network data represents a connection or interaction between two users (nodes) in the network.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_4 = {
-    'question': "Which of the following is an example of a complex network?",
+module_1_lecture_transcripts_question_4 = {
+    'question': "Which method is commonly used for non-linear classification in high-dimensional data?",
     'options_list': [
-        'A ring network where every node connects to four other nodes',
-        'A lattice structure in a grid',
-        'The neural network of the C.elegans worm',
-        'A random network where each pair of nodes is connected with the same probability'
+        'Linear regression',
+        'Principal Component Analysis (PCA)',
+        'Kernel methods',
+        'Bag-of-words model'
     ],
-    'correct_answer': 'The neural network of the C.elegans worm',
-    'explanation': "The neural network of the C.elegans worm is a complex network with specific interconnections and non-linear interactions between neurons.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'Kernel methods',
+    'explanation': "Kernel methods are often used to perform non-linear classification, especially in high-dimensional spaces.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_5 = {
-    'question': "What is the main premise of Network Science?",
+module_1_lecture_transcripts_question_5 = {
+    'question': "What is the purpose of the least squares method in linear regression?",
     'options_list': [
-        'The detailed study of every system component',
-        'Understanding a system\'s network architecture can provide valuable insights into its function and resilience',
-        'The design of systems should start with the implementation details',
-        'Only systems with simple structures are suitable for network analysis'
+        'To maximize the likelihood function',
+        'To find the parameters that minimize the sum of squared errors',
+        'To perform dimensionality reduction',
+        'To identify clusters in the data'
     ],
-    'correct_answer': "Understanding a system's network architecture can provide valuable insights into its function and resilience",
-    'explanation': "Network Science posits that knowing the network architecture of a system allows for significant insights into its behavior and resilience, even without knowing every detail.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'To find the parameters that minimize the sum of squared errors',
+    'explanation': "The least squares method aims to minimize the sum of squared errors between the observed data points and the model’s predictions.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_6 = {
-    'question': "Which centrality metric in a network is indicated by the size of the node's label, relating to the number of shortest paths that traverse it?",
+module_1_lecture_transcripts_question_6 = {
+    'question': "Which model is frequently used in speech recognition to capture dependencies in sequential data?",
     'options_list': [
-        'Degree Centrality',
-        'PageRank Centrality',
-        'Betweenness Centrality',
-        'Closeness Centrality'
+        'Latent Semantic Indexing (LSI)',
+        'Hidden Markov Model (HMM)',
+        'Support Vector Machine (SVM)',
+        'Gradient Descent'
     ],
-    'correct_answer': 'Betweenness Centrality',
-    'explanation': "Betweenness Centrality measures how often a node appears on the shortest paths between other nodes, indicating its role in facilitating communication within the network.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'Hidden Markov Model (HMM)',
+    'explanation': "Hidden Markov Models (HMMs) are used in speech recognition to model the sequence of spoken words and their dependencies.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_7 = {
-    'question': "What does the term 'Community Detection' in Network Science refer to?",
+module_1_lecture_transcripts_question_7 = {
+    'question': "What does the term 'matrix completion' refer to in the context of product recommendation systems?",
     'options_list': [
-        'Identifying nodes with the highest degree',
-        'Discovering clusters of highly interconnected nodes',
-        'Measuring the shortest path between nodes',
-        'Analyzing the dynamic rewiring processes in networks'
+        'Filling in missing entries in a user-item matrix',
+        'Clustering products into distinct categories',
+        'Reducing the dimensions of a large matrix',
+        'Identifying outliers in a dataset'
     ],
-    'correct_answer': 'Discovering clusters of highly interconnected nodes',
-    'explanation': "Community Detection involves identifying groups of nodes within a network that are more densely connected to each other than to nodes outside the group.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'Filling in missing entries in a user-item matrix',
+    'explanation': "Matrix completion refers to predicting the missing values in a user-item matrix, which is used for making product recommendations.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_8 = {
-    'question': "Which of the following statements about dynamic networks is true?",
+module_1_lecture_transcripts_question_8 = {
+    'question': "Which of the following is NOT a key component required for building a machine learning model according to the lecture?",
     'options_list': [
-        'They remain static over time.',
-        'They do not exhibit community structure changes.',
-        'They change over time due to natural evolution, growth, or rewiring processes.',
-        'They cannot be modeled using network science.'
+        'Programming skills',
+        'Probability and statistics',
+        'Knowledge of chemistry',
+        'Linear algebra'
     ],
-    'correct_answer': 'They change over time due to natural evolution, growth, or rewiring processes.',
-    'explanation': "Dynamic networks evolve over time, with changes in their structure due to various factors like growth or natural evolution.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'Knowledge of chemistry',
+    'explanation': "While programming, probability, statistics, and linear algebra are essential, chemistry is not a required component for building a machine learning model.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_9 = {
-    'question': "The spread of a virus like H1N1 through a social network is an example of what kind of process in Network Science?",
+module_1_lecture_transcripts_question_9 = {
+    'question': "In the context of novelty and anomaly detection, what is typically the input data?",
     'options_list': [
-        'A static network analysis',
-        'A dynamic process on a network',
-        'A trivial network phenomenon',
-        'A random network process'
+        'Historical weather patterns',
+        'Labeled normal and abnormal data',
+        'A large text corpus',
+        'High-dimensional image data'
     ],
-    'correct_answer': 'A dynamic process on a network',
-    'explanation': "The spread of a virus through a network is a dynamic process that unfolds over time, influenced by the structure of the underlying network.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'Labeled normal and abnormal data',
+    'explanation': "The input data in novelty and anomaly detection usually consists of labeled normal data and sometimes abnormal data, to detect outliers or novelties.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_10 = {
-    'question': "What significant discovery did Watts and Strogatz make about real-world networks?",
+module_1_lecture_transcripts_question_10 = {
+    'question': "Which of the following approaches is suggested when the inversion of a matrix in the least squares method becomes computationally expensive?",
     'options_list': [
-        'They are all random in nature.',
-        'They exhibit a Small-World property where most node pairs are close to each other.',
-        'They follow a strict hierarchical structure.',
-        'They are fully connected networks.'
+        'Latent Semantic Indexing',
+        'Kernel Trick',
+        'Gradient Descent',
+        'Support Vector Machine'
     ],
-    'correct_answer': 'They exhibit a Small-World property where most node pairs are close to each other.',
-    'explanation': "Watts and Strogatz discovered that real-world networks often have a Small-World property, meaning that most nodes are connected by short paths.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': 'Gradient Descent',
+    'explanation': "Gradient Descent is used as an iterative optimization approach when direct matrix inversion is computationally expensive or infeasible.",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_11 = {
-    'question': "What is meant by 'Scale-Free' networks, as described by Barabási and Albert?",
+module_1_lecture_transcripts_question_11 = {
+    'question': "Suppose you have a simple linear regression model \( y = 3x + 2 \). If \( x = 4 \), what is the predicted value of \( y \)?",
     'options_list': [
-        'Networks where all nodes have an equal number of connections.',
-        'Networks where the number of connections per node follows a power-law distribution.',
-        'Networks with a fully connected architecture.',
-        'Networks with a random distribution of connections.'
+        '10',
+        '12',
+        '14',
+        '20'
     ],
-    'correct_answer': 'Networks where the number of connections per node follows a power-law distribution.',
-    'explanation': "Scale-Free networks are characterized by a few nodes having many connections (hubs), while most nodes have very few connections, following a power-law distribution.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': '14',
+    'explanation': "Substituting \( x = 4 \) into the equation \( y = 3x + 2 \), you get \( y = 3(4) + 2 = 14 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_12 = {
-    'question': "Which of the following is NOT one of the disciplines that contributed to the development of Network Science?",
+module_1_lecture_transcripts_question_12 = {
+    'question': "Given a dataset with two features \( x_1 \) and \( x_2 \), and the linear model \( y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 \), if \( \theta_0 = 1 \), \( \theta_1 = 2 \), \( \theta_2 = 3 \), and the input \( x_1 = 2 \), \( x_2 = 1 \), what is the predicted value of \( y \)?",
     'options_list': [
-        'Graph Theory',
-        'Statistical Mechanics',
-        'Astronomy',
-        'Machine Learning'
+        '6',
+        '7',
+        '8',
+        '9'
     ],
-    'correct_answer': 'Astronomy',
-    'explanation': "While Network Science draws from various fields like Graph Theory, Statistical Mechanics, and Machine Learning, Astronomy is not a core contributor.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': '8',
+    'explanation': "Substitute the values into the model: \( y = 1 + 2(2) + 3(1) = 8 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_13 = {
-    'question': "In the context of influence and cascade phenomena, what does Network Science primarily study?",
+module_1_lecture_transcripts_question_13 = {
+    'question': "Consider a small dataset with the following points: \((1, 2)\), \((2, 4)\), \((3, 5)\). Calculate the mean of the dependent variable \( y \).",
     'options_list': [
-        'The physical spreading of diseases',
-        'The spread of ideas, opinions, and social trends through networks',
-        'The random disconnection of nodes in a network',
-        'The creation of regular networks in online social platforms'
+        '2',
+        '3',
+        '4',
+        '5'
     ],
-    'correct_answer': 'The spread of ideas, opinions, and social trends through networks',
-    'explanation': "Network Science examines how non-physical entities like ideas and opinions spread through networks, often influencing social trends.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': '3.67',
+    'explanation': "The mean of \( y \) is \( \frac{2 + 4 + 5}{3} = 3.67 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_14 = {
-    'question': "Which of the following best describes the concept of 'Preferential Attachment' in Scale-Free networks?",
+module_1_lecture_transcripts_question_14 = {
+    'question': "Using the same dataset \((1, 2)\), \((2, 4)\), \((3, 5)\), calculate the sum of squared errors (SSE) if the model is \( y = 2x \).",
     'options_list': [
-        'Nodes connect randomly without preference.',
-        'New nodes prefer to attach to already well-connected nodes.',
-        'All nodes have an equal chance of connecting to any other node.',
-        'Nodes are restricted from connecting to highly connected nodes.'
+        '0.5',
+        '1',
+        '2',
+        '3'
     ],
-    'correct_answer': 'New nodes prefer to attach to already well-connected nodes.',
-    'explanation': "Preferential Attachment describes the tendency for new nodes in a network to connect to nodes that are already well-connected, leading to the formation of hubs.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': '1',
+    'explanation': "The SSE is calculated as \( (2 - 2)^2 + (4 - 4)^2 + (5 - 6)^2 = 1 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-lowxy_lecture_notes_question_15 = {
-    'question': "Why is the mapping from a real-world system to a network representation considered only a model?",
+module_1_lecture_transcripts_question_15 = {
+    'question': "If you are given two features \( x_1 = 3 \) and \( x_2 = 4 \), calculate the Euclidean distance between these two features.",
     'options_list': [
-        'It represents every detail of the system accurately.',
-        'It simplifies the system by focusing only on interconnections, discarding other details.',
-        'It exaggerates the complexity of the system.',
-        'It cannot be used to analyze real-world systems.'
+        '1',
+        '2',
+        '5',
+        '7'
     ],
-    'correct_answer': 'It simplifies the system by focusing only on interconnections, discarding other details.',
-    'explanation': "A network representation is a model that abstracts away some details to focus on the interconnections, making it easier to analyze complex systems.",
-    'chapter_information': 'Lowxy Lecture Notes'
+    'correct_answer': '5',
+    'explanation': "The Euclidean distance between \( x_1 \) and \( x_2 \) is \( \sqrt{(3 - 0)^2 + (4 - 0)^2} = 5 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-barabasi_network_science_ch1_question_1 = {
-    'question': "What does the 2003 North American Blackout illustrate about interconnected systems?",
+module_1_lecture_transcripts_question_16 = {
+    'question': "For a linear model \( y = \theta_1 x_1 + \theta_2 x_2 + \epsilon \), where \( \epsilon \) is the error term and follows a normal distribution \( N(0, \sigma^2) \), if \( y = 10 \), \( \theta_1 = 2 \), \( \theta_2 = 3 \), \( x_1 = 2 \), \( x_2 = 1 \), what is the value of the error term \( \epsilon \)?",
     'options_list': [
-        'The stability of local networks against failures',
-        'The benefits of decentralized power grids',
-        'The vulnerability of interconnected systems to cascading failures',
-        'The importance of isolated power generators'
+        '0',
+        '1',
+        '2',
+        '-1'
     ],
-    'correct_answer': 'The vulnerability of interconnected systems to cascading failures',
-    'explanation': "The 2003 blackout highlights how interconnected systems are vulnerable to cascading failures, where a local failure can propagate and cause widespread disruption.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': '2',
+    'explanation': "First calculate \( \hat{y} = \theta_1 x_1 + \theta_2 x_2 = 2(2) + 3(1) = 7 \). The error term \( \epsilon = y - \hat{y} = 10 - 7 = 3 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-barabasi_network_science_ch1_question_2 = {
-    'question': "Which of the following is an example of a cascading failure?",
+module_1_lecture_transcripts_question_17 = {
+    'question': "Given the following probabilities \( P(A) = 0.4 \), \( P(B) = 0.3 \), and \( P(A \cap B) = 0.1 \), compute \( P(A \cup B) \).",
     'options_list': [
-        'A single router failure leading to a global internet outage',
-        'A local flood affecting only the surrounding area',
-        'A factory shutting down due to a local power outage',
-        'A product recall affecting multiple countries'
+        '0.5',
+        '0.6',
+        '0.7',
+        '0.8'
     ],
-    'correct_answer': 'A single router failure leading to a global internet outage',
-    'explanation': "A cascading failure occurs when a local issue, such as a single router failure, triggers a series of failures across a broader system, leading to a larger impact.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': '0.6',
+    'explanation': "Use the formula \( P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.4 + 0.3 - 0.1 = 0.6 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-barabasi_network_science_ch1_question_3 = {
-    'question': "Why did the interconnected nature of the power grid contribute to the 2003 blackout?",
+module_1_lecture_transcripts_question_18 = {
+    'question': "If a small dataset consists of 3 data points \((x_1, y_1)\), \((x_2, y_2)\), and \((x_3, y_3)\) where \( y = 2x + 1 \), and the data points are \((1, 3)\), \((2, 5)\), and \((3, 7)\), compute the value of the loss function \( L(\theta) = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - \hat{y}^{(i)})^2 \) for this model.",
     'options_list': [
-        'It allowed for the immediate rerouting of electricity, preventing further damage',
-        'It caused local failures to propagate across the network, leading to widespread outages',
-        'It isolated the failures, limiting the impact to the local area',
-        'It automatically corrected the failures without human intervention'
+        '0',
+        '0.5',
+        '1',
+        '2'
     ],
-    'correct_answer': 'It caused local failures to propagate across the network, leading to widespread outages',
-    'explanation': "The interconnected nature of the power grid meant that local failures could propagate across the entire network, leading to widespread outages during the 2003 blackout.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': '0',
+    'explanation': "Since \( y^{(i)} = \hat{y}^{(i)} \) for all points, the loss function \( L(\theta) = 0 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-barabasi_network_science_ch1_question_4 = {
-    'question': "What is a key theme illustrated by the 2003 Northeast blackout?",
+module_1_lecture_transcripts_question_19 = {
+    'question': "Suppose you have two vectors \( \mathbf{x} = [2, 3] \) and \( \mathbf{\theta} = [4, 5] \). Calculate the dot product \( \mathbf{\theta}^T \mathbf{x} \).",
     'options_list': [
-        'The importance of increasing power production',
-        'The need for more isolated power systems',
-        'The role of network structure in preventing cascading failures',
-        'The benefits of interconnected power grids'
+        '23',
+        '25',
+        '26',
+        '28'
     ],
-    'correct_answer': 'The role of network structure in preventing cascading failures',
-    'explanation': "The 2003 blackout emphasizes the need to understand network structures to prevent cascading failures that can lead to widespread disruptions.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': '23',
+    'explanation': "The dot product \( \mathbf{\theta}^T \mathbf{x} = 4(2) + 5(3) = 23 \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-barabasi_network_science_ch1_question_5 = {
-    'question': "According to Barabási, what is a fundamental challenge in understanding complex systems?",
+module_1_lecture_transcripts_question_20 = {
+    'question': "Given a simple linear regression model \( y = 5x - 3 \), calculate the gradient with respect to \( x \) when \( x = 2 \).",
     'options_list': [
-        'Deriving their behavior from knowledge of individual components',
-        'Mapping the geographical locations of system components',
-        'Ensuring isolated function of system components',
-        'Eliminating interactions between system components'
+        '5',
+        '7',
+        '10',
+        '12'
     ],
-    'correct_answer': 'Deriving their behavior from knowledge of individual components',
-    'explanation': "A major challenge in understanding complex systems is deriving their collective behavior from the knowledge of the system's individual components.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': '5',
+    'explanation': "The gradient of \( y = 5x - 3 \) with respect to \( x \) is 5, which is constant regardless of \( x \).",
+    'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
-barabasi_network_science_ch1_question_6 = {
-    'question': "Why is network science considered crucial for understanding complex systems?",
+minkowski_metric_paper_question_1 = {
+    'question': "What is one of the main drawbacks of the K-Means algorithm addressed by this paper?",
     'options_list': [
-        'It simplifies the study of individual system components',
-        'It focuses solely on the physical aspects of systems',
-        'It uncovers the underlying networks that govern interactions in complex systems',
-        'It replaces the need for mathematical models'
+        'Lack of defense against noisy features',
+        'High computational complexity',
+        'Difficulty in handling large datasets',
+        'Poor performance with non-Euclidean distances'
     ],
-    'correct_answer': 'It uncovers the underlying networks that govern interactions in complex systems',
-    'explanation': "Network science is crucial because it reveals the networks that dictate the interactions and behavior of complex systems, enabling a deeper understanding of these systems.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'Lack of defense against noisy features',
+    'explanation': "The paper focuses on addressing the issue of K-Means' lack of defense against noisy features by incorporating feature weights.",
+    'chapter_information': 'Minkowski Metric Paper'
 }
 
-barabasi_network_science_ch1_question_7 = {
-    'question': "What does the emergence of network science in the 21st century primarily owe to?",
+minkowski_metric_paper_question_2 = {
+    'question': "Which metric does the paper extend the Weighted K-Means method to?",
     'options_list': [
-        'The discovery of new physical phenomena',
-        'The ability to map and analyze large-scale networks',
-        'The decline of traditional scientific methods',
-        'The isolation of specific scientific disciplines'
+        'Euclidean metric',
+        'Minkowski metric',
+        'Manhattan metric',
+        'Chebyshev metric'
     ],
-    'correct_answer': 'The ability to map and analyze large-scale networks',
-    'explanation': "Network science emerged due to technological advancements that allowed for the mapping and analysis of large-scale networks across various disciplines.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'Minkowski metric',
+    'explanation': "The paper extends the Weighted K-Means method to the Minkowski metric for measuring distances.",
+    'chapter_information': 'Minkowski Metric Paper'
 }
 
-barabasi_network_science_ch1_question_8 = {
-    'question': "Which of the following best describes the 'universality' concept in network science?",
+minkowski_metric_paper_question_3 = {
+    'question': "How are the feature weights updated in the proposed Minkowski metric Weighted K-Means?",
     'options_list': [
-        'All networks are identical regardless of their nature',
-        'Different networks share similar organizing principles despite their differences',
-        'Network structures are completely random and unpredictable',
-        'Networks evolve independently without common principles'
+        'By minimizing the sum of squared distances',
+        'By using a gradient descent method',
+        'By applying the first order optimality condition with respect to the Minkowski metric',
+        'By assigning equal weights to all features'
     ],
-    'correct_answer': 'Different networks share similar organizing principles despite their differences',
-    'explanation': "The concept of 'universality' in network science refers to the discovery that different networks, despite their diverse nature, share common organizing principles.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'By applying the first order optimality condition with respect to the Minkowski metric',
+    'explanation': "The feature weights in the Minkowski metric Weighted K-Means are updated by applying the first order optimality condition, ensuring they are non-negative and sum to unity.",
+    'chapter_information': 'Minkowski Metric Paper'
 }
 
-barabasi_network_science_ch1_question_9 = {
-    'question': "What role does 'interdisciplinary nature' play in network science?",
+minkowski_metric_paper_question_4 = {
+    'question': "What is the effect of using a higher Minkowski exponent \( b \) on the feature weights?",
     'options_list': [
-        'It isolates network science from other fields',
-        'It allows for the integration of tools and ideas across different disciplines',
-        'It focuses exclusively on biological networks',
-        'It limits the application of network science to specific domains'
+        'Increases the influence of all features equally',
+        'Decreases the influence of noise features',
+        'Makes all features equally important',
+        'Has no effect on the clustering results'
     ],
-    'correct_answer': 'It allows for the integration of tools and ideas across different disciplines',
-    'explanation': "The interdisciplinary nature of network science enables the integration of tools and concepts from various fields, enhancing the study of complex systems.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'Decreases the influence of noise features',
+    'explanation': "A higher Minkowski exponent \( b \) decreases the influence of noise features by assigning them lower weights in the clustering process.",
+    'chapter_information': 'Minkowski Metric Paper'
 }
 
-barabasi_network_science_ch1_question_10 = {
-    'question': "Which of the following best exemplifies the societal impact of network science?",
+minkowski_metric_paper_question_5 = {
+    'question': "What is the primary advantage of initializing K-Means with anomalous clusters?",
     'options_list': [
-        'The rise of traditional manufacturing industries',
-        'The development of network-based technologies like Google and Facebook',
-        'The decline of global trade networks',
-        'The isolation of local communities'
+        'Reduces computational complexity',
+        'Ensures convergence to the global minimum',
+        'Provides better cluster recovery in the presence of noise',
+        'Simplifies the implementation of the algorithm'
     ],
-    'correct_answer': 'The development of network-based technologies like Google and Facebook',
-    'explanation': "Network science has had a profound societal impact, particularly through the development of network-based technologies like Google and Facebook.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'Provides better cluster recovery in the presence of noise',
+    'explanation': "Initializing K-Means with anomalous clusters helps in better cluster recovery, especially in the presence of noise, by starting from more distinct centroids.",
+    'chapter_information': 'Minkowski Metric Paper'
 }
 
-
-barabasi_network_science_ch1_question_11 = {
-    'question': "What is one of the key reasons for the growing interest in network science in the 21st century?",
+minkowski_metric_paper_question_6 = {
+    'question': "Given the Minkowski metric \( p \)-norm between points \( x = [1, 2] \) and \( y = [3, 4] \) with \( p = 3 \), compute the distance.",
     'options_list': [
-        'The discovery of new types of networks',
-        'The ability to apply mathematical tools from graph theory to real-world data',
-        'The decline of other scientific disciplines',
-        'The focus on small, isolated systems'
+        '2.924',
+        '3.301',
+        '3.914',
+        '4.641'
     ],
-    'correct_answer': 'The ability to apply mathematical tools from graph theory to real-world data',
-    'explanation': "The growing interest in network science is largely due to the application of mathematical tools from graph theory to real-world data, enabling new insights into complex systems.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
+    'correct_answer': '3.301',
+    'explanation': "The Minkowski distance with \( p = 3 \) is calculated as \( ((3-1)^3 + (4-2)^3)^{1/3} = 3.301 \).",
+    'chapter_information': 'Minkowski Metric Paper'
 }
-
-barabasi_network_science_ch1_question_12 = {
-    'question': "How did the advent of digital technology contribute to the emergence of network science?",
-    'options_list': [
-        'By limiting data collection to small-scale networks',
-        'By making it easier to visualize networks in 3D',
-        'By enabling the collection and analysis of vast amounts of network data',
-        'By eliminating the need for network maps'
-    ],
-    'correct_answer': 'By enabling the collection and analysis of vast amounts of network data',
-    'explanation': "Digital technology has played a crucial role in the emergence of network science by enabling the collection, storage, and analysis of vast amounts of network data.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
-}
-
-barabasi_network_science_ch1_question_13 = {
-    'question': "What did the concept of 'universality' in network science reveal about different types of networks?",
-    'options_list': [
-        'All networks are fundamentally different and unique',
-        'Different networks, despite their diversity, share similar structural properties',
-        'Only biological networks exhibit universal properties',
-        'Social networks are completely unpredictable'
-    ],
-    'correct_answer': 'Different networks, despite their diversity, share similar structural properties',
-    'explanation': "The concept of 'universality' in network science revealed that different types of networks, despite their diversity, share similar structural properties governed by common principles.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
-}
-
-barabasi_network_science_ch1_question_14 = {
-    'question': "Why is network science considered an interdisciplinary field?",
-    'options_list': [
-        'Because it focuses only on social networks',
-        'Because it combines concepts and tools from various scientific disciplines to study complex systems',
-        'Because it ignores traditional scientific methods',
-        'Because it only applies to technological networks'
-    ],
-    'correct_answer': 'Because it combines concepts and tools from various scientific disciplines to study complex systems',
-    'explanation': "Network science is interdisciplinary because it integrates concepts and tools from multiple scientific disciplines, such as biology, sociology, and computer science, to study and understand complex systems.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
-}
-
-barabasi_network_science_ch1_question_15 = {
-    'question': "What is one of the goals of network science in relation to positive and negative traits within networks?",
-    'options_list': [
-        'To eliminate all forms of interconnectivity',
-        'To enhance the spread of positive traits and limit the spread of negative traits',
-        'To focus exclusively on the physical layout of networks',
-        'To prevent any form of information flow'
-    ],
-    'correct_answer': 'To enhance the spread of positive traits and limit the spread of negative traits',
-    'explanation': "One of the goals of network science is to enhance the spread of traits that are beneficial while limiting the spread of those that can make networks vulnerable or weak.",
-    'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
-}
-
 
 
 KC_MPC_QUESTIONS = []

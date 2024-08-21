@@ -389,6 +389,173 @@ barabasi_network_science_ch1_question_15 = {
     'chapter_information': 'Chapter 1: A-L. Barabási, Network Science, 2015'
 }
 
+prerequisites_probability_question_1 = {
+    'question': "A factory has two machines, A and B, that produce widgets. Machine A produces 60% of the widgets, and Machine B produces 40%. The probability that a widget produced by Machine A is defective is 0.02, and the probability that a widget produced by Machine B is defective is 0.05. If a randomly selected widget is found to be defective, what is the probability that it was produced by Machine A?",
+    'options_list': [
+        '0.23',
+        '0.26',
+        '0.30',
+        '0.33'
+    ],
+    'correct_answer': '0.23',
+    'explanation': "Using Bayes' theorem, we can calculate the probability that a defective widget was produced by Machine A. The correct probability is 0.23.",
+    'chapter_information': 'Prerequisites'
+}
+
+prerequisites_probability_question_2 = {
+    'question': "A bag contains 7 red balls, 5 blue balls, and 8 green balls. Two balls are drawn successively without replacement. What is the probability that the first ball drawn is red and the second ball drawn is blue?",
+    'options_list': [
+        '35/152',
+        '7/40',
+        '14/95',
+        '21/100'
+    ],
+    'correct_answer': '35/152',
+    'explanation': "The probability of drawing a red ball first and a blue ball second, without replacement, is calculated as (7/20) * (5/19) = 35/152.",
+    'chapter_information': 'Prerequisites'
+}
+
+prerequisites_probability_question_3 = {
+    'question': "In a class of 30 students, 18 students are enrolled in a Mathematics course and 12 in a Physics course. If 6 students are enrolled in both courses, what is the probability that a student chosen at random is enrolled in at least one of the courses?",
+    'options_list': [
+        '0.80',
+        '0.70',
+        '0.85',
+        '0.90'
+    ],
+    'correct_answer': '0.80',
+    'explanation': "The probability of a student being enrolled in at least one course is calculated using the principle of inclusion-exclusion: P(A ∪ B) = P(A) + P(B) - P(A ∩ B).",
+    'chapter_information': 'Prerequisites'
+}
+
+prerequisites_probability_question_4 = {
+    'question': "A coin is biased such that the probability of getting heads is 0.6. If the coin is tossed 4 times, what is the probability of getting exactly 2 heads?",
+    'options_list': [
+        '0.3456',
+        '0.2304',
+        '0.432',
+        '0.243'
+    ],
+    'correct_answer': '0.3456',
+    'explanation': "The probability of getting exactly 2 heads in 4 tosses of a biased coin with P(H) = 0.6 can be calculated using the binomial probability formula.",
+    'chapter_information': 'Prerequisites'
+}
+
+prerequisites_calculus_question_1 = {
+    'question': "Find the derivative of the function f(x) = x^3 + 4x^2 - x + 6.",
+    'options_list': [
+        '3x^2 + 8x - 1',
+        '3x^2 + 8x + 6',
+        'x^3 + 8x - 1',
+        'x^2 + 8x - 1'
+    ],
+    'correct_answer': '3x^2 + 8x - 1',
+    'explanation': "The derivative of the function f(x) = x^3 + 4x^2 - x + 6 is f'(x) = 3x^2 + 8x - 1.",
+    'chapter_information': 'Prerequisites'
+}
+
+prerequisites_calculus_question_2 = {
+    'question': "Compute the integral ∫ (2x^3 - 4x + 1) dx.",
+    'options_list': [
+        'x^4/2 - 2x^2 + x + C',
+        'x^4/2 - 2x^2 + x',
+        '2x^4/4 - 2x^2 + x + C',
+        'x^4 - 2x^2 + x + C'
+    ],
+    'correct_answer': 'x^4/2 - 2x^2 + x + C',
+    'explanation': "The integral of the function ∫ (2x^3 - 4x + 1) dx is x^4/2 - 2x^2 + x + C.",
+    'chapter_information': 'Prerequisites'
+}
+
+prerequisites_calculus_question_3 = {
+    'question': "Solve the differential equation dy/dx = y with the initial condition y(0) = 3.",
+    'options_list': [
+        'y = 3e^x',
+        'y = 3e^-x',
+        'y = 3',
+        'y = 3x'
+    ],
+    'correct_answer': 'y = 3e^x',
+    'explanation': "The differential equation dy/dx = y with the initial condition y(0) = 3 has the solution y = 3e^x.",
+    'chapter_information': 'Prerequisites'
+}
+
+prerequisites_calculus_question_4 = {
+    'question': "Find the eigenvalues of the matrix A = [[2, 1], [1, 2]].",
+    'options_list': [
+        '3, 1',
+        '2, 2',
+        '4, 0',
+        '3, -1'
+    ],
+    'correct_answer': '3, 1',
+    'explanation': "The eigenvalues of the matrix A = [[2, 1], [1, 2]] are 3 and 1.",
+    'chapter_information': 'Prerequisites'
+}
+
+knowledge_check_network_science_question_8 = {
+    'question': "Which of the following statements best describes the concept of 'network centrality' in network science?",
+    'options_list': [
+        'A measure of how isolated a node is within the network',
+        'A metric that determines the most connected node in the network',
+        'A collection of metrics that indicate the importance or influence of a node in the network',
+        'A measure of the physical distance between nodes in the network'
+    ],
+    'correct_answer': 'A collection of metrics that indicate the importance or influence of a node in the network',
+    'explanation': "Network centrality includes various metrics, such as degree centrality and betweenness centrality, that help identify the most important or influential nodes within a network.",
+    'chapter_information': 'Knowledge Check Inspired'
+}
+
+knowledge_check_network_science_question_9 = {
+    'question': "True or False: In network science, 'communities' within a network refer to clusters of nodes that are more densely connected to each other than to nodes outside the cluster.",
+    'options_list': [
+        'True',
+        'False'
+    ],
+    'correct_answer': 'True',
+    'explanation': "Communities or clusters in a network are groups of nodes that have a higher density of connections within the group compared to connections with nodes outside the group.",
+    'chapter_information': 'Knowledge Check Inspired'
+}
+
+knowledge_check_network_science_question_10 = {
+    'question': "Which of the following is TRUE about complex networks as studied in network science?",
+    'options_list': [
+        'They can only be applied to biological systems',
+        'They often have nontrivial topological features such as clustering and short path lengths',
+        'They are always organized in a regular grid',
+        'They are unpredictable and cannot be analyzed mathematically'
+    ],
+    'correct_answer': 'They often have nontrivial topological features such as clustering and short path lengths',
+    'explanation': "Complex networks are characterized by nontrivial features like clustering and short path lengths, which make them different from simple networks like lattices or random graphs.",
+    'chapter_information': 'Knowledge Check Inspired'
+}
+
+knowledge_check_network_science_question_11 = {
+    'question': "Which of the following statements is FALSE regarding dynamics on networks?",
+    'options_list': [
+        'It involves studying how the network topology changes over time',
+        'It includes the analysis of how network states evolve over time',
+        'It only applies to social networks',
+        'It is concerned with both the structure of the network and the processes that occur within it'
+    ],
+    'correct_answer': 'It only applies to social networks',
+    'explanation': "Dynamics on networks can apply to any type of network, not just social networks. It encompasses how the structure of the network and the processes within it evolve over time.",
+    'chapter_information': 'Knowledge Check Inspired'
+}
+
+knowledge_check_network_science_question_12 = {
+    'question': "In Dr. Barabási's TED talk, he mentioned the unexpected decline in the number of FDA-approved drugs after the Human Genome Project. What was one reason he gave for this effect?",
+    'options_list': [
+        'The complexity of gene interactions was underestimated',
+        'The data from the genome was not mapped accurately',
+        'There was a lack of funding for new drug development',
+        'The focus shifted to non-genetic factors influencing health'
+    ],
+    'correct_answer': 'The complexity of gene interactions was underestimated',
+    'explanation': "Barabási explained that the decline was due to an underestimation of the complexity of gene interactions, which made it more challenging to develop new drugs based on genetic information.",
+    'chapter_information': 'Knowledge Check Inspired'
+}
+
 
 
 KC_MPC_QUESTIONS = []

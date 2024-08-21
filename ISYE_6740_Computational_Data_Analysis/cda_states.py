@@ -1,6 +1,6 @@
 import numpy as np
-from .ns_week1_mpc import WEEK_1_MPC
-from .ns_week2_mpc import WEEK_2_MPC
+from .cda_week1_mpc import WEEK_1_MPC
+from .cda_week2_mpc import WEEK_2_MPC
 
 ############################
 questions_dictionary = {'1': WEEK_1_MPC,

@@ -1,342 +1,406 @@
-easley_kleinberg_ch2_question_1 = {
-    'question': "What is the difference between a directed graph and an undirected graph?",
+module_2_lecture_notes_question_1 = {
+    'question': "What is the primary goal of clustering in the context of image databases?",
     'options_list': [
-        'A directed graph has weighted edges, while an undirected graph does not',
-        'A directed graph allows multiple edges between nodes, while an undirected graph does not',
-        'A directed graph has edges with a direction, while an undirected graph does not',
-        'A directed graph only connects nodes of the same type, while an undirected graph does not'
+        'To label each image correctly',
+        'To group images into clusters based on their similarity',
+        'To compress image data',
+        'To increase the resolution of images'
     ],
-    'correct_answer': 'A directed graph has edges with a direction, while an undirected graph does not',
-    'explanation': "In a directed graph, the edges have a specific direction indicating the relationship from one node to another, whereas in an undirected graph, the edges have no direction, representing a mutual relationship.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'To group images into clusters based on their similarity',
+    'explanation': "The goal of clustering is to divide the objects into groups such that the objects within a group are more similar to each other than to those in different groups.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_2 = {
-    'question': "What does a 'path' in a graph represent?",
+module_2_lecture_notes_question_2 = {
+    'question': "In the example of handwritten digits, what is the main task that clustering is used to achieve?",
     'options_list': [
-        'A loop within a graph where the first and last nodes are the same',
-        'A sequence of edges that connect one node to itself',
-        'A sequence of nodes where each consecutive pair is connected by an edge',
-        'A set of unconnected nodes in a graph'
+        'Recognizing individual digits',
+        'Grouping similar handwritten digits together',
+        'Improving the resolution of digit images',
+        'Digitizing handwritten documents'
     ],
-    'correct_answer': 'A sequence of nodes where each consecutive pair is connected by an edge',
-    'explanation': "A path in a graph is defined as a sequence of nodes where each consecutive pair of nodes is connected by an edge, showing how one can travel from one node to another through the network.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'Grouping similar handwritten digits together',
+    'explanation': "Clustering is used to group similar images of handwritten digits together, such as grouping all images of the digit '7' into one cluster.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_3 = {
-    'question': "What is a 'cycle' in the context of graph theory?",
+module_2_lecture_notes_question_3 = {
+    'question': "How are images represented in the context of clustering handwritten digits?",
     'options_list': [
-        'A path that does not repeat any nodes',
-        'A path with at least three edges where the first and last nodes are the same',
-        'A sequence of nodes where each node has exactly two neighbors',
-        'A graph where all nodes are connected in a single loop'
+        'As vectors of pixel values',
+        'As 3D models',
+        'As sequences of numbers',
+        'As matrices of color values'
     ],
-    'correct_answer': 'A path with at least three edges where the first and last nodes are the same',
-    'explanation': "A cycle is a special type of path in a graph where the path starts and ends at the same node, and all other nodes in the cycle are distinct.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'As vectors of pixel values',
+    'explanation': "Images are represented by vectorizing the matrix of pixel values, turning each image into a long vector.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_4 = {
-    'question': "In graph theory, what does it mean for a graph to be 'connected'?",
+module_2_lecture_notes_question_4 = {
+    'question': "What is the first step in the K-means algorithm?",
     'options_list': [
-        'Every node has at least one edge',
-        'There is a path between every pair of nodes',
-        'Every node is connected to a central hub',
-        'All nodes are part of at least one cycle'
+        'Assigning data points to clusters',
+        'Calculating the centroids',
+        'Initializing the centroids randomly',
+        'Sorting the data points'
     ],
-    'correct_answer': 'There is a path between every pair of nodes',
-    'explanation': "A graph is considered connected if there is a path between every pair of nodes, meaning you can travel from any node to any other node within the graph.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'Initializing the centroids randomly',
+    'explanation': "The first step in the K-means algorithm is to initialize the centroids randomly.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_5 = {
-    'question': "What is a 'connected component' in a graph?",
+module_2_lecture_notes_question_5 = {
+    'question': "Why might different initializations in K-means lead to different results?",
     'options_list': [
-        'A subset of nodes in which every node is connected to every other node, and no node is connected to any node outside this subset',
-        'A group of nodes that all have the same degree',
-        'A part of the graph where all edges are directed',
-        'A cluster of nodes with no edges connecting them to the rest of the graph'
+        'Because K-means is a convex optimization problem',
+        'Because K-means always finds the global minimum',
+        'Because K-means solves a non-convex optimization problem',
+        'Because K-means uses a deterministic algorithm'
     ],
-    'correct_answer': 'A subset of nodes in which every node is connected to every other node, and no node is connected to any node outside this subset',
-    'explanation': "A connected component is a subset of a graph in which any two nodes are connected by paths, and which is connected to no additional nodes in the rest of the graph.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'Because K-means solves a non-convex optimization problem',
+    'explanation': "Different initializations can lead to different results because K-means is solving a non-convex optimization problem, which may lead to different local minima.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_6 = {
-    'question': "What is the significance of a 'giant component' in a graph?",
+module_2_lecture_notes_question_6 = {
+    'question': "What property of the K-means objective function ensures that the algorithm converges?",
     'options_list': [
-        'It is the only component in a graph that is connected',
-        'It contains the majority of the nodes in the graph and is typically unique',
-        'It is the smallest connected component in a graph',
-        'It represents a graph where all nodes are directly connected to each other'
+        'It is non-monotonic',
+        'It is convex',
+        'It is monotonic and decreasing',
+        'It can oscillate'
     ],
-    'correct_answer': 'It contains the majority of the nodes in the graph and is typically unique',
-    'explanation': "A giant component in a graph is a connected component that contains a significant fraction of all the nodes in the graph. When it exists, it is usually unique and represents the largest connected subgraph.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'It is monotonic and decreasing',
+    'explanation': "The K-means objective function is monotonic and decreasing, which ensures that the algorithm will converge.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_7 = {
-    'question': "In the context of graph theory, what is the purpose of 'breadth-first search'?",
+module_2_lecture_notes_question_7 = {
+    'question': "In general, why is clustering using the exact global optimal solution for K-means considered NP-hard?",
     'options_list': [
-        'To find the longest path in a graph',
-        'To discover the shortest path between two nodes',
-        'To explore all nodes of a graph layer by layer starting from a given node',
-        'To identify all cycles in a graph'
+        'Because it requires solving a non-linear system',
+        'Because the number of possibilities is \( k^m \), where \( k \) is the number of centroids and \( m \) is the number of data points',
+        'Because it involves continuous optimization',
+        'Because it can only be solved using dynamic programming'
     ],
-    'correct_answer': 'To explore all nodes of a graph layer by layer starting from a given node',
-    'explanation': "Breadth-first search is an algorithm used to explore a graph by visiting all nodes level by level starting from a given node, which helps in finding the shortest path to all reachable nodes from the starting point.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'Because the number of possibilities is \( k^m \), where \( k \) is the number of centroids and \( m \) is the number of data points',
+    'explanation': "Clustering using the exact global optimal solution is considered NP-hard because the number of possibilities is \( k^m \), making it computationally infeasible for large datasets.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_8 = {
-    'question': "How is the 'small-world phenomenon' best described?",
+module_2_lecture_notes_question_8 = {
+    'question': "How can K-means be generalized to account for different definitions of similarity?",
     'options_list': [
-        'The idea that most networks are completely disconnected',
-        'The observation that most nodes in a large network are directly connected to all other nodes',
-        'The concept that most nodes in a large network can be reached from any other node by a small number of steps',
-        'The idea that networks grow at a small, constant rate'
+        'By changing the number of clusters',
+        'By using a different similarity or dissimilarity function',
+        'By initializing centroids differently',
+        'By increasing the number of iterations'
     ],
-    'correct_answer': 'The concept that most nodes in a large network can be reached from any other node by a small number of steps',
-    'explanation': "The small-world phenomenon suggests that in large networks, most nodes can be reached from any other node through a relatively small number of intermediate steps, often referred to as 'six degrees of separation.'",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'By using a different similarity or dissimilarity function',
+    'explanation': "K-means can be generalized by using a different similarity or dissimilarity function instead of the standard Euclidean distance.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_9 = {
-    'question': "What does it mean for a graph to have 'cycles'?",
+module_2_lecture_notes_question_9 = {
+    'question': "What is a dendrogram, as used in hierarchical clustering?",
     'options_list': [
-        'The graph has a path that returns to the starting node',
-        'The graph has a path that includes every node exactly once',
-        'The graph has no edges connecting its nodes',
-        'The graph has multiple edges between some pairs of nodes'
+        'A plot showing the assignment of data points to clusters',
+        'A tree structure representing the hierarchy of clusters',
+        'A type of decision tree used for classification',
+        'A matrix representing distances between points'
     ],
-    'correct_answer': 'The graph has a path that returns to the starting node',
-    'explanation': "A cycle in a graph is a path that starts and ends at the same node, with each node in the cycle being distinct except for the starting/ending node.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'A tree structure representing the hierarchy of clusters',
+    'explanation': "A dendrogram is a tree structure that represents the hierarchy of clusters formed during hierarchical clustering.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-easley_kleinberg_ch2_question_10 = {
-    'question': "What is the 'diameter' of a graph?",
+module_2_lecture_notes_question_10 = {
+    'question': "What distinguishes hierarchical clustering from K-means?",
     'options_list': [
-        'The maximum degree of any node in the graph',
-        'The maximum distance between any pair of nodes in the graph',
-        'The number of edges in the graph',
-        'The average number of connections per node'
+        'Hierarchical clustering requires a predefined number of clusters',
+        'Hierarchical clustering works best with large datasets',
+        'Hierarchical clustering organizes data in a hierarchical fashion',
+        'Hierarchical clustering is faster than K-means'
     ],
-    'correct_answer': 'The maximum distance between any pair of nodes in the graph',
-    'explanation': "The diameter of a graph is defined as the maximum distance between any pair of nodes, representing the longest shortest path in the network.",
-    'chapter_information': 'Chapter 2: D. Easley and J. Kleinberg, Networks, Crowds and Markets, Cambridge Univ Press, 2010'
+    'correct_answer': 'Hierarchical clustering organizes data in a hierarchical fashion',
+    'explanation': "Hierarchical clustering is distinguished from K-means by its approach of organizing data into a hierarchy, typically represented by a dendrogram.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-
-barabasi_ch2_question_1 = {
-    'question': "What was Euler's key insight in solving the Bridges of Königsberg problem?",
+module_2_lecture_notes_question_11 = {
+    'question': "What is the role of the centroid in the K-means algorithm?",
     'options_list': [
-        "Representing the land areas and bridges as a graph and analyzing the degrees of nodes",
-        "Counting the number of possible paths in the city",
-        "Constructing a physical model of the bridges to simulate different paths",
-        "Analyzing the length and width of each bridge"
+        'It determines the number of clusters',
+        'It represents the center of a cluster and is used to assign data points to the nearest cluster',
+        'It is a measure of the distance between clusters',
+        'It is a threshold value for stopping the algorithm'
     ],
-    'correct_answer': "Representing the land areas and bridges as a graph and analyzing the degrees of nodes",
-    'explanation': "Euler's key insight was to represent the land areas as nodes and the bridges as edges of a graph. He then showed that for a path to exist that crosses each bridge exactly once, there must be exactly zero or two nodes with an odd number of edges. In the Königsberg problem, there were four such nodes, making the desired path impossible.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'It represents the center of a cluster and is used to assign data points to the nearest cluster',
+    'explanation': "In K-means, a centroid represents the center of a cluster, and each data point is assigned to the cluster with the nearest centroid.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_2 = {
-    'question': "How does Barabási describe the relationship between networks and graphs?",
+module_2_lecture_notes_question_12 = {
+    'question': "How does the K-means algorithm adjust the centroids during each iteration?",
     'options_list': [
-        "Networks and graphs are entirely different concepts used in separate fields of study",
-        "Networks represent real-world systems, while graphs are their mathematical representations",
-        "Graphs are more complex structures that can only be used to represent specific types of networks",
-        "Networks are theoretical constructs, while graphs are practical tools for data analysis"
+        'By moving them to the geometric median of the assigned data points',
+        'By calculating the average of all data points assigned to each cluster',
+        'By randomly selecting new data points',
+        'By minimizing the sum of squared distances between data points and the centroid'
     ],
-    'correct_answer': "Networks represent real-world systems, while graphs are their mathematical representations",
-    'explanation': "In Barabási's framework, networks refer to real-world systems of interconnected components, while graphs are the mathematical representations of these networks. The terms are often used interchangeably, but they highlight the difference between the practical application and theoretical study.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'By calculating the average of all data points assigned to each cluster',
+    'explanation': "During each iteration of K-means, the centroids are adjusted by calculating the average (mean) of all data points assigned to each cluster, moving the centroid to this new position.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_3 = {
-    'question': "What does the degree of a node represent in a network?",
+module_2_lecture_notes_question_13 = {
+    'question': "Which property of the K-means algorithm ensures that it will eventually terminate?",
     'options_list': [
-        "The number of nodes in the entire network",
-        "The total number of edges connected to that node",
-        "The shortest path length from that node to any other node",
-        "The average distance between the node and all other nodes in the network"
+        'The algorithm's use of Euclidean distance',
+        'The finite number of possible data point assignments',
+        'The ability to find the global minimum',
+        'The use of non-linear optimization techniques'
     ],
-    'correct_answer': "The total number of edges connected to that node",
-    'explanation': "The degree of a node in a network represents the number of edges (or links) connected to it. It is a fundamental property that helps in understanding the node's connectivity within the network.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'The finite number of possible data point assignments',
+    'explanation': "K-means will eventually terminate because there is a finite number of possible assignments of data points to clusters, and the algorithm is designed to reduce the objective function at each step.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_4 = {
-    'question': "What is a bipartite network?",
+module_2_lecture_notes_question_14 = {
+    'question': "Why might the K-means algorithm fail to find the global minimum of the objective function?",
     'options_list': [
-        "A network where all nodes have an equal degree",
-        "A network that has exactly two connected components",
-        "A network whose nodes can be divided into two distinct sets with edges only between nodes from different sets",
-        "A network in which each node is connected to exactly two other nodes"
+        'Because it uses a non-convex objective function',
+        'Because it always converges to a global minimum',
+        'Because it only considers the first two data points',
+        'Because it randomly initializes centroids each time'
     ],
-    'correct_answer': "A network whose nodes can be divided into two distinct sets with edges only between nodes from different sets",
-    'explanation': "A bipartite network is one in which nodes can be divided into two disjoint sets, U and V, with edges only between nodes from different sets (U to V), and no edges within the same set.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'Because it uses a non-convex objective function',
+    'explanation': "K-means might fail to find the global minimum because it uses a non-convex objective function, leading to convergence at local minima depending on the initialization.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_5 = {
-    'question': "Why are most real-world networks considered sparse?",
+module_2_lecture_notes_question_15 = {
+    'question': "What is the significance of the 'triangle inequality' in the context of distance functions?",
     'options_list': [
-        "Because they have fewer nodes than links",
-        "Because the number of links is much smaller than the maximum possible number of links in a complete graph",
-        "Because they contain a large number of disconnected components",
-        "Because each node in the network is connected to every other node"
+        'It ensures that the distance between two points is never negative',
+        'It is used to compute centroids in K-means',
+        'It ensures that the distance between two points plus a third point is minimized',
+        'It guarantees that the direct distance between two points is always less than or equal to the sum of distances via a third point'
     ],
-    'correct_answer': "Because the number of links is much smaller than the maximum possible number of links in a complete graph",
-    'explanation': "Real-world networks are considered sparse because the number of links (L) is much smaller than the maximum possible number of links (Lmax) in a complete graph, meaning that only a small fraction of all possible connections are realized.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'It guarantees that the direct distance between two points is always less than or equal to the sum of distances via a third point',
+    'explanation': "The triangle inequality ensures that the direct distance between two points is always less than or equal to the sum of the distances when traveling via a third point, which is a key property for defining a valid distance metric.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_6 = {
-    'question': "What is the significance of the adjacency matrix in network analysis?",
+module_2_lecture_notes_question_16 = {
+    'question': "In hierarchical clustering, what happens when you cut the dendrogram at a certain level?",
     'options_list': [
-        "It stores only the nodes of the network without any link information",
-        "It is a visual representation of the network",
-        "It provides a way to represent the presence or absence of links between nodes in a matrix format",
-        "It is used to calculate the shortest path between any two nodes in the network"
+        'You define the number of clusters',
+        'You merge all clusters into one',
+        'You separate the data points into different clusters based on the cut level',
+        'You optimize the centroid positions'
     ],
-    'correct_answer': "It provides a way to represent the presence or absence of links between nodes in a matrix format",
-    'explanation': "The adjacency matrix is a matrix representation of a network where each element indicates whether a pair of nodes is connected by a link. It is particularly useful for mathematical and computational analysis of network properties.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'You separate the data points into different clusters based on the cut level',
+    'explanation': "Cutting the dendrogram at a certain level separates the data points into clusters, with each cut level corresponding to a different number of clusters.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_7 = {
-    'question': "What does the clustering coefficient measure in a network?",
+module_2_lecture_notes_question_17 = {
+    'question': "What is a key difference between K-means and K-medoids algorithms?",
     'options_list': [
-        "The total number of nodes in a network",
-        "The number of nodes connected to a single node",
-        "The degree to which the neighbors of a node are interconnected",
-        "The maximum path length between any two nodes in the network"
+        'K-means uses centroids while K-medoids uses actual data points as cluster centers',
+        'K-means is faster than K-medoids',
+        'K-means is used for larger datasets, while K-medoids is used for smaller datasets',
+        'K-means requires more memory than K-medoids'
     ],
-    'correct_answer': "The degree to which the neighbors of a node are interconnected",
-    'explanation': "The clustering coefficient measures the extent to which the neighbors of a given node are connected to each other. A high clustering coefficient indicates that a node’s neighbors are likely to form a tightly-knit group.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'K-means uses centroids while K-medoids uses actual data points as cluster centers',
+    'explanation': "The key difference between K-means and K-medoids is that K-means uses the average of data points as the centroid, while K-medoids selects actual data points as the cluster centers.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_8 = {
-    'question': "Why are real networks often characterized as having a 'small-world' property?",
+module_2_lecture_notes_question_18 = {
+    'question': "How does the K-means algorithm handle noisy data?",
     'options_list': [
-        "Because they are disconnected and isolated",
-        "Because they consist of only a few nodes and links",
-        "Because they have short average path lengths despite their large size",
-        "Because they have very high clustering coefficients"
+        'It excludes noisy data points from the clusters',
+        'It assigns noisy data points to the nearest cluster, which may lead to incorrect clustering',
+        'It creates a separate cluster for noisy data',
+        'It ignores noisy data during the clustering process'
     ],
-    'correct_answer': "Because they have short average path lengths despite their large size",
-    'explanation': "Real-world networks often exhibit the 'small-world' property, where even though the network is large, the average path length between any two nodes is relatively short, allowing for efficient communication or interaction across the network.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'It assigns noisy data points to the nearest cluster, which may lead to incorrect clustering',
+    'explanation': "The K-means algorithm assigns noisy data points to the nearest cluster, which can sometimes result in incorrect clustering as these points may not fit well into any cluster.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_9 = {
-    'question': "What is the relationship between node degree and the average clustering coefficient in a network?",
+module_2_lecture_notes_question_19 = {
+    'question': "Why is the L2 (Euclidean) distance commonly used in the K-means algorithm?",
     'options_list': [
-        "Nodes with higher degrees always have higher clustering coefficients",
-        "Nodes with higher degrees tend to have lower clustering coefficients",
-        "The clustering coefficient is independent of the node degree",
-        "Nodes with higher degrees tend to have no clustering coefficient"
+        'Because it is the simplest to calculate',
+        'Because it ensures a global minimum',
+        'Because it is a smooth and differentiable function',
+        'Because it minimizes the squared distance, making it suitable for averaging'
     ],
-    'correct_answer': "Nodes with higher degrees tend to have lower clustering coefficients",
-    'explanation': "In many networks, nodes with higher degrees tend to have lower clustering coefficients, meaning that highly connected nodes (hubs) are less likely to have their neighbors interconnected, leading to a more hub-and-spoke structure.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'Because it minimizes the squared distance, making it suitable for averaging',
+    'explanation': "The L2 (Euclidean) distance is commonly used in K-means because it minimizes the squared distance between points and centroids, which is consistent with the averaging process used to adjust the centroids.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-barabasi_ch2_question_10 = {
-    'question': "How is a bipartite network different from a regular network?",
+module_2_lecture_notes_question_20 = {
+    'question': "What is one advantage of hierarchical clustering over K-means?",
     'options_list': [
-        "It contains nodes that can have self-loops",
-        "It has a strict hierarchical structure with nodes at different levels",
-        "It has two distinct sets of nodes, with edges only between nodes from different sets",
-        "It is a network where all nodes are connected to every other node"
+        'It is faster for large datasets',
+        'It requires less memory',
+        'It provides a complete picture of how data points are related at various levels of granularity',
+        'It always finds the global minimum'
     ],
-    'correct_answer': "It has two distinct sets of nodes, with edges only between nodes from different sets",
-    'explanation': "A bipartite network consists of two distinct sets of nodes, with edges only existing between nodes from different sets, and no edges within the same set.",
-    'chapter_information': 'Chapter 2: A-L. Barabási, Network Science, 2015'
+    'correct_answer': 'It provides a complete picture of how data points are related at various levels of granularity',
+    'explanation': "One advantage of hierarchical clustering is that it provides a complete picture of how data points are related at various levels of granularity, unlike K-means, which gives a single partition of the data.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-fibonacci_heaps_question_1 = {
-    'question': "What is the primary advantage of a Fibonacci heap compared to other heap data structures?",
+module_2_lecture_notes_question_21 = {
+    'question': "Given two vectors \( \mathbf{x} = [1, 2] \) and \( \mathbf{y} = [4, 6] \), calculate the Euclidean distance between them.",
     'options_list': [
-        "It has a better worst-case time complexity for all operations",
-        "It allows all operations to be performed in constant time",
-        "It has an amortized constant time for decrease-key and insert operations",
-        "It requires less memory to store the heap"
+        '2',
+        '3',
+        '5',
+        '7'
     ],
-    'correct_answer': "It has an amortized constant time for decrease-key and insert operations",
-    'explanation': "The primary advantage of Fibonacci heaps is that they provide amortized constant time for operations like insert and decrease-key, making them highly efficient for algorithms like Dijkstra's shortest path.",
-    'chapter_information': 'Topic: Fibonacci Heaps, Source: Wikipedia'
+    'correct_answer': '5',
+    'explanation': "The Euclidean distance between the vectors \( \mathbf{x} \) and \( \mathbf{y} \) is calculated as \( \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9 + 16} = \sqrt{25} = 5 \).",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-fibonacci_heaps_question_2 = {
-    'question': "In a Fibonacci heap, what happens during the 'decrease-key' operation?",
+module_2_lecture_notes_question_22 = {
+    'question': "If a dataset consists of three 2-dimensional data points \((1, 2)\), \((3, 4)\), and \((5, 6)\), and the initial centroids for K-means are chosen as \((1, 2)\) and \((5, 6)\), which centroid will the point \((3, 4)\) be assigned to after the first iteration?",
     'options_list': [
-        "The key is simply decreased, with no other structural changes",
-        "The node with the decreased key is cut from its parent and added to the root list if it becomes smaller than its parent's key",
-        "All nodes are rearranged to maintain the heap property",
-        "The entire heap is rebuilt to ensure the minimum key is at the root"
+        'Centroid at (1, 2)',
+        'Centroid at (5, 6)',
+        'A new centroid',
+        'Cannot be determined'
     ],
-    'correct_answer': "The node with the decreased key is cut from its parent and added to the root list if it becomes smaller than its parent's key",
-    'explanation': "During the decrease-key operation in a Fibonacci heap, if the decreased key violates the heap property with its parent, the node is cut from its parent and added to the root list to maintain the heap's structural properties.",
-    'chapter_information': 'Topic: Fibonacci Heaps, Source: Wikipedia'
+    'correct_answer': 'Centroid at (1, 2)',
+    'explanation': "The point \((3, 4)\) is closer to \((1, 2)\) than \((5, 6)\). The Euclidean distance to \((1, 2)\) is \( \sqrt{(3-1)^2 + (4-2)^2} = \sqrt{8} \) and to \((5, 6)\) is \( \sqrt{8} \), so the point \((3, 4)\) is equidistant to both centroids.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-fibonacci_heaps_question_3 = {
-    'question': "What is the amortized time complexity of the 'extract-min' operation in a Fibonacci heap?",
+module_2_lecture_notes_question_23 = {
+    'question': "Compute the Manhattan distance between the points \( \mathbf{p} = [3, 5] \) and \( \mathbf{q} = [1, 1] \).",
     'options_list': [
-        "O(1)",
-        "O(log n)",
-        "O(n log n)",
-        "O(n)"
+        '4',
+        '5',
+        '6',
+        '7'
     ],
-    'correct_answer': "O(log n)",
-    'explanation': "The extract-min operation in a Fibonacci heap has an amortized time complexity of O(log n), making it efficient for operations that require frequent minimum element extraction.",
-    'chapter_information': 'Topic: Fibonacci Heaps, Source: Wikipedia'
+    'correct_answer': '6',
+    'explanation': "The Manhattan distance is calculated as the sum of the absolute differences between corresponding entries: \( |3-1| + |5-1| = 2 + 4 = 6 \).",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-
-kosaraju_algorithm_question_1 = {
-    'question': "What is the main purpose of Kosaraju's algorithm?",
+module_2_lecture_notes_question_24 = {
+    'question': "For a K-means algorithm with \( k = 3 \) clusters and \( m = 100 \) data points, what is the time complexity of one iteration?",
     'options_list': [
-        "To find the shortest path between two nodes in a graph",
-        "To sort the nodes of a graph in topological order",
-        "To find all strongly connected components (SCCs) in a directed graph",
-        "To detect cycles in an undirected graph"
+        'O(m)',
+        'O(k)',
+        'O(mk)',
+        'O(m^2k)'
     ],
-    'correct_answer': "To find all strongly connected components (SCCs) in a directed graph",
-    'explanation': "Kosaraju's algorithm is used to find all strongly connected components (SCCs) in a directed graph. It is efficient and uses two passes of depth-first search.",
-    'chapter_information': 'Topic: Kosaraju\'s Algorithm, Source: Wikipedia'
+    'correct_answer': 'O(mk)',
+    'explanation': "The time complexity of one iteration in the K-means algorithm is \( O(mk) \), as each data point needs to be compared to all \( k \) centroids.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-kosaraju_algorithm_question_2 = {
-    'question': "Which of the following is a correct step in Kosaraju's algorithm?",
+module_2_lecture_notes_question_25 = {
+    'question': "What is the space complexity of the K-means algorithm, assuming \( m \) data points and \( k \) clusters?",
     'options_list': [
-        "Perform a breadth-first search to find all SCCs",
-        "Reverse the direction of all edges in the graph, then perform DFS in the order of the first DFS's finishing times",
-        "Sort all nodes by in-degree, then perform a topological sort",
-        "Use a priority queue to keep track of the nodes with the lowest out-degree"
+        'O(m + k)',
+        'O(mk)',
+        'O(m)',
+        'O(k)'
     ],
-    'correct_answer': "Reverse the direction of all edges in the graph, then perform DFS in the order of the first DFS's finishing times",
-    'explanation': "One key step in Kosaraju's algorithm is to reverse the direction of all edges in the graph, and then perform a depth-first search (DFS) in the order determined by the finishing times from the first DFS.",
-    'chapter_information': 'Topic: Kosaraju\'s Algorithm, Source: Wikipedia'
+    'correct_answer': 'O(m + k)',
+    'explanation': "The space complexity of the K-means algorithm is \( O(m + k) \) as it needs to store all data points and the centroids of the clusters.",
+    'chapter_information': 'Module 2 Lecture Notes'
 }
 
-kosaraju_algorithm_question_3 = {
-    'question': "What is the time complexity of Kosaraju's algorithm?",
+k_medoid_paper_question_1 = {
+    'question': "What is the relationship between the medoid in squared `2 norm and the mean of the data points in a cluster?",
     'options_list': [
-        "O(V^2)",
-        "O(V + E)",
-        "O(V log V)",
-        "O(E log V)"
+        'The medoid is always the geometric median.',
+        'The medoid is equivalent to the mean of the data points.',
+        'The medoid is the data point closest to the mean.',
+        'The medoid is unrelated to the mean of the data points.'
     ],
-    'correct_answer': "O(V + E)",
-    'explanation': "Kosaraju's algorithm runs in O(V + E) time, where V is the number of vertices and E is the number of edges. This efficiency makes it a powerful tool for finding SCCs in large graphs.",
-    'chapter_information': 'Topic: Kosaraju\'s Algorithm, Source: Wikipedia'
+    'correct_answer': 'The medoid is the data point closest to the mean.',
+    'explanation': "The paper concludes that finding the medoid in squared `2 norm is equivalent to finding the mean of the data points and then identifying the data point closest to that mean.",
+    'chapter_information': 'K-medoid Paper by Yao Xie'
 }
+
+k_medoid_paper_question_2 = {
+    'question': "Given three data points \((1, 2)\), \((3, 4)\), and \((5, 6)\) in 2D space, which point is the medoid under the squared `2 norm?",
+    'options_list': [
+        '(1, 2)',
+        '(3, 4)',
+        '(5, 6)',
+        'None of the above'
+    ],
+    'correct_answer': '(3, 4)',
+    'explanation': "The mean of the points is \( \mu = (3, 4) \). The point closest to the mean is \( (3, 4) \), making it the medoid.",
+    'chapter_information': 'K-medoid Paper by Yao Xie'
+}
+
+k_medoid_paper_question_3 = {
+    'question': "Which of the following best describes the cost function used to find the medoid in squared `2 norm?",
+    'options_list': [
+        'mΣ_{i=1}^{m} ||x_j||^2 + Σ_{i=1}^{m} ||x_i||^2 + 2mμ̂^T x_j',
+        'm||x_j||^2 + Σ_{i=1}^{m} ||x_i||^2 - 2mμ̂^T x_j',
+        'Σ_{i=1}^{m} ||x_j||^2 + 2Σ_{i=1}^{m} ||x_i||^2 - mμ̂^T x_j',
+        'Σ_{i=1}^{m} ||x_j - μ̂ ||^2'
+    ],
+    'correct_answer': 'm||x_j||^2 + Σ_{i=1}^{m} ||x_i||^2 - 2mμ̂^T x_j',
+    'explanation': "The cost function for finding the medoid in squared `2 norm is given by \( m||x_j||^2 + Σ_{i=1}^{m} ||x_i||^2 - 2mμ̂^T x_j \).",
+    'chapter_information': 'K-medoid Paper by Yao Xie'
+}
+
+k_medoid_paper_question_4 = {
+    'question': "Why can certain terms be dropped from the cost function when finding the medoid?",
+    'options_list': [
+        'The terms are negligible and do not affect the result.',
+        'The terms are constants that do not change with the choice of medoid.',
+        'The terms are redundant and cancel out.',
+        'Dropping the terms simplifies the computation without affecting the outcome.'
+    ],
+    'correct_answer': 'The terms are constants that do not change with the choice of medoid.',
+    'explanation': "Certain terms can be dropped because they are constants and do not affect the optimal solution when minimizing the cost function.",
+    'chapter_information': 'K-medoid Paper by Yao Xie'
+}
+
+k_medoid_paper_question_5 = {
+    'question': "What is the time complexity of finding the medoid in a dataset with \( m \) data points using the squared `2 norm?",
+    'options_list': [
+        'O(m)',
+        'O(m^2)',
+        'O(m^3)',
+        'O(\log m)'
+    ],
+    'correct_answer': 'O(m^2)',
+    'explanation': "Finding the medoid involves calculating the distance between all pairs of points, which leads to a time complexity of \( O(m^2) \).",
+    'chapter_information': 'K-medoid Paper by Yao Xie'
+}
+
+k_medoid_paper_question_6 = {
+    'question': "What is the space complexity of storing the distance matrix when calculating the medoid for \( m \) data points?",
+    'options_list': [
+        'O(m + k)',
+        'O(mk)',
+        'O(m)',
+        'O(m^2)'
+    ],
+    'correct_answer': 'O(m^2)',
+    'explanation': "The distance matrix requires storing \( m \times m \) distances, leading to a space complexity of \( O(m^2) \).",
+    'chapter_information': 'K-medoid Paper by Yao Xie'
+}
+
 
 
 

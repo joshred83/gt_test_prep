@@ -1,5 +1,5 @@
 import streamlit as st
-from .ns_states import Token
+from .cda_states import Token
 
 def apply_custom_css():
     custom_css = """
