@@ -1,25 +1,25 @@
 import streamlit as st
-from CS_7280_Network_Science.ns_module import ns_mpc_big_review, ns_mpc_page1, ns_states
+from CS_7643_Deep_Learning import rl_mpc_big_review, rl_mpc_page1, rl_states
 
 def intro():
-    st.write("# CS 7280 Network Science Review App")
+    st.write("# CS 7643 Deep Learning Science Review App")
     st.sidebar.success("Select a review category to begin.")
 
     st.markdown("""
 The app features GPT-generated multiple-choice questions based on course content, lectures, and my personal notes, along with relevant questions from the course itself and similar classes from other institutions.
- I began creating tools like this because I believe that actively recalling information is a more effective way to learn than simply reviewing course material.
+I began creating tools like this because I believe that actively recalling information is a more effective way to learn than simply reviewing course material.
 
 1. **Chapter Review**: Select specific chapters to review and answer questions related to those chapters.
 2. **Big Review**: Select multiple chapters for a comprehensive review session.
 
 ### Additional Resources:
-- [Yi Xiang Low's Course Notes](https://lowyx.com/posts/gt-networkscience-notes/)
-- [Course Book: A-L. Barabási, Network Science, 2015](https://networksciencebook.com/)
-- [Official Course Website](https://omscs.gatech.edu/cs-7280-network-science)
+- [Yi Xiang Low's Course Notes](https://lowyx.com/posts/gt-dl-notes/)
+- [Monzersaleh Lecture Notes](https://monzersaleh.github.io/GeorgiaTech/CS7643_DeepLearning.html)
+- [Course Book: Deep Learning Book, 2016](https://www.deeplearningbook.org/)
+- [Official Course Website](https://omscs.gatech.edu/cs-7643-deep-learning)
+- [Lecture Transcripts](https://docs.google.com/document/d/1pDB-TrvQU5plKyQM54X_VYztze5gRpjz/edit?usp=sharing&ouid=105353834096756704207&rtpof=true&sd=true)
 
-If you find this app useful, please consider giving it a star on GitHub: [CS7280_Review_Helper](https://github.com/gderiddershanghai/CS7280_Review_Helper). 
-
-Or check out my other review apps for:
+Check out my other review apps for:
 - [ISYE 6501 Introduction to Analytics Modeling](https://isye6501test-prep.streamlit.app/)
 - [MGT 6203 Analytics for Business](https://mgt-6203-mt-study-aid.streamlit.app/)
 - [ISYE 6740 Computational Data Analytics](https://www.google.com)
@@ -30,12 +30,12 @@ Or check out my other review apps for:
 def chapter_review():
     st.markdown("# Chapter Review")
     st.write('Select chapters to review and answer questions.')
-    ns_mpc_page1.sa_questions()
+    rl_mpc_page1.sa_questions()
 
 def big_review():
     st.markdown("# Big Review")
     st.write('Comprehensive review with selectable chapters.')
-    ns_mpc_big_review.big_review()
+    rl_mpc_big_review.big_review()
 
 def reset_or_initialize_state():
     keys_to_delete = ['token', 'chapter_review_state', 'big_review_state']

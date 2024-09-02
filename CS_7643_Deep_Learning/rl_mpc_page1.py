@@ -25,23 +25,34 @@ def sa_questions():
         st.session_state.questions_initialized = False
 
     st.markdown("### Please select a topic to proceed:")
-    initial_options = {"L1 - What is Network Science?": '1', "L2 - Relevant Concepts from Graph Theory": '2'}
+    
+    # Use the lesson names from the provided image
+    initial_options = {
+        "Lesson 1: Linear Classifiers and Gradient Descent": '1', 
+        "Lesson 2: Neural Networks": '2'
+    }
     topics = {
-    "L1 - What is Network Science?": '1',
-    "L2 - Relevant Concepts from Graph Theory": '2',
-    "L3 - Degree Distribution and The “Friendship Paradox”": '3',
-    "L4 - Random vs. Real Graphs and Power-Law Networks": '4',
-    "L5 - Network Paths, Clustering and The “Small World” Property": '5',
-    "L6 - Centrality and Network-core Metrics and Algorithms": '6',
-    "L7 - Modularity and Community Detection": '7',
-    "L8 - Advanced Topics in Community Detection": '8',
-    "L9 - Spreading Phenomena on Networks and Epidemics": '9',
-    "L10 - Social Influence and Other Network Contagion Phenomena": '10',
-    "L11 - Other Network Dynamic Processes": '11',
-    "L12 - Network Modeling": '12',
-    "L13 - Statistical Analysis of Network Data": '13',
-    "L14 - Machine Learning in Network": '14'
-}
+        "Lesson 1: Linear Classifiers and Gradient Descent": '1',
+        "Lesson 2: Neural Networks": '2',
+        "Lesson 3: Optimization of Deep Neural Networks": '3',
+        "Lesson 4: Data Wrangling": '4',
+        "Lesson 5: Convolution and Pooling Layers": '5',
+        "Lesson 6: Convolutional Neural Networks": '6',
+        "Lesson 7: Visualization": '7',
+        "Lesson 8: Scalable Training": '8',
+        "Lesson 9: Advanced Computer Vision and Applications": '9',
+        "Lesson 10: Responsible AI and Bias and Fairness": '10',
+        "Lesson 11: Introduction to Structured Data": '11',
+        "Lesson 12: Language Models": '12',
+        "Lesson 13: Embeddings": '13',
+        "Lesson 14: Neural Attention Models": '14',
+        "Lesson 15: Neural Machine Translation": '15',
+        "Lesson 16: Advanced Topics: Translation": '16',
+        "Lesson 17: Deep Reinforcement Learning": '17',
+        "Lesson 18: Unsupervised and Semi-Supervised Learning": '18',
+        "Lesson 19: Generative Models": '19'
+    }
+    
     selected_option = st.radio(label='', options=list(initial_options.keys()))
 
     if st.button("Proceed") or st.session_state.questions_initialized:

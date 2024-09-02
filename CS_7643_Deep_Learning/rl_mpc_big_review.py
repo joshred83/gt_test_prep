@@ -1,22 +1,32 @@
 import streamlit as st
 from .rl_states import Token
 
-# Define the list of chapters 
-chapters = [
-    'L1 - What is Network Science?',
-    'L2 - Relevant Concepts from Graph Theory',
-    'L3 - Degree Distribution and The “Friendship Paradox”',
-    'L4 - Random vs. Real Graphs and Power-Law Networks',
-    'L5 - Network Paths, Clustering and The “Small World” Property',
-    'L6 - Centrality and Network-core Metrics and Algorithms',
-    'L7 - Modularity and Community Detection',
-    'L8 - Advanced Topics in Community Detection',
-    'L9 - Spreading Phenomena on Networks and Epidemics',
-    'L10 - Social Influence and Other Network Contagion Phenomena',
-    'L11 - Other Network Dynamic Processes',
-    'L12 - Network Modeling',
-    'L13 - Statistical Analysis of Network Data',
-    'L14 - Machine Learning in Network'
+# Define the list of lessons as per the image
+lessons = [
+    'Lesson 1: Linear Classifiers and Gradient Descent',
+    'Lesson 2: Neural Networks',
+    'Lesson 3: Optimization of Deep Neural Networks',
+    'Lesson 4: Data Wrangling',
+    'Lesson 5: Convolution and Pooling Layers',
+    'Lesson 6: Convolutional Neural Networks',
+    'Lesson 7: Visualization',
+    'Lesson 8: Scalable Training',
+    'Lesson 9: Advanced Computer Vision Applications',
+    'Lesson 10: Responsible AI and Bias and Fairness',
+    'Lesson 11: Introduction to Structured Data',
+    'Lesson 12: Language Models',
+    'Lesson 13: Embeddings',
+    'Lesson 14: Neural Attention Models',
+    'Lesson 15: Neural Machine Translation',
+    'Lesson 16: Advanced Topics: Translation',
+    'Lesson 17: Deep Reinforcement Learning',
+    'Lesson 18: Unsupervised and Semi-Supervised Learning',
+    'Lesson 19: Generative Models'
+]
+
+lessons = [
+    'Lesson 1: Linear Classifiers and Gradient Descent',
+    'Lesson 2: Neural Networks',
 ]
 
 # Custom CSS to inject into the Streamlit app for styling
@@ -36,19 +46,19 @@ def question_generator(label, options, question_key):
     question = st.radio(label='Please select the correct answer', options=options, key=question_key)
     return question
 
-# Function to create checkboxes for chapters
-def create_checkboxes(chapters, columns=2, preselected=None):
+# Function to create checkboxes for lessons
+def create_checkboxes(lessons, columns=2, preselected=None):
     if preselected is None:
         preselected = []
-    selected_chapters = []
+    selected_lessons = []
     cols = st.columns(columns)
-    for index, chapter in enumerate(chapters):
+    for index, lesson in enumerate(lessons):
         col = cols[index % columns]
-        # Preselect specified chapters by setting the value parameter to True if the chapter is in the preselected list
-        is_selected = col.checkbox(chapter, key=chapter, value=chapter in preselected)
+        # Preselect specified lessons by setting the value parameter to True if the lesson is in the preselected list
+        is_selected = col.checkbox(lesson, key=lesson, value=lesson in preselected)
         if is_selected:
-            selected_chapters.append(index)  # Add zero-based index
-    return selected_chapters
+            selected_lessons.append(index)  # Add zero-based index
+    return selected_lessons
 
 def big_review():
     # Ensure the token is initialized with state 'all'
@@ -56,14 +66,14 @@ def big_review():
         st.session_state.token = Token(STATE='all')
         st.session_state.questions_initialized = False
 
-    # Display chapters for review with checkboxes
-    st.title("Select Chapters for Review")
-    preselected_chapters = []  # List any chapters you want to preselect if needed
-    selected_chapters = create_checkboxes(chapters, preselected=preselected_chapters)
+    # Display lessons for review with checkboxes
+    st.title("Select Lessons for Review")
+    preselected_lessons = []  # List any lessons you want to preselect if needed
+    selected_lessons = create_checkboxes(lessons, preselected=preselected_lessons)
 
-    if st.button('Submit Chapters') or st.session_state.questions_initialized:
+    if st.button('Submit Lessons') or st.session_state.questions_initialized:
         if not st.session_state.questions_initialized:
-            st.session_state.token.chapters_to_review = [index for index in selected_chapters]
+            st.session_state.token.chapters_to_review = [index for index in selected_lessons]
             st.session_state.token.initialize_mpc_questions()
             st.session_state.questions = st.session_state.token.mpc_questions
             st.session_state.questions_initialized = True

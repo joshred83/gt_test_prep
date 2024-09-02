@@ -18,6 +18,12 @@ chapters = [
     'L13 - Statistical Analysis of Network Data',
     'L14 - Machine Learning in Network'
 ]
+chapters = [
+    'L1 - What is Network Science?',
+    'L2 - Relevant Concepts from Graph Theory',
+
+]
+
 
 # Custom CSS to inject into the Streamlit app for styling
 st.markdown(
