@@ -23,8 +23,8 @@ Or check out my other review apps for:
 - [ISYE 6501 Introduction to Analytics Modeling](https://isye6501test-prep.streamlit.app/)
 - [MGT 6203 Analytics for Business](https://mgt-6203-mt-study-aid.streamlit.app/)
 - [ISYE 6740 Computational Data Analytics](https://www.google.com)
-- [CS 7643 Deep Learning](https://www.google.com)
-- [CS 7280 Network Science Review App](https://www.google.com)
+- [CS 7643 Deep Learning](https://deep-learning-practice.streamlit.app/)
+- [CS 7280 Network Science Review App](https://network-science-review.streamlit.app/)
     """)
 
 def chapter_review():

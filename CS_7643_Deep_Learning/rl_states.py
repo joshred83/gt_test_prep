@@ -27,7 +27,7 @@ class Token():
                 self.chapters_to_review = [0,1]
             self.mpc_questions = []
             while len(self.mpc_questions)<self.num_questions :
-                chapters = np.random.choice(self.chapters_to_review, size=len(self.chapters_to_review), replace=True)
+                chapters = np.random.choice(self.chapters_to_review, size=len(self.chapters_to_review), replace=False)
                 for chapter in chapters:
                     list_length = len(all[chapter])
                     mpc_idx = np.random.choice(range(list_length), size=1, replace=False)
