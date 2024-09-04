@@ -1,5 +1,5 @@
 import streamlit as st
-from .rl_states import Token
+from .dl_states import Token
 
 def apply_custom_css():
     custom_css = """
@@ -29,8 +29,10 @@ def sa_questions():
     # Use the lesson names from the provided image
     initial_options = {
         "Lesson 1: Linear Classifiers and Gradient Descent": '1', 
-        "Lesson 2: Neural Networks": '2'
+        "Lesson 2: Neural Networks": '2',
+        "Lesson 3: Optimization of Deep Neural Networks": '3',
     }
+    
     topics = {
         "Lesson 1: Linear Classifiers and Gradient Descent": '1',
         "Lesson 2: Neural Networks": '2',

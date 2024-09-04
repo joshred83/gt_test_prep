@@ -1,5 +1,5 @@
 import streamlit as st
-from CS_7643_Deep_Learning import rl_mpc_big_review, rl_mpc_page1, rl_states
+from CS_7643_Deep_Learning import dl_states, rl_mpc_big_review, rl_mpc_page1
 
 def intro():
     st.write("# CS 7643 Deep Learning Science Review App")
@@ -25,7 +25,8 @@ Check out my other review apps for:
 - [ISYE 6740 Computational Data Analytics](https://www.google.com)
 - [CS 7643 Deep Learning](https://deep-learning-practice.streamlit.app/)
 - [CS 7280 Network Science Review App](https://network-science-review.streamlit.app/)
-    """)
+    """
+    )
 
 def chapter_review():
     st.markdown("# Chapter Review")

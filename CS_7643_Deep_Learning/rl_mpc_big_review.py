@@ -1,5 +1,5 @@
 import streamlit as st
-from .rl_states import Token
+from .dl_states import Token
 
 # Define the list of lessons as per the image
 lessons = [
@@ -27,6 +27,7 @@ lessons = [
 lessons = [
     'Lesson 1: Linear Classifiers and Gradient Descent',
     'Lesson 2: Neural Networks',
+    'Lesson 3: Optimization of Deep Neural Networks',
 ]
 
 # Custom CSS to inject into the Streamlit app for styling

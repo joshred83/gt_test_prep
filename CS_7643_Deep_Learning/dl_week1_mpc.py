@@ -559,18 +559,18 @@ deep_learning_probability_question_7 = {
     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
 }
 
-deep_learning_probability_question_8 = {
-    'question': "Let X be a continuous random variable with probability density function f(x) = 2x for 0 ≤ x ≤ 1. What is the expected value E[X]?",
-    'options_list': [
-        '1/2',
-        '1/3',
-        '2/3',
-        '1/4'
-    ],
-    'correct_answer': '2/3',
-    'explanation': "The expected value E[X] = ∫xf(x)dx. Substituting f(x) = 2x and integrating over the interval [0, 1] gives E[X] = 2/3.",
-    'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
-}
+# deep_learning_probability_question_8 = {
+#     'question': "Let X be a continuous random variable with probability density function f(x) = 2x for 0 ≤ x ≤ 1. What is the expected value E[X]?",
+#     'options_list': [
+#         '1/2',
+#         '1/3',
+#         '2/3',
+#         '1/4'
+#     ],
+#     'correct_answer': '2/3',
+#     'explanation': "The expected value E[X] = ∫xf(x)dx. Substituting f(x) = 2x and integrating over the interval [0, 1] gives E[X] = 2/3.",
+#     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
+# }
 
 deep_learning_probability_question_9 = {
     'question': "Suppose you have a biased coin where the probability of heads is unknown. You start with a prior belief that P(Heads) follows a Beta distribution with parameters α=2 and β=2. After observing 3 heads and 1 tail, what is the posterior distribution of P(Heads)?",
@@ -598,22 +598,22 @@ deep_learning_probability_question_10 = {
     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
 }
 
-deep_learning_probability_question_11 = {
-    'question': "Consider a Markov chain with three states A, B, and C. The transition matrix is given by: \n"
-                "[[0.2, 0.6, 0.2],\n"
-                "[0.5, 0.4, 0.1],\n"
-                "[0.3, 0.3, 0.4]]. \n"
-                "What is the probability of transitioning from state A to state C in two steps?",
-    'options_list': [
-        '0.18',
-        '0.24',
-        '0.28',
-        '0.32'
-    ],
-    'correct_answer': '0.18',
-    'explanation': "The two-step transition probability is the (1,3) entry of the squared transition matrix. Calculating the square gives a (1,3) entry of 0.18.",
-    'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
-}
+# deep_learning_probability_question_11 = {
+#     'question': "Consider a Markov chain with three states A, B, and C. The transition matrix is given by: \n"
+#                 "[[0.2, 0.6, 0.2],\n"
+#                 "[0.5, 0.4, 0.1],\n"
+#                 "[0.3, 0.3, 0.4]]. \n"
+#                 "What is the probability of transitioning from state A to state C in two steps?",
+#     'options_list': [
+#         '0.18',
+#         '0.24',
+#         '0.28',
+#         '0.32'
+#     ],
+#     'correct_answer': '0.18',
+#     'explanation': "The two-step transition probability is the (1,3) entry of the squared transition matrix. Calculating the square gives a (1,3) entry of 0.18.",
+#     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
+# }
 
 deep_learning_probability_question_12 = {
     'question': "Given a Markov chain with states S1, S2, S3, and transition probabilities P(S1 -> S2) = 0.4, P(S2 -> S3) = 0.5, and P(S3 -> S1) = 0.7. If the process starts in state S1, what is the probability that it returns to S1 after 3 steps?",
@@ -654,8 +654,36 @@ deep_learning_probability_question_14 = {
     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
 }
 
+# deep_learning_probability_question_15 = {
+#     'question': "You have a discrete random variable X with the following probability distribution: P(X=1) = 0.1, P(X=2) = 0.3, P(X=3) = 0.4, P(X=4) = 0.2. Calculate the entropy H(X) in bits.",
+#     'options_list': [
+#         '1.72',
+#         '1.85',
+#         '2.00',
+#         '2.15'
+#     ],
+#     'correct_answer': '1.85',
+#     'explanation': "The entropy H(X) is calculated as -ΣP(x)log2(P(x)). Substituting the values and summing yields H(X) ≈ 1.85 bits.",
+#     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
+# }
+
+# deep_learning_probability_question_16 = {
+#     'question': "Consider two random variables X and Y, where P(X=1) = 0.6, P(X=2) = 0.4, and P(Y=1|X=1) = 0.8, P(Y=1|X=2) = 0.3. Compute the conditional entropy H(Y|X).",
+#     'options_list': [
+#         '0.52',
+#         '0.67',
+#         '0.89',
+#         '1.05'
+#     ],
+#     'correct_answer': '0.67',
+#     'explanation': "The conditional entropy H(Y|X) = ΣP(X=x)H(Y|X=x). Calculating the individual entropies and summing them gives H(Y|X) ≈ 0.67.",
+#     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
+# }
+
+
+
 deep_learning_probability_question_15 = {
-    'question': "You have a discrete random variable X with the following probability distribution: P(X=1) = 0.1, P(X=2) = 0.3, P(X=3) = 0.4, P(X=4) = 0.2. Calculate the entropy H(X) in bits.",
+    'question': "You have a discrete random variable $X$ with the following probability distribution: $P(X=1) = 0.1$, $P(X=2) = 0.3$, $P(X=3) = 0.4$, $P(X=4) = 0.2$. Calculate the entropy $H(X)$ in bits.",
     'options_list': [
         '1.72',
         '1.85',
@@ -663,12 +691,12 @@ deep_learning_probability_question_15 = {
         '2.15'
     ],
     'correct_answer': '1.85',
-    'explanation': "The entropy H(X) is calculated as -ΣP(x)log2(P(x)). Substituting the values and summing yields H(X) ≈ 1.85 bits.",
+    'explanation': "The entropy $H(X)$ is calculated as $-\\sum P(x) \\log_2(P(x))$. Substituting the values and summing yields $H(X) \\approx 1.85$ bits.",
     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
 }
 
 deep_learning_probability_question_16 = {
-    'question': "Consider two random variables X and Y, where P(X=1) = 0.6, P(X=2) = 0.4, and P(Y=1|X=1) = 0.8, P(Y=1|X=2) = 0.3. Compute the conditional entropy H(Y|X).",
+    'question': "Consider two random variables $X$ and $Y$, where $P(X=1) = 0.6$, $P(X=2) = 0.4$, and $P(Y=1|X=1) = 0.8$, $P(Y=1|X=2) = 0.3$. Compute the conditional entropy $H(Y|X)$.",
     'options_list': [
         '0.52',
         '0.67',
@@ -676,13 +704,39 @@ deep_learning_probability_question_16 = {
         '1.05'
     ],
     'correct_answer': '0.67',
-    'explanation': "The conditional entropy H(Y|X) = ΣP(X=x)H(Y|X=x). Calculating the individual entropies and summing them gives H(Y|X) ≈ 0.67.",
+    'explanation': "The conditional entropy $H(Y|X) = \\sum P(X=x)H(Y|X=x)$. Calculating the individual entropies and summing them gives $H(Y|X) \\approx 0.67$.",
     'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
 }
 
+deep_learning_probability_question_11 = {
+    'question': "Consider a Markov chain with three states A, B, and C. The transition matrix is given by: \n"
+                "[[0.2, 0.6, 0.2],\n"
+                "[0.5, 0.4, 0.1],\n"
+                "[0.3, 0.3, 0.4]]. \n"
+                "What is the probability of transitioning from state A to state C in two steps?",
+    'options_list': [
+        '0.18',
+        '0.24',
+        '0.28',
+        '0.32'
+    ],
+    'correct_answer': '0.18',
+    'explanation': "The two-step transition probability is the (1,3) entry of the squared transition matrix. Calculating the square gives a (1,3) entry of 0.18.",
+    'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
+}
 
-
-
+deep_learning_probability_question_8 = {
+    'question': "Let $X$ be a continuous random variable with probability density function $f(x) = 2x$ for $0 \\leq x \\leq 1$. What is the expected value $E[X]$?",
+    'options_list': [
+        '1/2',
+        '1/3',
+        '2/3',
+        '1/4'
+    ],
+    'correct_answer': '2/3',
+    'explanation': "The expected value $E[X] = \\int_0^1 x f(x) dx$. Substituting $f(x) = 2x$ and integrating over the interval [0, 1] gives $E[X] = 2/3$.",
+    'chapter_information': 'Deep Learning Book: Chapter 3 - Probability'
+}
 
 
 KC_MPC_QUESTIONS = []
