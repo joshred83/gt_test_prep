@@ -100,6 +100,10 @@ def big_review():
                     st.session_state.submitted_answers = {}
 
                 st.session_state.submitted_answers[question_key] = question
+                print('question', question)
+                print(correct_answer, 'corect')
+                if question not in ['True', 'False']: question = question[0]
+            
 
                 if question == correct_answer:
                     st.success('Great work!')
