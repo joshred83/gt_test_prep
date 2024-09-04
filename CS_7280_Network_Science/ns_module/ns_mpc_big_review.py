@@ -84,10 +84,12 @@ def big_review():
             explanation = q['explanation']
 
             st.markdown('-------------------------------')
-            st.markdown(f'<div class="question-style">{label}</div>', unsafe_allow_html=True)
+            # Use st.markdown to render the question, allowing LaTeX and markdown formatting
+            st.markdown(f"**{label}**")
 
             question = question_generator(label, options, question_key)
 
+            # Store submitted answers in session state
             if st.button('Submit', key=f"submit_{i}"):
                 if 'submitted_answers' not in st.session_state:
                     st.session_state.submitted_answers = {}
@@ -103,6 +105,7 @@ def big_review():
 
                 if 'chapter_information' in q:
                     st.write(f"You can review {q['chapter_information']}")
+
 
 if __name__ == "__main__":
     big_review()

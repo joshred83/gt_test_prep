@@ -18,7 +18,7 @@ class Token():
         self.mpc_questions = []
         self.picture_questions = None
         self.islr_questions = None
-        self.num_questions = 5
+        self.num_questions = 10
         self.chapters_to_review = None
         # self.image = None
 
@@ -26,7 +26,7 @@ class Token():
         # self.STATE = 'review'
         if self.STATE == 'all':
             if self.chapters_to_review is None:
-                self.chapters_to_review = [0,1]
+                self.chapters_to_review = [0,1,2]
             self.mpc_questions = []
             while len(self.mpc_questions)<self.num_questions :
                 chapters = np.random.choice(self.chapters_to_review, size=len(self.chapters_to_review), replace=False)

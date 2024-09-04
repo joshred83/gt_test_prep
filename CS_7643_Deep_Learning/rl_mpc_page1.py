@@ -66,7 +66,6 @@ def sa_questions():
             st.session_state.questions_initialized = True
 
         questions = st.session_state.questions
-
         for i, q in enumerate(questions, start=0):
             label = q['question']
             options = q['options_list']
@@ -75,7 +74,8 @@ def sa_questions():
             explanation = q['explanation']
 
             st.markdown('-------------------------------')
-            st.markdown(f'<div class="question-style">{label}</div>', unsafe_allow_html=True)
+            # Directly use st.markdown for the question text, allowing LaTeX to render
+            st.markdown(f"**{label}**")
 
             question = question_generator(label, options, question_key)
 
@@ -89,6 +89,8 @@ def sa_questions():
 
                 if 'chapter_information' in q:
                     st.write(f"You can review {q['chapter_information']}")
+            
+
 
 if __name__ == "__main__":
     sa_questions()
