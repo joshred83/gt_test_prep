@@ -38,7 +38,8 @@ def big_review():
         for i, q in enumerate(questions, start=0):
             label = q['question']
             options = q['options_list']
-            correct_answer = q['correct_answer']
+            correct_answer_letter = q['correct_answer']  # Correct answer stored as 'A', 'B', 'C', 'D'
+            correct_answer = options[ord(correct_answer_letter) - ord('A')]  
             question_key = f"question_{i}"
             explanation = q['explanation']
 
