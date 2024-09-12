@@ -29,8 +29,7 @@ Check out my other review apps for:
 - [ISYE 6740 Computational Data Analytics](https://www.google.com)
 - [CS 7643 Deep Learning](https://deep-learning-practice.streamlit.app/)
 - [CS 7280 Network Science Review App](https://network-science-review.streamlit.app/)
-    """
-    )
+    """)
 
 def chapter_review():
     st.markdown("# Chapter Review")
@@ -43,6 +42,7 @@ def big_review():
     dl_mpc_big_review.big_review()
 
 def reset_or_initialize_state():
+    # Reset any specific state variables related to the review types
     keys_to_delete = ['token', 'chapter_review_state', 'big_review_state']
     for key in keys_to_delete:
         if key in st.session_state:
@@ -54,16 +54,17 @@ page_names_to_funcs = {
     "Big Review": big_review
 }
 
+# Initialize session state for selected demo
 if 'current_demo' not in st.session_state:
     st.session_state['current_demo'] = None
 
 # Sidebar selection box
 demo_name = st.sidebar.selectbox("Choose Review Type", list(page_names_to_funcs.keys()), index=0)
 
-# Check if the demo has changed
+# Check if the demo selection has changed
 if st.session_state['current_demo'] != demo_name:
     st.session_state['current_demo'] = demo_name  # Update the current demo
-    reset_or_initialize_state()  # Reset or initialize state based on new demo
+    reset_or_initialize_state()  # Reset or initialize state based on new selection
 
 # Dynamically call the selected demo function
 if demo_name in page_names_to_funcs:
