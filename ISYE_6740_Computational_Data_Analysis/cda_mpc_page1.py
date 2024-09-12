@@ -26,35 +26,35 @@ def sa_questions():
 
     st.markdown("### Please select a topic to proceed:")
     
-    # Use the lesson names from the provided image
+    # Updated lesson names based on the images and instructions
     initial_options = {
-        "Lesson 1: Linear Classifiers and Gradient Descent": '1', 
-        "Lesson 2: Neural Networks": '2',
-        "Lesson 3: Optimization of Deep Neural Networks": '3',
-        "Lesson 4: Data Wrangling": '4',
-        "Lesson 5: Convolution and Pooling Layers": '5',
+        "Lecture 1: Introduction": '1',
+        "Lecture 2: Clustering, K-means": '2',
+        "Lecture 3: Spectral Clustering": '3',
+        "Lecture 4: PCA": '4',
+        "Lecture 5: Nonlinear Dimensionality Reduction (ISOMAP)": '5',
+        "Lecture 6: Density Estimation": '6',
+        "Lecture 7: Gaussian Mixture Models": '7',
+        "Lecture 8: Basic Optimization": '8',
+        "Lecture 9: Classification": '9',
+        "Lecture 10: SVM": '10',
+        "Lecture 11: Neural Networks": '11',
+        "Lecture 12: Feature Selection": '12',
+        "Lecture 13: Anomaly Detection": '13',
+        "Lecture 14: Boosting": '14',
+        "Lecture 15: Random Forest": '15',
+        "Lecture 16: Bias-Variance Tradeoff": '16',
+        "Lecture 17: Kernel Methods": '17',
+        "Lecture 18: Introduction to Reinforcement Learning": '18',
+        "Lecture 19: Final Review": '19'
     }
     
-    topics = {
-        "Lesson 1: Linear Classifiers and Gradient Descent": '1',
-        "Lesson 2: Neural Networks": '2',
-        "Lesson 3: Optimization of Deep Neural Networks": '3',
-        "Lesson 4: Data Wrangling": '4',
-        "Lesson 5: Convolution and Pooling Layers": '5',
-        "Lesson 6: Convolutional Neural Networks": '6',
-        "Lesson 7: Visualization": '7',
-        "Lesson 8: Scalable Training": '8',
-        "Lesson 9: Advanced Computer Vision and Applications": '9',
-        "Lesson 10: Responsible AI and Bias and Fairness": '10',
-        "Lesson 11: Introduction to Structured Data": '11',
-        "Lesson 12: Language Models": '12',
-        "Lesson 13: Embeddings": '13',
-        "Lesson 14: Neural Attention Models": '14',
-        "Lesson 15: Neural Machine Translation": '15',
-        "Lesson 16: Advanced Topics: Translation": '16',
-        "Lesson 17: Deep Reinforcement Learning": '17',
-        "Lesson 18: Unsupervised and Semi-Supervised Learning": '18',
-        "Lesson 19: Generative Models": '19'
+    initial_options = {
+        "Lecture 1: Introduction": '1',
+        "Lecture 2: Clustering, K-means": '2',
+        "Lecture 3: Spectral Clustering": '3',
+        "Lecture 4: PCA": '4',
+        "Lecture 5: Nonlinear Dimensionality Reduction (ISOMAP)": '5',
     }
     
     selected_option = st.radio(label='', options=list(initial_options.keys()))
@@ -71,11 +71,17 @@ def sa_questions():
         for i, q in enumerate(questions, start=0):
             label = q['question']
             options = q['options_list']
-            if q['correct_answer'] in ['True', 'False']:
-                correct_answer = q['correct_answer']
-            if q['correct_answer'] not in ['True', 'False']:
-                correct_answer_letter = q['correct_answer']  
-                correct_answer = options[ord(correct_answer_letter) - ord('A')]  
+            # Correct answer handling
+            correct_answer = q['correct_answer']
+            
+            # If the correct answer is 'True' or 'False', keep it as it is
+            if correct_answer in ['True', 'False']:
+                correct_answer = correct_answer
+            
+            # If the correct answer is a single letter ('A', 'B', 'C', or 'D'), convert it to the corresponding option
+            elif correct_answer[0] in ['A', 'B', 'C', 'D'] and len(correct_answer) == 1:
+                correct_answer_letter = correct_answer
+                correct_answer = options[ord(correct_answer_letter) - ord('A')]
             question_key = f"question_{i}"
             explanation = q['explanation']
 
@@ -95,7 +101,6 @@ def sa_questions():
 
                 if 'chapter_information' in q:
                     st.write(f"You can review {q['chapter_information']}")
-            
 
 
 if __name__ == "__main__":

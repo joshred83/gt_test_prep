@@ -1,29 +1,30 @@
 import streamlit as st
 from .cda_states import Token
 
-# Define the list of chapters 
+# Define the list of chapters based on the provided topics
 chapters = [
-    'L1 - What is Network Science?',
-    'L2 - Relevant Concepts from Graph Theory',
-    'L3 - Degree Distribution and The “Friendship Paradox”',
-    'L4 - Random vs. Real Graphs and Power-Law Networks',
-    'L5 - Network Paths, Clustering and The “Small World” Property',
-    'L6 - Centrality and Network-core Metrics and Algorithms',
-    'L7 - Modularity and Community Detection',
-    'L8 - Advanced Topics in Community Detection',
-    'L9 - Spreading Phenomena on Networks and Epidemics',
-    'L10 - Social Influence and Other Network Contagion Phenomena',
-    'L11 - Other Network Dynamic Processes',
-    'L12 - Network Modeling',
-    'L13 - Statistical Analysis of Network Data',
-    'L14 - Machine Learning in Network'
-]
-chapters = [
-    'L1 - What is Network Science?',
-    'L2 - Relevant Concepts from Graph Theory',
-
+    'Week 1: Introduction and Overview, Clustering and k-means',
+    'Week 2: Spectral Clustering',
+    'Week 3: Dimensionality Reduction and PCA',
+    'Week 4: Nonlinear Dimensionality Reduction',
+    'Week 5: Density Estimation',
+    'Week 6: Gaussian Mixture Model and EM Algorithm',
+    'Week 7: Basic of Optimization Theory',
+    'Week 8: Classification Naïve Bayes and Logistic Regression',
+    'Week 9: Support Vector Machine (SVM), Neural Networks',
+    'Week 10: Feature Selection and Anomaly Detection',
+    'Week 11: Boosting Algorithms and AdaBoost',
+    'Week 12: Random Forest',
+    'Week 13: Bias-Variance Tradeoff and Cross-Validation'
 ]
 
+# Mapping weeks to their respective chapter indices
+week_to_chapter_indices = {
+    'Week 1': [0, 1],  # Week 1 corresponds to chapters at indices 1 & 2
+    'Week 2': [2],     # Week 2 corresponds to chapter at index 3
+    'Week 3': [3],     # Week 3 corresponds to chapter at index 4
+    'Week 4': [4]      # Week 4 corresponds to chapter at index 5
+}
 
 # Custom CSS to inject into the Streamlit app for styling
 st.markdown(
@@ -43,17 +44,19 @@ def question_generator(label, options, question_key):
     return question
 
 # Function to create checkboxes for chapters
-def create_checkboxes(chapters, columns=2, preselected=None):
+def create_checkboxes(week_to_chapter_indices, chapters, columns=2, preselected=None):
     if preselected is None:
         preselected = []
     selected_chapters = []
     cols = st.columns(columns)
-    for index, chapter in enumerate(chapters):
-        col = cols[index % columns]
-        # Preselect specified chapters by setting the value parameter to True if the chapter is in the preselected list
-        is_selected = col.checkbox(chapter, key=chapter, value=chapter in preselected)
+    
+    # Loop over each week and its corresponding chapter indices
+    for week, chapter_indices in week_to_chapter_indices.items():
+        col = cols[list(week_to_chapter_indices.keys()).index(week) % columns]
+        is_selected = col.checkbox(week, key=week, value=week in preselected)
         if is_selected:
-            selected_chapters.append(index)  # Add zero-based index
+            # Append all the chapters corresponding to the selected week
+            selected_chapters.extend(chapter_indices)
     return selected_chapters
 
 def big_review():
@@ -63,13 +66,13 @@ def big_review():
         st.session_state.questions_initialized = False
 
     # Display chapters for review with checkboxes
-    st.title("Select Chapters for Review")
-    preselected_chapters = []  # List any chapters you want to preselect if needed
-    selected_chapters = create_checkboxes(chapters, preselected=preselected_chapters)
+    st.title("Select Weeks for Review")
+    preselected_weeks = []  # List any weeks you want to preselect if needed
+    selected_chapter_indices = create_checkboxes(week_to_chapter_indices, chapters, preselected=preselected_weeks)
 
     if st.button('Submit Chapters') or st.session_state.questions_initialized:
         if not st.session_state.questions_initialized:
-            st.session_state.token.chapters_to_review = [index for index in selected_chapters]
+            st.session_state.token.chapters_to_review = [index for index in selected_chapter_indices]
             st.session_state.token.initialize_mpc_questions()
             st.session_state.questions = st.session_state.token.mpc_questions
             st.session_state.questions_initialized = True
@@ -79,11 +82,17 @@ def big_review():
         for i, q in enumerate(questions, start=0):
             label = q['question']
             options = q['options_list']
-            if q['correct_answer'] in ['True', 'False']:
-                correct_answer = q['correct_answer']
-            if q['correct_answer'] not in ['True', 'False']:
-                correct_answer_letter = q['correct_answer']  
-                correct_answer = options[ord(correct_answer_letter) - ord('A')]  
+            # Correct answer handling
+            correct_answer = q['correct_answer']
+            
+            # If the correct answer is 'True' or 'False', keep it as it is
+            if correct_answer in ['True', 'False']:
+                correct_answer = correct_answer
+            
+            # If the correct answer is a single letter ('A', 'B', 'C', or 'D'), convert it to the corresponding option
+            elif correct_answer[0] in ['A', 'B', 'C', 'D'] and len(correct_answer) == 1:
+                correct_answer_letter = correct_answer
+                correct_answer = options[ord(correct_answer_letter) - ord('A')]
             question_key = f"question_{i}"
             explanation = q['explanation']
 
@@ -109,7 +118,6 @@ def big_review():
 
                 if 'chapter_information' in q:
                     st.write(f"You can review {q['chapter_information']}")
-
 
 if __name__ == "__main__":
     big_review()

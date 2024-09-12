@@ -147,8 +147,7 @@ module_2_lecture_notes_question_12 = {
         'By moving them to the geometric median of the assigned data points',
         'By calculating the average of all data points assigned to each cluster',
         'By randomly selecting new data points',
-        'By minimizing the sum of squared distances between data points and the centroid'
-    ],
+        'By minimizing the sum of squared distances between data points and the centroid'],
     'correct_answer': 'By calculating the average of all data points assigned to each cluster',
     'explanation': "During each iteration of K-means, the centroids are adjusted by calculating the average (mean) of all data points assigned to each cluster, moving the centroid to this new position.",
     'chapter_information': 'Module 2 Lecture Notes'
@@ -157,7 +156,7 @@ module_2_lecture_notes_question_12 = {
 module_2_lecture_notes_question_13 = {
     'question': "Which property of the K-means algorithm ensures that it will eventually terminate?",
     'options_list': [
-        'The algorithm's use of Euclidean distance',
+        "The algorithm's use of Euclidean distance",
         'The finite number of possible data point assignments',
         'The ability to find the global minimum',
         'The use of non-linear optimization techniques'

@@ -38,12 +38,17 @@ def big_review():
         for i, q in enumerate(questions, start=0):
             label = q['question']
             options = q['options_list']
-            # if q['correct_answer'] in ['True', 'False']:
-            #     correct_answer = q['correct_answer']
-            # if q['correct_answer'] not in ['True', 'False']:
-            #     correct_answer_letter = q['correct_answer']  
-            #     correct_answer = options[ord(correct_answer_letter) - ord('A')]  
+            # Correct answer handling
             correct_answer = q['correct_answer']
+            
+            # If the correct answer is 'True' or 'False', keep it as it is
+            if correct_answer in ['True', 'False']:
+                correct_answer = correct_answer
+            
+            # If the correct answer is a single letter ('A', 'B', 'C', or 'D'), convert it to the corresponding option
+            elif correct_answer[0] in ['A', 'B', 'C', 'D'] and len(correct_answer) == 1:
+                correct_answer_letter = correct_answer
+                correct_answer = options[ord(correct_answer_letter) - ord('A')]
             question_key = f"question_{i}"
             explanation = q['explanation']
 
