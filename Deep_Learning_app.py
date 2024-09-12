@@ -1,5 +1,5 @@
 import streamlit as st
-from CS_7643_Deep_Learning import dl_states, rl_mpc_big_review, rl_mpc_page1
+from CS_7643_Deep_Learning import dl_mpc_big_review, dl_mpc_page1, dl_states
 
 def intro():
     st.write("# CS 7643 Deep Learning Science Review App")
@@ -17,6 +17,10 @@ I began creating tools like this because I believe that actively recalling infor
 - [Monzersaleh Lecture Notes](https://monzersaleh.github.io/GeorgiaTech/CS7643_DeepLearning.html)
 - [Course Book: Deep Learning Book, 2016](https://www.deeplearningbook.org/)
 - [Official Course Website](https://omscs.gatech.edu/cs-7643-deep-learning)
+- [NYU Deep Learning (Yann LeCun) - YouTube](https://www.youtube.com/watch?v=mTtDfKgLm54&list=PLLHTzKZzVU9e6xUfG10TkTWApKSZCzuBI)
+- [University of Michigan Deep Learning for Computer Vision - YouTube](https://www.youtube.com/watch?v=dJYGatp4SvA&list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r)
+- [Deep Learning Book Lecture Series - YouTube](https://www.youtube.com/playlist?list=PLbBjZEwyU7W1CDs3Vx_GOJ9b3EgYQB3GE)
+- [3Blue1Brown Neural Network Series - YouTube](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
 - [Lecture Transcripts](https://docs.google.com/document/d/1pDB-TrvQU5plKyQM54X_VYztze5gRpjz/edit?usp=sharing&ouid=105353834096756704207&rtpof=true&sd=true)
 
 Check out my other review apps for:
@@ -31,12 +35,12 @@ Check out my other review apps for:
 def chapter_review():
     st.markdown("# Chapter Review")
     st.write('Select chapters to review and answer questions.')
-    rl_mpc_page1.sa_questions()
+    dl_mpc_page1.sa_questions()
 
 def big_review():
     st.markdown("# Big Review")
     st.write('Comprehensive review with selectable chapters.')
-    rl_mpc_big_review.big_review()
+    dl_mpc_big_review.big_review()
 
 def reset_or_initialize_state():
     keys_to_delete = ['token', 'chapter_review_state', 'big_review_state']

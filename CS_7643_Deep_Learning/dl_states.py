@@ -1,6 +1,6 @@
 import numpy as np
 from .dl_week1_mpc import WEEK_1_MPC
-from .rl_week2_mpc import WEEK_2_MPC
+from .dl_week2_mpc import WEEK_2_MPC
 from .dl_week3_mpc import WEEK_3_MPC
 
 ############################

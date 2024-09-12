@@ -1242,6 +1242,980 @@ lesson_3_5_regularization_mpc_question_5 = {
     'chapter_information': 'Lesson 3.5: Regularization, Section 4: Why Dropout Works'
 }
 
+deep_learning_book_9_1_mpc_question_1 = {
+    'question': "What is the mathematical relationship between convolution and cross-correlation as described in the text?",
+    'options_list': [
+        "A) They are identical operations",
+        "B) Cross-correlation flips the kernel, convolution does not",
+        "C) Convolution flips the kernel, cross-correlation does not",
+        "D) They are inverse operations of each other"
+    ],
+    'correct_answer': 'C',
+    'explanation': "Convolution involves flipping the kernel before applying it to the input, while cross-correlation applies the kernel directly without flipping. Both operations are often referred to as 'convolution' in machine learning libraries.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_mpc_question_2 = {
+    'question': "Which of the following matrix types corresponds to 2D discrete convolution?",
+    'options_list': [
+        "A) Toeplitz matrix",
+        "B) Circulant matrix",
+        "C) Doubly block circulant matrix",
+        "D) Sparse matrix"
+    ],
+    'correct_answer': 'C',
+    'explanation': "In two dimensions, 2D convolution corresponds to a doubly block circulant matrix, which captures the structure of shifting blocks across the input.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_mpc_question_3 = {
+    'question': "According to the text, why do many machine learning libraries implement cross-correlation but call it convolution?",
+    'options_list': [
+        "A) It's mathematically more accurate",
+        "B) It's computationally more efficient",
+        "C) It's a common convention in the field",
+        "D) The difference is irrelevant for neural networks"
+    ],
+    'correct_answer': 'C',
+    'explanation': "Many machine learning libraries use cross-correlation but call it convolution because it has become a common convention, despite the technical difference.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_mpc_question_4 = {
+    'question': "What property of convolution arises from flipping the kernel relative to the input?",
+    'options_list': [
+        "A) Associativity",
+        "B) Distributivity",
+        "C) Commutativity",
+        "D) Transitivity"
+    ],
+    'correct_answer': 'C',
+    'explanation': "Flipping the kernel in convolution ensures that the operation is commutative, a property that is useful in theoretical proofs but not always critical for neural network implementations.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_mpc_question_5 = {
+    'question': "What is the advantage of using convolution in neural networks, as described in the text?",
+    'options_list': [
+        "A) It allows the model to learn global patterns across the input",
+        "B) It significantly reduces the number of parameters through weight sharing",
+        "C) It makes the network non-commutative",
+        "D) It eliminates the need for dense connections between layers"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Convolution reduces the number of parameters by sharing weights across local patches, making it highly efficient for tasks like image recognition.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_tf_question_1 = {
+    'question': "Discrete convolution can always be represented as multiplication by a dense matrix.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Convolutions are typically represented by sparse matrices (such as Toeplitz or doubly block circulant matrices), as the kernel is much smaller than the input.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_tf_question_2 = {
+    'question': "The commutative property of convolution is crucial for neural network implementations.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "While the commutative property of convolution is useful in theoretical contexts, it is not crucial for neural network implementations. In practice, cross-correlation (which does not involve flipping) is often used.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_tf_question_3 = {
+    'question': "In machine learning applications, convolution is typically used with multidimensional arrays of parameters adapted by the learning algorithm.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "In deep learning, convolution is typically applied to multidimensional arrays (tensors), and the parameters (kernels) are adapted through training.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_tf_question_4 = {
+    'question': "Convolutional neural networks strictly require the use of kernel flipping to function properly.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Kernel flipping is not strictly required for convolutional neural networks. Many machine learning libraries use cross-correlation (without flipping) and still refer to it as convolution.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+deep_learning_book_9_1_tf_question_5 = {
+    'question': "The text suggests that for practical machine learning, the distinction between convolution and cross-correlation is often not critical.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "In practical machine learning applications, the distinction between convolution (with kernel flipping) and cross-correlation (without flipping) is often not critical, as the model will learn the appropriate patterns regardless.",
+    'chapter_information': 'Deep Learning Book 9.1'
+}
+
+
+deep_learning_book_9_2_9_3_mpc_question_1 = {
+    'question': "What is the primary purpose of pooling layers in convolutional neural networks?",
+    'options_list': [
+        "A) To increase the spatial dimensions of feature maps",
+        "B) To add non-linearity to the network",
+        "C) To reduce the spatial dimensions of feature maps and control overfitting",
+        "D) To perform convolution operations"
+    ],
+    'correct_answer': 'C',
+    'explanation': "Pooling layers reduce the spatial dimensions of feature maps, which helps control overfitting and reduces computational complexity in the next layers.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_mpc_question_2 = {
+    'question': "Which of the following is NOT a common type of pooling operation?",
+    'options_list': [
+        "A) Max pooling",
+        "B) Average pooling",
+        "C) Global pooling",
+        "D) Median pooling"
+    ],
+    'correct_answer': 'D',
+    'explanation': "Median pooling is not commonly used in CNNs, whereas max pooling, average pooling, and global pooling are typical pooling operations.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_mpc_question_3 = {
+    'question': "How does max pooling typically operate on a 2x2 region of a feature map?",
+    'options_list': [
+        "A) It computes the average of the 4 values",
+        "B) It selects the maximum value among the 4",
+        "C) It sums up all 4 values",
+        "D) It multiplies all 4 values together"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling selects the maximum value from the 2x2 region, which helps reduce the spatial dimensions while retaining the most prominent features.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_mpc_question_4 = {
+    'question': "What is a key benefit of pooling layers introducing spatial invariance?",
+    'options_list': [
+        "A) It allows the network to detect features regardless of their exact location",
+        "B) It increases the number of parameters in the network",
+        "C) It makes the network more sensitive to small translations",
+        "D) It expands the spatial dimensions of feature maps"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Pooling layers, especially max pooling, introduce spatial invariance by enabling the network to detect features irrespective of small translations in the input.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_tf_question_1 = {
+    'question': "Pooling layers always use a stride equal to the size of the pooling window.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Pooling layers can use a stride smaller than the pooling window, resulting in overlapping pooling regions.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_tf_question_2 = {
+    'question': "Max pooling tends to work better than average pooling for most computer vision tasks.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Max pooling is often more effective than average pooling because it captures the most prominent features in an input, which is crucial for tasks like object detection.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_tf_question_3 = {
+    'question': "Pooling layers increase the computational complexity of convolutional neural networks.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Pooling layers reduce computational complexity by downsampling the input and reducing the number of parameters for subsequent layers.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_tf_question_4 = {
+    'question': "The choice of pooling operation and pooling region size has no impact on a CNN's performance.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "The choice of pooling operation and the pooling region size can significantly affect the performance of a CNN, influencing factors such as spatial resolution and feature retention.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+deep_learning_book_9_2_9_3_tf_question_5 = {
+    'question': "Pooling layers can help make CNNs more robust to small positional changes of features in the input.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Pooling introduces spatial invariance, which helps CNNs become more robust to small positional changes in the input features.",
+    'chapter_information': 'Deep Learning Book 9.2 and 9.3'
+}
+
+
+deep_learning_book_9_4_9_5_mpc_question_1 = {
+    'question': "What does the function g(G, V, s) compute in the context of training a convolutional network?",
+    'options_list': [
+        "A) The forward pass output",
+        "B) The gradient with respect to the input",
+        "C) The gradient with respect to the kernel weights",
+        "D) The loss function"
+    ],
+    'correct_answer': 'C',
+    'explanation': "The function g(G, V, s) computes the gradient with respect to the kernel weights in the context of backpropagation during training.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_mpc_question_2 = {
+    'question': "In the equation for h(K, G, s), what does this function represent?",
+    'options_list': [
+        "A) The forward convolution operation",
+        "B) The gradient with respect to the input V",
+        "C) The gradient with respect to the kernel K",
+        "D) The transpose convolution operation"
+    ],
+    'correct_answer': 'B',
+    'explanation': "The function h(K, G, s) computes the gradient with respect to the input V, which is used for backpropagating the error in convolutional networks.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_mpc_question_3 = {
+    'question': "For a convolutional autoencoder, which function is used to perform the transpose of the convolution operation?",
+    'options_list': [
+        "A) c(K, V, s)",
+        "B) g(G, V, s)",
+        "C) h(K, G, s)",
+        "D) J(V, K)"
+    ],
+    'correct_answer': 'C',
+    'explanation': "In convolutional autoencoders, h(K, G, s) is used to perform the transpose of the convolution operation.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_mpc_question_4 = {
+    'question': "How are biases typically shared in convolutional layers?",
+    'options_list': [
+        "A) One bias per input channel",
+        "B) One bias per output channel, shared across locations",
+        "C) One unique bias for each output location",
+        "D) Biases are not used in convolutional layers"
+    ],
+    'correct_answer': 'B',
+    'explanation': "In convolutional layers, biases are typically shared across all locations for each output channel.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_tf_question_1 = {
+    'question': "The function c(K, V, s) represents the forward pass of a strided convolution operation.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The function c(K, V, s) represents the forward pass of a convolution operation with strides.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_tf_question_2 = {
+    'question': "In convolutional autoencoders, g(H, E, s) is used to compute the gradient with respect to the encoder weights.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "The function g(H, E, s) is used to compute the gradient with respect to the kernel in the decoder, not the encoder.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_tf_question_3 = {
+    'question': "Using separate biases for each output location always improves the statistical efficiency of the model.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Using separate biases for each output location may reduce the statistical efficiency of the model, though it allows the model to account for differences in image statistics at different locations.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_tf_question_4 = {
+    'question': "The equations presented in the text are for the two-dimensional, single example version of convolutional operations.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The equations presented focus on the two-dimensional, single example version of convolutional operations.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+deep_learning_book_9_4_9_5_tf_question_5 = {
+    'question': "Tiled convolution uses the same bias sharing pattern as the kernel tiling pattern.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Tiled convolution shares biases in the same pattern as the tiling of kernels across the input, ensuring consistency in parameter sharing.",
+    'chapter_information': 'Deep Learning Book 9.4 and 9.5'
+}
+
+
+deep_learning_book_9_6_9_8_mpc_question_1 = {
+    'question': "What are the three basic strategies mentioned for obtaining convolution kernels without supervised training?",
+    'options_list': [
+        "A) Random initialization, hand-designed kernels, unsupervised learning",
+        "B) Supervised learning, transfer learning, fine-tuning",
+        "C) Gradient descent, momentum, Adam optimization",
+        "D) Data augmentation, regularization, early stopping"
+    ],
+    'correct_answer': 'A',
+    'explanation': "The text mentions three strategies for obtaining convolution kernels without supervised training: random initialization, hand-designed kernels, and unsupervised learning.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_mpc_question_2 = {
+    'question': "According to the text, what is an advantage of learning features with an unsupervised criterion?",
+    'options_list': [
+        "A) It always results in better classification accuracy",
+        "B) It allows features to be determined separately from the classifier layer",
+        "C) It eliminates the need for a classifier layer entirely",
+        "D) It requires less training data than supervised methods"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Learning features with an unsupervised criterion allows them to be determined separately from the classifier layer, enabling feature extraction to occur independently.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_mpc_question_3 = {
+    'question': "What approach did Coates et al. (2011) use to learn convolution kernels in an unsupervised manner?",
+    'options_list': [
+        "A) Principal Component Analysis (PCA)",
+        "B) Autoencoders",
+        "C) K-means clustering",
+        "D) Generative Adversarial Networks (GANs)"
+    ],
+    'correct_answer': 'C',
+    'explanation': "Coates et al. (2011) used k-means clustering to learn convolution kernels from small image patches in an unsupervised manner.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_mpc_question_4 = {
+    'question': "What is the 'canonical example' of greedy layer-wise pretraining for convolutional models mentioned in the text?",
+    'options_list': [
+        "A) LeNet-5",
+        "B) AlexNet",
+        "C) Convolutional Deep Belief Network",
+        "D) VGGNet"
+    ],
+    'correct_answer': 'C',
+    'explanation': "The convolutional deep belief network is mentioned as the canonical example of greedy layer-wise pretraining for convolutional models.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_tf_question_1 = {
+    'question': "Random filters often perform poorly in convolutional networks compared to learned filters.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Random filters have been shown to work surprisingly well in convolutional networks, particularly when followed by pooling layers.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_tf_question_2 = {
+    'question': "Greedy layer-wise pretraining allows training very large models with high computational cost only at inference time.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Greedy layer-wise pretraining allows for efficient training of large models by reducing computational cost during training and incurring higher cost only at inference time.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_tf_question_3 = {
+    'question': "As of the writing of this text, most convolutional networks are trained using unsupervised pretraining methods.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Most convolutional networks today are trained using fully supervised methods, with unsupervised pretraining being more common when labeled datasets were smaller.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_tf_question_4 = {
+    'question': "Unsupervised pretraining may offer regularization benefits compared to purely supervised training.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Unsupervised pretraining may offer regularization benefits, though the exact causes of these benefits are not entirely understood.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+deep_learning_book_9_6_9_8_tf_question_5 = {
+    'question': "The text suggests that the benefits of unsupervised pretraining are fully understood and can be clearly attributed to specific causes.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "The text mentions that the benefits of unsupervised pretraining are not fully understood and it is difficult to attribute them to specific causes.",
+    'chapter_information': 'Deep Learning Book 9.6-9.8'
+}
+
+chapter_2_quiz_prep_mpc_question_1 = {
+    'question': "You have an input volume of 32×32×3. What are the dimensions of the resulting volume after convolving a 5×5 kernel with 0 padding (valid convolution), stride of 1, and 2 filters?",
+    'options_list': [
+        "A) 32×32×2",
+        "B) 28×28×2",
+        "C) 30×30×2",
+        "D) 28×28×3"
+    ],
+    'correct_answer': 'B',
+    'explanation': "For a valid convolution, the output size is reduced due to no padding. Using a 5×5 kernel with stride 1 results in an output size of 28×28 in each spatial dimension and 2 filters give a depth of 2.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_2 = {
+    'question': "How many weights and biases does the layer described in the previous question (input volume of 32×32×3, 5×5 kernel, valid convolution, stride of 1, and 2 filters) have?",
+    'options_list': [
+        "A) 150",
+        "B) 160",
+        "C) 152",
+        "D) 180"
+    ],
+    'correct_answer': 'C',
+    'explanation': "The number of parameters is calculated as (5×5×3)×2 + 2 biases, which gives 152 total parameters.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_3 = {
+    'question': "You want to process time-series data with a 1D CONV that has the same configuration as the layer described earlier (5×5 kernel, valid convolution, stride of 1, and 2 filters) but with a kernel size of 5. The input volume of shape T×3 models three fluctuating values over time. How many weights and biases does this layer have?",
+    'options_list': [
+        "A) 30",
+        "B) 32",
+        "C) 25",
+        "D) 28"
+    ],
+    'correct_answer': 'B',
+    'explanation': "For 1D CONV with a kernel size of 5, the number of parameters is (5×3)×2 filters + 2 biases, which results in 32.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_4 = {
+    'question': "Suppose you have an input volume of dimension 64×64×16. How many parameters would a single 1×1 convolutional filter have, including the bias?",
+    'options_list': [
+        "A) 16",
+        "B) 64",
+        "C) 17",
+        "D) 1"
+    ],
+    'correct_answer': 'C',
+    'explanation': "For a 1×1 convolutional filter with an input depth of 16, the number of parameters is 16 weights + 1 bias, which gives a total of 17 parameters.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_5 = {
+    'question': "Suppose your input is a 300×300 color (RGB) image, and you use a convolutional layer with 100 filters that are each 5×5. How many parameters does this layer have, including the bias parameters?",
+    'options_list': [
+        "A) 7600",
+        "B) 7500",
+        "C) 7200",
+        "D) 7800"
+    ],
+    'correct_answer': 'A',
+    'explanation': "The number of parameters is calculated as (5×5×3)×100 filters + 100 biases, which results in 7600 parameters.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_6 = {
+    'question': "You have an input volume that is 63×63×16 and convolve it with 32 filters that are each 7×7, with a stride of 1. You want to use a 'same' convolution. What is the padding?",
+    'options_list': [
+        "A) 1",
+        "B) 2",
+        "C) 3",
+        "D) 4"
+    ],
+    'correct_answer': 'C',
+    'explanation': "For a 'same' convolution with a 7×7 kernel, padding of 3 is required to maintain the input size of 63×63.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_7 = {
+    'question': "What is the output volume of a 32×32×16 input data after applying max pooling with a square kernel of size 2 and stride = 2?",
+    'options_list': [
+        "A) 32×32×16",
+        "B) 16×16×16",
+        "C) 16×16×32",
+        "D) 32×16×16"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling with a 2×2 kernel and stride 2 reduces each spatial dimension by half, resulting in an output of 16×16×16.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_8 = {
+    'question': "What is the resulting volume of padding a 15×15×8 input volume using pad=2?",
+    'options_list': [
+        "A) 17×17×8",
+        "B) 19×19×8",
+        "C) 20×20×8",
+        "D) 15×15×8"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Padding the input with pad=2 adds 2 units to each spatial dimension, resulting in a volume of 19×19×8.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+chapter_2_quiz_prep_mpc_question_9 = {
+    'question': "You have an input volume of 101×101×3. What is the resulting width after performing a convolution with the following parameters: kernel size=7, stride=5, no padding?",
+    'options_list': [
+        "A) 20",
+        "B) 19",
+        "C) 18",
+        "D) 21"
+    ],
+    'correct_answer': 'B',
+    'explanation': "With no padding and a stride of 5, the resulting width is calculated as (101−7)/5 + 1 = 19.",
+    'chapter_information': 'Chapter 2 Quiz Prep'
+}
+
+perplexity_quiz_prep_mpc_question_1 = {
+    'question': "You have an input volume of 64×64×3. What are the dimensions of the resulting volume after applying a convolutional layer with 16 filters of size 3×3, stride of 2, and 'same' padding?",
+    'options_list': [
+        "A) 32×32×16",
+        "B) 31×31×16",
+        "C) 64×64×16",
+        "D) 62×62×16"
+    ],
+    'correct_answer': 'A',
+    'explanation': "With 'same' padding and a stride of 2, the output spatial dimensions are halved, giving an output volume of 32×32×16 with 16 filters.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_mpc_question_2 = {
+    'question': "How many parameters (weights and biases) does a convolutional layer have with the following configuration: 64 filters of size 5×5, input volume 128×128×3?",
+    'options_list': [
+        "A) 4,800",
+        "B) 4,864",
+        "C) 9,600",
+        "D) 9,664"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The number of parameters is calculated as (5×5×3)×64 filters + 64 biases, which results in 9,664 parameters.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_mpc_question_3 = {
+    'question': "What is the output volume size after applying max pooling with a 2×2 kernel and stride of 2 to an input volume of 56×56×32?",
+    'options_list': [
+        "A) 28×28×32",
+        "B) 27×27×32",
+        "C) 28×28×16",
+        "D) 54×54×32"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Max pooling with a 2×2 kernel and stride 2 reduces each spatial dimension by half, resulting in an output volume of 28×28×32.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_mpc_question_4 = {
+    'question': "You have a 3D input volume of 16×16×16×8 (width×height×depth×channels). What is the output volume size after applying a 3D convolution with 32 filters of size 3×3×3, stride of 1, and 'valid' padding?",
+    'options_list': [
+        "A) 14×14×14×32",
+        "B) 16×16×16×32",
+        "C) 18×18×18×32",
+        "D) 14×14×14×8"
+    ],
+    'correct_answer': 'A',
+    'explanation': "For 'valid' padding, the output spatial dimensions are reduced by the size of the kernel minus 1 (3−1=2), giving an output volume of 14×14×14×32.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_1 = {
+    'question': "A 1×1 convolution with 64 filters applied to an input volume of 32×32×128 will result in an output volume of 32×32×64.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "A 1×1 convolution reduces only the depth of the input volume based on the number of filters used, resulting in 32×32×64 for 64 filters.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_2 = {
+    'question': "Applying 'same' padding to a convolutional layer always results in an output volume with the same spatial dimensions as the input volume, regardless of the kernel size and stride.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "While 'same' padding preserves spatial dimensions for stride=1, increasing the stride will reduce the output dimensions.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_3 = {
+    'question': "The number of parameters in a convolutional layer is independent of the input volume size.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The number of parameters in a convolutional layer depends on the kernel size and number of filters, not on the size of the input volume.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_4 = {
+    'question': "A max pooling layer with a 3×3 kernel and stride of 2 will reduce the spatial dimensions of the input by exactly one-third.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "A stride of 2 reduces the spatial dimensions by approximately half, not one-third.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_5 = {
+    'question': "In a 3D convolution, the number of channels in the output volume is always equal to the number of filters used, regardless of the number of input channels.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "In 3D convolutions, the number of output channels is determined by the number of filters, regardless of the input channels.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+university_of_michigan_lecture_8_mpc_question_1 = {
+    'question': "You have an input volume of size 227×227×3. A convolutional layer applies 64 filters, each of size 11×11, with a stride of 4 and padding of 2. What are the dimensions of the resulting feature map after the convolution?",
+    'options_list': [
+        "A) 64×56×56",
+        "B) 64×27×27",
+        "C) 64×32×32",
+        "D) 64×28×28"
+    ],
+    'correct_answer': 'A',
+    'explanation': "For a convolutional layer with padding=2, stride=4, and kernel size=11, the formula for output size is: [(input size - kernel size + 2×padding) / stride] + 1. Thus, the resulting feature map dimensions are 64×56×56.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_2 = {
+    'question': "You have an input volume of size 27×27×192. A max pooling layer with a 3×3 kernel, stride of 2, and padding of 0 is applied. What are the dimensions of the resulting volume after pooling?",
+    'options_list': [
+        "A) 192×27×27",
+        "B) 192×13×13",
+        "C) 192×14×14",
+        "D) 192×6×6"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling with a 3×3 kernel, stride 2, and no padding reduces the size using the formula [(input size - kernel size) / stride] + 1. This gives an output size of 192×13×13.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_3 = {
+    'question': "An input volume of size 13×13×192 is processed by a convolutional layer with 384 filters, each of size 3×3, with a stride of 1 and padding of 1. What are the dimensions of the resulting feature map?",
+    'options_list': [
+        "A) 384×27×27",
+        "B) 384×13×13",
+        "C) 256×13×13",
+        "D) 192×13×13"
+    ],
+    'correct_answer': 'B',
+    'explanation': "With padding of 1 and stride of 1, the spatial dimensions remain the same as the input, so the output volume size will be 384×13×13.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_4 = {
+    'question': "You have an input volume of size 13×13×256. A convolutional layer applies 256 filters, each of size 3×3, with stride of 1 and padding of 1. What are the dimensions of the resulting feature map?",
+    'options_list': [
+        "A) 384×13×13",
+        "B) 256×13×13",
+        "C) 256×7×7",
+        "D) 192×13×13"
+    ],
+    'correct_answer': 'B',
+    'explanation': "With padding of 1 and a stride of 1, the output feature map dimensions will match the input dimensions, resulting in 256×13×13.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_5 = {
+    'question': "A max pooling layer with a 3×3 kernel, stride of 2, and no padding is applied to an input volume of size 13×13×256. What are the dimensions of the resulting feature map?",
+    'options_list': [
+        "A) 256×13×13",
+        "B) 256×6×6",
+        "C) 256×7×7",
+        "D) 256×8×8"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling reduces the dimensions based on the formula: [(input size - kernel size) / stride] + 1. This results in a feature map size of 256×6×6.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_6 = {
+    'question': "You have an input volume of size 6×6×256. After flattening the output volume, what is the total number of features in the flattened output?",
+    'options_list': [
+        "A) 9216",
+        "B) 4608",
+        "C) 256",
+        "D) 4096"
+    ],
+    'correct_answer': 'A',
+    'explanation': "To flatten a 6×6×256 input, multiply the dimensions together: 6×6×256 = 9216 features.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_7 = {
+    'question': "In a convolutional layer, what does $C_{\text{out}}$ represent?",
+    'options_list': [
+        "A) Input channels",
+        "B) Output channels",
+        "C) Kernel height",
+        "D) Stride"
+    ],
+    'correct_answer': 'B',
+    'explanation': "In a convolutional layer, $C_{\text{out}}$ refers to the number of output channels or filters.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_8 = {
+    'question': "Which CNN architecture introduced the concept of residual connections?",
+    'options_list': [
+        "A) AlexNet",
+        "B) VGG",
+        "C) GoogleNet",
+        "D) ResNet"
+    ],
+    'correct_answer': 'D',
+    'explanation': "ResNet introduced the concept of residual connections, which allow the gradient to flow more easily through deep networks.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_9 = {
+    'question': "What is the output height ($H'$) for a convolution with input height $H=32$, kernel size $K=3$, padding $P=1$, and stride $S=2$?",
+    'options_list': [
+        "A) 16",
+        "B) 17",
+        "C) 18",
+        "D) 19"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Using the formula $H' = \frac{H - K + 2P}{S} + 1$, the output height is calculated as $H' = \frac{32 - 3 + 2(1)}{2} + 1 = 16$.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_10 = {
+    'question': "Which of the following is NOT a common kernel size for CNNs?",
+    'options_list': [
+        "A) 1×1",
+        "B) 3×3",
+        "C) 5×5",
+        "D) 7×7"
+    ],
+    'correct_answer': 'D',
+    'explanation': "While 1×1, 3×3, and 5×5 kernels are common, 7×7 kernels are less frequently used.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_1 = {
+    'question': "The Pre-Activation ResNet Block applies BatchNorm and ReLU before each convolution.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The Pre-Activation ResNet block moves BatchNorm and ReLU before each convolutional layer for better gradient flow.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_2 = {
+    'question': "3D convolution is primarily used for processing 2D image data.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "3D convolution is used for processing volumetric data, such as video or medical scans, not 2D image data.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_3 = {
+    'question': "Global average pooling in GoogleNet replaced fully connected layers.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "GoogleNet used global average pooling to replace fully connected layers, reducing the number of parameters in the network.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_4 = {
+    'question': "The weight matrix in a convolutional layer has dimensions $C_{\text{out}} \times C_{\text{in}} \times K_H \times K_W$.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The weight matrix in a convolutional layer is defined by the number of filters (output channels) and their dimensions.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_5 = {
+    'question': "After ResNet, the focus in CNN architecture design shifted towards increasing network complexity.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "After ResNet, the focus shifted towards building more efficient networks rather than increasing complexity.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+gt_lecture_5_2_mpc_question_1 = {
+    'question': "Given an input image of size 7×7×3 and a convolutional layer with a 3×3 kernel, stride of 1, and no padding, what will be the height and width of the output feature map?",
+    'options_list': [
+        "A) 5×5",
+        "B) 6×6",
+        "C) 7×7",
+        "D) 3×3"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Using the formula $H_{\text{out}} = \frac{H_{\text{in}} - K + 2P}{S} + 1$, with no padding (P=0) and stride of 1, the output height and width are $5×5$.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_2 = {
+    'question': "If you apply a convolutional layer with 6 kernels, each of size 3×3×3, to an input image of size 5×5×3 with padding of 1 and stride of 1, how many total parameters are involved in this layer (including biases)?",
+    'options_list': [
+        "A) 54",
+        "B) 112",
+        "C) 168",
+        "D) 58"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Each kernel has 3×3×3 = 27 parameters, and each kernel has an additional bias term, making it 28 parameters per kernel. With 6 kernels, the total number of parameters is $28 × 6 = 168$.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_3 = {
+    'question': "For an input volume of size 32×32×3, what is the output size after applying a convolutional layer with a 5×5 kernel, stride of 2, padding of 0, and 16 output channels?",
+    'options_list': [
+        "A) 16×16×16",
+        "B) 14×14×16",
+        "C) 32×32×16",
+        "D) 28×28×16"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Using the formula $H_{\text{out}} = \frac{H_{\text{in}} - K + 2P}{S} + 1$, with $H_{\text{in}} = 32$, $K = 5$, $P = 0$, and $S = 2$, we get an output size of 14×14×16.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_4 = {
+    'question': "In a convolutional layer, what does padding primarily control?",
+    'options_list': [
+        "A) The size of the input",
+        "B) The number of output channels",
+        "C) The spatial size of the output",
+        "D) The number of kernels"
+    ],
+    'correct_answer': 'C',
+    'explanation': "Padding is used to control the spatial size of the output by adding values (often zeros) around the input. It can help preserve the input size in the output.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_5 = {
+    'question': "How does stride affect the output size in a convolution operation?",
+    'options_list': [
+        "A) Increases the depth of the output",
+        "B) Reduces the spatial dimensions of the output",
+        "C) Adds additional channels to the output",
+        "D) Does not influence the output size"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Increasing the stride reduces the spatial dimensions of the output feature map by skipping pixels during the convolution process.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_1 = {
+    'question': "A stride larger than 1 reduces the spatial dimensions of the output feature map.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "When the stride is larger than 1, the kernel moves over the input faster, skipping pixels, which results in a reduced output size.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_2 = {
+    'question': "The depth of a kernel in a convolutional layer always matches the number of channels in the input image.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "For multi-channel inputs like RGB images, the kernel’s depth must match the number of input channels for proper convolution.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_3 = {
+    'question': "Zero-padding is used to ensure that the output size of a convolution layer is the same as the input size.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Zero-padding is commonly used to preserve the spatial dimensions of the input after convolution by padding the borders with zeros.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_4 = {
+    'question': "In a multi-kernel convolutional layer, the number of output channels is equal to the number of input channels.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "The number of output channels is determined by the number of kernels, not the number of input channels. Each kernel produces its own output feature map.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_5 = {
+    'question': "The output size formula for a convolution without padding is $H_{\text{out}} = \frac{H_{\text{in}} - K}{S} + 1$.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "For convolution without padding, the formula for the output size is $H_{\text{out}} = \frac{H_{\text{in}} - K}{S} + 1$.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+
 
 
 
