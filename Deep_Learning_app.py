@@ -33,12 +33,12 @@ Check out my other review apps for:
 
 def chapter_review():
     st.markdown("# Chapter Review")
-    st.write('Select chapters to review and answer questions.')
+    st.write('Select chapters to review and answer questions. Refresh Page to load new questions.')
     dl_mpc_page1.sa_questions()
 
 def big_review():
     st.markdown("# Big Review")
-    st.write('Comprehensive review with selectable chapters.')
+    st.write('Comprehensive review with selectable chapters. Refresh Page to load new questions.')
     dl_mpc_big_review.big_review()
 
 def reset_or_initialize_state():
