@@ -31,6 +31,8 @@ def sa_questions():
         "Lesson 1: Linear Classifiers and Gradient Descent": '1', 
         "Lesson 2: Neural Networks": '2',
         "Lesson 3: Optimization of Deep Neural Networks": '3',
+        "Lesson 4: Data Wrangling": '4',
+        "Lesson 5: Convolution and Pooling Layers": '5',
     }
     
     topics = {

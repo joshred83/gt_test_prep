@@ -1,65 +1,15 @@
 import streamlit as st
 from .dl_states import Token
 
-# Define the list of lessons as per the image
-lessons = [
-    'Lesson 1: Linear Classifiers and Gradient Descent',
-    'Lesson 2: Neural Networks',
-    'Lesson 3: Optimization of Deep Neural Networks',
-    'Lesson 4: Data Wrangling',
-    'Lesson 5: Convolution and Pooling Layers',
-    'Lesson 6: Convolutional Neural Networks',
-    'Lesson 7: Visualization',
-    'Lesson 8: Scalable Training',
-    'Lesson 9: Advanced Computer Vision Applications',
-    'Lesson 10: Responsible AI and Bias and Fairness',
-    'Lesson 11: Introduction to Structured Data',
-    'Lesson 12: Language Models',
-    'Lesson 13: Embeddings',
-    'Lesson 14: Neural Attention Models',
-    'Lesson 15: Neural Machine Translation',
-    'Lesson 16: Advanced Topics: Translation',
-    'Lesson 17: Deep Reinforcement Learning',
-    'Lesson 18: Unsupervised and Semi-Supervised Learning',
-    'Lesson 19: Generative Models'
-]
-
-lessons = [
-    'Lesson 1: Linear Classifiers and Gradient Descent',
-    'Lesson 2: Neural Networks',
-    'Lesson 3: Optimization of Deep Neural Networks',
-]
-
-# Custom CSS to inject into the Streamlit app for styling
-st.markdown(
-    """
-    <style>
-    .chapter {
-        color: blue;
-    }
-    /* Add other CSS styles as needed */
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# Map quizzes to their corresponding lesson indices
+quiz_mapping = {
+    "Quiz 1": [0, 1],  # Corresponds to Lesson 1 and Lesson 2
+    "Quiz 2": [2, 3],  # Corresponds to Lesson 3 and Lesson 5
+}
 
 def question_generator(label, options, question_key):
     question = st.radio(label='Please select the correct answer', options=options, key=question_key)
     return question
-
-# Function to create checkboxes for lessons
-def create_checkboxes(lessons, columns=2, preselected=None):
-    if preselected is None:
-        preselected = []
-    selected_lessons = []
-    cols = st.columns(columns)
-    for index, lesson in enumerate(lessons):
-        col = cols[index % columns]
-        # Preselect specified lessons by setting the value parameter to True if the lesson is in the preselected list
-        is_selected = col.checkbox(lesson, key=lesson, value=lesson in preselected)
-        if is_selected:
-            selected_lessons.append(index)  # Add zero-based index
-    return selected_lessons
 
 def big_review():
     # Ensure the token is initialized with state 'all'
@@ -67,14 +17,18 @@ def big_review():
         st.session_state.token = Token(STATE='all')
         st.session_state.questions_initialized = False
 
-    # Display lessons for review with checkboxes
-    st.title("Select Lessons for Review")
-    preselected_lessons = []  # List any lessons you want to preselect if needed
-    selected_lessons = create_checkboxes(lessons, preselected=preselected_lessons)
+    # Select Quiz
+    st.title("Select a Quiz")
+    quiz_choice = st.radio("Choose a quiz", options=["Quiz 1", "Quiz 2"])
 
-    if st.button('Submit Lessons') or st.session_state.questions_initialized:
+    # Get lessons for the selected quiz
+    selected_quiz_lessons = quiz_mapping[quiz_choice]
+
+    # When the button is clicked, initialize questions based on the selected quiz
+    if st.button('Start Quiz') or st.session_state.questions_initialized:
         if not st.session_state.questions_initialized:
-            st.session_state.token.chapters_to_review = [index for index in selected_lessons]
+            # Initialize the questions for the selected quiz
+            st.session_state.token.chapters_to_review = selected_quiz_lessons
             st.session_state.token.initialize_mpc_questions()
             st.session_state.questions = st.session_state.token.mpc_questions
             st.session_state.questions_initialized = True
@@ -89,21 +43,15 @@ def big_review():
             explanation = q['explanation']
 
             st.markdown('-------------------------------')
-            # Use st.markdown to render the question, allowing LaTeX and markdown formatting
             st.markdown(f"**{label}**")
 
             question = question_generator(label, options, question_key)
 
-            # Store submitted answers in session state
             if st.button('Submit', key=f"submit_{i}"):
                 if 'submitted_answers' not in st.session_state:
                     st.session_state.submitted_answers = {}
 
                 st.session_state.submitted_answers[question_key] = question
-                print('question', question)
-                print(correct_answer, 'corect')
-                if question not in ['True', 'False']: question = question[0]
-            
 
                 if question == correct_answer:
                     st.success('Great work!')
@@ -114,7 +62,6 @@ def big_review():
 
                 if 'chapter_information' in q:
                     st.write(f"You can review {q['chapter_information']}")
-
 
 if __name__ == "__main__":
     big_review()
