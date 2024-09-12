@@ -17,9 +17,19 @@ def big_review():
         st.session_state.token = Token(STATE='all')
         st.session_state.questions_initialized = False
 
+    # Track the current quiz selection in the session state
+    if 'selected_quiz' not in st.session_state:
+        st.session_state.selected_quiz = None
+
     # Select Quiz
     st.title("Select a Quiz")
     quiz_choice = st.radio("Choose a quiz", options=["Quiz 1", "Quiz 2"])
+
+    # If the quiz selection changes, reload the app
+    if quiz_choice != st.session_state.selected_quiz:
+        st.session_state.selected_quiz = quiz_choice
+        st.session_state.questions_initialized = False  # Reset initialization flag
+        st.experimental_rerun()  # Reload the app
 
     # Get lessons for the selected quiz
     selected_quiz_lessons = quiz_mapping[quiz_choice]
