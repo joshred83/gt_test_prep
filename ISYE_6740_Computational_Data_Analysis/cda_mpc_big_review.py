@@ -1,5 +1,5 @@
 import streamlit as st
-from .ns_states import Token
+from .cda_states import Token
 
 # Define the list of chapters 
 chapters = [
