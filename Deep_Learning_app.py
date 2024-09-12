@@ -51,7 +51,7 @@ def reset_or_initialize_state():
 page_names_to_funcs = {
     "—": intro,
     "Chapter Review": chapter_review,
-    "Big Review": big_review
+    "Quiz Prep": big_review
 }
 
 # Initialize session state for selected demo
