@@ -13,18 +13,15 @@ I began creating tools like this because I believe that actively recalling infor
 2. **Big Review**: Select multiple chapters for a comprehensive review session.
 
 ### Additional Resources:
-- [Course Book: Deep Learning Book, 2016](https://www.deeplearningbook.org/)
-- [Official Course Website](https://omscs.gatech.edu/cs-7643-deep-learning)
-- [NYU Deep Learning (Yann LeCun) - YouTube](https://www.youtube.com/watch?v=mTtDfKgLm54&list=PLLHTzKZzVU9e6xUfG10TkTWApKSZCzuBI)
-- [University of Michigan Deep Learning for Computer Vision - YouTube](https://www.youtube.com/watch?v=dJYGatp4SvA&list=PL5-TkQAfAZFbzxjBHtzdVCWE0Zbhomg7r)
-- [Deep Learning Book Lecture Series - YouTube](https://www.youtube.com/playlist?list=PLbBjZEwyU7W1CDs3Vx_GOJ9b3EgYQB3GE)
-- [3Blue1Brown Neural Network Series - YouTube](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-- [Lecture Transcripts](https://docs.google.com/document/d/1pDB-TrvQU5plKyQM54X_VYztze5gRpjz/edit?usp=sharing&ouid=105353834096756704207&rtpof=true&sd=true)
+- [The Elements of Statistical Learning](https://hastie.su.domains/Papers/ESLII.pdf)
+- [Bishop - Pattern recognition and Machine learning](https://www.academia.edu/44025931/Pattern_recognition_and_Machine_learning)
+- [Cornell Machine Learning Lectures - YouTube](https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS)
+- [Lecture Transcripts](https://docs.google.com/document/d/1gwVNENEzxL45mlCm2Oy_p61ElFqfiqQB/edit#heading=h.2v13rmc85j9c)
 
 Check out my other review apps for:
 - [ISYE 6501 Introduction to Analytics Modeling](https://isye6501test-prep.streamlit.app/)
 - [MGT 6203 Analytics for Business](https://mgt-6203-mt-study-aid.streamlit.app/)
-- [ISYE 6740 Computational Data Analytics](https://www.google.com)
+- [ISYE 6740 Computational Data Analytics](https://cda-review-app.streamlit.app/)
 - [CS 7643 Deep Learning](https://deep-learning-practice.streamlit.app/)
 - [CS 7280 Network Science Review App](https://network-science-review.streamlit.app/)
     """)
