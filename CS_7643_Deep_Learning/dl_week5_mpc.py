@@ -232,6 +232,308 @@ module_5_lesson_1_tf_question_4 = {
     'chapter_information': 'Module 5, Lesson 1: Convolution Layers'
 }
 
+gt_lecture_3_mpc_question_1 = {
+    'question': "What is the primary function of a max pooling layer in a neural network?",
+    'options_list': [
+        "A) To increase the spatial dimensions of the input",
+        "B) To reduce the dimensionality of the input while retaining important features",
+        "C) To perform a convolution operation",
+        "D) To average the pixel values across a window"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling reduces the dimensionality of the input by retaining the maximum value in each window, allowing the network to keep the most important features.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_mpc_question_2 = {
+    'question': "Which of the following is a key difference between max pooling and average pooling?",
+    'options_list': [
+        "A) Max pooling averages pixel values while average pooling selects the maximum value.",
+        "B) Max pooling reduces the dimensionality, while average pooling increases dimensionality.",
+        "C) Max pooling selects the maximum value in the window, while average pooling calculates the average of values in the window.",
+        "D) Max pooling adds learned parameters, while average pooling does not."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Max pooling selects the maximum value within a defined window, while average pooling calculates the average of the values in that window.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_mpc_question_3 = {
+    'question': "What type of invariance do pooling layers introduce into neural networks?",
+    'options_list': [
+        "A) Rotational invariance",
+        "B) Translational invariance",
+        "C) Scale invariance",
+        "D) Equivariance"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Pooling layers introduce translational invariance, meaning small shifts in the input do not drastically change the output.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_mpc_question_4 = {
+    'question': "Which of the following hyperparameters is specific to pooling layers?",
+    'options_list': [
+        "A) Kernel size",
+        "B) Stride",
+        "C) Number of filters",
+        "D) Padding"
+    ],
+    'correct_answer': 'B',
+    'explanation': "In pooling layers, stride controls how much the window moves across the input, similar to convolutional layers.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_mpc_question_5 = {
+    'question': "Which of the following pooling types is less commonly used compared to max pooling?",
+    'options_list': [
+        "A) Global pooling",
+        "B) Average pooling",
+        "C) Max pooling",
+        "D) Fractional max pooling"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling is more commonly used than average pooling, which calculates the average of values in the pooling window.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_tf_question_1 = {
+    'question': "Max pooling retains the maximum value in a defined window, while reducing the input dimensionality.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Max pooling selects the maximum value from a window, reducing the input's spatial dimensions while preserving key features.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_tf_question_2 = {
+    'question': "Pooling layers have learned parameters, similar to convolutional layers.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Pooling layers do not have learned parameters; they perform predefined operations like max or average pooling without training any weights.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_tf_question_3 = {
+    'question': "Convolution operations are equivariant, meaning that a feature moving in the input causes a corresponding movement in the output.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Convolution is equivariant because when a feature moves in the input, the corresponding activation in the output moves by the same amount.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+gt_lecture_3_tf_question_4 = {
+    'question': "Pooling layers are used to increase the spatial dimensions of the input image.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Pooling layers are used to reduce the spatial dimensions (height and width) of the input while keeping the most important information.",
+    'chapter_information': 'GT Lecture 3'
+}
+
+andrew_ng_c4w1_mpc_question_1 = {
+    'question': "What is the primary function of a max pooling layer in a convolutional neural network?",
+    'options_list': [
+        "A) To increase the spatial dimensions of the input",
+        "B) To reduce the dimensionality of the input while retaining important features",
+        "C) To perform a convolution operation",
+        "D) To average the pixel values across a window"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling reduces the dimensionality of the input by retaining the maximum value in each window, allowing the network to keep the most important features.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_2 = {
+    'question': "Which of the following is a key difference between max pooling and average pooling?",
+    'options_list': [
+        "A) Max pooling averages pixel values while average pooling selects the maximum value.",
+        "B) Max pooling reduces the dimensionality, while average pooling increases dimensionality.",
+        "C) Max pooling selects the maximum value in the window, while average pooling calculates the average of values in the window.",
+        "D) Max pooling adds learned parameters, while average pooling does not."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Max pooling selects the maximum value within a defined window, while average pooling calculates the average of the values in that window.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_3 = {
+    'question': "What type of invariance do pooling layers introduce into neural networks?",
+    'options_list': [
+        "A) Rotational invariance",
+        "B) Translational invariance",
+        "C) Scale invariance",
+        "D) Equivariance"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Pooling layers introduce translational invariance, meaning small shifts in the input do not drastically change the output.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_4 = {
+    'question': "Which of the following hyperparameters is specific to pooling layers?",
+    'options_list': [
+        "A) Kernel size",
+        "B) Stride",
+        "C) Number of filters",
+        "D) Padding"
+    ],
+    'correct_answer': 'B',
+    'explanation': "In pooling layers, stride controls how much the window moves across the input, similar to convolutional layers.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_5 = {
+    'question': "Which of the following pooling types is less commonly used compared to max pooling?",
+    'options_list': [
+        "A) Global pooling",
+        "B) Average pooling",
+        "C) Max pooling",
+        "D) Fractional max pooling"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling is more commonly used than average pooling, which calculates the average of values in the pooling window.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_tf_question_1 = {
+    'question': "Max pooling retains the maximum value in a defined window, while reducing the input dimensionality.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Max pooling selects the maximum value from a window, reducing the input's spatial dimensions while preserving key features.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_tf_question_2 = {
+    'question': "Pooling layers have learned parameters, similar to convolutional layers.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Pooling layers do not have learned parameters; they perform predefined operations like max or average pooling without training any weights.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_tf_question_3 = {
+    'question': "Convolution operations are equivariant, meaning that a feature moving in the input causes a corresponding movement in the output.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Convolution is equivariant because when a feature moves in the input, the corresponding activation in the output moves by the same amount.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_tf_question_4 = {
+    'question': "Pooling layers are used to increase the spatial dimensions of the input image.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "Pooling layers are used to reduce the spatial dimensions (height and width) of the input while keeping the most important information.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_6 = {
+    'question': "What is the main purpose of parameter sharing in ConvNets?",
+    'options_list': [
+        "A) It allows parameters to be shared across different tasks for transfer learning.",
+        "B) It reduces the total number of parameters, helping to prevent overfitting.",
+        "C) It allows a feature detector to be applied in multiple locations across the input.",
+        "D) It ensures that the gradients for multiple layers remain the same."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Parameter sharing allows the same feature detector (kernel) to be applied across different regions of the input, reducing the number of parameters and enabling the network to detect features across the entire image.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_7 = {
+    'question': "If you have an input volume of 63x63x16 and convolve it with 32 filters of size 7x7, using a stride of 2 and no padding, what is the output volume?",
+    'options_list': [
+        "A) 16x16x32",
+        "B) 29x29x16",
+        "C) 29x29x32",
+        "D) 16x16x16"
+    ],
+    'correct_answer': 'C',
+    'explanation': "The output volume is calculated by applying the formula for convolution: $$H_{out} = \\frac{(H_{in} - K)}{S} + 1$$, giving a 29x29x32 output.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_8 = {
+    'question': "You have a 300x300 RGB image, and you apply a convolutional layer with 100 filters, each 5x5. How many parameters does the layer have, including bias terms?",
+    'options_list': [
+        "A) 2,500",
+        "B) 7,500",
+        "C) 2,600",
+        "D) 7,600"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The number of parameters is calculated as $$K_H \\times K_W \\times C_{in} + 1$$ (for the bias term), and then multiplied by the number of filters: $$5 \\times 5 \\times 3 + 1 = 76$$ per filter, so the total is $$76 \\times 100 = 7,600$$.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_mpc_question_9 = {
+    'question': "What is the output volume when you apply max pooling with a stride of 2 and filter size of 2 to an input volume of 32x32x16?",
+    'options_list': [
+        "A) 16x16x16",
+        "B) 32x32x8",
+        "C) 15x15x16",
+        "D) 32x32x16"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Max pooling with a stride of 2 reduces the height and width by a factor of 2, so the output volume will be 16x16x16.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_tf_question_5 = {
+    'question': "Pooling layers do not affect the backpropagation (derivatives) calculation because they do not have parameters.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "While pooling layers do not have parameters, they still affect the gradient flow during backpropagation as the max operation influences which values contribute to the next layer.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_tf_question_6 = {
+    'question': "In convolutional networks, sparsity of connections means that each filter is only connected to a small region of the input.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Sparsity of connections in ConvNets refers to the fact that each filter operates on only a small portion of the input (a local receptive field), reducing the number of connections.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
+
+andrew_ng_c4w1_tf_question_7 = {
+    'question': "In a convolutional layer with multiple channels (e.g., an RGB image), each kernel has the same depth as the input channels.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "In convolutional layers, the depth of each kernel matches the number of input channels (e.g., 3 for RGB images), allowing the kernel to operate across all input channels.",
+    'chapter_information': 'Andrew Ng Deep Learning C4W1'
+}
 
 
 
