@@ -129,7 +129,7 @@ module_1_lecture_transcripts_question_10 = {
 }
 
 module_1_lecture_transcripts_question_11 = {
-    'question': "Suppose you have a simple linear regression model \( y = 3x + 2 \). If \( x = 4 \), what is the predicted value of \( y \)?",
+    'question': "Suppose you have a simple linear regression model $ y = 3x + 2 $. If $ x = 4 $, what is the predicted value of $ y $?",
     'options_list': [
         '10',
         '12',
@@ -137,12 +137,13 @@ module_1_lecture_transcripts_question_11 = {
         '20'
     ],
     'correct_answer': '14',
-    'explanation': "Substituting \( x = 4 \) into the equation \( y = 3x + 2 \), you get \( y = 3(4) + 2 = 14 \).",
+    'explanation': "Substituting $ x = 4 $ into the equation $ y = 3x + 2 $, you get $ y = 3(4) + 2 = 14 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
+
 module_1_lecture_transcripts_question_12 = {
-    'question': "Given a dataset with two features \( x_1 \) and \( x_2 \), and the linear model \( y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 \), if \( \theta_0 = 1 \), \( \theta_1 = 2 \), \( \theta_2 = 3 \), and the input \( x_1 = 2 \), \( x_2 = 1 \), what is the predicted value of \( y \)?",
+    'question': "Given a dataset with two features $ x_1 $ and $ x_2 $, and the linear model $ y = \\theta_0 + \\theta_1 x_1 + \\theta_2 x_2 $, if $ \\theta_0 = 1 $, $ \\theta_1 = 2 $, $ \\theta_2 = 3 $, and the input $ x_1 = 2 $, $ x_2 = 1 $, what is the predicted value of $ y $?",
     'options_list': [
         '6',
         '7',
@@ -150,12 +151,12 @@ module_1_lecture_transcripts_question_12 = {
         '9'
     ],
     'correct_answer': '8',
-    'explanation': "Substitute the values into the model: \( y = 1 + 2(2) + 3(1) = 8 \).",
+    'explanation': "Substitute the values into the model: $ y = 1 + 2(2) + 3(1) = 8 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_13 = {
-    'question': "Consider a small dataset with the following points: \((1, 2)\), \((2, 4)\), \((3, 5)\). Calculate the mean of the dependent variable \( y \).",
+    'question': "Consider a small dataset with the following points: $(1, 2)$, $(2, 4)$, $(3, 5)$. Calculate the mean of the dependent variable $ y $.",
     'options_list': [
         '2',
         '3',
@@ -163,12 +164,12 @@ module_1_lecture_transcripts_question_13 = {
         '5'
     ],
     'correct_answer': '3.67',
-    'explanation': "The mean of \( y \) is \( \frac{2 + 4 + 5}{3} = 3.67 \).",
+    'explanation': "The mean of $ y $ is $ \\frac{2 + 4 + 5}{3} = 3.67 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_14 = {
-    'question': "Using the same dataset \((1, 2)\), \((2, 4)\), \((3, 5)\), calculate the sum of squared errors (SSE) if the model is \( y = 2x \).",
+    'question': "Using the same dataset $(1, 2)$, $(2, 4)$, $(3, 5)$, calculate the sum of squared errors (SSE) if the model is $ y = 2x $.",
     'options_list': [
         '0.5',
         '1',
@@ -176,12 +177,12 @@ module_1_lecture_transcripts_question_14 = {
         '3'
     ],
     'correct_answer': '1',
-    'explanation': "The SSE is calculated as \( (2 - 2)^2 + (4 - 4)^2 + (5 - 6)^2 = 1 \).",
+    'explanation': "The SSE is calculated as $ (2 - 2)^2 + (4 - 4)^2 + (5 - 6)^2 = 1 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_15 = {
-    'question': "If you are given two features \( x_1 = 3 \) and \( x_2 = 4 \), calculate the Euclidean distance between these two features.",
+    'question': "If you are given two features $ x_1 = 3 $ and $ x_2 = 4 $, calculate the Euclidean distance between these two features.",
     'options_list': [
         '1',
         '2',
@@ -189,12 +190,12 @@ module_1_lecture_transcripts_question_15 = {
         '7'
     ],
     'correct_answer': '5',
-    'explanation': "The Euclidean distance between \( x_1 \) and \( x_2 \) is \( \sqrt{(3 - 0)^2 + (4 - 0)^2} = 5 \).",
+    'explanation': "The Euclidean distance between $ x_1 $ and $ x_2 $ is $ \\sqrt{(3 - 0)^2 + (4 - 0)^2} = 5 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_16 = {
-    'question': "For a linear model \( y = \theta_1 x_1 + \theta_2 x_2 + \epsilon \), where \( \epsilon \) is the error term and follows a normal distribution \( N(0, \sigma^2) \), if \( y = 10 \), \( \theta_1 = 2 \), \( \theta_2 = 3 \), \( x_1 = 2 \), \( x_2 = 1 \), what is the value of the error term \( \epsilon \)?",
+    'question': "For a linear model $ y = \\theta_1 x_1 + \\theta_2 x_2 + \\epsilon $, where $ \\epsilon $ is the error term and follows a normal distribution $ N(0, \\sigma^2) $, if $ y = 10 $, $ \\theta_1 = 2 $, $ \\theta_2 = 3 $, $ x_1 = 2 $, $ x_2 = 1 $, what is the value of the error term $ \\epsilon $?",
     'options_list': [
         '0',
         '1',
@@ -202,12 +203,12 @@ module_1_lecture_transcripts_question_16 = {
         '-1'
     ],
     'correct_answer': '2',
-    'explanation': "First calculate \( \hat{y} = \theta_1 x_1 + \theta_2 x_2 = 2(2) + 3(1) = 7 \). The error term \( \epsilon = y - \hat{y} = 10 - 7 = 3 \).",
+    'explanation': "First calculate $ \\hat{y} = \\theta_1 x_1 + \\theta_2 x_2 = 2(2) + 3(1) = 7 $. The error term $ \\epsilon = y - \\hat{y} = 10 - 7 = 3 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_17 = {
-    'question': "Given the following probabilities \( P(A) = 0.4 \), \( P(B) = 0.3 \), and \( P(A \cap B) = 0.1 \), compute \( P(A \cup B) \).",
+    'question': "Given the following probabilities $ P(A) = 0.4 $, $ P(B) = 0.3 $, and $ P(A \\cap B) = 0.1 $, compute $ P(A \\cup B) $.",
     'options_list': [
         '0.5',
         '0.6',
@@ -215,12 +216,12 @@ module_1_lecture_transcripts_question_17 = {
         '0.8'
     ],
     'correct_answer': '0.6',
-    'explanation': "Use the formula \( P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.4 + 0.3 - 0.1 = 0.6 \).",
+    'explanation': "Use the formula $ P(A \\cup B) = P(A) + P(B) - P(A \\cap B) = 0.4 + 0.3 - 0.1 = 0.6 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_18 = {
-    'question': "If a small dataset consists of 3 data points \((x_1, y_1)\), \((x_2, y_2)\), and \((x_3, y_3)\) where \( y = 2x + 1 \), and the data points are \((1, 3)\), \((2, 5)\), and \((3, 7)\), compute the value of the loss function \( L(\theta) = \frac{1}{n} \sum_{i=1}^{n} (y^{(i)} - \hat{y}^{(i)})^2 \) for this model.",
+    'question': "If a small dataset consists of 3 data points $(x_1, y_1)$, $(x_2, y_2)$, and $(x_3, y_3)$ where $ y = 2x + 1 $, and the data points are $(1, 3)$, $(2, 5)$, and $(3, 7)$, compute the value of the loss function $ L(\\theta) = \\frac{1}{n} \\sum_{i=1}^{n} (y^{(i)} - \\hat{y}^{(i)})^2 $ for this model.",
     'options_list': [
         '0',
         '0.5',
@@ -228,12 +229,12 @@ module_1_lecture_transcripts_question_18 = {
         '2'
     ],
     'correct_answer': '0',
-    'explanation': "Since \( y^{(i)} = \hat{y}^{(i)} \) for all points, the loss function \( L(\theta) = 0 \).",
+    'explanation': "Since $ y^{(i)} = \\hat{y}^{(i)} $ for all points, the loss function $ L(\\theta) = 0 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_19 = {
-    'question': "Suppose you have two vectors \( \mathbf{x} = [2, 3] \) and \( \mathbf{\theta} = [4, 5] \). Calculate the dot product \( \mathbf{\theta}^T \mathbf{x} \).",
+    'question': "Suppose you have two vectors $ \\mathbf{x} = [2, 3] $ and $ \\mathbf{\\theta} = [4, 5] $. Calculate the dot product $ \\mathbf{\\theta}^T \\mathbf{x} $.",
     'options_list': [
         '23',
         '25',
@@ -241,12 +242,12 @@ module_1_lecture_transcripts_question_19 = {
         '28'
     ],
     'correct_answer': '23',
-    'explanation': "The dot product \( \mathbf{\theta}^T \mathbf{x} = 4(2) + 5(3) = 23 \).",
+    'explanation': "The dot product $ \\mathbf{\\theta}^T \\mathbf{x} = 4(2) + 5(3) = 23 $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
 
 module_1_lecture_transcripts_question_20 = {
-    'question': "Given a simple linear regression model \( y = 5x - 3 \), calculate the gradient with respect to \( x \) when \( x = 2 \).",
+    'question': "Given a simple linear regression model $ y = 5x - 3 $, calculate the gradient with respect to $ x $ when $ x = 2 $.",
     'options_list': [
         '5',
         '7',
@@ -254,9 +255,10 @@ module_1_lecture_transcripts_question_20 = {
         '12'
     ],
     'correct_answer': '5',
-    'explanation': "The gradient of \( y = 5x - 3 \) with respect to \( x \) is 5, which is constant regardless of \( x \).",
+    'explanation': "The gradient of $ y = 5x - 3 $ with respect to $ x $ is 5, which is constant regardless of $ x $.",
     'chapter_information': 'Module 1 Lecture Transcripts'
 }
+
 
 minkowski_metric_paper_question_1 = {
     'question': "What is one of the main drawbacks of the K-Means algorithm addressed by this paper?",
@@ -298,7 +300,7 @@ minkowski_metric_paper_question_3 = {
 }
 
 minkowski_metric_paper_question_4 = {
-    'question': "What is the effect of using a higher Minkowski exponent \( b \) on the feature weights?",
+    'question': "What is the effect of using a higher Minkowski exponent $ b $ on the feature weights?",
     'options_list': [
         'Increases the influence of all features equally',
         'Decreases the influence of noise features',
@@ -306,7 +308,7 @@ minkowski_metric_paper_question_4 = {
         'Has no effect on the clustering results'
     ],
     'correct_answer': 'Decreases the influence of noise features',
-    'explanation': "A higher Minkowski exponent \( b \) decreases the influence of noise features by assigning them lower weights in the clustering process.",
+    'explanation': "A higher Minkowski exponent $ b $ decreases the influence of noise features by assigning them lower weights in the clustering process.",
     'chapter_information': 'Minkowski Metric Paper'
 }
 
@@ -324,7 +326,7 @@ minkowski_metric_paper_question_5 = {
 }
 
 minkowski_metric_paper_question_6 = {
-    'question': "Given the Minkowski metric \( p \)-norm between points \( x = [1, 2] \) and \( y = [3, 4] \) with \( p = 3 \), compute the distance.",
+    'question': "Given the Minkowski metric $ p $-norm between points $ x = [1, 2] $ and $ y = [3, 4] $ with $ p = 3 $, compute the distance.",
     'options_list': [
         '2.924',
         '3.301',
@@ -332,9 +334,10 @@ minkowski_metric_paper_question_6 = {
         '4.641'
     ],
     'correct_answer': '3.301',
-    'explanation': "The Minkowski distance with \( p = 3 \) is calculated as \( ((3-1)^3 + (4-2)^3)^{1/3} = 3.301 \).",
+    'explanation': "The Minkowski distance with $ p = 3 $ is calculated as $ ((3-1)^3 + (4-2)^3)^{1/3} = 3.301 $.",
     'chapter_information': 'Minkowski Metric Paper'
 }
+
 
 
 KC_MPC_QUESTIONS = []

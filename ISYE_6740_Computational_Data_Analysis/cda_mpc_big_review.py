@@ -1,5 +1,5 @@
 import streamlit as st
-from .cda_states import Token
+from .ns_states import Token
 
 # Define the list of chapters 
 chapters = [
@@ -18,6 +18,12 @@ chapters = [
     'L13 - Statistical Analysis of Network Data',
     'L14 - Machine Learning in Network'
 ]
+chapters = [
+    'L1 - What is Network Science?',
+    'L2 - Relevant Concepts from Graph Theory',
+
+]
+
 
 # Custom CSS to inject into the Streamlit app for styling
 st.markdown(
@@ -73,15 +79,21 @@ def big_review():
         for i, q in enumerate(questions, start=0):
             label = q['question']
             options = q['options_list']
-            correct_answer = q['correct_answer']
+            if q['correct_answer'] in ['True', 'False']:
+                correct_answer = q['correct_answer']
+            if q['correct_answer'] not in ['True', 'False']:
+                correct_answer_letter = q['correct_answer']  
+                correct_answer = options[ord(correct_answer_letter) - ord('A')]  
             question_key = f"question_{i}"
             explanation = q['explanation']
 
             st.markdown('-------------------------------')
-            st.markdown(f'<div class="question-style">{label}</div>', unsafe_allow_html=True)
+            # Use st.markdown to render the question, allowing LaTeX and markdown formatting
+            st.markdown(f"**{label}**")
 
             question = question_generator(label, options, question_key)
 
+            # Store submitted answers in session state
             if st.button('Submit', key=f"submit_{i}"):
                 if 'submitted_answers' not in st.session_state:
                     st.session_state.submitted_answers = {}
@@ -97,6 +109,7 @@ def big_review():
 
                 if 'chapter_information' in q:
                     st.write(f"You can review {q['chapter_information']}")
+
 
 if __name__ == "__main__":
     big_review()
