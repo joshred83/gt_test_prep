@@ -271,18 +271,18 @@ gt_lecture_3_mpc_question_3 = {
     'chapter_information': 'GT Lecture 3'
 }
 
-gt_lecture_3_mpc_question_4 = {
-    'question': "Which of the following hyperparameters is specific to pooling layers?",
-    'options_list': [
-        "A) Kernel size",
-        "B) Stride",
-        "C) Number of filters",
-        "D) Padding"
-    ],
-    'correct_answer': 'B',
-    'explanation': "In pooling layers, stride controls how much the window moves across the input, similar to convolutional layers.",
-    'chapter_information': 'GT Lecture 3'
-}
+# gt_lecture_3_mpc_question_4 = {
+#     'question': "Which of the following hyperparameters is specific to pooling layers?",
+#     'options_list': [
+#         "A) Kernel size",
+#         "B) Stride",
+#         "C) Number of filters",
+#         "D) Padding"
+#     ],
+#     'correct_answer': 'B',
+#     'explanation': "In pooling layers, stride controls how much the window moves across the input, similar to convolutional layers.",
+#     'chapter_information': 'GT Lecture 3'
+# }
 
 gt_lecture_3_mpc_question_5 = {
     'question': "Which of the following pooling types is less commonly used compared to max pooling?",
