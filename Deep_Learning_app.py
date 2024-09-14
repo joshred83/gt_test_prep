@@ -38,7 +38,7 @@ def chapter_review():
 
 def big_review():
     st.markdown("# Big Review")
-    st.write('Comprehensive review with selectable chapters. Refresh Page to load new questions.')
+    st.write('Comprehensive Quiz Review. Refresh Page to load new questions.')
     dl_mpc_big_review.big_review()
 
 def reset_or_initialize_state():
