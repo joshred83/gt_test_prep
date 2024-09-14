@@ -2215,7 +2215,258 @@ gt_lecture_5_2_tf_question_5 = {
     'chapter_information': 'GT Lecture 5.2'
 }
 
+andrew_ng_regularization_quiz_1_question_1 = {
+    'question': "If you have 10,000,000 examples, how would you split the train/dev/test set in a machine learning task to ensure sufficient data for both training and evaluation?",
+    'options_list': [
+        "A) 98% train, 1% dev, 1% test",
+        "B) 33% train, 33% dev, 33% test",
+        "C) 60% train, 20% dev, 20% test"
+    ],
+    'correct_answer': 'A',
+    'explanation': "For large datasets like 10,000,000 examples, it is common to allocate a majority to training (e.g., 98%) while using smaller portions for dev and test (1% each) to maintain enough training data while still evaluating the model.",
+    'chapter_information': 'Andrew Ng Regularization Quiz 1'
+}
 
+andrew_ng_regularization_quiz_1_question_2 = {
+    'question': "In a supervised learning problem, how should the dev and test sets be chosen?",
+    'options_list': [
+        "A) Come from the same distribution",
+        "B) Come from different distributions",
+        "C) Be identical to each other (same X/y pairs)",
+        "D) Have the same number of examples"
+    ],
+    'correct_answer': 'A',
+    'explanation': "The dev and test sets should come from the same distribution to ensure that model evaluation is consistent and reflects real-world performance.",
+    'chapter_information': 'Andrew Ng Regularization Quiz 1'
+}
+
+andrew_ng_regularization_quiz_1_question_3 = {
+    'question': "If your neural network model seems to have high bias (indicating underfitting), what of the following would be promising things to try? (Check all that apply)",
+    'options_list': [
+        "A) Make the neural network deeper",
+        "B) Get more test data",
+        "C) Get more training data",
+        "D) Increase the number of units in each hidden layer",
+        "E) Add regularization"
+    ],
+    'correct_answer': ['A', 'D'],
+    'explanation': "High bias indicates underfitting, which can often be mitigated by making the network deeper or increasing the number of units in each hidden layer. Getting more data or adding regularization would not necessarily help in this case.",
+    'chapter_information': 'Andrew Ng Regularization Quiz 1'
+}
+
+andrew_ng_regularization_quiz_1_question_4 = {
+    'question': "You are building a classifier for apples, bananas, and oranges, and your model shows a training error of 0.5% and a dev set error of 7%. Which of the following are promising things to try to improve the classifier's performance? (Check all that apply)",
+    'options_list': [
+        "A) Increase the regularization parameter lambda",
+        "B) Decrease the regularization parameter lambda",
+        "C) Get more training data",
+        "D) Use a bigger neural network"
+    ],
+    'correct_answer': ['B', 'C'],
+    'explanation': "A high dev set error relative to the training error often indicates overfitting. Decreasing the regularization parameter and getting more training data can help reduce this overfitting.",
+    'chapter_information': 'Andrew Ng Regularization Quiz 1'
+}
+
+andrew_ng_regularization_quiz_1_question_5 = {
+    'question': "In the context of neural networks, what is weight decay?",
+    'options_list': [
+        "A) A regularization technique such as L2 regularization that results in gradient descent shrinking the weights on every iteration.",
+        "B) Gradual corruption of the weights in the neural network if it is trained on noisy data.",
+        "C) The process of gradually decreasing the learning rate during training.",
+        "D) A technique to avoid vanishing gradient by imposing a ceiling on the values of the weights."
+    ],
+    'correct_answer': 'A',
+    'explanation': "Weight decay is another term for L2 regularization, which applies a penalty on large weights during training by shrinking the weights after each iteration.",
+    'chapter_information': 'Andrew Ng Regularization Quiz 1'
+}
+
+andrew_ng_regularization_quiz_1_question_6 = {
+    'question': "What happens when you increase the regularization hyperparameter lambda in a neural network model?",
+    'options_list': [
+        "A) Weights are pushed toward becoming smaller (closer to 0)",
+        "B) Weights are pushed toward becoming bigger (further from 0)",
+        "C) Doubling lambda should roughly result in doubling the weights",
+        "D) Gradient descent takes bigger steps with each iteration (proportional to lambda)"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Increasing lambda encourages weight shrinkage, pushing weights toward 0, which helps prevent overfitting by reducing model complexity.",
+    'chapter_information': 'Andrew Ng Regularization Quiz 1'
+}
+
+andrew_ng_regularization_quiz_1_question_7 = {
+    'question': "With the inverted dropout technique, what happens at test time during the forward pass?",
+    'options_list': [
+        "A) You apply dropout (randomly eliminating units) but keep the 1/keep_prob factor in the calculations used in training.",
+        "B) You do not apply dropout (do not randomly eliminate units) and do not keep the 1/keep_prob factor in the calculations used in training.",
+        "C) You apply dropout (randomly eliminating units) and do not keep the 1/keep_prob factor in the calculations used in training."
+    ],
+    'correct_answer': 'B',
+    'explanation': "In the inverted dropout technique, dropout is not applied during test time, and the keep_prob scaling is not used in the test calculations.",
+    'chapter_information': 'Andrew Ng Regularization Quiz 1'
+}
+
+andrew_ng_optimization_algorithms_quiz_2_question_2 = {
+    'question': "Which of these statements about mini-batch gradient descent do you agree with?",
+    'options_list': [
+        "A) One iteration of mini-batch gradient descent (computing on a single mini-batch) is faster than one iteration of batch gradient descent.",
+        "B) Training one epoch (one pass through the training set) using mini-batch gradient descent is faster than training one epoch using batch gradient descent.",
+        "C) You should implement mini-batch gradient descent without an explicit for-loop over different mini-batches, so that the algorithm processes all mini-batches at the same time (vectorization)."
+    ],
+    'correct_answer': 'A',
+    'explanation': "One iteration of mini-batch gradient descent processes fewer examples than batch gradient descent, which is why it is typically faster.",
+    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+}
+
+andrew_ng_optimization_algorithms_quiz_2_question_3 = {
+    'question': "Why is the best mini-batch size usually not 1 and not m (the full training set), but instead something in-between?",
+    'options_list': [
+        "A) If the mini-batch size is m, you end up with batch gradient descent, which has to process the whole training set before making progress.",
+        "B) If the mini-batch size is m, you end up with stochastic gradient descent, which is usually slower than mini-batch gradient descent.",
+        "C) If the mini-batch size is 1, you lose the benefits of vectorization across examples in the mini-batch.",
+        "D) If the mini-batch size is 1, you end up having to process the entire training set before making any progress."
+    ],
+    'correct_answer': ['A', 'C'],
+    'explanation': "Mini-batch gradient descent strikes a balance between processing multiple examples for vectorization efficiency while making progress faster than batch gradient descent (which processes the entire training set).",
+    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+}
+
+andrew_ng_optimization_algorithms_quiz_2_question_5 = {
+    'question': "Suppose the temperature in Casablanca over the first three days of January is constant: $ \theta_1 = 10^{\circ}C $, $ \theta_2 = 10^{\circ}C $. You use an exponentially weighted average with $ \beta = 0.5 $ to track the temperature: $ v_0 = 0 $, $ v_t = \beta v_{t-1} + (1 - \beta) \theta_t $. If $ v_2 $ is the value computed after day 2 without bias correction and $ v_2^{\text{corrected}} $ is the value you compute with bias correction, what are these values?",
+    'options_list': [
+        "A) $ v_2 = 7.5, v_2^{\text{corrected}} = 10 $",
+        "B) $ v_2 = 10, v_2^{\text{corrected}} = 10 $",
+        "C) $ v_2 = 10, v_2^{\text{corrected}} = 7.5 $",
+        "D) $ v_2 = 7.5, v_2^{\text{corrected}} = 7.5 $"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Without bias correction, the exponentially weighted average is $ v_2 = 7.5 $, but with bias correction, it compensates for the initialization and yields $ v_2^{\text{corrected}} = 10 $.",
+    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+}
+
+andrew_ng_optimization_algorithms_quiz_2_question_6 = {
+    'question': "Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number.",
+    'options_list': [
+        "A) $ \alpha = \frac{1}{1 + 2 + 3 + t} \alpha_0 $",
+        "B) $ \alpha = 0.95^t \alpha_0 $",
+        "C) $ \alpha = e^t \alpha_0 $",
+        "D) $ \alpha = \frac{1}{\sqrt{t}} \alpha_0 $"
+    ],
+    'correct_answer': 'C',
+    'explanation': "A learning rate that increases exponentially as the epoch progresses is not suitable as it would cause divergence during training. The other decay schemes gradually reduce the learning rate.",
+    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+}
+
+andrew_ng_optimization_algorithms_quiz_2_question_9 = {
+    'question': "Suppose batch gradient descent in a deep network is taking excessively long to find parameter values that achieve a small value for the cost function $ J(\mathbf{w}^{[1]}, \mathbf{b}^{[1]}, \ldots, \mathbf{w}^{[L]}, \mathbf{b}^{[L]}) $. Which of the following techniques could help find parameter values that attain a small value for $ J $? (Check all that apply)",
+    'options_list': [
+        "A) Try using Adam",
+        "B) Try better random initialization for the weights",
+        "C) Try tuning the learning rate $ \alpha $",
+        "D) Try initializing all the weights to zero",
+        "E) Try mini-batch gradient descent"
+    ],
+    'correct_answer': ['A', 'B', 'C', 'E'],
+    'explanation': "Using Adam, better initialization, tuning the learning rate, and using mini-batch gradient descent can all help speed up convergence in deep networks.",
+    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+}
+
+andrew_ng_optimization_algorithms_quiz_2_question_10 = {
+    'question': "Which of the following statements about the Adam optimization algorithm is false?",
+    'options_list': [
+        "A) We usually use 'default' values for the hyperparameters $ \beta_1, \beta_2 $ and $ \epsilon $ in Adam ($ \beta_1 = 0.9, \beta_2 = 0.999, \epsilon = 10^{-8} $).",
+        "B) The learning rate hyperparameter $ \alpha $ in Adam usually needs to be tuned.",
+        "C) Adam combines the advantages of RMSProp and momentum.",
+        "D) Adam should be used with batch gradient computations, not with mini-batches."
+    ],
+    'correct_answer': 'D',
+    'explanation': "Adam is designed to work well with mini-batches. The statement that it should be used with batch gradient computations is false.",
+    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+}
+
+
+andrew_ng_hyperparameter_tuning_quiz_3_question_1 = {
+    'question': "If searching among a large number of hyperparameters, you should try values in a grid rather than random values so that you can carry out the search more systematically and not rely on chance. True or False?",
+    'options_list': [
+        "A) True",
+        "B) False"
+    ],
+    'correct_answer': 'B',
+    'explanation': "While grid search may seem systematic, random search is often more efficient and can cover a broader range of values, leading to better hyperparameter optimization.",
+    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+}
+
+andrew_ng_hyperparameter_tuning_quiz_3_question_2 = {
+    'question': "Every hyperparameter, if set poorly, can have a huge negative impact on training, and so all hyperparameters are about equally important to tune well. True or False?",
+    'options_list': [
+        "A) True",
+        "B) False"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Not all hyperparameters are equally important. For example, the learning rate tends to be more critical than other hyperparameters like the batch size.",
+    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+}
+
+andrew_ng_hyperparameter_tuning_quiz_3_question_3 = {
+    'question': "During hyperparameter search, whether you try to babysit one model ('Panda' strategy) or train a lot of models in parallel ('Caviar' strategy) is largely determined by:",
+    'options_list': [
+        "A) Whether you use batch or mini-batch optimization",
+        "B) The presence of local minima (and saddle points) in your neural network",
+        "C) The amount of computational power you can access",
+        "D) The number of hyperparameters you have to tune"
+    ],
+    'correct_answer': 'C',
+    'explanation': "The 'Caviar' strategy (training many models in parallel) requires more computational power than the 'Panda' strategy (babysitting one model).",
+    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+}
+
+andrew_ng_hyperparameter_tuning_quiz_3_question_4 = {
+    'question': "If you think $ \beta $ (hyperparameter for momentum) is between 0.9 and 0.99, which of the following is the recommended way to sample a value for $ \beta $?",
+    'options_list': [
+        "A) beta = 0.9 + random.rand()",
+        "B) beta = 0.9 + (0.99 - 0.9) * random.rand()",
+        "C) beta = 1 - 10^{(random.rand() - 1)}"
+    ],
+    'correct_answer': 'C',
+    'explanation': "The recommended method for sampling a value of $ \beta $ is to use $ \beta = 1 - 10^{(random.rand() - 1)} $, as it samples effectively from the logarithmic scale.",
+    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+}
+
+andrew_ng_hyperparameter_tuning_quiz_3_question_5 = {
+    'question': "Finding good hyperparameter values is very time-consuming. So typically you should do it once at the start of the project and try to find very good hyperparameters so that you don’t ever have to revisit tuning them again. True or False?",
+    'options_list': [
+        "A) True",
+        "B) False"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Hyperparameter tuning is often an iterative process. It is common to revisit and adjust hyperparameters throughout the project as needed.",
+    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+}
+
+andrew_ng_hyperparameter_tuning_quiz_3_question_6 = {
+    'question': "In batch normalization as presented in the videos, if you apply it on the $l$-th layer of your neural network, what are you normalizing?",
+    'options_list': [
+        "A) $y^{(l)}$",
+        "B) $z^{(l)}$",
+        "C) $b^{(l)}$",
+        "D) $a^{(l)}$"
+    ],
+    'correct_answer': 'B',
+    'explanation': "In batch normalization, the normalization is applied to $z^{(l)}$, which is the input to the activation function for layer $l$.",
+    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+}
+
+andrew_ng_hyperparameter_tuning_quiz_3_question_7 = {
+    'question': "In the normalization formula $z_{norm} = \frac{z - \mu}{\sqrt{\sigma^2 + \epsilon}}$, why do we use epsilon?",
+    'options_list': [
+        "A) To speed up convergence",
+        "B) To have a more accurate normalization",
+        "C) In case $ \mu $ is too small",
+        "D) To avoid division by zero"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The $ \epsilon $ term is added to avoid division by zero in case $ \sigma^2 $ is very small.",
+    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+}
 
 
 

@@ -535,6 +535,103 @@ andrew_ng_c4w1_tf_question_7 = {
     'chapter_information': 'Andrew Ng Deep Learning C4W1'
 }
 
+uc_boulder_dl_cnn_question_1 = {
+    'question': "Consider a convolutional neural network model with three convolution layers. The first layer has 50 filters, the second layer has 100 filters, and the third layer has 200 filters. All convolution layers have a stride of 2 and the same padding. The input images are 300x400 pixels with RGB channels, and the filter size is 3x3. How many trainable parameters does the CNN model have?",
+    'options_list': ["Do the computation"],
+    'correct_answer': '226700',
+    'explanation': "Parameters in 1st layer: 50 filters with 3x3x3 size + 1 bias = 50x(3x3x3+1) = 1400\nParameters in 2nd layer: 100 filters with (3x3x50 + 1) = 45100\nParameters in 3rd layer: 200 filters with (3x3x100+1) = 180200\nTotal parameters = 1400 + 45100 + 180200 = 226700",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_5 = {
+    'question': "How many convolutional layers with 3x3 filters would you need to have the same receptive field as a convolutional layer with 11x11 filters? Assume stride=1 and no padding.",
+    'options_list': ["Do the computation"],
+    'correct_answer': '5',
+    'explanation': "The correct answer is 5 layers. The receptive field grows from 1->3->5->7->9->11 with each layer.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_4 = {
+    'question': "True or False: You can use bigger strides in a convolutional layer instead of a max-pooling layer for better accuracy.",
+    'options_list': [
+        "A) True",
+        "B) False"
+    ],
+    'correct_answer': 'A',
+    'explanation': "A convolutional layer with stride two can subsample equivalently with a max-pooling layer with a 2x2 filter size. It costs more parameters, but the convolutional layer is learnable, so it tends to have better accuracy.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_3 = {
+    'question': "While training a CNN model, you receive the OOM (out of memory) error message. What can you do to resolve the issue? Choose all that apply.",
+    'options_list': [
+        "A) Reduce the batch size",
+        "B) Reduce the number of epochs",
+        "C) Reduce the number of filters in convolution layers",
+        "D) Reduce the stride of convolution layers",
+        "E) Reduce the number of layers"
+    ],
+    'correct_answer': " A, C, and E",
+    'explanation': "Reducing the mini-batch size will require less memory per batch. Reducing the number of filters can reduce the feature map depth. Reducing the number of layers will give fewer parameters and feature maps.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_2 = {
+    'question': "Consider a convolutional neural network model with three convolution layers. The first layer has 50 filters, the second layer has 100 filters, and the third layer has 200 filters. All convolution layers have a stride of 2 and the same padding. The input images are 300x400 pixels with RGB channels. What is the feature map size after the third convolution layer?",
+    'options_list': [
+        "A) 150x200x50",
+        "B) 38x50x200",
+        "C) 75x100x100"
+    ],
+    'correct_answer': 'B',
+    'explanation': "After applying the first convolutional layer, the first feature map size is 150x200x50. After the second layer, the feature map size is 75x100x100. After the third layer, the feature map size is 38x50x200. The width 75 gets padded to 77, then divided by two to get 38.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_6 = {
+    'question': "Consider a convolutional neural network with an input volume of 64x64x3 (RGB image). You apply a convolutional layer with 32 filters of size 5x5, using stride=1 and same padding. How many trainable parameters does this layer have?",
+    'options_list': ["Do the computation"],
+    'correct_answer': '2432',
+    'explanation': "The number of parameters is calculated as (5x5x3 + 1) per filter (for the bias term), and then multiplied by the number of filters: (5x5x3 + 1) x 32 = 2432 parameters.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_7 = {
+    'question': "You have a convolutional layer with 64 filters of size 7x7, using stride=2 and no padding. The input volume is 128x128x32. What is the output feature map size after applying the convolutional layer?",
+    'options_list': ["Do the computation"],
+    'correct_answer': '61x61x64',
+    'explanation': "Using the formula for the output size of a convolutional layer: $$H_{out} = \\frac{H_{in} - K}{S} + 1$$, we get $$H_{out} = \\frac{128 - 7}{2} + 1 = 61$$. Thus, the output feature map size is 61x61x64.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_8 = {
+    'question': "Consider a CNN with a 224x224x3 input. You apply a convolutional layer with 128 filters of size 3x3 and stride=1. If the output volume is 224x224x128, how many trainable parameters are there in this layer?",
+    'options_list': ["Do the computation"],
+    'correct_answer': '3,712',
+    'explanation': "The number of parameters is calculated as (3x3x3 + 1) per filter (for the bias term), and then multiplied by the number of filters: (3x3x3 + 1) x 128 = 3712 parameters.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_9 = {
+    'question': "If you have an input volume of 150x150x64 and convolve it with 256 filters of size 5x5, using a stride of 2 and same padding, what is the output volume size?",
+    'options_list': ["Do the computation"],
+    'correct_answer': '75x75x256',
+    'explanation': "The output size is calculated using the formula: $$H_{out} = \\frac{H_{in}}{S}$$ when padding is applied. Here, $$H_{out} = \\frac{150}{2} = 75$$. Therefore, the output volume is 75x75x256.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_10 = {
+    'question': "You have an input volume of 256x256x32, and you apply a max-pooling layer with a 2x2 filter and stride of 2. What is the output volume size after applying the max-pooling layer?",
+    'options_list': ["Do the computation"],
+    'correct_answer': '128x128x32',
+    'explanation': "Max-pooling reduces the spatial dimensions by a factor of the stride. So, the output size is $$\\frac{256}{2} = 128$$. The depth remains unchanged, so the output is 128x128x32.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+
+
+
+
 
 
 KC_MPC_QUESTIONS = []
