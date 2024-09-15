@@ -155,18 +155,18 @@ lesson3_mpc_question_3 = {
     'chapter_information': 'Lesson 3 - Second Lecture'
 }
 
-deep_learning_ch7_mpc_question_1 = {
-    'question': "Which of the following statements about L1 regularization is NOT true?",
-    'options_list': [
-        "A) L1 regularization induces sparsity by driving some weights to zero.",
-        "B) L1 regularization uses the absolute value of weights in the penalty term.",
-        "C) The optimal solution for L1 regularization is always sparse, regardless of the value of \( \\alpha \\).",
-        "D) L1 regularization can be interpreted as MAP inference with a Laplace prior."
-    ],
-    'correct_answer': 'C',
-    'explanation': "L1 regularization induces sparsity only for large enough values of \( \\alpha \\). If \( \\alpha \\) is too small, the solution may not be sparse.",
-    'chapter_information': 'Deep Learning Book Chapter 7.1'
-}
+# deep_learning_ch7_mpc_question_1 = {
+#     'question': "Which of the following statements about L1 regularization is NOT true?",
+#     'options_list': [
+#         "A) L1 regularization induces sparsity by driving some weights to zero.",
+#         "B) L1 regularization uses the absolute value of weights in the penalty term.",
+#         "C) The optimal solution for L1 regularization is always sparse, regardless of the value of \( \\alpha \\).",
+#         "D) L1 regularization can be interpreted as MAP inference with a Laplace prior."
+#     ],
+#     'correct_answer': 'C',
+#     'explanation': "L1 regularization induces sparsity only for large enough values of \( \\alpha \\). If \( \\alpha \\) is too small, the solution may not be sparse.",
+#     'chapter_information': 'Deep Learning Book Chapter 7.1'
+# }
 
 # deep_learning_ch7_truefalse_question_1 = {
 #     'question': "True or False: L1 regularization can be viewed as equivalent to maximum a posteriori (MAP) Bayesian inference with a Laplace prior over the weights.",
@@ -913,18 +913,18 @@ deep_learning_ch8_mpc_question_35 = {
     'chapter_information': 'Deep Learning Book Chapter 8.7'
 }
 
-deep_learning_ch8_mpc_question_36 = {
-    'question': "If curriculum learning is viewed as a continuation method, what role do the earlier cost functions \( J^{(i)} \) play?",
-    'options_list': [
-        "A) They increase the influence of simpler examples, making the initial phases of learning easier.",
-        "B) They introduce harder examples first, forcing the model to learn faster.",
-        "C) They focus only on increasing the capacity of the model without changing the learning process.",
-        "D) They are designed to overfit the training data to improve generalization."
-    ],
-    'correct_answer': 'A',
-    'explanation': "In curriculum learning, the earlier cost functions are designed to increase the influence of simpler examples, which makes the initial phases of learning easier and gradually increases the complexity of the task.",
-    'chapter_information': 'Deep Learning Book Chapter 8.7'
-}
+# deep_learning_ch8_mpc_question_36 = {
+#     'question': "If curriculum learning is viewed as a continuation method, what role do the earlier cost functions \( J^{(i)} \) play?",
+#     'options_list': [
+#         "A) They increase the influence of simpler examples, making the initial phases of learning easier.",
+#         "B) They introduce harder examples first, forcing the model to learn faster.",
+#         "C) They focus only on increasing the capacity of the model without changing the learning process.",
+#         "D) They are designed to overfit the training data to improve generalization."
+#     ],
+#     'correct_answer': 'A',
+#     'explanation': "In curriculum learning, the earlier cost functions are designed to increase the influence of simpler examples, which makes the initial phases of learning easier and gradually increases the complexity of the task.",
+#     'chapter_information': 'Deep Learning Book Chapter 8.7'
+# }
 
 deep_learning_ch8_mpc_question_37 = {
     'question': "In the curriculum learning approach proposed by Zaremba and Sutskever (2014) for training recurrent neural networks, what differentiates the stochastic curriculum from the deterministic curriculum?",
@@ -1919,31 +1919,31 @@ andrew_ng_optimization_algorithms_quiz_2_question_3 = {
     'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
 }
 
-andrew_ng_optimization_algorithms_quiz_2_question_5 = {
-    'question': "Suppose the temperature in Casablanca over the first three days of January is constant: $ \theta_1 = 10^{\circ}C $, $ \theta_2 = 10^{\circ}C $. You use an exponentially weighted average with $ \beta = 0.5 $ to track the temperature: $ v_0 = 0 $, $ v_t = \beta v_{t-1} + (1 - \beta) \theta_t $. If $ v_2 $ is the value computed after day 2 without bias correction and $ v_2^{\text{corrected}} $ is the value you compute with bias correction, what are these values?",
-    'options_list': [
-        "A) $ v_2 = 7.5, v_2^{\text{corrected}} = 10 $",
-        "B) $ v_2 = 10, v_2^{\text{corrected}} = 10 $",
-        "C) $ v_2 = 10, v_2^{\text{corrected}} = 7.5 $",
-        "D) $ v_2 = 7.5, v_2^{\text{corrected}} = 7.5 $"
-    ],
-    'correct_answer': 'A',
-    'explanation': "Without bias correction, the exponentially weighted average is $ v_2 = 7.5 $, but with bias correction, it compensates for the initialization and yields $ v_2^{\text{corrected}} = 10 $.",
-    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
-}
+# andrew_ng_optimization_algorithms_quiz_2_question_5 = {
+#     'question': "Suppose the temperature in Casablanca over the first three days of January is constant: $ \theta_1 = 10^{\circ}C $, $ \theta_2 = 10^{\circ}C $. You use an exponentially weighted average with $ \beta = 0.5 $ to track the temperature: $ v_0 = 0 $, $ v_t = \beta v_{t-1} + (1 - \beta) \theta_t $. If $ v_2 $ is the value computed after day 2 without bias correction and $ v_2^{\text{corrected}} $ is the value you compute with bias correction, what are these values?",
+#     'options_list': [
+#         "A) $ v_2 = 7.5, v_2^{\text{corrected}} = 10 $",
+#         "B) $ v_2 = 10, v_2^{\text{corrected}} = 10 $",
+#         "C) $ v_2 = 10, v_2^{\text{corrected}} = 7.5 $",
+#         "D) $ v_2 = 7.5, v_2^{\text{corrected}} = 7.5 $"
+#     ],
+#     'correct_answer': 'A',
+#     'explanation': "Without bias correction, the exponentially weighted average is $ v_2 = 7.5 $, but with bias correction, it compensates for the initialization and yields $ v_2^{\text{corrected}} = 10 $.",
+#     'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+# }
 
-andrew_ng_optimization_algorithms_quiz_2_question_6 = {
-    'question': "Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number.",
-    'options_list': [
-        "A) $ \alpha = \frac{1}{1 + 2 + 3 + t} \alpha_0 $",
-        "B) $ \alpha = 0.95^t \alpha_0 $",
-        "C) $ \alpha = e^t \alpha_0 $",
-        "D) $ \alpha = \frac{1}{\sqrt{t}} \alpha_0 $"
-    ],
-    'correct_answer': 'C',
-    'explanation': "A learning rate that increases exponentially as the epoch progresses is not suitable as it would cause divergence during training. The other decay schemes gradually reduce the learning rate.",
-    'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
-}
+# andrew_ng_optimization_algorithms_quiz_2_question_6 = {
+#     'question': "Which of these is NOT a good learning rate decay scheme? Here, t is the epoch number.",
+#     'options_list': [
+#         "A) $ \alpha = \frac{1}{1 + 2 + 3 + t} \alpha_0 $",
+#         "B) $ \alpha = 0.95^t \alpha_0 $",
+#         "C) $ \alpha = e^t \alpha_0 $",
+#         "D) $ \alpha = \frac{1}{\sqrt{t}} \alpha_0 $"
+#     ],
+#     'correct_answer': 'C',
+#     'explanation': "A learning rate that increases exponentially as the epoch progresses is not suitable as it would cause divergence during training. The other decay schemes gradually reduce the learning rate.",
+#     'chapter_information': 'Andrew Ng Optimization Algorithms Quiz 2'
+# }
 
 andrew_ng_optimization_algorithms_quiz_2_question_9 = {
     'question': "Suppose batch gradient descent in a deep network is taking excessively long to find parameter values that achieve a small value for the cost function $ J(\mathbf{w}^{[1]}, \mathbf{b}^{[1]}, \ldots, \mathbf{w}^{[L]}, \mathbf{b}^{[L]}) $. Which of the following techniques could help find parameter values that attain a small value for $ J $? (Check all that apply)",
@@ -2044,18 +2044,18 @@ andrew_ng_hyperparameter_tuning_quiz_3_question_6 = {
     'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
 }
 
-andrew_ng_hyperparameter_tuning_quiz_3_question_7 = {
-    'question': "In the normalization formula $z_{norm} = \frac{z - \mu}{\sqrt{\sigma^2 + \epsilon}}$, why do we use epsilon?",
-    'options_list': [
-        "A) To speed up convergence",
-        "B) To have a more accurate normalization",
-        "C) In case $ \mu $ is too small",
-        "D) To avoid division by zero"
-    ],
-    'correct_answer': 'D',
-    'explanation': "The $ \epsilon $ term is added to avoid division by zero in case $ \sigma^2 $ is very small.",
-    'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
-}
+# andrew_ng_hyperparameter_tuning_quiz_3_question_7 = {
+#     'question': "In the normalization formula $z_{norm} = \frac{z - \mu}{\sqrt{\sigma^2 + \epsilon}}$, why do we use epsilon?",
+#     'options_list': [
+#         "A) To speed up convergence",
+#         "B) To have a more accurate normalization",
+#         "C) In case $ \mu $ is too small",
+#         "D) To avoid division by zero"
+#     ],
+#     'correct_answer': 'D',
+#     'explanation': "The $ \epsilon $ term is added to avoid division by zero in case $ \sigma^2 $ is very small.",
+#     'chapter_information': 'Andrew Ng Hyperparameter Tuning Quiz 3'
+# }
 
 
 
