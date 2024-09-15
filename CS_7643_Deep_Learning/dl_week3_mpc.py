@@ -68,35 +68,55 @@ monzersaleh_optimization_question_5 = {
 
 lesso1n3_truefalse_question_1 = {
     'question': "True or False: A neural network with more parameters than training examples is more likely to generalize better due to its larger capacity.",
-    'correct_answer': 'False',
+        'options_list': [
+        "True",
+        "False"
+    ],
+        'correct_answer': 'False',
     'explanation': "Having more parameters than training examples increases the risk of overfitting, where the model memorizes the data instead of generalizing to new data.",
     'chapter_information': 'Lesson 3 - Lecture Transcripts'
 }
 
 less1on3_truefalse_question_2 = {
     'question': "True or False: Initializing neural network weights too close to zero can lead to poor learning performance due to vanishing gradients.",
-    'correct_answer': 'True',
+        'options_list': [
+        "True",
+        "False"
+    ],
+        'correct_answer': 'True',
     'explanation': "When weights are initialized too close to zero, gradients may become very small during backpropagation, leading to slow learning or the vanishing gradient problem.",
     'chapter_information': 'Lesson 3 - Lecture Transcripts'
 }
 
 le1sson3_truefalse_question_3 = {
     'question': "True or False: Adding depth to a neural network always leads to parameter efficiency, making it easier to learn any function.",
-    'correct_answer': 'False',
+        'options_list': [
+        "True",
+        "False"
+    ],
+        'correct_answer': 'False',
     'explanation': "While adding depth can improve learning efficiency, it can also introduce challenges such as vanishing gradients, making deeper networks harder to train without careful design.",
     'chapter_information': 'Lesson 3 - Lecture Transcripts'
 }
 
 lesso1n3_truefalse_question_4 = {
     'question': "True or False: Regularization techniques like dropout are essential only when the model is overfitting and can be ignored otherwise.",
-    'correct_answer': 'False',
+        'options_list': [
+        "True",
+        "False"
+    ],
+        'correct_answer': 'False',
     'explanation': "Dropout can improve model robustness and generalization even when overfitting is not obvious. It helps prevent co-adaptation of neurons, improving generalization.",
     'chapter_information': 'Lesson 3 - Lecture Transcripts'
 }
 
 less1on3_truefalse_question_5 = {
     'question': "True or False: Backpropagation can only be used with neural networks that have fully connected layers.",
-    'correct_answer': 'False',
+        'options_list': [
+        "True",
+        "False"
+    ],
+        'correct_answer': 'False',
     'explanation': "Backpropagation can be applied to various architectures including convolutional and recurrent networks, not just fully connected layers.",
     'chapter_information': 'Lesson 3 - Lecture Transcripts'
 }
@@ -111,7 +131,11 @@ less1on3_truefalse_question_5 = {
 
 less1on3_truefalse_question_2 = {
     'question': "True or False: Subgradients are only used when the activation function is piecewise linear, and they cannot be applied to non-differentiable points in non-linear functions like sigmoid or tanh.",
-    'correct_answer': 'False',
+        'options_list': [
+        "True",
+        "False"
+    ],
+        'correct_answer': 'False',
     'explanation': "Subgradients can be used at non-differentiable points in functions like ReLU and other piecewise functions. They approximate the gradient at non-smooth points.",
     'chapter_information': 'Lesson 3 - Second Lecture'
 }
