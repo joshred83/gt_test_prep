@@ -727,10 +727,11 @@ uc_boulder_dl_cnn_question_7 = {
 uc_boulder_dl_cnn_question_8 = {
     'question': "Consider a CNN with a 224x224x3 input. You apply a convolutional layer with 128 filters of size 3x3 and stride=1. If the output volume is 224x224x128, how many trainable parameters are there in this layer?",
     'options_list': ["Do the computation"],
-    'correct_answer': '3,712',
-    'explanation': "The number of parameters is calculated as (3x3x3 + 1) per filter (for the bias term), and then multiplied by the number of filters: (3x3x3 + 1) x 128 = 3712 parameters.",
+    'correct_answer': '3,584',
+    'explanation': "The number of parameters is calculated as (3x3x3) per filter (for the weights), and each filter also has 1 bias term. Then, multiply by the number of filters: (3x3x3) x 128 + 128 = 3584 parameters.",
     'chapter_information': 'UC Boulder DL Course'
 }
+
 
 uc_boulder_dl_cnn_question_9 = {
     'question': "If you have an input volume of 150x150x64 and convolve it with 256 filters of size 5x5, using a stride of 2 and same padding, what is the output volume size?",
