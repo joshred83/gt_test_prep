@@ -749,6 +749,417 @@ uc_boulder_dl_cnn_question_10 = {
 }
 
 
+perplexity_quiz_prep_mpc_question_1 = {
+    'question': "You have an input volume of 64×64×3. What are the dimensions of the resulting volume after applying a convolutional layer with 16 filters of size 3×3, stride of 2, and 'same' padding?",
+    'options_list': [
+        "A) 32×32×16",
+        "B) 31×31×16",
+        "C) 64×64×16",
+        "D) 62×62×16"
+    ],
+    'correct_answer': 'A',
+    'explanation': "With 'same' padding and a stride of 2, the output spatial dimensions are halved, giving an output volume of 32×32×16 with 16 filters.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_mpc_question_2 = {
+    'question': "How many parameters (weights and biases) does a convolutional layer have with the following configuration: 64 filters of size 5×5, input volume 128×128×3?",
+    'options_list': [
+        "A) 4,800",
+        "B) 4,864",
+        "C) 9,600",
+        "D) 9,664"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The number of parameters is calculated as (5×5×3)×64 filters + 64 biases, which results in 9,664 parameters.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_mpc_question_3 = {
+    'question': "What is the output volume size after applying max pooling with a 2×2 kernel and stride of 2 to an input volume of 56×56×32?",
+    'options_list': [
+        "A) 28×28×32",
+        "B) 27×27×32",
+        "C) 28×28×16",
+        "D) 54×54×32"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Max pooling with a 2×2 kernel and stride 2 reduces each spatial dimension by half, resulting in an output volume of 28×28×32.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_mpc_question_4 = {
+    'question': "You have a 3D input volume of 16×16×16×8 (width×height×depth×channels). What is the output volume size after applying a 3D convolution with 32 filters of size 3×3×3, stride of 1, and 'valid' padding?",
+    'options_list': [
+        "A) 14×14×14×32",
+        "B) 16×16×16×32",
+        "C) 18×18×18×32",
+        "D) 14×14×14×8"
+    ],
+    'correct_answer': 'A',
+    'explanation': "For 'valid' padding, the output spatial dimensions are reduced by the size of the kernel minus 1 (3−1=2), giving an output volume of 14×14×14×32.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_1 = {
+    'question': "A 1×1 convolution with 64 filters applied to an input volume of 32×32×128 will result in an output volume of 32×32×64.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "A 1×1 convolution reduces only the depth of the input volume based on the number of filters used, resulting in 32×32×64 for 64 filters.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_2 = {
+    'question': "Applying 'same' padding to a convolutional layer always results in an output volume with the same spatial dimensions as the input volume, regardless of the kernel size and stride.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "While 'same' padding preserves spatial dimensions for stride=1, increasing the stride will reduce the output dimensions.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_3 = {
+    'question': "The number of parameters in a convolutional layer is independent of the input volume size.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The number of parameters in a convolutional layer depends on the kernel size and number of filters, not on the size of the input volume.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_4 = {
+    'question': "A max pooling layer with a 3×3 kernel and stride of 2 will reduce the spatial dimensions of the input by exactly one-third.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "A stride of 2 reduces the spatial dimensions by approximately half, not one-third.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+perplexity_quiz_prep_tf_question_5 = {
+    'question': "In a 3D convolution, the number of channels in the output volume is always equal to the number of filters used, regardless of the number of input channels.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "In 3D convolutions, the number of output channels is determined by the number of filters, regardless of the input channels.",
+    'chapter_information': 'Perplexity Quiz Prep'
+}
+
+university_of_michigan_lecture_8_mpc_question_1 = {
+    'question': "You have an input volume of size 227×227×3. A convolutional layer applies 64 filters, each of size 11×11, with a stride of 4 and padding of 2. What are the dimensions of the resulting feature map after the convolution?",
+    'options_list': [
+        "A) 64×56×56",
+        "B) 64×27×27",
+        "C) 64×32×32",
+        "D) 64×28×28"
+    ],
+    'correct_answer': 'A',
+    'explanation': "For a convolutional layer with padding=2, stride=4, and kernel size=11, the formula for output size is: [(input size - kernel size + 2×padding) / stride] + 1. Thus, the resulting feature map dimensions are 64×56×56.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_2 = {
+    'question': "You have an input volume of size 27×27×192. A max pooling layer with a 3×3 kernel, stride of 2, and padding of 0 is applied. What are the dimensions of the resulting volume after pooling?",
+    'options_list': [
+        "A) 192×27×27",
+        "B) 192×13×13",
+        "C) 192×14×14",
+        "D) 192×6×6"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling with a 3×3 kernel, stride 2, and no padding reduces the size using the formula [(input size - kernel size) / stride] + 1. This gives an output size of 192×13×13.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_3 = {
+    'question': "An input volume of size 13×13×192 is processed by a convolutional layer with 384 filters, each of size 3×3, with a stride of 1 and padding of 1. What are the dimensions of the resulting feature map?",
+    'options_list': [
+        "A) 384×27×27",
+        "B) 384×13×13",
+        "C) 256×13×13",
+        "D) 192×13×13"
+    ],
+    'correct_answer': 'B',
+    'explanation': "With padding of 1 and stride of 1, the spatial dimensions remain the same as the input, so the output volume size will be 384×13×13.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_4 = {
+    'question': "You have an input volume of size 13×13×256. A convolutional layer applies 256 filters, each of size 3×3, with stride of 1 and padding of 1. What are the dimensions of the resulting feature map?",
+    'options_list': [
+        "A) 384×13×13",
+        "B) 256×13×13",
+        "C) 256×7×7",
+        "D) 192×13×13"
+    ],
+    'correct_answer': 'B',
+    'explanation': "With padding of 1 and a stride of 1, the output feature map dimensions will match the input dimensions, resulting in 256×13×13.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_5 = {
+    'question': "A max pooling layer with a 3×3 kernel, stride of 2, and no padding is applied to an input volume of size 13×13×256. What are the dimensions of the resulting feature map?",
+    'options_list': [
+        "A) 256×13×13",
+        "B) 256×6×6",
+        "C) 256×7×7",
+        "D) 256×8×8"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Max pooling reduces the dimensions based on the formula: [(input size - kernel size) / stride] + 1. This results in a feature map size of 256×6×6.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_6 = {
+    'question': "You have an input volume of size 6×6×256. After flattening the output volume, what is the total number of features in the flattened output?",
+    'options_list': [
+        "A) 9216",
+        "B) 4608",
+        "C) 256",
+        "D) 4096"
+    ],
+    'correct_answer': 'A',
+    'explanation': "To flatten a 6×6×256 input, multiply the dimensions together: 6×6×256 = 9216 features.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_7 = {
+    'question': "In a convolutional layer, what does $C_{\text{out}}$ represent?",
+    'options_list': [
+        "A) Input channels",
+        "B) Output channels",
+        "C) Kernel height",
+        "D) Stride"
+    ],
+    'correct_answer': 'B',
+    'explanation': "In a convolutional layer, $C_{\text{out}}$ refers to the number of output channels or filters.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_8 = {
+    'question': "Which CNN architecture introduced the concept of residual connections?",
+    'options_list': [
+        "A) AlexNet",
+        "B) VGG",
+        "C) GoogleNet",
+        "D) ResNet"
+    ],
+    'correct_answer': 'D',
+    'explanation': "ResNet introduced the concept of residual connections, which allow the gradient to flow more easily through deep networks.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_9 = {
+    'question': "What is the output height ($H'$) for a convolution with input height $H=32$, kernel size $K=3$, padding $P=1$, and stride $S=2$?",
+    'options_list': [
+        "A) 16",
+        "B) 17",
+        "C) 18",
+        "D) 19"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Using the formula $H' = \frac{H - K + 2P}{S} + 1$, the output height is calculated as $H' = \frac{32 - 3 + 2(1)}{2} + 1 = 16$.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_mpc_question_10 = {
+    'question': "Which of the following is NOT a common kernel size for CNNs?",
+    'options_list': [
+        "A) 1×1",
+        "B) 3×3",
+        "C) 5×5",
+        "D) 7×7"
+    ],
+    'correct_answer': 'D',
+    'explanation': "While 1×1, 3×3, and 5×5 kernels are common, 7×7 kernels are less frequently used.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_1 = {
+    'question': "The Pre-Activation ResNet Block applies BatchNorm and ReLU before each convolution.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The Pre-Activation ResNet block moves BatchNorm and ReLU before each convolutional layer for better gradient flow.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_2 = {
+    'question': "3D convolution is primarily used for processing 2D image data.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "3D convolution is used for processing volumetric data, such as video or medical scans, not 2D image data.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_3 = {
+    'question': "Global average pooling in GoogleNet replaced fully connected layers.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "GoogleNet used global average pooling to replace fully connected layers, reducing the number of parameters in the network.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_4 = {
+    'question': "The weight matrix in a convolutional layer has dimensions $C_{\\text{out}} \\times C_{\\text{in}} \\times K_H \\times K_W$.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "The weight matrix in a convolutional layer is defined by the number of filters (output channels) and their dimensions.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+university_of_michigan_lecture_8_tf_question_5 = {
+    'question': "After ResNet, the focus in CNN architecture design shifted towards increasing network complexity.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "After ResNet, the focus shifted towards building more efficient networks rather than increasing complexity.",
+    'chapter_information': 'University of Michigan Lecture 8'
+}
+
+gt_lecture_5_2_mpc_question_1 = {
+    'question': "Given an input image of size 7×7×3 and a convolutional layer with a 3×3 kernel, stride of 1, and no padding, what will be the height and width of the output feature map?",
+    'options_list': [
+        "A) 5×5",
+        "B) 6×6",
+        "C) 7×7",
+        "D) 3×3"
+    ],
+    'correct_answer': 'A',
+    'explanation': "Using the formula $H_{\text{out}} = \frac{H_{\text{in}} - K + 2P}{S} + 1$, with no padding (P=0) and stride of 1, the output height and width are $5×5$.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_2 = {
+    'question': "If you apply a convolutional layer with 6 kernels, each of size 3×3×3, to an input image of size 5×5×3 with padding of 1 and stride of 1, how many total parameters are involved in this layer (including biases)?",
+    'options_list': [
+        "A) 54",
+        "B) 112",
+        "C) 168",
+        "D) 58"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Each kernel has 3×3×3 = 27 parameters, and each kernel has an additional bias term, making it 28 parameters per kernel. With 6 kernels, the total number of parameters is $28 × 6 = 168$.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_3 = {
+    'question': "For an input volume of size 32×32×3, what is the output size after applying a convolutional layer with a 5×5 kernel, stride of 2, padding of 0, and 16 output channels?",
+    'options_list': [
+        "A) 16×16×16",
+        "B) 14×14×16",
+        "C) 32×32×16",
+        "D) 28×28×16"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Using the formula $H_{\text{out}} = \frac{H_{\text{in}} - K + 2P}{S} + 1$, with $H_{\text{in}} = 32$, $K = 5$, $P = 0$, and $S = 2$, we get an output size of 14×14×16.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_4 = {
+    'question': "In a convolutional layer, what does padding primarily control?",
+    'options_list': [
+        "A) The size of the input",
+        "B) The number of output channels",
+        "C) The spatial size of the output",
+        "D) The number of kernels"
+    ],
+    'correct_answer': 'C',
+    'explanation': "Padding is used to control the spatial size of the output by adding values (often zeros) around the input. It can help preserve the input size in the output.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_mpc_question_5 = {
+    'question': "How does stride affect the output size in a convolution operation?",
+    'options_list': [
+        "A) Increases the depth of the output",
+        "B) Reduces the spatial dimensions of the output",
+        "C) Adds additional channels to the output",
+        "D) Does not influence the output size"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Increasing the stride reduces the spatial dimensions of the output feature map by skipping pixels during the convolution process.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_1 = {
+    'question': "A stride larger than 1 reduces the spatial dimensions of the output feature map.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "When the stride is larger than 1, the kernel moves over the input faster, skipping pixels, which results in a reduced output size.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_2 = {
+    'question': "The depth of a kernel in a convolutional layer always matches the number of channels in the input image.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "For multi-channel inputs like RGB images, the kernel’s depth must match the number of input channels for proper convolution.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_3 = {
+    'question': "Zero-padding is used to ensure that the output size of a convolution layer is the same as the input size.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "Zero-padding is commonly used to preserve the spatial dimensions of the input after convolution by padding the borders with zeros.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_4 = {
+    'question': "In a multi-kernel convolutional layer, the number of output channels is equal to the number of input channels.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'False',
+    'explanation': "The number of output channels is determined by the number of kernels, not the number of input channels. Each kernel produces its own output feature map.",
+    'chapter_information': 'GT Lecture 5.2'
+}
+
+gt_lecture_5_2_tf_question_5 = {
+    'question': "The output size formula for a convolution without padding is $H_{\text{out}} = \frac{H_{\text{in}} - K}{S} + 1$.",
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': 'True',
+    'explanation': "For convolution without padding, the formula for the output size is $H_{\text{out}} = \frac{H_{\text{in}} - K}{S} + 1$.",
+    'chapter_information': 'GT Lecture 5.2'
+}
 
 
 
