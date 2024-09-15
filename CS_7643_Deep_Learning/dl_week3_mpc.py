@@ -1686,122 +1686,122 @@ deep_learning_book_9_6_9_8_tf_question_5 = {
     'chapter_information': 'Deep Learning Book 9.6-9.8'
 }
 
-chapter_2_quiz_prep_mpc_question_1 = {
-    'question': "You have an input volume of 32×32×3. What are the dimensions of the resulting volume after convolving a 5×5 kernel with 0 padding (valid convolution), stride of 1, and 2 filters?",
-    'options_list': [
-        "A) 32×32×2",
-        "B) 28×28×2",
-        "C) 30×30×2",
-        "D) 28×28×3"
-    ],
-    'correct_answer': 'B',
-    'explanation': "For a valid convolution, the output size is reduced due to no padding. Using a 5×5 kernel with stride 1 results in an output size of 28×28 in each spatial dimension and 2 filters give a depth of 2.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_1 = {
+#     'question': "You have an input volume of 32×32×3. What are the dimensions of the resulting volume after convolving a 5×5 kernel with 0 padding (valid convolution), stride of 1, and 2 filters?",
+#     'options_list': [
+#         "A) 32×32×2",
+#         "B) 28×28×2",
+#         "C) 30×30×2",
+#         "D) 28×28×3"
+#     ],
+#     'correct_answer': 'B',
+#     'explanation': "For a valid convolution, the output size is reduced due to no padding. Using a 5×5 kernel with stride 1 results in an output size of 28×28 in each spatial dimension and 2 filters give a depth of 2.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_2 = {
-    'question': "How many weights and biases does the layer described in the previous question (input volume of 32×32×3, 5×5 kernel, valid convolution, stride of 1, and 2 filters) have?",
-    'options_list': [
-        "A) 150",
-        "B) 160",
-        "C) 152",
-        "D) 180"
-    ],
-    'correct_answer': 'C',
-    'explanation': "The number of parameters is calculated as (5×5×3)×2 + 2 biases, which gives 152 total parameters.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_2 = {
+#     'question': "How many weights and biases does the layer described in the previous question (input volume of 32×32×3, 5×5 kernel, valid convolution, stride of 1, and 2 filters) have?",
+#     'options_list': [
+#         "A) 150",
+#         "B) 160",
+#         "C) 152",
+#         "D) 180"
+#     ],
+#     'correct_answer': 'C',
+#     'explanation': "The number of parameters is calculated as (5×5×3)×2 + 2 biases, which gives 152 total parameters.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_3 = {
-    'question': "You want to process time-series data with a 1D CONV that has the same configuration as the layer described earlier (5×5 kernel, valid convolution, stride of 1, and 2 filters) but with a kernel size of 5. The input volume of shape T×3 models three fluctuating values over time. How many weights and biases does this layer have?",
-    'options_list': [
-        "A) 30",
-        "B) 32",
-        "C) 25",
-        "D) 28"
-    ],
-    'correct_answer': 'B',
-    'explanation': "For 1D CONV with a kernel size of 5, the number of parameters is (5×3)×2 filters + 2 biases, which results in 32.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_3 = {
+#     'question': "You want to process time-series data with a 1D CONV that has the same configuration as the layer described earlier (5×5 kernel, valid convolution, stride of 1, and 2 filters) but with a kernel size of 5. The input volume of shape T×3 models three fluctuating values over time. How many weights and biases does this layer have?",
+#     'options_list': [
+#         "A) 30",
+#         "B) 32",
+#         "C) 25",
+#         "D) 28"
+#     ],
+#     'correct_answer': 'B',
+#     'explanation': "For 1D CONV with a kernel size of 5, the number of parameters is (5×3)×2 filters + 2 biases, which results in 32.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_4 = {
-    'question': "Suppose you have an input volume of dimension 64×64×16. How many parameters would a single 1×1 convolutional filter have, including the bias?",
-    'options_list': [
-        "A) 16",
-        "B) 64",
-        "C) 17",
-        "D) 1"
-    ],
-    'correct_answer': 'C',
-    'explanation': "For a 1×1 convolutional filter with an input depth of 16, the number of parameters is 16 weights + 1 bias, which gives a total of 17 parameters.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_4 = {
+#     'question': "Suppose you have an input volume of dimension 64×64×16. How many parameters would a single 1×1 convolutional filter have, including the bias?",
+#     'options_list': [
+#         "A) 16",
+#         "B) 64",
+#         "C) 17",
+#         "D) 1"
+#     ],
+#     'correct_answer': 'C',
+#     'explanation': "For a 1×1 convolutional filter with an input depth of 16, the number of parameters is 16 weights + 1 bias, which gives a total of 17 parameters.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_5 = {
-    'question': "Suppose your input is a 300×300 color (RGB) image, and you use a convolutional layer with 100 filters that are each 5×5. How many parameters does this layer have, including the bias parameters?",
-    'options_list': [
-        "A) 7600",
-        "B) 7500",
-        "C) 7200",
-        "D) 7800"
-    ],
-    'correct_answer': 'A',
-    'explanation': "The number of parameters is calculated as (5×5×3)×100 filters + 100 biases, which results in 7600 parameters.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_5 = {
+#     'question': "Suppose your input is a 300×300 color (RGB) image, and you use a convolutional layer with 100 filters that are each 5×5. How many parameters does this layer have, including the bias parameters?",
+#     'options_list': [
+#         "A) 7600",
+#         "B) 7500",
+#         "C) 7200",
+#         "D) 7800"
+#     ],
+#     'correct_answer': 'A',
+#     'explanation': "The number of parameters is calculated as (5×5×3)×100 filters + 100 biases, which results in 7600 parameters.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_6 = {
-    'question': "You have an input volume that is 63×63×16 and convolve it with 32 filters that are each 7×7, with a stride of 1. You want to use a 'same' convolution. What is the padding?",
-    'options_list': [
-        "A) 1",
-        "B) 2",
-        "C) 3",
-        "D) 4"
-    ],
-    'correct_answer': 'C',
-    'explanation': "For a 'same' convolution with a 7×7 kernel, padding of 3 is required to maintain the input size of 63×63.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_6 = {
+#     'question': "You have an input volume that is 63×63×16 and convolve it with 32 filters that are each 7×7, with a stride of 1. You want to use a 'same' convolution. What is the padding?",
+#     'options_list': [
+#         "A) 1",
+#         "B) 2",
+#         "C) 3",
+#         "D) 4"
+#     ],
+#     'correct_answer': 'C',
+#     'explanation': "For a 'same' convolution with a 7×7 kernel, padding of 3 is required to maintain the input size of 63×63.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_7 = {
-    'question': "What is the output volume of a 32×32×16 input data after applying max pooling with a square kernel of size 2 and stride = 2?",
-    'options_list': [
-        "A) 32×32×16",
-        "B) 16×16×16",
-        "C) 16×16×32",
-        "D) 32×16×16"
-    ],
-    'correct_answer': 'B',
-    'explanation': "Max pooling with a 2×2 kernel and stride 2 reduces each spatial dimension by half, resulting in an output of 16×16×16.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_7 = {
+#     'question': "What is the output volume of a 32×32×16 input data after applying max pooling with a square kernel of size 2 and stride = 2?",
+#     'options_list': [
+#         "A) 32×32×16",
+#         "B) 16×16×16",
+#         "C) 16×16×32",
+#         "D) 32×16×16"
+#     ],
+#     'correct_answer': 'B',
+#     'explanation': "Max pooling with a 2×2 kernel and stride 2 reduces each spatial dimension by half, resulting in an output of 16×16×16.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_8 = {
-    'question': "What is the resulting volume of padding a 15×15×8 input volume using pad=2?",
-    'options_list': [
-        "A) 17×17×8",
-        "B) 19×19×8",
-        "C) 20×20×8",
-        "D) 15×15×8"
-    ],
-    'correct_answer': 'B',
-    'explanation': "Padding the input with pad=2 adds 2 units to each spatial dimension, resulting in a volume of 19×19×8.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_8 = {
+#     'question': "What is the resulting volume of padding a 15×15×8 input volume using pad=2?",
+#     'options_list': [
+#         "A) 17×17×8",
+#         "B) 19×19×8",
+#         "C) 20×20×8",
+#         "D) 15×15×8"
+#     ],
+#     'correct_answer': 'B',
+#     'explanation': "Padding the input with pad=2 adds 2 units to each spatial dimension, resulting in a volume of 19×19×8.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
-chapter_2_quiz_prep_mpc_question_9 = {
-    'question': "You have an input volume of 101×101×3. What is the resulting width after performing a convolution with the following parameters: kernel size=7, stride=5, no padding?",
-    'options_list': [
-        "A) 20",
-        "B) 19",
-        "C) 18",
-        "D) 21"
-    ],
-    'correct_answer': 'B',
-    'explanation': "With no padding and a stride of 5, the resulting width is calculated as (101−7)/5 + 1 = 19.",
-    'chapter_information': 'Chapter 2 Quiz Prep'
-}
+# chapter_2_quiz_prep_mpc_question_9 = {
+#     'question': "You have an input volume of 101×101×3. What is the resulting width after performing a convolution with the following parameters: kernel size=7, stride=5, no padding?",
+#     'options_list': [
+#         "A) 20",
+#         "B) 19",
+#         "C) 18",
+#         "D) 21"
+#     ],
+#     'correct_answer': 'B',
+#     'explanation': "With no padding and a stride of 5, the resulting width is calculated as (101−7)/5 + 1 = 19.",
+#     'chapter_information': 'Chapter 2 Quiz Prep'
+# }
 
 perplexity_quiz_prep_mpc_question_1 = {
     'question': "You have an input volume of 64×64×3. What are the dimensions of the resulting volume after applying a convolutional layer with 16 filters of size 3×3, stride of 2, and 'same' padding?",
