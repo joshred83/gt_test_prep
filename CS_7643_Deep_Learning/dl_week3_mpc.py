@@ -2082,6 +2082,492 @@ andrew_ng_hyperparameter_tuning_quiz_3_question_6 = {
 # }
 
 
+perplexity_ch8_truefalse_question_1 = {
+    'question': "True or False: AdaGrad is typically more effective than RMSprop in recurrent neural network applications due to its accumulation of squared gradients over time.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "RMSprop is generally preferred for recurrent neural networks because AdaGrad's aggressive learning rate reduction can be counterproductive over time.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_2 = {
+    'question': "True or False: Nesterov Accelerated Gradient (NAG) computes the gradient at the current weight position, allowing it to update more responsively than classical momentum.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "NAG calculates the gradient at the approximate future position of the weights, not the current position, making it more responsive than standard momentum.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_1 = {
+    'question': "Which of the following is NOT a characteristic of the Adam optimizer?",
+    'options_list': [
+        "A) It uses the first moment estimate like momentum to guide its updates.",
+        "B) It adapts the learning rate using squared gradients, similar to RMSprop.",
+        "C) It requires bias correction due to zero-initialization of moment estimates.",
+        "D) It is less sensitive to hyperparameter tuning compared to RMSprop and momentum."
+    ],
+    'correct_answer': 'D',
+    'explanation': "Adam is highly sensitive to hyperparameter tuning, especially for β1 and β2 values, which significantly influence its performance.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_2 = {
+    'question': "Which of the following best describes the role of bias correction in the Adam optimizer?",
+    'options_list': [
+        "A) It adjusts the learning rate over time as training progresses.",
+        "B) It compensates for the biased initialization of moment estimates towards zero.",
+        "C) It ensures Adam behaves identically to SGD with momentum.",
+        "D) It reduces the sensitivity to small β2 values during training."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Bias correction in Adam addresses the biased moment estimates caused by their zero-initialization, especially in early training steps.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_3 = {
+    'question': "True or False: Adaptive gradient clipping adjusts the learning rate based on the gradient history, allowing more control over the optimization process.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Adaptive gradient clipping adjusts the clipping threshold, not the learning rate, based on the history of gradient norms.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_3 = {
+    'question': "Which of the following is a consequence of poorly tuned β1 and β2 parameters in Adam?",
+    'options_list': [
+        "A) The optimizer may fail to escape sharp minima.",
+        "B) Gradients may not be properly scaled, causing erratic updates.",
+        "C) The moving averages of gradients may not stabilize, leading to poor convergence.",
+        "D) The optimizer may reduce the learning rate too aggressively."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Poor tuning of β1 and β2 can result in unstable moving averages of gradients, which adversely affects convergence.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_4 = {
+    'question': "True or False: Adaptive methods like Adam generalize poorly compared to SGD due to their tendency to find sharp minima during training.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'True',
+    'explanation': "Adam and other adaptive methods can converge to sharp minima, which are associated with poorer generalization to unseen data.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_4 = {
+    'question': "What is a major drawback of using adaptive optimizers like Adam or RMSprop in terms of memory requirements?",
+    'options_list': [
+        "A) They store multiple moment estimates for each parameter, which increases memory usage.",
+        "B) They require constant recomputation of the gradients, which adds computational overhead.",
+        "C) Their memory requirements are equivalent to simple optimizers like SGD.",
+        "D) They significantly increase training time due to their complex update rules."
+    ],
+    'correct_answer': 'A',
+    'explanation': "Adam and RMSprop store moment estimates for each parameter, increasing memory requirements compared to simple optimizers like SGD.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_5 = {
+    'question': "Which of the following is NOT a consequence of using a very small batch size during optimization?",
+    'options_list': [
+        "A) Noisy gradient estimates that help the model escape local minima.",
+        "B) Faster convergence in terms of the number of epochs.",
+        "C) Slower, less stable updates leading to longer training times.",
+        "D) Tendency to find flatter minima, which can generalize better."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Small batch sizes lead to slower convergence in terms of epochs due to noisy gradient updates.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_6 = {
+    'question': "True or False: Ill-conditioning in neural network optimization refers to the presence of both very large and very small singular values in the Hessian matrix, which makes gradient descent unstable.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'True',
+    'explanation': "Ill-conditioning causes instability in gradient descent, as it makes optimization landscapes steep in some directions and flat in others.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_6 = {
+    'question': "Which of the following is a primary drawback of second-order optimization methods compared to first-order methods like SGD?",
+    'options_list': [
+        "A) Second-order methods require the use of momentum to escape local minima.",
+        "B) Second-order methods rely solely on gradient information and may converge slowly.",
+        "C) Second-order methods require the computation of the Hessian, making them computationally expensive.",
+        "D) Second-order methods are prone to overfitting in large-scale neural networks."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Second-order methods need to calculate or approximate the Hessian matrix, which is computationally expensive, especially in deep learning.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_7 = {
+    'question': "True or False: Saddle points in neural network optimization represent locations where the gradient is zero and the curvature is positive in all directions.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "At saddle points, the gradient is zero, but the curvature is positive in some directions and negative in others, making them harder to escape.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_7 = {
+    'question': "Which of the following initialization strategies is designed specifically for ReLU activations?",
+    'options_list': [
+        "A) Xavier/Glorot initialization.",
+        "B) He initialization.",
+        "C) Orthogonal initialization.",
+        "D) LeCun initialization."
+    ],
+    'correct_answer': 'B',
+    'explanation': "He initialization is tailored for ReLU activations to account for their non-linearity by considering only the neurons in the previous layer.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_8 = {
+    'question': "True or False: In distributed training, the effective batch size refers to the total number of examples processed across all nodes before a parameter update is made.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'True',
+    'explanation': "The effective batch size is the total number of examples processed across all nodes in distributed training, affecting gradient estimates and learning rate scaling.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_8 = {
+    'question': "How does noise in stochastic gradient descent (SGD) benefit the optimization process?",
+    'options_list': [
+        "A) It prevents the optimizer from reaching a global minimum.",
+        "B) It helps the optimizer escape local minima and saddle points.",
+        "C) It decreases the variance in gradient estimates, leading to faster convergence.",
+        "D) It has no effect on the optimization process."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Noise in SGD can help escape local minima and saddle points by introducing variability into the gradient updates.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_9 = {
+    'question': "True or False: Batch normalization improves the conditioning of the optimization problem and can accelerate convergence by smoothing the loss landscape.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'True',
+    'explanation': "Batch normalization improves optimization by smoothing the landscape and making the network more resilient to changes in learning rate and other hyperparameters.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_mpc_question_9 = {
+    'question': "Which of the following is a benefit of supervised pre-training over unsupervised pre-training?",
+    'options_list': [
+        "A) It does not require labeled data, making it more versatile.",
+        "B) It provides a stronger initial condition by aligning the network's weights to useful features for related tasks.",
+        "C) It captures the underlying structure of the data without relying on task-specific labels.",
+        "D) It leads to better performance on completely unrelated tasks."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Supervised pre-training provides a strong initialization by training on labeled data from related tasks, aligning the network with useful features.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+perplexity_ch8_truefalse_question_10 = {
+    'question': "True or False: Sharp minima in the optimization landscape are associated with better generalization compared to flat minima.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Sharp minima are often associated with poor generalization, while flat minima tend to generalize better to unseen data.",
+    'chapter_information': 'Perplexity, Chapter 8'
+}
+
+# L1 vs L2 regularization and MAP Bayesian inference
+perplexity_ch7_mpc_question_1 = {
+    'question': "Which of the following is TRUE about the differences between L1 and L2 regularization?",
+    'options_list': [
+        "A) L1 regularization encourages sparsity by penalizing the square of the weights, while L2 regularization is related to a Laplace prior.",
+        "B) L1 regularization is linked to a Gaussian prior and promotes smaller weights overall, while L2 regularization promotes sparsity.",
+        "C) L1 regularization promotes sparsity and is linked to a Laplace prior, while L2 regularization distributes error more evenly and is related to a Gaussian prior.",
+        "D) L2 regularization promotes sparsity and is better suited for activation functions like ReLU compared to L1."
+    ],
+    'correct_answer': 'C',
+    'explanation': "L1 regularization leads to sparsity by zeroing out less important features (Laplace prior), whereas L2 distributes error more evenly (Gaussian prior).",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Explicit constraints with reprojection vs penalty-based regularization
+perplexity_ch7_truefalse_question_2 = {
+    'question': "True or False: Explicit constraints with reprojection are computationally more efficient than penalty-based methods because they directly satisfy constraints during training.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Explicit constraints are computationally expensive as they require reprojecting onto a feasible set during training, unlike penalty-based methods which are computationally lighter.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Dead units and mitigation techniques
+perplexity_ch7_mpc_question_2 = {
+    'question': "Which technique is LEAST effective at preventing dead units in a neural network?",
+    'options_list': [
+        "A) He initialization",
+        "B) Batch normalization",
+        "C) L2 regularization",
+        "D) Using ReLU activations"
+    ],
+    'correct_answer': 'C',
+    'explanation': "He initialization and batch normalization help prevent dead units, whereas L2 regularization focuses on weight magnitude and is less effective at preventing dead units.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Noise injection vs regularization
+perplexity_ch7_truefalse_question_3 = {
+    'question': "True or False: Noise injection at the input layer and noise in the hidden layers serve the same purpose in terms of regularization.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Noise injection at the input layer simulates robustness to input variations, while noise in hidden layers helps prevent overfitting by disrupting learned patterns.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Early stopping, L2, and dropout comparison
+perplexity_ch7_mpc_question_3 = {
+    'question': "Which of the following statements correctly describes the relationship between early stopping, L2 regularization, and dropout?",
+    'options_list': [
+        "A) Dropout and L2 regularization both act on the weights, while early stopping limits the number of epochs to prevent overfitting.",
+        "B) L2 regularization is more computationally expensive than dropout, and early stopping reduces the chance of overfitting by freezing weights during training.",
+        "C) Early stopping focuses on reducing weight magnitude, L2 penalizes large weights, and dropout prevents overfitting by limiting the depth of the network.",
+        "D) Early stopping penalizes neuron connections, L2 penalizes neuron outputs, and dropout disables entire neurons to prevent overfitting."
+    ],
+    'correct_answer': 'A',
+    'explanation': "Early stopping halts training based on validation performance, L2 regularizes by penalizing large weights, and dropout disables neurons to prevent overfitting.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Batch size and regularization dynamics
+perplexity_ch7_truefalse_question_4 = {
+    'question': "True or False: Larger batch sizes lead to noisier gradient estimates and improve generalization performance.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Larger batch sizes lead to more stable gradient estimates, but this can result in convergence to sharp minima that generalize poorly.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Multi-task learning as regularization
+perplexity_ch7_mpc_question_4 = {
+    'question': "Which of the following statements is TRUE about multi-task learning as a form of regularization?",
+    'options_list': [
+        "A) Multi-task learning works best when tasks are unrelated, as this prevents overfitting.",
+        "B) Multi-task learning regularizes by forcing the model to learn features that generalize across multiple tasks, improving robustness.",
+        "C) Multi-task learning imposes weight penalties similar to L2 regularization to achieve its regularization effect.",
+        "D) Multi-task learning works similarly to early stopping, halting learning when performance on all tasks begins to degrade."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Multi-task learning improves robustness by sharing representations between tasks, encouraging learning of general features that apply across multiple tasks.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Dataset augmentation and invariance
+perplexity_ch7_truefalse_question_5 = {
+    'question': "True or False: Dataset augmentation primarily increases training data diversity by adding noise to the input data, improving model generalization.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Dataset augmentation applies transformations that the model should be invariant to, such as rotations or scaling, which helps improve generalization.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Supervised vs unsupervised pre-training
+perplexity_ch7_mpc_question_5 = {
+    'question': "Which of the following is TRUE regarding the differences between supervised and unsupervised pre-training?",
+    'options_list': [
+        "A) Supervised pre-training always leads to better generalization than unsupervised pre-training, regardless of the data availability.",
+        "B) Supervised pre-training aligns network weights with relevant features, while unsupervised pre-training encourages capturing salient features without labels.",
+        "C) Unsupervised pre-training relies on labeled data, while supervised pre-training does not.",
+        "D) Both supervised and unsupervised pre-training serve as forms of data augmentation."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Supervised pre-training leverages labeled data for feature learning, while unsupervised pre-training captures important data features without needing labels.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Batch normalization and regularization
+perplexity_ch7_truefalse_question_6 = {
+    'question': "True or False: Batch normalization helps prevent overfitting by directly penalizing large weights in a neural network.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Batch normalization regularizes by stabilizing learning dynamics and reducing internal covariate shift, but it does not directly penalize large weights.",
+    'chapter_information': 'Perplexity, Chapter 7'
+}
+
+# Batch Normalization and Internal Covariate Shift
+perplexity_quiz2_mpc_question_1 = {
+    'question': "Which of the following best explains why batch normalization helps with internal covariate shift?",
+    'options_list': [
+        "A) It normalizes the inputs to each layer by setting their mean to zero and variance to one, making the training process more stable.",
+        "B) It prevents gradient explosion by clipping large gradients during training.",
+        "C) It reduces the learning rate dynamically during training to ensure convergence.",
+        "D) It adjusts the loss function to reduce sensitivity to outliers in the data."
+    ],
+    'correct_answer': 'A',
+    'explanation': "Batch normalization stabilizes the training process by normalizing inputs to have zero mean and unit variance, helping to reduce internal covariate shift.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Weight Initialization Strategies
+perplexity_quiz2_mpc_question_2 = {
+    'question': "Which of the following initialization methods is most appropriate for ReLU activation functions?",
+    'options_list': [
+        "A) Xavier/Glorot initialization",
+        "B) He initialization",
+        "C) LSUV initialization",
+        "D) LeCun initialization"
+    ],
+    'correct_answer': 'B',
+    'explanation': "He initialization is specifically designed for ReLU activations, accounting for the fact that half of the activations will be zeroed out.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Optimizer Comparison
+perplexity_quiz2_truefalse_question_1 = {
+    'question': "True or False: Adam is always preferred over SGD with momentum due to its adaptive learning rates and faster convergence.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "While Adam is robust and fast, SGD with momentum can outperform Adam in some cases, particularly in terms of final accuracy and generalization.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# L1, L2, and Dropout Regularization
+perplexity_quiz2_mpc_question_3 = {
+    'question': "Which of the following statements correctly compares L1, L2 regularization, and dropout?",
+    'options_list': [
+        "A) L1 regularization promotes sparsity by penalizing large weights, while L2 encourages smaller weights, and dropout randomly removes neurons during training.",
+        "B) L1 regularization promotes smaller weights, L2 prevents neurons from being dropped, and dropout penalizes large weights.",
+        "C) Dropout promotes sparsity by zeroing out weights, L2 penalizes large weights, and L1 randomly drops neurons.",
+        "D) L1 and L2 regularization modify the learning rate, while dropout adds noise to the weights during training."
+    ],
+    'correct_answer': 'A',
+    'explanation': "L1 promotes sparsity by zeroing out weights, L2 encourages smaller weights, and dropout randomly removes neurons during training to prevent overfitting.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Batch Size and Gradient Estimates
+perplexity_quiz2_truefalse_question_2 = {
+    'question': "True or False: Larger batch sizes lead to noisier gradient estimates, which improves generalization by helping the model escape local minima.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Larger batch sizes provide cleaner gradient estimates, while smaller batches introduce noise, which can help escape local minima and improve generalization.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Supervised vs Unsupervised Pre-Training
+perplexity_quiz2_mpc_question_4 = {
+    'question': "Which of the following best describes the difference between supervised pre-training and unsupervised pre-training?",
+    'options_list': [
+        "A) Supervised pre-training uses labeled data to train the model, while unsupervised pre-training uses unlabeled data to learn the data's underlying structure.",
+        "B) Supervised pre-training helps the model learn task-specific features, while unsupervised pre-training is only useful for feature selection.",
+        "C) Supervised pre-training is useful only for large datasets, while unsupervised pre-training works well with small datasets.",
+        "D) Unsupervised pre-training trains the model on a target task, while supervised pre-training involves pre-training on an unrelated task."
+    ],
+    'correct_answer': 'A',
+    'explanation': "Supervised pre-training uses labeled data to learn features relevant to the task, while unsupervised pre-training helps the model capture the data's underlying structure without labels.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Sharp Minima and Generalization
+perplexity_quiz2_truefalse_question_3 = {
+    'question': "True or False: Sharp minima in the loss landscape are associated with better generalization compared to flatter minima.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'False',
+    'explanation': "Sharp minima are more sensitive to small changes in weights and input, which typically leads to poor generalization, while flatter minima tend to generalize better.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Batch Normalization vs Layer Normalization
+perplexity_quiz2_mpc_question_5 = {
+    'question': "Which of the following is TRUE regarding the differences between batch normalization, layer normalization, and group normalization?",
+    'options_list': [
+        "A) Batch normalization normalizes across the batch, layer normalization normalizes within each example, and group normalization normalizes across groups of channels.",
+        "B) Layer normalization normalizes across the batch, while batch normalization normalizes within each example.",
+        "C) Group normalization operates on the batch dimension, making it useful only for large batch sizes.",
+        "D) Batch normalization and layer normalization are identical, but group normalization normalizes across the spatial dimensions."
+    ],
+    'correct_answer': 'A',
+    'explanation': "Batch normalization normalizes across the batch, layer normalization normalizes within each example, and group normalization normalizes within groups of channels, making it useful for small batch sizes.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# ReLU vs Sigmoid Activation Functions
+perplexity_quiz2_mpc_question_6 = {
+    'question': "Which of the following is a key difference between ReLU and sigmoid activation functions in terms of gradient propagation?",
+    'options_list': [
+        "A) Sigmoid activation functions avoid vanishing gradients by maintaining consistent gradients across all input values, unlike ReLU.",
+        "B) ReLU is zero-centered, leading to better gradient propagation compared to sigmoid.",
+        "C) Sigmoid activation functions are prone to vanishing gradients, while ReLU avoids this issue for positive inputs but can result in dead neurons.",
+        "D) ReLU and sigmoid have the same gradient propagation behavior, but ReLU is faster to compute."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Sigmoid activation functions suffer from vanishing gradients for inputs far from zero, whereas ReLU avoids this for positive inputs but can cause dead neurons when inputs are negative.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Weight Initialization: Small values vs He/Glorot
+perplexity_quiz2_truefalse_question_4 = {
+    'question': "True or False: Initializing weights with small values close to zero can lead to vanishing gradients, stalling the learning process.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'True',
+    'explanation': "Small weight initialization can result in vanishing gradients, particularly in deep networks, preventing efficient weight updates.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Convergence properties of SGD, Adam, and RMSprop
+perplexity_quiz2_mpc_question_7 = {
+    'question': "Which of the following correctly describes the differences between the convergence properties of SGD, RMSprop, and Adam?",
+    'options_list': [
+        "A) RMSprop and Adam adapt the learning rate for each parameter, leading to faster convergence than SGD, which uses a fixed learning rate.",
+        "B) SGD with a constant learning rate typically converges faster than RMSprop and Adam in complex networks.",
+        "C) Adam tends to have slower convergence than RMSprop but achieves better generalization due to its moving average of gradients.",
+        "D) RMSprop and Adam always outperform SGD in terms of final model accuracy."
+    ],
+    'correct_answer': 'A',
+    'explanation': "RMSprop and Adam use adaptive learning rates, leading to faster convergence in many networks compared to SGD, which has a fixed learning rate.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Dropout and Model Generalization
+perplexity_quiz2_truefalse_question_5 = {
+    'question': "True or False: Dropout improves model generalization by preventing the network from relying too heavily on any one neuron.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'True',
+    'explanation': "Dropout randomly disables neurons during training, which helps prevent overfitting by ensuring the network doesn't rely too much on any specific neuron.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Internal Covariate Shift and Batch Normalization
+perplexity_quiz2_mpc_question_8 = {
+    'question': "Which of the following best describes how batch normalization addresses the internal covariate shift problem?",
+    'options_list': [
+        "A) It adjusts the learning rate dynamically to reduce the sensitivity to changes in the distribution of inputs.",
+        "B) It normalizes the inputs to each layer so that they have zero mean and unit variance, stabilizing the input distributions.",
+        "C) It introduces noise to the inputs to prevent the input distributions from changing too quickly during training.",
+        "D) It resets the weights after every epoch to maintain a stable input distribution across all layers."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Batch normalization normalizes the inputs to each layer to maintain stable input distributions, which reduces internal covariate shift and accelerates training.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Manipulating Batch Size and Training Stability
+perplexity_quiz2_mpc_question_9 = {
+    'question': "How does manipulating batch size affect the stability of the training process?",
+    'options_list': [
+        "A) Larger batches introduce more noise into the gradient estimates, leading to less stable training but better generalization.",
+        "B) Smaller batches reduce the noise in gradient estimates and lead to smoother convergence.",
+        "C) Larger batches provide more stable gradient estimates but can result in poor generalization by converging to sharp minima.",
+        "D) Smaller batches lead to faster convergence because they increase the number of iterations per epoch."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Larger batches provide stable gradient estimates but risk overfitting and converging to sharp minima, which generalize poorly.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+# Supervised Pre-Training and Convergence
+perplexity_quiz2_truefalse_question_6 = {
+    'question': "True or False: Supervised pre-training can accelerate convergence by providing a good initialization of weights based on a related task.",
+    'options_list': ["True", "False"],
+    'correct_answer': 'True',
+    'explanation': "Supervised pre-training helps the model learn relevant features from a related task, leading to faster convergence and better generalization when fine-tuned on the target task.",
+    'chapter_information': 'Perplexity, Quiz 2 Prep'
+}
+
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
