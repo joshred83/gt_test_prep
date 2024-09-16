@@ -9,8 +9,8 @@ def intro():
 The app features GPT-generated multiple-choice questions based on course content, lectures, and my personal notes, along with relevant questions from the course itself and similar classes from other institutions.
 I began creating tools like this because I believe that actively recalling information is a more effective way to learn than simply reviewing course material.
 
-1. **Chapter Review**: Select specific chapters to review and answer questions related to those chapters.
-2. **Big Review**: Select multiple chapters for a comprehensive review session.
+1. **Lesson Review**: Select specific lessons to review and answer questions related to those lessons.
+2. **Big Review**: Select multiple lessons for a comprehensive review session.
 
 ### Additional Resources:
 - [Yi Xiang Low's Course Notes](https://lowyx.com/posts/gt-dl-notes/)
@@ -32,8 +32,8 @@ Check out my other review apps for:
     """)
 
 def chapter_review():
-    st.markdown("# Chapter Review")
-    st.write('Select chapters to review and answer questions. Refresh Page to load new questions.')
+    st.markdown("# Lesson Review")
+    st.write('Select specific lessons to review and answer questions. Refresh Page to load new questions.')
     dl_mpc_page1.sa_questions()
 
 def big_review():
@@ -50,7 +50,7 @@ def reset_or_initialize_state():
 
 page_names_to_funcs = {
     "—": intro,
-    "Chapter Review": chapter_review,
+    "Lesson Review": chapter_review,
     "Quiz Prep": big_review
 }
 

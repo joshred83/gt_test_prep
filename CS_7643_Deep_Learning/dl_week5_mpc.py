@@ -771,10 +771,11 @@ perplexity_quiz_prep_mpc_question_2 = {
         "C) 9,600",
         "D) 9,664"
     ],
-    'correct_answer': 'D',
-    'explanation': "The number of parameters is calculated as (5×5×3)×64 filters + 64 biases, which results in 9,664 parameters.",
+    'correct_answer': 'B',
+    'explanation': "The number of parameters is calculated as (5×5×3)×64 filters + 64 biases, which results in 4,864 parameters.",
     'chapter_information': 'Perplexity Quiz Prep'
 }
+
 
 perplexity_quiz_prep_mpc_question_3 = {
     'question': "What is the output volume size after applying max pooling with a 2×2 kernel and stride of 2 to an input volume of 56×56×32?",
