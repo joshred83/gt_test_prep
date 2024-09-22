@@ -25,7 +25,12 @@ def sa_questions():
         st.session_state.questions_initialized = False
 
     st.markdown("### Please select a topic to proceed:")
-    initial_options = {"L1 - What is Network Science?": '1', "L2 - Relevant Concepts from Graph Theory": '2'}
+    initial_options = {"L1 - What is Network Science?": '1', 
+                       "L2 - Relevant Concepts from Graph Theory": '2',
+                        "L3 - Degree Distribution and The “Friendship Paradox”": '3',
+                        "L4 - Random vs. Real Graphs and Power-Law Networks": '4',
+                        "L5 - Network Paths, Clustering and The “Small World” Property": '5',}
+    
     topics = {
     "L1 - What is Network Science?": '1',
     "L2 - Relevant Concepts from Graph Theory": '2',

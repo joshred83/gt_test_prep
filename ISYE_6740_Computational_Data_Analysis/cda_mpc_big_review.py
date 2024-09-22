@@ -23,7 +23,8 @@ week_to_chapter_indices = {
     'Week 1': [0, 1],  # Week 1 corresponds to chapters at indices 1 & 2
     'Week 2': [2],     # Week 2 corresponds to chapter at index 3
     'Week 3': [3],     # Week 3 corresponds to chapter at index 4
-    'Week 4': [4]      # Week 4 corresponds to chapter at index 5
+    'Week 4': [4],      # Week 4 corresponds to chapter at index 5
+    'Week 5': [5, 6],
 }
 
 # Custom CSS to inject into the Streamlit app for styling

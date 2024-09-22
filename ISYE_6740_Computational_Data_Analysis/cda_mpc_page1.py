@@ -55,6 +55,7 @@ def sa_questions():
         "Lecture 3: Spectral Clustering": '3',
         "Lecture 4: PCA": '4',
         "Lecture 5: Nonlinear Dimensionality Reduction (ISOMAP)": '5',
+        "Lecture 6: Density Estimation": '6',
     }
     
     selected_option = st.radio(label='', options=list(initial_options.keys()))

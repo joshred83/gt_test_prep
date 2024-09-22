@@ -1,10 +1,16 @@
 import numpy as np
 from .ns_week1_mpc import WEEK_1_MPC
 from .ns_week2_mpc import WEEK_2_MPC
+from .ns_week3_mpc import WEEK_3_MPC
+from .ns_week4_mpc import WEEK_4_MPC
+from .ns_week5_mpc import WEEK_5_MPC
 
 ############################
 questions_dictionary = {'1': WEEK_1_MPC,
-                        '2': WEEK_2_MPC}
+                        '2': WEEK_2_MPC,
+                        '3': WEEK_3_MPC,
+                        '4': WEEK_4_MPC,
+                        '5': WEEK_5_MPC},
 all = list(questions_dictionary.values())
 
 OPEN_QUESTIONS = []

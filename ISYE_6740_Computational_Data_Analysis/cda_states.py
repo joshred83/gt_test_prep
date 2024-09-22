@@ -4,13 +4,15 @@ from .cda_week2_mpc import WEEK_2_MPC
 from .cda_week3_mpc import WEEK_3_MPC
 from .cda_week4_mpc import WEEK_4_MPC
 from .cda_week5_mpc import WEEK_5_MPC
+from .cda_week6_mpc import WEEK_6_MPC
 
 ############################
 questions_dictionary = {'1': WEEK_1_MPC,
                         '2': WEEK_2_MPC,
                         '3': WEEK_3_MPC,
                         '4': WEEK_4_MPC,
-                        '5': WEEK_5_MPC}
+                        '5': WEEK_5_MPC,
+                        '6': WEEK_6_MPC}
 all = list(questions_dictionary.values())
 
 OPEN_QUESTIONS = []
