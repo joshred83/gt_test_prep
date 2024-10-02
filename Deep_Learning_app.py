@@ -1,5 +1,6 @@
 import streamlit as st
 from CS_7643_Deep_Learning import dl_mpc_big_review, dl_mpc_page1, dl_states
+import os
 
 def intro():
     st.write("# CS 7643 Deep Learning Science Review App")

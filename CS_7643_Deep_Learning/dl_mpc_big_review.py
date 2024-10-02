@@ -1,6 +1,6 @@
 import streamlit as st
 from .dl_states import Token
-
+import os
 # Map quizzes to their corresponding lesson indices
 quiz_mapping = {
     "Quiz 1": [0, 1],  # Corresponds to Lesson 1 and Lesson 2
@@ -52,14 +52,24 @@ def big_review():
                 correct_answer_letter = correct_answer
                 correct_answer = options[ord(correct_answer_letter) - ord('A')]
             question_key = f"question_{i}"
-            explanation = q['explanation']
+            explanation = ''
+            if 'explanation' in q and q['explanation']:
+                explanation = q['explanation']
 
             st.markdown('-------------------------------')
             st.markdown(f"**{label}**")
 
             question = question_generator(label, options, question_key)
+            
+            image_dir = os.path.join(os.getcwd(), 'CS_7643_Deep_Learning/')
             if 'image' in q and q['image']:
-                st.image(q['image'], use_column_width=True)
+                image_path = os.path.join(image_dir, q['image'])
+                # st.write(f"Current working directory: {os.getcwd()}")
+
+                if os.path.exists(image_path):
+                    st.image(image_path, use_column_width=True)
+                else:
+                    st.write("Image not found.")
 
             if st.button('Submit', key=f"submit_{i}"):
                 if 'submitted_answers' not in st.session_state:

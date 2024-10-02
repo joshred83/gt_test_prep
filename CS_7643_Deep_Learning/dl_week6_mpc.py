@@ -1033,21 +1033,21 @@ andrew_ng_week2_question_4 = {
 
 andrew_ng_week2_question_5 = {
     'question': ("The following equation captures the computation in a ResNet block. What goes into the two blanks above?\n"
-                 r"\(a^{[l+2]} = g(W^{[l+2]}g(W^{[l+1]}a^{[l]} + b^{[l+1]}) + b^{[l+2]} + \_\_\_\_\_ + \_\_\_\_\_\_)\)"),
+                 r"$a^{[l+2]} = g(W^{[l+2]}g(W^{[l+1]}a^{[l]} + b^{[l+1]}) + b^{[l+2]} + \_\_\_\_\_ + \_\_\_\_\_)$"),
     'options_list': [
-        r"\(a^{[l]}\) and 0, respectively",
-        "0 and \(a^{[l]}\), respectively",
-        r"\(z^{[l]}\) and \(a^{[l]}\), respectively",
-        "0 and \(z^{[l+1]}\), respectively"
+        r"$a^{[l]}$ and 0, respectively",
+        "0 and $a^{[l]}$, respectively",
+        r"$z^{[l]}$ and $a^{[l]}$, respectively",
+        "0 and $z^{[l+1]}$, respectively"
     ],
-    'correct_answer': r"\(a^{[l]}\) and 0, respectively",
+    'correct_answer': r"$a^{[l]}$ and 0, respectively",
     'chapter_information': 'Andrew Ng Course - Week 2'
 }
 
 andrew_ng_week2_question_6 = {
     'question': "Which ones of the following statements on Residual Networks are true? (Check all that apply)",
     'options_list': [
-        r"A ResNet with \(L\) layers would have on the order of \(L^2\) skip connections in total.",
+        r"A ResNet with $L$ layers would have on the order of $L^2$ skip connections in total.",
         "Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks.",
         "The skip-connections compute a complex non-linear function of the input to pass to a deeper layer in the network.",
         "The skip-connection makes it easy for the network to learn an identity mapping between the input and the output within the ResNet block."
@@ -1116,6 +1116,149 @@ andrew_ng_week2_question_10 = {
     ],
     'chapter_information': 'Andrew Ng Course - Week 2'
 }
+
+
+alex_net_mpc_question_1 = {
+    'question': "Which of the following is a characteristic feature of the AlexNet architecture?",
+    'options_list': [
+        "A) 1x1 convolutions for dimensionality reduction",
+        "B) Use of large 11x11 filters in the initial convolutional layers",
+        "C) Incorporation of Inception blocks",
+        "D) Residual connections for deeper networks"
+    ],
+    'correct_answer': 'B',
+    'explanation': "AlexNet uses large 11x11 filters in its first convolutional layer, a design choice that was influenced by the computational resources available at the time.",
+    'chapter_information': 'Advanced CNN Architectures: AlexNet',
+    'image': 'images/alex_net.png'
+}
+
+inception_block_mpc_question_1 = {
+    'question': "What is the primary purpose of the Inception block in GoogLeNet?",
+    'options_list': [
+        "A) Using only large filters for feature extraction",
+        "B) Extracting features at multiple scales using parallel filters of different sizes",
+        "C) Implementing skip connections to prevent vanishing gradients",
+        "D) Replacing pooling layers with fully connected layers"
+    ],
+    'correct_answer': 'B',
+    'explanation': "The Inception block uses parallel filters of different sizes to capture features at multiple scales within the same layer.",
+    'chapter_information': 'Advanced CNN Architectures: Inception',
+    'image': 'images/inception_blocktorch.png'
+}
+
+residual_block_mpc_question_1 = {
+    'question': "In a residual block of a ResNet, what is the main benefit of the skip (residual) connection?",
+    'options_list': [
+        "A) It allows the network to learn new transformations at each layer",
+        "B) It helps in learning small changes rather than entirely new transformations, improving gradient flow",
+        "C) It replaces the need for pooling layers in the network",
+        "D) It reduces the overall number of parameters in the network"
+    ],
+    'correct_answer': 'B',
+    'explanation': "Skip connections in residual blocks allow layers to learn small residual changes instead of entirely new transformations, improving gradient flow and making the training of very deep networks feasible.",
+    'chapter_information': 'Advanced CNN Architectures: ResNet',
+    'image': 'images/residual_block.png'
+}
+
+vgg_block_mpc_question_1 = {
+    'question': "Which of the following describes the unique design choice of VGG networks?",
+    'options_list': [
+        "A) Using large 11x11 filters in initial layers",
+        "B) Stacking multiple 3x3 convolutional layers in sequence",
+        "C) Implementing Inception blocks for feature extraction",
+        "D) Employing 1x1 convolutions for dimensionality reduction"
+    ],
+    'correct_answer': 'B',
+    'explanation': "VGG networks stack multiple small 3x3 convolutional layers in sequence, which allows for a deeper network with more non-linearities.",
+    'chapter_information': 'Advanced CNN Architectures: VGG Networks',
+    'image': 'images/vgg_block.png'
+}
+
+u_net_mpc_question_1 = {
+    'question': "Which of the following is a key feature of the U-Net architecture?",
+    'options_list': [
+        "A) Skip connections between corresponding layers in the encoder and decoder",
+        "B) Use of large convolutional filters in every layer",
+        "C) Incorporating Inception modules for multi-scale feature extraction",
+        "D) A fully connected layer at the end of the network for classification"
+    ],
+    'correct_answer': 'A',
+    'explanation': "U-Net is known for its skip connections that connect the encoder layers to corresponding decoder layers, allowing the network to capture fine-grained details.",
+    'chapter_information': 'Advanced CNN Architectures: U-Net',
+    'image': 'images/U_net.jpg'
+}
+
+architecture_identification_question_1 = {
+    'question': "Look at the displayed image. Which of the following neural network architectures is depicted in the image?",
+    'options_list': [
+        "A) AlexNet",
+        "B) Inception Network",
+        "C) ResNet",
+        "D) VGG Network"
+    ],
+    'correct_answer': 'A',
+    'explanation': "The image shows the architecture of AlexNet, characterized by its use of large convolutional kernels (e.g., 11x11) in the initial layers, multiple convolutional layers, and fully connected layers at the end.",
+    'image': 'images/alex_net.png',
+    'chapter_information': 'Architecture Identification - AlexNet'
+}
+
+architecture_identification_question_2 = {
+    'question': "Look at the displayed image. Which neural network architecture block is shown in the image?",
+    'options_list': [
+        "A) Residual Block",
+        "B) Inception Block",
+        "C) Self-Attention Block",
+        "D) Convolutional Block"
+    ],
+    'correct_answer': 'B',
+    'explanation': "The image shows the Inception block, which uses parallel filters of different sizes to capture features at multiple scales within a single layer.",
+    'image': 'images/inception_blocktorch.png',
+    'chapter_information': 'Architecture Identification - Inception Block'
+}
+
+architecture_identification_question_3 = {
+    'question': "Look at the displayed image. Which model architecture is depicted here?",
+    'options_list': [
+        "A) VGG Network",
+        "B) Inception Network",
+        "C) ResNet",
+        "D) U-Net"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The image shows the U-Net architecture, known for its U-shaped structure and use in image segmentation tasks.",
+    'image': 'images/U_net.jpg',
+    'chapter_information': 'Architecture Identification - U-Net'
+}
+
+architecture_identification_question_4 = {
+    'question': "Look at the displayed image. What neural network architecture block is shown?",
+    'options_list': [
+        "A) Residual Block",
+        "B) VGG Block",
+        "C) Self-Attention Block",
+        "D) Inception Block"
+    ],
+    'correct_answer': 'A',
+    'explanation': "The image shows a Residual Block, which is a key component of ResNet. It introduces skip connections to help address the vanishing gradient problem in deep networks.",
+    'image': 'images/residual_block.png',
+    'chapter_information': 'Architecture Identification - Residual Block'
+}
+
+architecture_identification_question_5 = {
+    'question': "Look at the displayed image. Identify the model architecture depicted.",
+    'options_list': [
+        "A) ResNet",
+        "B) VGG Network",
+        "C) Inception Network",
+        "D) Transformer"
+    ],
+    'correct_answer': 'B',
+    'explanation': "The image shows the VGG network, known for using small 3x3 convolutional kernels repeated in blocks and 2x2 max-pooling layers.",
+    'image': 'images/vgg_model_description.png',
+    'chapter_information': 'Architecture Identification - VGG Network'
+}
+
+
 
 
 

@@ -1,5 +1,6 @@
 import streamlit as st
 from .dl_states import Token
+import os
 
 def apply_custom_css():
     custom_css = """
@@ -36,6 +37,7 @@ def sa_questions():
         "Lesson 6: Convolutional Neural Networks": '6',}
     #     "Lesson 7: Visualization": '7',
     #     "Lesson 8: Scalable Training": '8',
+        # "Lesson 9: Advanced Computer Vision and Applications": '9',
     # }
     
     topics = {
@@ -60,7 +62,7 @@ def sa_questions():
         "Lesson 19: Generative Models": '19'
     }
     
-    selected_option = st.radio(label='', options=list(initial_options.keys()))
+    selected_option = st.radio(label='', options=list(initial_options.keys()), label_visibility="collapsed")
 
     if st.button("Proceed") or st.session_state.questions_initialized:
         if not st.session_state.questions_initialized:
@@ -77,6 +79,9 @@ def sa_questions():
             # Correct answer handling
             correct_answer = q['correct_answer']
             
+            explanation = q.get('explanation', " ")
+
+                
             # If the correct answer is 'True' or 'False', keep it as it is
             if correct_answer in ['True', 'False']:
                 correct_answer = correct_answer
@@ -86,14 +91,25 @@ def sa_questions():
                 correct_answer_letter = correct_answer
                 correct_answer = options[ord(correct_answer_letter) - ord('A')]
             question_key = f"question_{i}"
-            explanation = q['explanation']
+            # explanation = q['explanation']
 
             st.markdown('-------------------------------')
             # Directly use st.markdown for the question text, allowing LaTeX to render
             st.markdown(f"**{label}**")
 
             question = question_generator(label, options, question_key)
+            
+            image_dir = os.path.join(os.getcwd(), 'CS_7643_Deep_Learning/')
+            if 'image' in q and q['image']:
+                # print('current dir:', print(os.getcwd()))
+                image_path = os.path.join(image_dir, q['image'])
+                st.write(f"Current working directory: {os.getcwd()}")
 
+                if os.path.exists(image_path):
+                    st.image(image_path, use_column_width=True)
+                else:
+                    st.write("Image not found.")
+                
             if st.button('Submit', key=f"submit_{i}"):
                 if question == correct_answer:
                     st.success('Great work!')
