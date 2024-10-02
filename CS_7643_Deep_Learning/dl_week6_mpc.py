@@ -597,8 +597,10 @@ lesson_6_3_cnn_computational_question_5 = {
     'chapter_information': '6.3 Convolutional Neural Networks'
 }
 
+
+
 # Question 1
-question_1 = {
+mquest1ion_1 = {
     'question': "In a convolutional neural network (CNN) layer, given an input size of 227x227x3 (height x width x channels), 96 filters, and a filter size of 11x11 with a stride of 4 and no padding, calculate the output size of this convolutional layer.",
     'options_list': [
         "56x56x96",
@@ -617,7 +619,7 @@ question_1 = {
 }
 
 # Question 2
-question_2 = {
+mqu1estion_2 = {
     'question': "If a convolutional layer has an output size of 64x56x56, calculate the memory required to store the activations of this layer assuming 32-bit floating-point precision.",
     'options_list': [
         "784 KB",
@@ -636,7 +638,7 @@ question_2 = {
 }
 
 # Question 3
-question_3 = {
+mqu1estion_3 = {
     'question': (
         "Consider a convolutional layer in a CNN with the following properties:\n"
         "- Input channels: 3\n"
@@ -663,7 +665,7 @@ question_3 = {
 }
 
 # Question 4
-question_4 = {
+mquestio1n_4 = {
     'question': "Given the output size of a convolutional layer is 55x55x96 and each activation is stored as a 32-bit float, calculate the total memory size in kilobytes required to store these activations.",
     'options_list': [
         "784 KB",
@@ -682,7 +684,7 @@ question_4 = {
 }
 
 # Question 5
-question_5 = {
+mques1tion_5 = {
     'question': (
         "For a convolutional layer with the following specifications:\n"
         "- Input size: 224x224x3\n"
@@ -703,6 +705,118 @@ question_5 = {
         "Number of output elements = 224 * 224 * 64 = 3,211,264\n"
         "Number of operations per output element = 3 * 3 * 3 = 27 (since each filter operates over a 3x3 window across 3 input channels)\n"
         "Total FLOPs = 3,211,264 * 27 = 72,855,552."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+
+# Question 6
+question_6 = {
+    'question': (
+        "A convolutional neural network (CNN) layer has an output of size 112x112x128. "
+        "Assuming each activation is stored as a 32-bit float, calculate the total memory required to store the activations of this layer in kilobytes."
+    ),
+    'options_list': [
+        "1,280 KB",
+        "512 KB",
+        "6,144 KB",
+        "4,096 KB"
+    ],
+    'correct_answer': "6,144 KB",
+    'explanation': (
+        "Number of elements in the output = 112 * 112 * 128 = 1,605,632\n"
+        "Bytes per element = 4 (32-bit floating point)\n"
+        "Total memory (in bytes) = 1,605,632 * 4 = 6,422,528 bytes\n"
+        "Convert to kilobytes: 6,422,528 / 1,024 = 6,144 KB."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 7
+question_7 = {
+    'question': (
+        "Given a convolutional layer with an output size of 28x28x256 and using 32-bit floating-point precision, "
+        "calculate the total memory required to store the activations of this layer in kilobytes."
+    ),
+    'options_list': [
+        "100 KB",
+        "800 KB",
+        "3,200 KB",
+        "4,096 KB"
+    ],
+    'correct_answer': "800 KB",
+    'explanation': (
+        "Number of elements in the output = 28 * 28 * 256 = 200,704\n"
+        "Bytes per element = 4 (32-bit floating point)\n"
+        "Total memory (in bytes) = 200,704 * 4 = 802,816 bytes\n"
+        "Convert to kilobytes: 802,816 / 1,024 ≈ 800 KB."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 8
+question_8 = {
+    'question': (
+        "If a fully connected layer has 4,096 output nodes and receives an input of size 7x7x512, "
+        "calculate the memory required to store the weights of this layer in megabytes, assuming 32-bit floating-point precision."
+    ),
+    'options_list': [
+        "16 MB",
+        "102 MB",
+        "4 MB",
+        "50 MB"
+    ],
+    'correct_answer': "102 MB",
+    'explanation': (
+        "Number of weights = input size * output size = (7 * 7 * 512) * 4096 = 102,760,448\n"
+        "Bytes per element = 4 (32-bit floating point)\n"
+        "Total memory (in bytes) = 102,760,448 * 4 = 411,041,792 bytes\n"
+        "Convert to megabytes: 411,041,792 / (1024 * 1024) ≈ 102 MB."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 9
+question_9 = {
+    'question': (
+        "A CNN layer has an input of size 224x224x3 and produces an output of size 112x112x64. "
+        "Calculate the memory required to store both the input and output activations in kilobytes, assuming 32-bit floating-point precision."
+    ),
+    'options_list': [
+        "1,600 KB",
+        "2,500 KB",
+        "3,200 KB",
+        "4,096 KB"
+    ],
+    'correct_answer': "2,500 KB",
+    'explanation': (
+        "Memory for input = 224 * 224 * 3 * 4 = 602,112 bytes\n"
+        "Convert to kilobytes: 602,112 / 1,024 ≈ 588 KB\n"
+        "Memory for output = 112 * 112 * 64 * 4 = 3,211,264 bytes\n"
+        "Convert to kilobytes: 3,211,264 / 1,024 ≈ 3,136 KB\n"
+        "Total memory = 588 KB + 3,136 KB = 2,500 KB."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 10
+question_10 = {
+    'question': (
+        "A convolutional layer has an output size of 14x14x512. Assuming 32-bit floating-point precision, "
+        "what is the total memory required to store the activations of this layer in kilobytes?"
+    ),
+    'options_list': [
+        "400 KB",
+        "500 KB",
+        "800 KB",
+        "1,000 KB"
+    ],
+    'correct_answer': "400 KB",
+    'explanation': (
+        "Number of elements in the output = 14 * 14 * 512 = 100,352\n"
+        "Bytes per element = 4 (32-bit floating point)\n"
+        "Total memory (in bytes) = 100,352 * 4 = 401,408 bytes\n"
+        "Convert to kilobytes: 401,408 / 1,024 ≈ 400 KB."
     ),
     'chapter_information': "Michigan Lecture 8"
 }
