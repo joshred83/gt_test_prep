@@ -4,7 +4,8 @@ from .dl_states import Token
 # Map quizzes to their corresponding lesson indices
 quiz_mapping = {
     "Quiz 1": [0, 1],  # Corresponds to Lesson 1 and Lesson 2
-    "Quiz 2": [2, 4],  # Corresponds to Lesson 3 and Lesson 5
+    "Quiz 2": [2, 4],
+    "Quiz 2": [4, 6, 7, 8], 
 }
 
 def question_generator(label, options, question_key):

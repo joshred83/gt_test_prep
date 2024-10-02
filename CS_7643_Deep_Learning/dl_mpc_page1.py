@@ -33,6 +33,8 @@ def sa_questions():
         "Lesson 3: Optimization of Deep Neural Networks": '3',
         "Lesson 4: Data Wrangling": '4',
         "Lesson 5: Convolution and Pooling Layers": '5',
+        "Lesson 6: Convolutional Neural Networks": '6',
+        "Lesson 7: Visualization": '7',
     }
     
     topics = {

@@ -405,6 +405,313 @@ lesson_6_lecture_gradient_conv_layer_mpc_question_3 = {
 }
 
 
+lesson_6_lecture_gradient_conv_layer_mpc_question_4 = {
+    'question': "Given the input matrix $X$ and a $2 \\times 2$ kernel $K$, the output $Y$ is calculated through cross-correlation. Suppose the input $X$ and kernel $K$ are given by:\n\n"
+                 "$X = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$, \n\n"
+                 "$K = \\begin{bmatrix} k_{1,1} & k_{1,2} \\\\ k_{2,1} & k_{2,2} \\end{bmatrix}$.\n\n"
+                 "If the gradient from the next layer $\\frac{\\partial L}{\\partial Y}$ is:\n\n"
+                 "$\\frac{\\partial L}{\\partial Y} = \\begin{bmatrix} 2 & 0.5 \\\\ -1 & 1.5 \\end{bmatrix}$,\n\n"
+                 "what is the gradient with respect to $k_{1,1}$?",
+    'options_list': [
+        "A) 12",
+        "B) 15.5",
+        "C) 5",
+        "D) 10.5"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The gradient with respect to $k_{1,1}$ is computed by summing the product of each element in $\\frac{\\partial L}{\\partial Y}$ with the corresponding input elements affected by $k_{1,1}$:\n\n"
+                   "$\\frac{\\partial L}{\\partial k_{1,1}} = (2 \\times 1) + (0.5 \\times 2) + (-1 \\times 4) + (1.5 \\times 5) = 2 + 1 - 4 + 7.5 = 10.5$.",
+    'chapter_information': 'Lesson 6 Lecture Gradient for conv layer'
+}
+
+lesson_6_lecture_gradient_conv_layer_mpc_question_5 = {
+    'question': "Suppose we have the input $X$ and a $2 \\times 2$ kernel $K$ defined as:\n\n"
+                 "$X = \\begin{bmatrix} 1 & 3 & 5 \\\\ 7 & 9 & 11 \\\\ 13 & 15 & 17 \\end{bmatrix}$, \n\n"
+                 "$K = \\begin{bmatrix} k_{1,1} & k_{1,2} \\\\ k_{2,1} & k_{2,2} \\end{bmatrix}$.\n\n"
+                 "The gradient from the next layer $\\frac{\\partial L}{\\partial Y}$ is:\n\n"
+                 "$\\frac{\\partial L}{\\partial Y} = \\begin{bmatrix} 0.5 & -0.2 \\\\ 1.3 & -0.7 \\end{bmatrix}$.\n\n"
+                 "What is the gradient with respect to $k_{2,2}$?",
+    'options_list': [
+        "A) 5.1",
+        "B) -3.6",
+        "C) 8.4",
+        "D) 10.7"
+    ],
+    'correct_answer': 'A',
+    'explanation': "The gradient with respect to $k_{2,2}$ is computed by summing the product of each element in $\\frac{\\partial L}{\\partial Y}$ with the input elements affected by $k_{2,2}$:\n\n"
+                   "$\\frac{\\partial L}{\\partial k_{2,2}} = (0.5 \\times 9) + (-0.2 \\times 11) + (1.3 \\times 15) + (-0.7 \\times 17) = 4.5 - 2.2 + 19.5 - 11.9 = 5.1$.",
+    'chapter_information': 'Lesson 6 Lecture Gradient for conv layer'
+}
+
+lesson_6_lecture_gradient_conv_layer_mpc_question_6 = {
+    'question': "Given the input matrix $X$ and a $2 \\times 2$ kernel $K$, the output $Y$ is calculated through cross-correlation. Suppose the input $X$ and kernel $K$ are:\n\n"
+                 "$X = \\begin{bmatrix} 2 & 4 & 6 \\\\ 8 & 10 & 12 \\\\ 14 & 16 & 18 \\end{bmatrix}$, \n\n"
+                 "$K = \\begin{bmatrix} k_{1,1} & k_{1,2} \\\\ k_{2,1} & k_{2,2} \\end{bmatrix}$.\n\n"
+                 "The gradient from the next layer $\\frac{\\partial L}{\\partial Y}$ is:\n\n"
+                 "$\\frac{\\partial L}{\\partial Y} = \\begin{bmatrix} -0.5 & 0.3 \\\\ 0.8 & -0.4 \\end{bmatrix}$.\n\n"
+                 "What is the gradient with respect to $k_{1,2}$?",
+    'options_list': [
+        "A) 1.8",
+        "B) -2.7",
+        "C) 0.6",
+        "D) -4.4"
+    ],
+    'correct_answer': 'B',
+    'explanation': "The gradient with respect to $k_{1,2}$ is computed by summing the product of each element in $\\frac{\\partial L}{\\partial Y}$ with the input elements affected by $k_{1,2}$:\n\n"
+                   "$\\frac{\\partial L}{\\partial k_{1,2}} = (-0.5 \\times 4) + (0.3 \\times 6) + (0.8 \\times 10) + (-0.4 \\times 12) = -2 + 1.8 + 8 - 4.8 = -2.7$.",
+    'chapter_information': 'Lesson 6 Lecture Gradient for conv layer'
+}
+
+lesson_6_3_cnn_mpc_question_1 = {
+    'question': "What happens to the receptive field of a neuron in deeper layers of a Convolutional Neural Network (CNN)?",
+    'options_list': [
+        "A) It decreases as it processes fewer regions of the input image.",
+        "B) It remains the same size regardless of the network's depth.",
+        "C) It increases as it combines information from larger regions of the input image.",
+        "D) It only changes when the kernel size is modified."
+    ],
+    'correct_answer': 'C',
+    'explanation': "The receptive field of a neuron in deeper layers increases because it combines information from progressively larger regions of the input image, allowing the network to extract more abstract features.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+lesson_6_3_cnn_mpc_question_2 = {
+    'question': "In a Convolutional Neural Network, what is the purpose of alternating convolutional layers with non-linearities like ReLU?",
+    'options_list': [
+        "A) To reduce the size of the input image.",
+        "B) To increase the network's representational power.",
+        "C) To keep the network linear.",
+        "D) To replace pooling layers."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Non-linearities like ReLU are used in CNNs to introduce non-linearity into the network, thereby increasing its representational power. Without these non-linearities, the network would only perform linear operations, which limits its ability to model complex functions.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+lesson_6_3_cnn_mpc_question_3 = {
+    'question': "Which of the following best describes the equivariance property of convolutional layers in CNNs?",
+    'options_list': [
+        "A) The network can handle changes in scale.",
+        "B) Feature detection in the output maps shifts correspondingly when the input image is shifted.",
+        "C) The network can classify images regardless of their rotation.",
+        "D) The depth of the output changes with each convolution."
+    ],
+    'correct_answer': 'B',
+    'explanation': "Equivariance in convolutional layers means that if the input image is shifted, the detected features in the output maps will also shift correspondingly, preserving spatial information.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+lesson_6_3_cnn_mpc_question_4 = {
+    'question': "When building a CNN, which of the following factors determines the depth of the output in a convolutional layer?",
+    'options_list': [
+        "A) The number of channels in the input image.",
+        "B) The number of kernels used in the convolutional layer.",
+        "C) The size of the kernel.",
+        "D) The type of activation function used."
+    ],
+    'correct_answer': 'B',
+    'explanation': "The depth of the output in a convolutional layer is determined by the number of kernels (or filters) used in that layer. Each kernel produces a separate feature map, contributing to the overall depth of the output.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+lesson_6_3_cnn_mpc_question_5 = {
+    'question': "Which of the following statements about pooling layers in a CNN is true?",
+    'options_list': [
+        "A) Pooling layers reduce the input's depth while keeping the width and height constant.",
+        "B) Pooling layers increase the network's computational complexity.",
+        "C) Pooling layers do not have learnable parameters.",
+        "D) Pooling layers must always follow a fully connected layer."
+    ],
+    'correct_answer': 'C',
+    'explanation': "Pooling layers do not have learnable parameters. They perform a fixed operation (e.g., max-pooling) to reduce the spatial dimensions (height and width) of the input, while keeping the depth constant.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+# Question 1: Number of Parameters in a Convolutional Layer
+lesson_6_3_cnn_computational_question_1 = {
+    'question': "Consider a convolutional layer with an input of size (batch size, channels, height, width) = (1, 3, 32, 32) and 10 filters of size 5x5. How many trainable parameters are in this layer, including the biases?",
+    'options_list': [
+        "A) 250",
+        "B) 760",
+        "C) 7600",
+        "D) 1510"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The number of parameters in a convolutional layer is given by (number of filters) × (filter size in height × filter size in width × number of input channels) + (number of filters for biases). In this case: (10 filters) × (5 × 5 × 3) + (10 biases) = 750 + 10 = 1510.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+# Question 2: Memory Requirements for Activations
+lesson_6_3_cnn_computational_question_2 = {
+    'question': "A convolutional layer has an input size of (1, 3, 64, 64) and 16 filters of size 3x3 with a stride of 1 and padding of 1. What is the size of the output tensor, and how much memory (in number of elements) does it occupy?",
+    'options_list': [
+        "A) (1, 16, 62, 62) - 61,504 elements",
+        "B) (1, 16, 64, 64) - 65,536 elements",
+        "C) (1, 16, 32, 32) - 16,384 elements",
+        "D) (1, 16, 64, 64) - 16,384 elements"
+    ],
+    'correct_answer': 'B',
+    'explanation': "The output size for a convolutional layer with padding of 1, stride of 1, and kernel size 3x3 is the same as the input size, i.e., (64, 64) for each of the 16 filters. Thus, the output tensor is of size (1, 16, 64, 64). The total number of elements is 1 × 16 × 64 × 64 = 65,536.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+# Question 3: Gradient Calculation in Convolution
+lesson_6_3_cnn_computational_question_3 = {
+    'question': "Given an input tensor of size (1, 1, 3, 3) and a single 2x2 filter with a stride of 1, the forward convolution produces an output of size (1, 1, 2, 2). If the upstream gradient (∂L/∂Y) is a tensor of ones with size (1, 1, 2, 2), what is the gradient with respect to the bias in this convolutional layer?",
+    'options_list': [
+        "A) 1",
+        "B) 2",
+        "C) 3",
+        "D) 4"
+    ],
+    'correct_answer': 'D',
+    'explanation': "The gradient with respect to the bias in a convolutional layer is the sum of all elements in the upstream gradient (∂L/∂Y). Since the upstream gradient tensor has four elements, each being 1, the sum is 1 + 1 + 1 + 1 = 4.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+# Question 4: Transposed Convolution Output Size
+lesson_6_3_cnn_computational_question_4 = {
+    'question': "For a transposed convolution with an input size of (1, 1, 3, 3), a kernel size of 2x2, stride of 1, and padding of 0, what will be the output size?",
+    'options_list': [
+        "A) (1, 1, 2, 2)",
+        "B) (1, 1, 4, 4)",
+        "C) (1, 1, 5, 5)",
+        "D) (1, 1, 6, 6)"
+    ],
+    'correct_answer': 'C',
+    'explanation': "The output size for a transposed convolution is calculated as: (input size - 1) × stride + kernel size - 2 × padding. In this case, (3 - 1) × 1 + 2 = 5 for both height and width. So, the output size is (1, 1, 5, 5).",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+# Question 5: Backward Computation of Convolution
+lesson_6_3_cnn_computational_question_5 = {
+    'question': "In the backward pass of a convolutional layer, given an input of size (1, 1, 4, 4) and a 2x2 kernel, which statement about the gradient with respect to the input (∂L/∂X) is true?",
+    'options_list': [
+        "A) The gradient has the same size as the output tensor.",
+        "B) The gradient has the same size as the input tensor.",
+        "C) The gradient has double the size of the input tensor.",
+        "D) The gradient only affects the regions where the kernel was applied."
+    ],
+    'correct_answer': 'B',
+    'explanation': "In the backward pass of a convolutional layer, the gradient with respect to the input (∂L/∂X) has the same size as the input tensor, allowing the gradients to be propagated correctly to the previous layers.",
+    'chapter_information': '6.3 Convolutional Neural Networks'
+}
+
+# Question 1
+question_1 = {
+    'question': "In a convolutional neural network (CNN) layer, given an input size of 227x227x3 (height x width x channels), 96 filters, and a filter size of 11x11 with a stride of 4 and no padding, calculate the output size of this convolutional layer.",
+    'options_list': [
+        "56x56x96",
+        "55x55x96",
+        "112x112x96",
+        "28x28x96"
+    ],
+    'correct_answer': "55x55x96",
+    'explanation': (
+        "The output dimensions can be calculated using the formula:\n"
+        "output_dim = ((input_dim - kernel_size) / stride) + 1\n"
+        "output_dim = ((227 - 11) / 4) + 1 = 55\n"
+        "Thus, the output size is 55x55 with 96 filters as the depth."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 2
+question_2 = {
+    'question': "If a convolutional layer has an output size of 64x56x56, calculate the memory required to store the activations of this layer assuming 32-bit floating-point precision.",
+    'options_list': [
+        "784 KB",
+        "1,134 KB",
+        "500 KB",
+        "1,024 KB"
+    ],
+    'correct_answer': "784 KB",
+    'explanation': (
+        "Number of elements in the output = 64 * 56 * 56 = 200,704\n"
+        "Bytes per element = 4 (32-bit floating point)\n"
+        "Total memory (in bytes) = 200,704 * 4 = 802,816 bytes\n"
+        "Convert to kilobytes: 802,816 / 1,024 ≈ 784 KB."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 3
+question_3 = {
+    'question': (
+        "Consider a convolutional layer in a CNN with the following properties:\n"
+        "- Input channels: 3\n"
+        "- Output channels (filters): 64\n"
+        "- Kernel size: 11x11\n"
+        "- Stride: 1\n"
+        "- Padding: 0\n\n"
+        "Calculate the total number of parameters (weights) in this convolutional layer, including biases."
+    ),
+    'options_list': [
+        "23,296",
+        "34,944",
+        "72,000",
+        "1,728"
+    ],
+    'correct_answer': "23,296",
+    'explanation': (
+        "The number of weights = output channels * input channels * kernel width * kernel height\n"
+        "= 64 * 3 * 11 * 11 = 23,232\n"
+        "The number of biases = 64 (one bias per output channel)\n"
+        "Total parameters = 23,232 (weights) + 64 (biases) = 23,296."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 4
+question_4 = {
+    'question': "Given the output size of a convolutional layer is 55x55x96 and each activation is stored as a 32-bit float, calculate the total memory size in kilobytes required to store these activations.",
+    'options_list': [
+        "784 KB",
+        "1,134 KB",
+        "1,024 KB",
+        "512 KB"
+    ],
+    'correct_answer': "1,134 KB",
+    'explanation': (
+        "Number of elements in the output = 55 * 55 * 96 = 290,400\n"
+        "Bytes per element = 4 (32-bit floating point)\n"
+        "Total memory (in bytes) = 290,400 * 4 = 1,161,600 bytes\n"
+        "Convert to kilobytes: 1,161,600 / 1,024 ≈ 1,134 KB."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+# Question 5
+question_5 = {
+    'question': (
+        "For a convolutional layer with the following specifications:\n"
+        "- Input size: 224x224x3\n"
+        "- Number of filters: 64\n"
+        "- Filter size: 3x3\n"
+        "- Stride: 1\n"
+        "- Padding: 1 (same padding)\n\n"
+        "Calculate the number of floating point operations (FLOPs) for one forward pass through this layer."
+    ),
+    'options_list': [
+        "150,000",
+        "72,855,552",
+        "1,728",
+        "3,200,000"
+    ],
+    'correct_answer': "72,855,552",
+    'explanation': (
+        "Number of output elements = 224 * 224 * 64 = 3,211,264\n"
+        "Number of operations per output element = 3 * 3 * 3 = 27 (since each filter operates over a 3x3 window across 3 input channels)\n"
+        "Total FLOPs = 3,211,264 * 27 = 72,855,552."
+    ),
+    'chapter_information': "Michigan Lecture 8"
+}
+
+
+
+
+
+
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
 # print(global_items)

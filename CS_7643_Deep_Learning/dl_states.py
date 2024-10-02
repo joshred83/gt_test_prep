@@ -6,6 +6,7 @@ from .dl_week4_mpc import WEEK_4_MPC
 from .dl_week5_mpc import WEEK_5_MPC
 from .dl_week6_mpc import WEEK_6_MPC
 from .dl_week7_mpc import WEEK_7_MPC
+from .dl_week8_mpc import WEEK_8_MPC
 
 ############################
 questions_dictionary = {'1': WEEK_1_MPC,
@@ -14,7 +15,9 @@ questions_dictionary = {'1': WEEK_1_MPC,
                         '4': WEEK_4_MPC,
                         '5': WEEK_5_MPC,
                         '6': WEEK_6_MPC,
-                        '7': WEEK_7_MPC}
+                        '7': WEEK_7_MPC,
+                        '8': WEEK_8_MPC}
+
 all = list(questions_dictionary.values())
 
 OPEN_QUESTIONS = []
