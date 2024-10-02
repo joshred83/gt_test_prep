@@ -35,6 +35,7 @@ def sa_questions():
         "Lesson 5: Convolution and Pooling Layers": '5',
         "Lesson 6: Convolutional Neural Networks": '6',
         "Lesson 7: Visualization": '7',
+        "Lesson 8: Scalable Training": '8',
     }
     
     topics = {
