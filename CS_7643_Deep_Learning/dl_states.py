@@ -41,8 +41,12 @@ class Token():
             self.mpc_questions = []
             while len(self.mpc_questions)<self.num_questions :
                 chapters = np.random.choice(self.chapters_to_review, size=len(self.chapters_to_review), replace=False)
+                
                 for chapter in chapters:
                     list_length = len(all[chapter])
+                    if list_length == 0:
+                        print('chapter missing:', chapter)
+                        continue 
                     mpc_idx = np.random.choice(range(list_length), size=1, replace=False)
                     # print(list_length, mpc_idx)
                     self.mpc_questions.append(all[chapter][int(mpc_idx)])
