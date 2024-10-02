@@ -5,7 +5,7 @@ from .dl_states import Token
 quiz_mapping = {
     "Quiz 1": [0, 1],  # Corresponds to Lesson 1 and Lesson 2
     "Quiz 2": [2, 4],
-    "Quiz 2": [4, 6, 7, 8], 
+    "Quiz 3": [4, 6], 
 }
 
 def question_generator(label, options, question_key):
