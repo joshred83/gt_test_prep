@@ -404,7 +404,6 @@ lesson_6_lecture_gradient_conv_layer_mpc_question_3 = {
     'chapter_information': 'Lesson 6 Lecture Gradient for conv layer'
 }
 
-
 lesson_6_lecture_gradient_conv_layer_mpc_question_4 = {
     'question': "Given the input matrix $X$ and a $2 \\times 2$ kernel $K$, the output $Y$ is calculated through cross-correlation. Suppose the input $X$ and kernel $K$ are given by:\n\n"
                  "$X = \\begin{bmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{bmatrix}$, \n\n"
@@ -416,11 +415,11 @@ lesson_6_lecture_gradient_conv_layer_mpc_question_4 = {
         "A) 12",
         "B) 15.5",
         "C) 5",
-        "D) 10.5"
+        "D) 6.5"  # Corrected answer
     ],
     'correct_answer': 'D',
     'explanation': "The gradient with respect to $k_{1,1}$ is computed by summing the product of each element in $\\frac{\\partial L}{\\partial Y}$ with the corresponding input elements affected by $k_{1,1}$:\n\n"
-                   "$\\frac{\\partial L}{\\partial k_{1,1}} = (2 \\times 1) + (0.5 \\times 2) + (-1 \\times 4) + (1.5 \\times 5) = 2 + 1 - 4 + 7.5 = 10.5$.",
+                   "$\\frac{\\partial L}{\\partial k_{1,1}} = (2 \\times 1) + (0.5 \\times 2) + (-1 \\times 4) + (1.5 \\times 5) = 2 + 1 - 4 + 7.5 = 6.5$.",
     'chapter_information': 'Lesson 6 Lecture Gradient for conv layer'
 }
 
@@ -434,12 +433,12 @@ lesson_6_lecture_gradient_conv_layer_mpc_question_5 = {
     'options_list': [
         "A) 5.1",
         "B) -3.6",
-        "C) 8.4",
+        "C) 9.9",  # Corrected answer
         "D) 10.7"
     ],
-    'correct_answer': 'A',
+    'correct_answer': 'C',
     'explanation': "The gradient with respect to $k_{2,2}$ is computed by summing the product of each element in $\\frac{\\partial L}{\\partial Y}$ with the input elements affected by $k_{2,2}$:\n\n"
-                   "$\\frac{\\partial L}{\\partial k_{2,2}} = (0.5 \\times 9) + (-0.2 \\times 11) + (1.3 \\times 15) + (-0.7 \\times 17) = 4.5 - 2.2 + 19.5 - 11.9 = 5.1$.",
+                   "$\\frac{\\partial L}{\\partial k_{2,2}} = (0.5 \\times 9) + (-0.2 \\times 11) + (1.3 \\times 15) + (-0.7 \\times 17) = 4.5 - 2.2 + 19.5 - 11.9 = 9.9$.",
     'chapter_information': 'Lesson 6 Lecture Gradient for conv layer'
 }
 
@@ -452,13 +451,13 @@ lesson_6_lecture_gradient_conv_layer_mpc_question_6 = {
                  "What is the gradient with respect to $k_{1,2}$?",
     'options_list': [
         "A) 1.8",
-        "B) -2.7",
+        "B) 3",  # Corrected answer
         "C) 0.6",
         "D) -4.4"
     ],
     'correct_answer': 'B',
     'explanation': "The gradient with respect to $k_{1,2}$ is computed by summing the product of each element in $\\frac{\\partial L}{\\partial Y}$ with the input elements affected by $k_{1,2}$:\n\n"
-                   "$\\frac{\\partial L}{\\partial k_{1,2}} = (-0.5 \\times 4) + (0.3 \\times 6) + (0.8 \\times 10) + (-0.4 \\times 12) = -2 + 1.8 + 8 - 4.8 = -2.7$.",
+                   "$\\frac{\\partial L}{\\partial k_{1,2}} = (-0.5 \\times 4) + (0.3 \\times 6) + (0.8 \\times 10) + (-0.4 \\times 12) = -2 + 1.8 + 8 - 4.8 = 3$.",
     'chapter_information': 'Lesson 6 Lecture Gradient for conv layer'
 }
 
@@ -1258,6 +1257,70 @@ architecture_identification_question_5 = {
     'chapter_information': 'Architecture Identification - VGG Network'
 }
 
+architecture_identification_question_6 = {
+    'question': "Look at the displayed image. Which of the following neural network architectures is depicted in the image?",
+    'options_list': [
+        "A) ResNet",
+        "B) Inception Network",
+        "C) AlexNet",
+        "D) VGG Network"
+    ],
+    'correct_answer': 'A',
+    'image': 'images/resnet_init.png',
+    'chapter_information': 'Architecture Identification - ResNet'
+}
+
+architecture_identification_question_7 = {
+    'question': "Look at the displayed image. Which neural network block is shown in the image?",
+    'options_list': [
+        "A) Residual Block",
+        "B) Inception Block",
+        "C) Self-Attention Block",
+        "D) Convolutional Block"
+    ],
+    'correct_answer': 'B',
+    'image': 'images/tf_inception_block.png',
+    'chapter_information': 'Architecture Identification - TensorFlow Inception Block'
+}
+
+architecture_identification_question_8 = {
+    'question': "Look at the displayed image. Which model architecture is depicted here?",
+    'options_list': [
+        "A) VGG Network",
+        "B) Transformer",
+        "C) ResNet",
+        "D) Self-Attention Block"
+    ],
+    'correct_answer': 'D',
+    'image': 'images/self_attention_block.png',
+    'chapter_information': 'Architecture Identification - Self-Attention Block'
+}
+
+architecture_identification_question_9 = {
+    'question': "Look at the displayed image. Which neural network block is represented?",
+    'options_list': [
+        "A) VGG Block",
+        "B) Transformer Block",
+        "C) Inception Block",
+        "D) Residual Block"
+    ],
+    'correct_answer': 'D',
+    'image': 'images/tf_resid_block.png',
+    'chapter_information': 'Architecture Identification - TensorFlow Residual Block'
+}
+
+architecture_identification_question_10 = {
+    'question': "Look at the displayed image. What model architecture is shown?",
+    'options_list': [
+        "A) U-Net",
+        "B) AlexNet",
+        "C) Inception Network",
+        "D) Residual Connection"
+    ],
+    'correct_answer': 'D',
+    'image': 'images/residual_connection.png',
+    'chapter_information': 'Architecture Identification - Residual Connection'
+}
 
 
 
