@@ -46,7 +46,8 @@ def big_review():
             if correct_answer in ['True', 'False']:
                 correct_answer = correct_answer
             
-            # If the correct answer is a single letter ('A', 'B', 'C', or 'D'), convert it to the corresponding option
+            # If the correct answer is a single letter ('A', 'B', 'C', or 'D'), 
+            # convert it to the corresponding option
             elif correct_answer[0] in ['A', 'B', 'C', 'D'] and len(correct_answer) == 1:
                 correct_answer_letter = correct_answer
                 correct_answer = options[ord(correct_answer_letter) - ord('A')]
@@ -57,6 +58,8 @@ def big_review():
             st.markdown(f"**{label}**")
 
             question = question_generator(label, options, question_key)
+            if 'image' in q and q['image']:
+                st.image(q['image'], use_column_width=True)
 
             if st.button('Submit', key=f"submit_{i}"):
                 if 'submitted_answers' not in st.session_state:

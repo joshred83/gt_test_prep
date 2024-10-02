@@ -821,8 +821,301 @@ question_10 = {
     'chapter_information': "Michigan Lecture 8"
 }
 
+question_21 = {
+    'question': (
+        'Which CNN architecture introduced the use of parallel filters of different sizes within a single layer to capture features at multiple scales?'
+    ),
+    'options_list': [
+        'a) AlexNet',
+        'b) VGG Networks',
+        'c) Inception Networks (GoogLeNet)',
+        'd) Residual Networks (ResNet)'
+    ],
+    'correct_answer': 'c) Inception Networks (GoogLeNet)',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+question_22 = {
+    'question': (
+        'What was a key innovation in AlexNet that contributed to its success in computer vision tasks?'
+    ),
+    'options_list': [
+        'a) Use of 3x3 convolutions',
+        'b) Introduction of ReLU activation function',
+        'c) Skip connections',
+        'd) Automated architecture search'
+    ],
+    'correct_answer': 'b) Introduction of ReLU activation function',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+question_23 = {
+    'question': (
+        'Which architecture introduced skip connections to improve gradient flow in very deep networks?'
+    ),
+    'options_list': [
+        'a) AlexNet',
+        'b) VGG Networks',
+        'c) Inception Networks',
+        'd) Residual Networks (ResNet)'
+    ],
+    'correct_answer': 'd) Residual Networks (ResNet)',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+question_24 = {
+    'question': (
+        'In the VGG network, what was the primary reason for using smaller 3x3 convolutions instead of larger ones like 11x11?'
+    ),
+    'options_list': [
+        'a) To reduce computational complexity',
+        'b) To increase the depth of the network',
+        'c) To utilize smaller strides',
+        'd) To preserve more spatial information'
+    ],
+    'correct_answer': 'a) To reduce computational complexity',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+question_25 = {
+    'question': (
+        'Which of the following is a characteristic of automated architecture search in CNNs?'
+    ),
+    'options_list': [
+        'a) Manual design of each layer',
+        'b) Use of reinforcement learning to explore the space of possible architectures',
+        'c) Always results in fewer parameters than manually designed architectures',
+        'd) Primarily focuses on increasing the depth of the network'
+    ],
+    'correct_answer': 'b) Use of reinforcement learning to explore the space of possible architectures',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+# True/False Questions
+
+question_26 = {
+    'question': (
+        'The AlexNet architecture utilized a horizontal split across GPUs due to its large size.'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
 
 
+
+question_27 = {
+    'question': (
+        'VGG networks increased the number of parameters significantly compared to AlexNet by using larger convolutional kernels.'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+question_28 = {
+    'question': (
+        'Residual Networks (ResNet) introduced skip connections, allowing for improved gradient flow during backpropagation.'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+question_29 = {
+    'question': (
+        'Inception Networks utilize 1x1 convolutions to reduce computational complexity.'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+question_30 = {
+    'question': (
+        'One of the main challenges in advanced CNN architectures is solely about increasing the depth of the network.'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'chapter_information': 'Chapter 6 - Advanced Convolutional Neural Network'
+}
+
+
+ng_week2_question_1 = {
+    'question': 'Which of the following do you typically see as you move to deeper layers in a ConvNet?',
+    'options_list': [
+        'a) n_H and n_W decreases, while n_C also decreases',
+        'b) n_H and n_W increases, while n_C decreases',
+        'c) n_H and n_W increases, while n_C also increases',
+        'd) n_H and n_W decrease, while n_C increases'
+    ],
+    'correct_answer': 'd) n_H and n_W decrease, while n_C increases',
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+ng_week2_question_2 = {
+    'question': 'Which of the following do you typically see in a ConvNet? (Check all that apply.)',
+    'options_list': [
+        'a) Multiple CONV layers followed by a POOL layer',
+        'b) Multiple POOL layers followed by a CONV layer',
+        'c) FC layers in the last few layers',
+        'd) FC layers in the first few layers'
+    ],
+    'correct_answers': ['a) Multiple CONV layers followed by a POOL layer', 'c) FC layers in the last few layers'],
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+### True/False Questions
+
+ng_week2_question_3 = {
+    'question': 'In order to be able to build very deep networks, we usually only use pooling layers to downsize the height/width of the activation volumes while convolutions are used with "valid" padding. Otherwise, we would downsize the input of the model too quickly.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+ng_week2_question_4 = {
+    'question': 'Training a deeper network (for example, adding additional layers to the network) allows the network to fit more complex functions and thus almost always results in lower training error. For this question, assume we’re referring to "plain" networks.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_1 = {
+    'question': "Which of the following do you typically see as you move to deeper layers in a ConvNet?",
+    'options_list': [
+        r"\(n_H\) and \(n_W\) decrease, while \(n_C\) also decreases",
+        r"\(n_H\) and \(n_W\) increase, while \(n_C\) decreases",
+        r"\(n_H\) and \(n_W\) increase, while \(n_C\) also increases",
+        r"\(n_H\) and \(n_W\) decrease, while \(n_C\) increases"
+    ],
+    'correct_answer': r"\(n_H\) and \(n_W\) decrease, while \(n_C\) increases",
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_2 = {
+    'question': "Which of the following do you typically see in a ConvNet? (Check all that apply)",
+    'options_list': [
+        "Multiple CONV layers followed by a POOL layer",
+        "Multiple POOL layers followed by a CONV layer",
+        "FC layers in the last few layers",
+        "FC layers in the first few layers"
+    ],
+    'correct_answer': [
+        "Multiple CONV layers followed by a POOL layer",
+        "FC layers in the last few layers"
+    ],
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_3 = {
+    'question': ("In order to be able to build very deep networks, we usually only use pooling layers to "
+                 "downsize the height/width of the activation volumes while convolutions are used with 'valid' padding. "
+                 "Otherwise, we would downsize the input of the model too quickly."),
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': "False",
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_4 = {
+    'question': ("Training a deeper network (for example, adding additional layers to the network) allows the network to fit more complex functions "
+                 "and thus almost always results in lower training error. For this question, assume we’re referring to 'plain' networks."),
+    'options_list': [
+        "True",
+        "False"
+    ],
+    'correct_answer': "False",
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_5 = {
+    'question': ("The following equation captures the computation in a ResNet block. What goes into the two blanks above?\n"
+                 r"\(a^{[l+2]} = g(W^{[l+2]}g(W^{[l+1]}a^{[l]} + b^{[l+1]}) + b^{[l+2]} + \_\_\_\_\_ + \_\_\_\_\_\_)\)"),
+    'options_list': [
+        r"\(a^{[l]}\) and 0, respectively",
+        "0 and \(a^{[l]}\), respectively",
+        r"\(z^{[l]}\) and \(a^{[l]}\), respectively",
+        "0 and \(z^{[l+1]}\), respectively"
+    ],
+    'correct_answer': r"\(a^{[l]}\) and 0, respectively",
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_6 = {
+    'question': "Which ones of the following statements on Residual Networks are true? (Check all that apply)",
+    'options_list': [
+        r"A ResNet with \(L\) layers would have on the order of \(L^2\) skip connections in total.",
+        "Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks.",
+        "The skip-connections compute a complex non-linear function of the input to pass to a deeper layer in the network.",
+        "The skip-connection makes it easy for the network to learn an identity mapping between the input and the output within the ResNet block."
+    ],
+    'correct_answer': [
+        "Using a skip-connection helps the gradient to backpropagate and thus helps you to train deeper networks.",
+        "The skip-connection makes it easy for the network to learn an identity mapping between the input and the output within the ResNet block."
+    ],
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_7 = {
+    'question': "Suppose you have an input volume of dimension 64x64x16. How many parameters would a single 1x1 convolutional filter have (including the bias)?",
+    'options_list': [
+        "1",
+        "4097",
+        "17",
+        "2"
+    ],
+    'correct_answer': "17",
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_8 = {
+    'question': ("Suppose you have an input volume of dimension \(n_H \times n_W \times n_C\). Which of the following statements do you agree with? "
+                 "(Assume that '1x1 convolutional layer' below always uses a stride of 1 and no padding.)"),
+    'options_list': [
+        "You can use a 1x1 convolutional layer to reduce \(n_H\), \(n_W\), and \(n_C\).",
+        "You can use a 1x1 convolutional layer to reduce \(n_C\) but not \(n_H\), \(n_W\).",
+        "You can use a pooling layer to reduce \(n_H\), \(n_W\), and \(n_C\).",
+        "You can use a pooling layer to reduce \(n_H\), \(n_W\), but not \(n_C\)."
+    ],
+    'correct_answer': [
+        "You can use a 1x1 convolutional layer to reduce \(n_C\) but not \(n_H\), \(n_W\).",
+        "You can use a pooling layer to reduce \(n_H\), \(n_W\), but not \(n_C\)."
+    ],
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_9 = {
+    'question': "Which ones of the following statements on Inception Networks are true? (Check all that apply)",
+    'options_list': [
+        "Making an inception network deeper (by stacking more inception blocks together) should not hurt training set performance.",
+        "Inception blocks usually use 1x1 convolutions to reduce the input data volume’s size before applying 3x3 and 5x5 convolutions.",
+        "Inception networks incorporate a variety of network architectures (similar to dropout, which randomly chooses a network architecture on each step) and thus has a similar regularizing effect as dropout.",
+        "A single inception block allows the network to use a combination of 1x1, 3x3, 5x5 convolutions and pooling."
+    ],
+    'correct_answer': [
+        "Inception blocks usually use 1x1 convolutions to reduce the input data volume’s size before applying 3x3 and 5x5 convolutions.",
+        "A single inception block allows the network to use a combination of 1x1, 3x3, 5x5 convolutions and pooling."
+    ],
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
+
+andrew_ng_week2_question_10 = {
+    'question': "Which of the following are common reasons for using open-source implementations of ConvNets (both the model and/or weights)? (Check all that apply)",
+    'options_list': [
+        "A model trained for one computer vision task can usually be used to perform data augmentation even for a different computer vision task.",
+        "The same techniques for winning computer vision competitions, such as using multiple crops at test time, are widely used in practical deployments (or production system deployments) of ConvNets.",
+        "It is a convenient way to get working an implementation of a complex ConvNet architecture.",
+        "Parameters trained for one computer vision task are often useful as pretraining for other computer vision tasks."
+    ],
+    'correct_answer': [
+        "It is a convenient way to get working an implementation of a complex ConvNet architecture.",
+        "Parameters trained for one computer vision task are often useful as pretraining for other computer vision tasks."
+    ],
+    'chapter_information': 'Andrew Ng Course - Week 2'
+}
 
 
 
