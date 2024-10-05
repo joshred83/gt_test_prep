@@ -1322,7 +1322,287 @@ architecture_identification_question_10 = {
     'chapter_information': 'Architecture Identification - Residual Connection'
 }
 
+# Multiple Choice and True/False Questions
 
+focus_topics_question_1 = {
+    'question': 'Which of the following is NOT a key feature of the ResNet architecture?',
+    'options_list': [
+        'a) Skip connections',
+        'b) Batch normalization',
+        'c) Very deep networks (100+ layers)',
+        'd) 3D convolutions'
+    ],
+    'correct_answer': 'd) 3D convolutions',
+    'explanation': 'ResNet is characterized by skip connections, batch normalization, and very deep architectures, but does not typically use 3D convolutions.',
+    'chapter_information': 'Convolutional Neural Network Architectures'
+}
+
+focus_topics_question_2 = {
+    'question': 'Transfer learning is always effective, regardless of the similarity between the source and target domains.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': 'The effectiveness of transfer learning depends on the similarity between the source and target domains. It\'s most effective when the domains are related.',
+    'chapter_information': 'Effectiveness of Transfer Learning'
+}
+
+focus_topics_question_3 = {
+    'question': 'What is the main advantage of the Inception module in GoogLeNet?',
+    'options_list': [
+        'a) It reduces the number of parameters',
+        'b) It allows for multi-scale feature extraction',
+        'c) It eliminates the need for pooling layers',
+        'd) It prevents overfitting'
+    ],
+    'correct_answer': 'b) It allows for multi-scale feature extraction',
+    'explanation': 'The Inception module uses parallel convolutions with different filter sizes to capture features at multiple scales.',
+    'chapter_information': 'Convolutional Neural Network Architectures'
+}
+
+focus_topics_question_4 = {
+    'question': 'Convolutional layers are equivariant to translation, meaning that if the input shifts, the output shifts by the same amount.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'Convolutional layers have the property of translation equivariance, where a shift in the input results in a corresponding shift in the output.',
+    'chapter_information': 'Invariance vs. Equivariance'
+}
+
+focus_topics_question_5 = {
+    'question': 'Which of the following is NOT a common method for visualizing what a CNN has learned?',
+    'options_list': [
+        'a) Visualizing filter weights',
+        'b) Generating adversarial examples',
+        'c) Gradient-based saliency maps',
+        'd) Class activation mapping'
+    ],
+    'correct_answer': 'b) Generating adversarial examples',
+    'explanation': 'While adversarial examples can provide insights into network vulnerabilities, they are not typically used for visualizing what a CNN has learned.',
+    'chapter_information': 'Visualization'
+}
+
+focus_topics_question_6 = {
+    'question': 'Which of the following architectures introduced the concept of using very deep networks with small (3x3) convolutional filters throughout the entire network?',
+    'options_list': [
+        'a) AlexNet',
+        'b) VGGNet',
+        'c) Inception Net',
+        'd) ResNet'
+    ],
+    'correct_answer': 'b) VGGNet',
+    'explanation': 'VGGNet is known for its deep architecture that uses small (3x3) convolutional filters throughout the network.',
+    'chapter_information': 'Convolutional Neural Network Architectures'
+}
+
+focus_topics_question_7 = {
+    'question': 'ResNet addresses the vanishing gradient problem in deep networks by introducing residual connections, allowing gradients to flow directly through identity mappings.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'Residual connections in ResNet allow gradients to bypass some layers, helping to mitigate the vanishing gradient problem.',
+    'chapter_information': 'Convolutional Neural Network Architectures'
+}
+
+focus_topics_question_8 = {
+    'question': 'Which architecture is known for using "blocks" that consist of convolutional layers with different filter sizes concatenated together?',
+    'options_list': [
+        'a) AlexNet',
+        'b) VGGNet',
+        'c) Inception Net',
+        'd) ResNet'
+    ],
+    'correct_answer': 'c) Inception Net',
+    'explanation': 'Inception Net uses "Inception modules" that apply convolutional layers with different filter sizes, then concatenate their outputs.',
+    'chapter_information': 'Convolutional Neural Network Architectures'
+}
+
+focus_topics_question_9 = {
+    'question': 'AlexNet was the first CNN architecture to use batch normalization to accelerate training.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': 'Batch normalization was introduced after AlexNet. It was first used in architectures like Inception and ResNet.',
+    'chapter_information': 'Convolutional Neural Network Architectures'
+}
+
+focus_topics_question_10 = {
+    'question': 'What is the purpose of using saliency maps in CNN visualization?',
+    'options_list': [
+        'a) To increase the resolution of input images',
+        'b) To highlight regions in the input that most affect the network\'s output',
+        'c) To reduce overfitting by adding noise',
+        'd) To visualize the training loss over epochs'
+    ],
+    'correct_answer': 'b) To highlight regions in the input that most affect the network\'s output',
+    'explanation': 'Saliency maps are used to identify which parts of the input image are most important for the network\'s predictions.',
+    'chapter_information': 'Visualization'
+}
+
+focus_topics_question_11 = {
+    'question': 'Which object detection architecture uses a two-stage approach involving region proposal followed by classification?',
+    'options_list': [
+        'a) YOLO (You Only Look Once)',
+        'b) Faster R-CNN',
+        'c) SSD (Single Shot MultiBox Detector)',
+        'd) MobileNet'
+    ],
+    'correct_answer': 'b) Faster R-CNN',
+    'explanation': 'Faster R-CNN uses a two-stage approach: first generating region proposals, then classifying those proposals.',
+    'chapter_information': 'Advanced Computer Vision Architectures'
+}
+
+focus_topics_question_12 = {
+    'question': 'The SSD (Single Shot MultiBox Detector) architecture performs object detection in a single pass without the need for region proposals.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'SSD performs object detection in a single pass by using a grid of default bounding boxes to directly predict objects.',
+    'chapter_information': 'Advanced Computer Vision Architectures'
+}
+
+focus_topics_question_13 = {
+    'question': 'What is the main advantage of using anchor boxes in object detection models like Faster R-CNN and SSD?',
+    'options_list': [
+        'a) They reduce the number of parameters in the model',
+        'b) They allow the model to predict bounding boxes of varying sizes and aspect ratios',
+        'c) They improve the model\'s ability to classify images',
+        'd) They simplify the loss function calculation'
+    ],
+    'correct_answer': 'b) They allow the model to predict bounding boxes of varying sizes and aspect ratios',
+    'explanation': 'Anchor boxes provide a set of predefined shapes and sizes that the model can use to predict bounding boxes of varying sizes and aspect ratios.',
+    'chapter_information': 'Advanced Computer Vision Architectures'
+}
+
+focus_topics_question_14 = {
+    'question': 'YOLO divides the input image into a grid and predicts bounding boxes and class probabilities directly from the grid cells.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'YOLO divides the image into a grid and makes predictions for each cell, allowing for real-time object detection.',
+    'chapter_information': 'Advanced Computer Vision Architectures'
+}
+
+focus_topics_question_15 = {
+    'question': 'In the context of a classification problem, which of the following describes a false positive?',
+    'options_list': [
+        'a) The model correctly predicts the positive class',
+        'b) The model incorrectly predicts the negative class as positive',
+        'c) The model correctly predicts the negative class',
+        'd) The model incorrectly predicts the positive class as negative'
+    ],
+    'correct_answer': 'b) The model incorrectly predicts the negative class as positive',
+    'explanation': 'A false positive occurs when the model incorrectly predicts a negative example as positive.',
+    'chapter_information': 'Types of Errors and What They Mean'
+}
+
+focus_topics_question_16 = {
+    'question': 'A high recall indicates that the model has a low rate of false negatives.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'High recall means that the model successfully identifies most positive examples, resulting in fewer false negatives.',
+    'chapter_information': 'Types of Errors and What They Mean'
+}
+
+# Continuation of Multiple Choice and True/False Questions
+
+focus_topics_question_17 = {
+    'question': 'Transfer learning is most effective when:',
+    'options_list': [
+        'a) The source and target tasks are unrelated',
+        'b) The source and target datasets are vastly different in size',
+        'c) The features learned from the source task are general and applicable to the target task',
+        'd) The model is trained from scratch on the target task'
+    ],
+    'correct_answer': 'c) The features learned from the source task are general and applicable to the target task',
+    'explanation': 'Transfer learning works best when the source task has learned features that are relevant and transferable to the target task.',
+    'chapter_information': 'Effectiveness of Transfer Learning'
+}
+
+focus_topics_question_18 = {
+    'question': 'Fine-tuning a pre-trained model on a new task typically requires a larger learning rate than training from scratch.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': 'Usually, a smaller learning rate is used during fine-tuning to avoid large weight updates, preserving the learned features of the pre-trained model.',
+    'chapter_information': 'Effectiveness of Transfer Learning'
+}
+
+focus_topics_question_19 = {
+    'question': 'Which of the following best describes the role of padding in convolutional layers?',
+    'options_list': [
+        'a) To increase the number of parameters',
+        'b) To prevent overfitting',
+        'c) To preserve the spatial dimensions of the input after convolution',
+        'd) To reduce computational complexity'
+    ],
+    'correct_answer': 'c) To preserve the spatial dimensions of the input after convolution',
+    'explanation': 'Padding is used to keep the input and output dimensions the same, ensuring that important edge features are not lost during convolution.',
+    'chapter_information': 'Convolutional Layers and How They Work'
+}
+
+focus_topics_question_20 = {
+    'question': 'During the backward pass of a convolutional layer, gradients are computed with respect to both the weights (filters) and the input feature maps.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'In the backward pass, gradients are calculated for both the convolutional filters (weights) and the input feature maps to update the weights and propagate errors.',
+    'chapter_information': 'Convolutional Layers and How They Work'
+}
+
+focus_topics_question_21 = {
+    'question': 'Convolutional layers are equivariant to translation. This means:',
+    'options_list': [
+        'a) Translating the input results in a proportional change in the output',
+        'b) Translating the input results in the same translation in the output',
+        'c) Translating the input does not affect the output',
+        'd) The output is invariant to any transformations of the input'
+    ],
+    'correct_answer': 'b) Translating the input results in the same translation in the output',
+    'explanation': 'Equivariance means that a translation in the input leads to a corresponding translation in the output, preserving the spatial relationship.',
+    'chapter_information': 'Invariance vs. Equivariance'
+}
+
+focus_topics_question_22 = {
+    'question': 'Max-pooling operations introduce translation invariance into convolutional neural networks.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'Max-pooling captures the most prominent features in each pooling region, making the network less sensitive to small translations in the input.',
+    'chapter_information': 'Invariance vs. Equivariance'
+}
+
+focus_topics_question_23 = {
+    'question': 'An adversarial example is:',
+    'options_list': [
+        'a) An input intentionally designed to cause a model to make a mistake',
+        'b) A misclassified input due to random noise',
+        'c) An example from the test set used during training',
+        'd) A sample that the model correctly classifies with high confidence'
+    ],
+    'correct_answer': 'a) An input intentionally designed to cause a model to make a mistake',
+    'explanation': 'Adversarial examples are crafted inputs that exploit the model\'s weaknesses to produce incorrect outputs.',
+    'chapter_information': 'Adversarial Examples'
+}
+
+focus_topics_question_24 = {
+    'question': 'Small perturbations to input images, imperceptible to humans, can cause neural networks to misclassify them.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'Neural networks can be sensitive to small, carefully crafted perturbations, leading to incorrect classifications even if the changes are invisible to humans.',
+    'chapter_information': 'Adversarial Examples'
+}
+
+focus_topics_question_25 = {
+    'question': 'In style transfer, the style loss is computed by comparing:',
+    'options_list': [
+        'a) The pixel-wise difference between the content and generated images',
+        'b) The Gram matrices of the style and generated images',
+        'c) The activations of the final fully connected layer',
+        'd) The histogram of oriented gradients'
+    ],
+    'correct_answer': 'b) The Gram matrices of the style and generated images',
+    'explanation': 'Style transfer uses the Gram matrices to represent the style of an image and calculates the loss by comparing the style features of the generated and target style images.',
+    'chapter_information': 'Loss Functions (Including Style Transfer)'
+}
+
+focus_topics_question_26 = {
+    'question': 'The total loss in style transfer is a weighted sum of content loss and style loss.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'The loss function in style transfer includes a content loss to preserve the content structure and a style loss to apply the desired artistic style.',
+    'chapter_information': 'Loss Functions (Including Style Transfer)'
+}
 
 
 KC_MPC_QUESTIONS = []
