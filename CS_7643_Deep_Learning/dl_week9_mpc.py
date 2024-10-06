@@ -1460,6 +1460,256 @@ gt7_style_transfer_question_20 = {
     'chapter_information': 'GT Lecture 7 - Style Transfer'
 }
 
+fcn_semantic_segmentation_question_1 = {
+    'question': 'Which of the following statements best describes the main advantage of Fully Convolutional Networks (FCNs) for semantic segmentation?',
+    'options_list': [
+        'a) FCNs use patchwise training to efficiently handle pixelwise prediction.',
+        'b) FCNs produce fixed-sized output, making dense prediction more accurate.',
+        'c) FCNs are trained end-to-end, allowing input of any size to correspondingly sized output with no extra machinery.',
+        'd) FCNs discard shallow layer features to focus exclusively on deep, coarse semantic information.'
+    ],
+    'correct_answer': 'c) FCNs are trained end-to-end, allowing input of any size to correspondingly sized output with no extra machinery.',
+    'explanation': 'While patchwise training and fixed-size output might sound plausible, FCNs are distinct because of their end-to-end, pixel-to-pixel training capability with arbitrary input sizes.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+fcn_semantic_segmentation_question_2 = {
+    'question': 'How does the skip architecture in an FCN improve segmentation accuracy?',
+    'options_list': [
+        'a) It fuses semantic information from deep layers with appearance information from shallow layers, refining the segmentation.',
+        'b) It allows the network to skip redundant convolutional layers, speeding up inference.',
+        'c) It combines outputs from multiple classification networks for ensemble learning.',
+        'd) It relies exclusively on local pixel information, ignoring global structure for higher precision.'
+    ],
+    'correct_answer': 'a) It fuses semantic information from deep layers with appearance information from shallow layers, refining the segmentation.',
+    'explanation': 'Skip architectures enhance segmentation by combining both deep semantic and shallow appearance information, resulting in more precise output.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+fcn_semantic_segmentation_question_3 = {
+    'question': 'What is the primary reason FCNs do not require pre- and post-processing steps like superpixels or random fields?',
+    'options_list': [
+        'a) FCNs inherently contain an integrated superpixel-based post-processing step.',
+        'b) FCNs are limited to handling one-dimensional inputs efficiently, avoiding the need for extra processing.',
+        'c) The fully convolutional training approach eliminates the need for these complications.',
+        'd) The network\'s patchwise sampling makes additional processing redundant.'
+    ],
+    'correct_answer': 'c) The fully convolutional training approach eliminates the need for these complications.',
+    'explanation': 'Fully convolutional training precludes the need for complex processing steps, unlike other approaches that rely on superpixels or random fields.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+fcn_semantic_segmentation_question_4 = {
+    'question': 'Which factor limits the spatial detail in the segmentation output of an FCN?',
+    'options_list': [
+        'a) The use of only the final classification layer for pixelwise prediction.',
+        'b) The network\'s stride during pooling operations.',
+        'c) The depth of the convolutional layers within the network.',
+        'd) The employment of random field regularization techniques.'
+    ],
+    'correct_answer': 'b) The network\'s stride during pooling operations.',
+    'explanation': 'The stride during pooling directly affects the spatial resolution of the FCN’s output. Larger strides result in coarser segmentations.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+fcn_semantic_segmentation_question_5 = {
+    'question': 'The FCN architecture strictly requires a background model to achieve high accuracy in semantic segmentation tasks.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': 'FCNs can perform segmentation even without explicitly learning a background model, as the study suggests.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+fcn_semantic_segmentation_question_6 = {
+    'question': 'Upsampling in an FCN is a form of fractionally strided convolution that is learned during end-to-end training.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'Upsampling is implemented via learnable convolution in FCNs, making it an integral part of end-to-end training.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question1 = {
+    'question': 'In adapting classification networks to Fully Convolutional Networks (FCNs) for semantic segmentation, the authors:',
+    'options_list': [
+        'A) Replace all convolutional layers with fully connected layers to handle pixelwise predictions.',
+        'B) Transform fully connected layers into convolution layers to process inputs of any size.',
+        'C) Add additional pooling layers to reduce spatial dimensions and computational load.',
+        'D) Remove deeper layers to focus on high-resolution features from shallow layers.'
+    ],
+    'correct_answer': 'B) Transform fully connected layers into convolution layers to process inputs of any size.',
+    'explanation': 'The authors transform fully connected layers into convolution layers to enable the network to accept inputs of arbitrary size and produce correspondingly-sized outputs.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question2 = {
+    'question': 'Which of the following did the authors find unnecessary for achieving improved semantic segmentation results with FCNs?',
+    'options_list': [
+        'A) Utilizing pre-trained classification networks for transfer learning.',
+        'B) Incorporating superpixels, proposals, or post-processing refinement techniques.',
+        'C) Combining features from multiple layers using skip connections.',
+        'D) Training the network end-to-end on whole images.'
+    ],
+    'correct_answer': 'B) Incorporating superpixels, proposals, or post-processing refinement techniques.',
+    'explanation': 'The authors achieved improved results without using superpixels, proposals, or post-processing techniques, which they found unnecessary.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question3 = {
+    'question': 'The skip architecture introduced in the paper serves primarily to:',
+    'options_list': [
+        'A) Fuse deep, coarse semantic information with shallow, fine appearance information.',
+        'B) Bypass redundant layers to streamline the network and reduce overfitting.',
+        'C) Enhance the network\'s depth by adding more layers without increasing computation.',
+        'D) Separate the training process into independent stages for each network layer.'
+    ],
+    'correct_answer': 'A) Fuse deep, coarse semantic information with shallow, fine appearance information.',
+    'explanation': 'The skip architecture combines semantic information from deep layers with appearance information from shallow layers to produce detailed segmentations.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question4 = {
+    'question': 'According to the authors, a key advantage of fully convolutional training over patchwise training is that it:',
+    'options_list': [
+        'A) Increases computational complexity due to processing the whole image at once.',
+        'B) Reduces efficiency by handling overlapping patches separately.',
+        'C) Allows efficient learning and inference through dense feedforward computation and backpropagation.',
+        'D) Requires more memory because it processes multiple image patches simultaneously.'
+    ],
+    'correct_answer': 'C) Allows efficient learning and inference through dense feedforward computation and backpropagation.',
+    'explanation': 'Fully convolutional training is efficient because it processes the whole image, leveraging dense computation and avoiding redundant calculations from overlapping patches.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question5 = {
+    'question': 'In their experiments, the authors found that masking the foreground during both learning and inference:',
+    'options_list': [
+        'A) Significantly improved segmentation accuracy by focusing on context.',
+        'B) Had little effect on overall performance, indicating foreground pixels are unimportant.',
+        'C) Led the network to achieve nearly perfect background accuracy but confused certain classes.',
+        'D) Proved that the network could not recognize object segments without foreground information.'
+    ],
+    'correct_answer': 'C) Led the network to achieve nearly perfect background accuracy but confused certain classes.',
+    'explanation': 'When the foreground was masked during both learning and inference, the network achieved high background accuracy but showed confusion in certain classes.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question6 = {
+    'question': 'True or False: The authors concluded that learning a dedicated background model is essential for high semantic segmentation accuracy.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': 'The authors found that a dedicated background model was not vital and that the network could perform well without explicitly learning one.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question7 = {
+    'question': 'The authors\' approach to upsampling within the network involves:',
+    'options_list': [
+        'A) Implementing upsampling as a form of convolution with a fractional input stride.',
+        'B) Using non-differentiable layers that cannot be learned during training.',
+        'C) Applying fixed bilinear interpolation outside the network after processing.',
+        'D) Replacing convolutional layers with pooling layers to increase output resolution.'
+    ],
+    'correct_answer': 'A) Implementing upsampling as a form of convolution with a fractional input stride.',
+    'explanation': 'Upsampling is performed in-network by treating it as a backward convolution with a fractional stride, allowing it to be learned during training.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question8 = {
+    'question': 'The primary difference between the FCN-32s, FCN-16s, and FCN-8s models lies in:',
+    'options_list': [
+        'A) The datasets on which they were trained.',
+        'B) The number of convolutional layers used from the base network.',
+        'C) The stride at which they make predictions, affecting spatial detail.',
+        'D) The type of activation functions employed in the final layers.'
+    ],
+    'correct_answer': 'C) The stride at which they make predictions, affecting spatial detail.',
+    'explanation': 'FCN-32s, FCN-16s, and FCN-8s differ in the stride (32, 16, and 8 pixels respectively) of their predictions, impacting the spatial resolution of the output.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question9 = {
+    'question': 'The authors\' experiments with masking foreground and background regions aimed to:',
+    'options_list': [
+        'A) Demonstrate that context and shape cues are irrelevant for segmentation tasks.',
+        'B) Investigate the contributions of different visual cues to the network\'s predictions.',
+        'C) Show that the network requires foreground pixels to recognize any class.',
+        'D) Prove that background information is more important than foreground appearance.'
+    ],
+    'correct_answer': 'B) Investigate the contributions of different visual cues to the network\'s predictions.',
+    'explanation': 'By masking different regions, the authors studied how foreground, background, and shape cues affect the network\'s ability to make predictions.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question10 = {
+    'question': 'In their analysis, the authors suggest that the gap between oracle and state-of-the-art accuracy at every stride indicates that:',
+    'options_list': [
+        'A) Recognition, rather than resolution, is the bottleneck for the mean IU metric.',
+        'B) Increasing output resolution will always lead to significant accuracy improvements.',
+        'C) Pixel-perfect prediction is necessary to achieve acceptable mean IU scores.',
+        'D) The mean IU metric is a reliable measure of fine-scale segmentation accuracy.'
+    ],
+    'correct_answer': 'A) Recognition, rather than resolution, is the bottleneck for the mean IU metric.',
+    'explanation': 'The authors note that even with coarse outputs, high mean IU scores are achievable, suggesting that improving recognition is more critical than resolution for this metric.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question11 = {
+    'question': 'True or False: The authors found that increasing momentum in online learning could approximate the effects of a larger batch size, leading to faster convergence.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': 'By adjusting momentum, the authors simulated the effect of larger batch sizes, finding that higher momentum in online learning led to efficient training.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question12 = {
+    'question': 'The authors\' findings on class balancing during training suggest that:',
+    'options_list': [
+        'A) It is critical to balance classes due to the highly unbalanced nature of the datasets.',
+        'B) Class balancing is unnecessary even though the labels are mildly unbalanced.',
+        'C) Ignoring class balancing results in significantly lower accuracy.',
+        'D) Class balancing is only important when using patchwise training methods.'
+    ],
+    'correct_answer': 'B) Class balancing is unnecessary even though the labels are mildly unbalanced.',
+    'explanation': 'The authors observed that class balancing did not significantly affect performance, even with mildly unbalanced labels.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question13 = {
+    'question': 'The "shift-and-stitch" method discussed in the paper can be interpreted as:',
+    'options_list': [
+        'A) A technique to combine outputs from multiple networks trained on different datasets.',
+        'B) A form of data augmentation to increase the diversity of training samples.',
+        'C) Equivalent to filter dilation, effectively densifying predictions without reducing receptive field sizes.',
+        'D) A method to decrease the network\'s receptive field for finer spatial resolution.'
+    ],
+    'correct_answer': 'C) Equivalent to filter dilation, effectively densifying predictions without reducing receptive field sizes.',
+    'explanation': 'Shift-and-stitch can be seen as filter dilation, which densifies output predictions by enlarging filters without reducing receptive field sizes.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question14 = {
+    'question': 'True or False: The skip connections in the FCN architecture are used to prevent overfitting by skipping training on certain layers.',
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': 'Skip connections are used to fuse features from different layers, not to prevent overfitting by skipping training.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+sadistic_question15 = {
+    'question': 'The authors argue that fully convolutional networks (FCNs) improve segmentation accuracy primarily by:',
+    'options_list': [
+        'A) Utilizing complex pre- and post-processing techniques like random fields.',
+        'B) Simplifying the training process by eliminating the need for patchwise methods.',
+        'C) Increasing the number of parameters significantly compared to other methods.',
+        'D) Relying heavily on data augmentation to enhance performance.'
+    ],
+    'correct_answer': 'B) Simplifying the training process by eliminating the need for patchwise methods.',
+    'explanation': 'FCNs improve accuracy by allowing end-to-end training on whole images, making the process simpler and more efficient than patchwise methods.',
+    'chapter_information': 'Fully Convolutional Networks for Semantic Segmentation'
+}
+
+
+
 
 
 KC_MPC_QUESTIONS = []
