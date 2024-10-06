@@ -774,8 +774,7 @@ question_8 = {
     ),
     'chapter_information': "Michigan Lecture 8"
 }
-
-# Question 9
+#########
 question_9 = {
     'question': (
         "A CNN layer has an input of size 224x224x3 and produces an output of size 112x112x64. "
@@ -784,19 +783,20 @@ question_9 = {
     'options_list': [
         "1,600 KB",
         "2,500 KB",
-        "3,200 KB",
+        "3,724 KB",
         "4,096 KB"
     ],
-    'correct_answer': "2,500 KB",
+    'correct_answer': "3,724 KB",
     'explanation': (
         "Memory for input = 224 * 224 * 3 * 4 = 602,112 bytes\n"
         "Convert to kilobytes: 602,112 / 1,024 ≈ 588 KB\n"
         "Memory for output = 112 * 112 * 64 * 4 = 3,211,264 bytes\n"
         "Convert to kilobytes: 3,211,264 / 1,024 ≈ 3,136 KB\n"
-        "Total memory = 588 KB + 3,136 KB = 2,500 KB."
+        "Total memory = 588 KB + 3,136 KB = 3,724 KB."
     ),
     'chapter_information': "Michigan Lecture 8"
 }
+
 
 # Question 10
 question_10 = {
@@ -1605,44 +1605,100 @@ focus_topics_question_26 = {
 }
 
 uc_boulder_dl_cnn_question_1 = {
-    'question': "Consider a convolutional neural network model with three convolution layers. The first layer has 50 filters, the second layer has 100 filters, and the third layer has 200 filters. All convolution layers have a stride of 2 and the same padding. The input images are 300x400 pixels with RGB channels, and the filter size is 3x3. How many trainable parameters does the CNN model have?",
+    'question': (
+        "Consider a convolutional neural network model with three convolution layers. The first layer has 50 filters, "
+        "the second layer has 100 filters, and the third layer has 200 filters. All convolution layers have a stride of 2 and the same padding. "
+        "The input images are 300x400 pixels with RGB channels, and the filter size is 3x3. How many trainable parameters does the CNN model have?"
+    ),
     'options_list': ["Do the computation"],
     'correct_answer': '226700',
-    'explanation': "Parameters in 1st layer: 50 filters with 3x3x3 size + 1 bias = 50x(3x3x3+1) = 1400\nParameters in 2nd layer: 100 filters with (3x3x50 + 1) = 45100\nParameters in 3rd layer: 200 filters with (3x3x100+1) = 180200\nTotal parameters = 1400 + 45100 + 180200 = 226700",
+    'explanation': (
+        "Parameters in 1st layer: 50 filters with $3 \\times 3 \\times 3$ size + 1 bias = $50 \\times (3 \\times 3 \\times 3 + 1) = 1400$\n"
+        "Parameters in 2nd layer: 100 filters with $(3 \\times 3 \\times 50 + 1) = 45100$\n"
+        "Parameters in 3rd layer: 200 filters with $(3 \\times 3 \\times 100 + 1) = 180200$\n"
+        "Total parameters = $1400 + 45100 + 180200 = 226700$."
+    ),
     'chapter_information': 'UC Boulder DL Course'
 }
+
 
 uc_boulder_dl_cnn_question_2 = {
-    'question': "Given an input tensor of size 1x1x4x4 and a convolution filter of size 1x1x2x2, stride 1, and no padding. The input tensor is:\n[[[2., 0., -1., 3.], [1., -2., 2., -1.], [0., 3., -1., 2.], [-2., 1., 0., -3.]]]\nThe filter is:\n[[[1., -1.], [0., 2.]]]\nThe bias is 0. Compute the output tensor after applying this convolution.",
+    'question': (
+        "Given an input tensor of size 1x1x4x4 and a convolution filter of size 1x1x2x2, stride 1, and no padding. "
+        "The input tensor is:\n"
+        "$$\\begin{bmatrix} 2 & 0 & -1 & 3 \\\\ 1 & -2 & 2 & -1 \\\\ 0 & 3 & -1 & 2 \\\\ -2 & 1 & 0 & -3 \\end{bmatrix}$$\n"
+        "The filter is:\n"
+        "$$\\begin{bmatrix} 1 & -1 \\\\ 0 & 2 \\end{bmatrix}$$\n"
+        "The bias is 0. Compute the output tensor after applying this convolution."
+    ),
     'options_list': ["Calculate the convolution manually"],
-    'correct_answer': '[[[[-2., 4., -2.], [2., 3., -3.], [1., -1., -2.]]]]',
-    'explanation': "Slide the 2x2 filter over the 4x4 input tensor with stride 1, performing element-wise multiplication at each position, summing the results, and adding the bias (which is 0). For example, at the top-left corner, the sum is (2*1 + 0*(-1) + 1*0 + -2*2) = -2.",
+    'correct_answer': "$$\\begin{bmatrix} -2 & 4 & -2 \\\\ 2 & 3 & -3 \\\\ 1 & -1 & -2 \\end{bmatrix}$$",
+    'explanation': (
+        "Slide the $2 \\times 2$ filter over the $4 \\times 4$ input tensor with stride 1, performing element-wise multiplication at each position, summing the results, and adding the bias (which is 0). "
+        "For example, at the top-left corner, the sum is $(2 \\times 1 + 0 \\times (-1) + 1 \\times 0 + (-2) \\times 2) = -2$."
+    ),
     'chapter_information': 'UC Boulder DL Course'
 }
 
+
 uc_boulder_dl_cnn_question_3 = {
-    'question': "Consider a 3x3 input tensor:\n[[[1., -1., 2.], [0., 1., -2.], [3., -1., 0.]]].\nA 2x2 filter:\n[[[2., 0.], [-1., 1.]]].\nAfter performing a convolution operation, a random upstream gradient `dout`:\n[[[1., -1.], [2., 0.]]] is given. Compute the gradient of the filter (`dw`).",
+    'question': (
+        "Consider a 3x3 input tensor:\n"
+        "$$\\begin{bmatrix} 1 & -1 & 2 \\\\ 0 & 1 & -2 \\\\ 3 & -1 & 0 \\end{bmatrix}$$.\n"
+        "A 2x2 filter:\n"
+        "$$\\begin{bmatrix} 2 & 0 \\\\ -1 & 1 \\end{bmatrix}$$.\n"
+        "After performing a convolution operation, a random upstream gradient `dout`:\n"
+        "$$\\begin{bmatrix} 1 & -1 \\\\ 2 & 0 \\end{bmatrix}$$ is given. Compute the gradient of the filter (`dw`)."
+    ),
     'options_list': ["Calculate the gradient manually"],
-    'correct_answer': '[[[6., 0.], [5., -1.]]]',
-    'explanation': "To compute `dw`, slide the upstream gradient `dout` over the input tensor. Multiply `dout` elements by the corresponding regions of the input to accumulate `dw` values. For example, the top-left element of `dw` is computed as (1*1 + -1*0 + 2*3) = 6.",
+    'correct_answer': "$$\\begin{bmatrix} 6 & 0 \\\\ 5 & -1 \\end{bmatrix}$$",
+    'explanation': (
+        "To compute `dw`, slide the upstream gradient `dout` over the input tensor. Multiply `dout` elements by the corresponding regions of the input to accumulate `dw` values. "
+        "For example, the top-left element of `dw` is computed as $(1 \\times 1 + (-1) \\times 0 + 2 \\times 3) = 6$."
+    ),
     'chapter_information': 'UC Boulder DL Course'
 }
 
 uc_boulder_dl_cnn_question_4 = {
-    'question': "Given an input tensor of size 1x1x3x3:\n[[[2., -1., 3.], [0., 1., -2.], [-1., 0., 2.]]],\n and a 2x2 filter:\n[[[1., 0.], [2., -1.]]],\nwith a stride of 1 and no padding. During backpropagation, the upstream gradient `dout` is:\n[[[1., -2.], [0., 3.]]]. Compute the gradient with respect to the input tensor (`dx`).",
+    'question': (
+        "Given an input tensor of size 1x1x3x3:\n"
+        "$$\\begin{bmatrix} 2 & -1 & 3 \\\\ 0 & 1 & -2 \\\\ -1 & 0 & 2 \\end{bmatrix}$$,\n"
+        "and a 2x2 filter:\n"
+        "$$\\begin{bmatrix} 1 & 0 \\\\ 2 & -1 \\end{bmatrix}$$,\n"
+        "with a stride of 1 and no padding. During backpropagation, the upstream gradient `dout` is:\n"
+        "$$\\begin{bmatrix} 1 & -2 \\\\ 0 & 3 \\end{bmatrix}$$. Compute the gradient with respect to the input tensor (`dx`)."
+    ),
     'options_list': ["Perform the gradient computation manually"],
-    'correct_answer': '[[[1., -2., -2.], [2., -1., -6.], [0., 3., -3.]]]',
-    'explanation': "To compute `dx`, the filter is flipped both horizontally and vertically (since it is a 2D convolution) and then convolved with `dout`. Perform element-wise multiplication and summation for each region of the flipped filter and `dout` at each position on the input.",
+    'correct_answer': "$$\\begin{bmatrix} 1 & -2 & -2 \\\\ 2 & -1 & -6 \\\\ 0 & 3 & -3 \\end{bmatrix}$$",
+    'explanation': (
+        "To compute `dx`, the filter is flipped both horizontally and vertically (since it is a 2D convolution) and then convolved with `dout`. "
+        "Perform element-wise multiplication and summation for each region of the flipped filter and `dout` at each position on the input."
+    ),
     'chapter_information': 'UC Boulder DL Course'
 }
 
+
 uc_boulder_dl_cnn_question_5 = {
-    'question': "Consider an input tensor of size 1x1x3x3:\n[[[1., -1., 2.], [0., 1., -2.], [3., -1., 0.]]].\nApply a convolution operation using a 2x2 filter:\n[[[1., -1.], [0., 2.]]],\nwith a stride of 1 and padding of 1. Compute the output tensor.",
+    'question': (
+        "Consider an input tensor of size 1x1x3x3:\n"
+        "$$\\begin{bmatrix} 1 & -1 & 2 \\\\ 0 & 1 & -2 \\\\ 3 & -1 & 0 \\end{bmatrix}$$.\n"
+        "Apply a convolution operation using a 2x2 filter:\n"
+        "$$\\begin{bmatrix} 1 & -1 \\\\ 0 & 2 \\end{bmatrix}$$,\n"
+        "with a stride of 1 and padding of 1. Compute the output tensor."
+    ),
     'options_list': ["Perform the convolution with padding"],
-    'correct_answer': '[[[[1., -2., 2.], [3., -1., -6.], [3., 6., 0.]]]]',
-    'explanation': "With padding of 1, the input becomes a 5x5 tensor. Perform the convolution by sliding the 2x2 filter over the padded input. The resulting tensor is a 3x3 matrix where each element is calculated by the sum of element-wise multiplications at each region of overlap.",
+    'correct_answer': (
+        "$$\\begin{bmatrix} 2 & -2 & 4 & 0 \\\\ -1 & 4 & -7 & 2 \\\\ 6 & -3 & 3 & -2 \\\\ -3 & 4 & -1 & 0 \\end{bmatrix}$$"
+    ),
+    'explanation': (
+        "With padding of 1, the input tensor becomes a 5x5 tensor. Perform the convolution by sliding the 2x2 filter "
+        "over the padded input. The resulting tensor is a 4x4 matrix where each element is calculated by the sum of "
+        "element-wise multiplications at each region of overlap. The correct output tensor is:\n\n"
+        "$$\\begin{bmatrix} 2 & -2 & 4 & 0 \\\\ -1 & 4 & -7 & 2 \\\\ 6 & -3 & 3 & -2 \\\\ -3 & 4 & -1 & 0 \\end{bmatrix}$$"
+    ),
     'chapter_information': 'UC Boulder DL Course'
 }
+
 
 uc_boulder_dl_cnn_question_6 = {
     'question': "A convolutional layer in a neural network has 32 filters, each of size 3x3, and the input to this layer has 16 channels. The stride is 1, and padding is applied to keep the output size the same as the input. How many trainable parameters (including biases) does this convolutional layer have?",
