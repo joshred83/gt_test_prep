@@ -1604,6 +1604,55 @@ focus_topics_question_26 = {
     'chapter_information': 'Loss Functions (Including Style Transfer)'
 }
 
+uc_boulder_dl_cnn_question_1 = {
+    'question': "Consider a convolutional neural network model with three convolution layers. The first layer has 50 filters, the second layer has 100 filters, and the third layer has 200 filters. All convolution layers have a stride of 2 and the same padding. The input images are 300x400 pixels with RGB channels, and the filter size is 3x3. How many trainable parameters does the CNN model have?",
+    'options_list': ["Do the computation"],
+    'correct_answer': '226700',
+    'explanation': "Parameters in 1st layer: 50 filters with 3x3x3 size + 1 bias = 50x(3x3x3+1) = 1400\nParameters in 2nd layer: 100 filters with (3x3x50 + 1) = 45100\nParameters in 3rd layer: 200 filters with (3x3x100+1) = 180200\nTotal parameters = 1400 + 45100 + 180200 = 226700",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_2 = {
+    'question': "Given an input tensor of size 1x1x4x4 and a convolution filter of size 1x1x2x2, stride 1, and no padding. The input tensor is:\n[[[2., 0., -1., 3.], [1., -2., 2., -1.], [0., 3., -1., 2.], [-2., 1., 0., -3.]]]\nThe filter is:\n[[[1., -1.], [0., 2.]]]\nThe bias is 0. Compute the output tensor after applying this convolution.",
+    'options_list': ["Calculate the convolution manually"],
+    'correct_answer': '[[[[-2., 4., -2.], [2., 3., -3.], [1., -1., -2.]]]]',
+    'explanation': "Slide the 2x2 filter over the 4x4 input tensor with stride 1, performing element-wise multiplication at each position, summing the results, and adding the bias (which is 0). For example, at the top-left corner, the sum is (2*1 + 0*(-1) + 1*0 + -2*2) = -2.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_3 = {
+    'question': "Consider a 3x3 input tensor:\n[[[1., -1., 2.], [0., 1., -2.], [3., -1., 0.]]].\nA 2x2 filter:\n[[[2., 0.], [-1., 1.]]].\nAfter performing a convolution operation, a random upstream gradient `dout`:\n[[[1., -1.], [2., 0.]]] is given. Compute the gradient of the filter (`dw`).",
+    'options_list': ["Calculate the gradient manually"],
+    'correct_answer': '[[[6., 0.], [5., -1.]]]',
+    'explanation': "To compute `dw`, slide the upstream gradient `dout` over the input tensor. Multiply `dout` elements by the corresponding regions of the input to accumulate `dw` values. For example, the top-left element of `dw` is computed as (1*1 + -1*0 + 2*3) = 6.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_4 = {
+    'question': "Given an input tensor of size 1x1x3x3:\n[[[2., -1., 3.], [0., 1., -2.], [-1., 0., 2.]]],\n and a 2x2 filter:\n[[[1., 0.], [2., -1.]]],\nwith a stride of 1 and no padding. During backpropagation, the upstream gradient `dout` is:\n[[[1., -2.], [0., 3.]]]. Compute the gradient with respect to the input tensor (`dx`).",
+    'options_list': ["Perform the gradient computation manually"],
+    'correct_answer': '[[[1., -2., -2.], [2., -1., -6.], [0., 3., -3.]]]',
+    'explanation': "To compute `dx`, the filter is flipped both horizontally and vertically (since it is a 2D convolution) and then convolved with `dout`. Perform element-wise multiplication and summation for each region of the flipped filter and `dout` at each position on the input.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_5 = {
+    'question': "Consider an input tensor of size 1x1x3x3:\n[[[1., -1., 2.], [0., 1., -2.], [3., -1., 0.]]].\nApply a convolution operation using a 2x2 filter:\n[[[1., -1.], [0., 2.]]],\nwith a stride of 1 and padding of 1. Compute the output tensor.",
+    'options_list': ["Perform the convolution with padding"],
+    'correct_answer': '[[[[1., -2., 2.], [3., -1., -6.], [3., 6., 0.]]]]',
+    'explanation': "With padding of 1, the input becomes a 5x5 tensor. Perform the convolution by sliding the 2x2 filter over the padded input. The resulting tensor is a 3x3 matrix where each element is calculated by the sum of element-wise multiplications at each region of overlap.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+uc_boulder_dl_cnn_question_6 = {
+    'question': "A convolutional layer in a neural network has 32 filters, each of size 3x3, and the input to this layer has 16 channels. The stride is 1, and padding is applied to keep the output size the same as the input. How many trainable parameters (including biases) does this convolutional layer have?",
+    'options_list': ["Compute the number of parameters"],
+    'correct_answer': '4640',
+    'explanation': "Each filter has a size of 3x3x16 (since the input has 16 channels). Therefore, each filter has 3x3x16 = 144 weights. With 32 filters, the total number of weights is 32x144 = 4608. Additionally, each filter has 1 bias term, so 32 biases are added, resulting in a total of 4608 + 32 = 4640 parameters.",
+    'chapter_information': 'UC Boulder DL Course'
+}
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())

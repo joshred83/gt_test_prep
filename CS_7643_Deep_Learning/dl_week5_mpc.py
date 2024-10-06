@@ -1064,7 +1064,7 @@ gt_lecture_5_2_mpc_question_2 = {
         "C) 168",
         "D) 58"
     ],
-    'correct_answer': 'B',
+    'correct_answer': 'C',
     'explanation': "Each kernel has 3×3×3 = 27 parameters, and each kernel has an additional bias term, making it 28 parameters per kernel. With 6 kernels, the total number of parameters is $28 × 6 = 168$.",
     'chapter_information': 'GT Lecture 5.2'
 }
