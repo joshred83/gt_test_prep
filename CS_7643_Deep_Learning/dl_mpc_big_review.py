@@ -21,7 +21,7 @@ def big_review():
 
     # Select Quiz
     st.title("Select a Quiz")
-    quiz_choice = st.radio("Choose a quiz", options=["Quiz 1", "Quiz 2","Quiz 3" ])
+    quiz_choice = st.radio("Choose a quiz", options=["Quiz 1", "Quiz 2","Quiz 3","Quiz 4" ])
 
     # Get lessons for the selected quiz
     selected_quiz_lessons = quiz_mapping[quiz_choice]
