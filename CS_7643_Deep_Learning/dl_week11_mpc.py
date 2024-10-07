@@ -79,22 +79,42 @@ question_GT_Module_3_5 = {
     'chapter_information': 'GT Module 3 Introduction'
 }
 
+# question_GT_Module_3_6 = {
+#     'question': (
+#         'Which of the following best describes the primary innovation introduced by Transformer architectures over traditional RNNs?'
+#     ),
+#     'options_list': [
+#         'A) Utilizing convolutional layers to capture local dependencies in sequences.',
+#         'B) Introducing an attention mechanism that allows for dynamic weighting of all input elements, regardless of their position.',
+#         'C) Employing recurrent structures with shared parameters to process sequences.',
+#         'D) Compressing all past inputs into a single state vector for future predictions.'
+#     ],
+#     'correct_answer': 'B',
+#     'explanation': (
+#         'Transformers\' primary innovation is the use of self-attention mechanisms that dynamically weigh input elements, enabling the model to handle dependencies without relying on the sequence order.'
+#     ),
+#     'chapter_information': 'GT Module 3 Introduction'
+# }
+
 question_GT_Module_3_6 = {
     'question': (
-        'Which of the following best describes the primary innovation introduced by Transformer architectures over traditional RNNs?'
+        'Which of the following best describes the primary innovations introduced by Transformer architectures over traditional RNNs? (Note: Multiple answers may be correct.)'
     ),
     'options_list': [
         'A) Utilizing convolutional layers to capture local dependencies in sequences.',
-        'B) Introducing an attention mechanism that allows for dynamic weighting of all input elements, regardless of their position.',
-        'C) Employing recurrent structures with shared parameters to process sequences.',
-        'D) Compressing all past inputs into a single state vector for future predictions.'
+        'B) Introducing an attention mechanism that allows for dynamic weighting of all input elements, reducing training time significantly.',
+        'C) Employing recurrent structures with shared parameters to process sequences efficiently.',
+        'D) Compressing all past inputs into a single state vector for future predictions, improving computational efficiency.',
+        'E) Removing the need for sequential data processing, enabling parallelization during training and inference.',
+        'F) Utilizing positional encodings to retain the order of input elements in a non-recurrent fashion.'
     ],
-    'correct_answer': 'B',
+    'correct_answer': ['B', 'E', 'F'],
     'explanation': (
-        'Transformers\' primary innovation is the use of self-attention mechanisms that dynamically weigh input elements, enabling the model to handle dependencies without relying on the sequence order.'
+        'The primary innovations of Transformers include the introduction of the self-attention mechanism (Option B), which allows for dynamic weighting of input elements and enables parallel processing (Option E), drastically speeding up training and inference. Additionally, Transformers use positional encodings (Option F) to retain the order of input elements, unlike RNNs that rely on sequential processing. Options A, C, and D either misattribute the innovation or inaccurately describe the architecture.'
     ),
     'chapter_information': 'GT Module 3 Introduction'
 }
+
 
 question_GT_Module_3_7 = {
     'question': (

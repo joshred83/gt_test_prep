@@ -33,7 +33,7 @@ class Token():
         self.mpc_questions = []
         self.picture_questions = None
         self.islr_questions = None
-        self.num_questions = 15
+        self.num_questions = 10
         self.chapters_to_review = None
         # self.image = None
 
