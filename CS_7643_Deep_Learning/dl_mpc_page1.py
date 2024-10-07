@@ -37,6 +37,7 @@ def sa_questions():
         "Lesson 6: Convolutional Neural Networks": '6',
         "Lesson 7: Visualization": '7',
         "Lesson 9: Advanced Computer Vision and Applications": '9',
+        "Lesson 11: Introduction to Structured Data": '11',
     }
     
     topics = {
