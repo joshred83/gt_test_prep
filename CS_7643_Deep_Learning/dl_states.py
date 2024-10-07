@@ -47,6 +47,7 @@ class Token():
                 chapters = np.random.choice(self.chapters_to_review, size=len(self.chapters_to_review), replace=False)
                 
                 for chapter in chapters:
+                    print('chapter')
                     list_length = len(all[chapter])
                     if list_length == 0:
                         print('chapter missing:', chapter)
