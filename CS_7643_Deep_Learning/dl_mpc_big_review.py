@@ -6,11 +6,11 @@ quiz_mapping = {
     "Quiz 1": [0, 1],  # Corresponds to Lesson 1 and Lesson 2
     "Quiz 2": [2, 4], # subtract 1
     "Quiz 3": [4, 5, 6, 8], 
-    "Quiz 4": [10,10], 
+    "Quiz 4": [10], 
 }
 
 def question_generator(label, options, question_key):
-    question = st.radio(label='Please select the correct answer', options=options, key=question_key)
+    question = st.radio(label=' ', options=options, key=question_key)
     return question
 
 def big_review():

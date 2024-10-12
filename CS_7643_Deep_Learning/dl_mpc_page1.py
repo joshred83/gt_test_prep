@@ -62,7 +62,7 @@ def sa_questions():
         "Lesson 19: Generative Models": '19'
     }
     
-    selected_option = st.radio(label='', options=list(initial_options.keys()), label_visibility="collapsed")
+    selected_option = st.radio(label=' ', options=list(initial_options.keys()), label_visibility="collapsed")
 
     if st.button("Proceed") or st.session_state.questions_initialized:
         if not st.session_state.questions_initialized:

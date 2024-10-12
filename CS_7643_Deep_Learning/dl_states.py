@@ -20,6 +20,7 @@ questions_dictionary = {'1': WEEK_1_MPC,
                         '7': WEEK_7_MPC,
                         '8': WEEK_8_MPC,
                         '9': WEEK_9_MPC,
+                        '10': WEEK_9_MPC, 
                         '11': WEEK_11_MPC}
 
 all = list(questions_dictionary.values())
@@ -45,10 +46,13 @@ class Token():
             self.mpc_questions = []
             while len(self.mpc_questions)<self.num_questions :
                 chapters = np.random.choice(self.chapters_to_review, size=len(self.chapters_to_review), replace=False)
-                
+                print('chapters:', chapters)
                 for chapter in chapters:
                     print('chapter')
-                    list_length = len(all[chapter])
+                    try:
+                        list_length = len(all[chapter])
+                    except:
+                        list_length = 1
                     if list_length == 0:
                         print('chapter missing:', chapter)
                         continue 
