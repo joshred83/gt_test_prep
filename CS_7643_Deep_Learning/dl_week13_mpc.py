@@ -13,24 +13,6 @@ question_Efficient_Word_Representations_1_1 = {
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
 }
 
-question_Efficient_Word_Representations_1_2 = {
-    'question': (
-        'Which of the following cannot be inferred from the content about model architectures?'
-    ),
-    'options_list': [
-        'A) LSA performs significantly worse than distributed representations for preserving linear regularities.',
-        'B) The computational bottleneck for the NNLM is caused entirely by the vocabulary size V.',
-        'C) Adding layers always increases computational complexity due to the number of parameters being accessed.',
-        'D) The proposed models completely bypass the use of N-gram models for learning word representations.',
-        'E) The difference between LDA and NNLM is primarily in their handling of linear regularities.'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'The computational bottleneck in the Neural Network Language Model (NNLM) is not caused entirely by the vocabulary size. Other factors, such as the hidden layer size and dimensionality of word vectors, also contribute to the complexity.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
-}
-
 question_Efficient_Word_Representations_1_3 = {
     'question': (
         'True or False: The accuracy of word vectors, as measured by syntactic and semantic similarity tasks, is directly proportional to the size of the vocabulary.'
@@ -46,42 +28,9 @@ question_Efficient_Word_Representations_1_3 = {
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
 }
 
-question_Efficient_Word_Representations_1_4 = {
-    'question': (
-        'In the context of parallel training, which statement is most misleading?'
-    ),
-    'options_list': [
-        'A) DistBelief allows for parallel training using asynchronous gradient descent across multiple model replicas.',
-        'B) Adagrad is used to optimize learning rates for large datasets.',
-        'C) Parallel training guarantees reduced time complexity by ensuring every CPU core in the data center is utilized.',
-        'D) Synchronizing gradient updates across servers introduces no additional computational overhead.',
-        'E) The term "asynchronous" implies that CPU cores run completely independent of each other.'
-    ],
-    'correct_answer': 'D',
-    'explanation': (
-        'Synchronizing gradient updates across servers does introduce additional computational overhead due to communication and coordination, which must be accounted for.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
-}
-
-question_Efficient_Word_Representations_1_5 = {
-    'question': (
-        'True or False: Training a neural network model on a 1.6 billion-word dataset can achieve high-quality word vectors in under a day.'
-    ),
-    'options_list': [
-        'True',
-        'False'
-    ],
-    'correct_answer': 'True',
-    'explanation': (
-        'According to the paper, optimization techniques and reduced computational complexity allow efficient training on a large 1.6 billion-word dataset in less than a day.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
-}
-
 question_Efficient_Word_Representations_1_6 = {
     'question': (
-        'Which of the following is not a primary goal of the proposed novel model architectures?'
+        'Which of the following is not a primary goal of the proposed novel model architectures in the paper Efficient Estimation of Word Representations in Vector Space?'
     ),
     'options_list': [
         'A) Reducing computational cost while improving accuracy of word vector representations.',
@@ -92,23 +41,6 @@ question_Efficient_Word_Representations_1_6 = {
     'correct_answer': 'B',
     'explanation': (
         'The paper focuses on general large-scale datasets, aiming for improved computational efficiency and accuracy, not specifically optimizing for in-domain datasets.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
-}
-
-question_Efficient_Word_Representations_1_7 = {
-    'question': (
-        'Which of the following statements is incorrect regarding distributed word representations?'
-    ),
-    'options_list': [
-        'A) Simple word models such as N-grams can outperform complex models on large corpora.',
-        'B) Word vectors can encode multiple degrees of similarity, such as gender or inflectional forms.',
-        'C) Algebraic operations on word vectors can reveal syntactic regularities.',
-        'D) Distributed word representations are computationally more expensive than LSA for large datasets.'
-    ],
-    'correct_answer': 'A',
-    'explanation': (
-        'While N-gram models are effective for certain tasks, they generally do not outperform more complex models like neural networks on large corpora, especially in capturing deeper semantic and syntactic relationships.'
     ),
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
 }
@@ -179,21 +111,6 @@ question_Efficient_Word_Representations_1_11 = {
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
 }
 
-question_Efficient_Word_Representations_1_12 = {
-    'question': (
-        'True or False: In parallel training using DistBelief, the system relies on centralized gradient updates from each model replica to synchronize parameters.'
-    ),
-    'options_list': [
-        'True',
-        'False'
-    ],
-    'correct_answer': 'True',
-    'explanation': (
-        'DistBelief utilizes a centralized parameter server architecture where multiple model replicas asynchronously send gradient updates to central servers, which synchronize and distribute updated parameters.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 1&2'
-}
-
 question_Efficient_Word_Representations_3_1 = {
     'question': (
         'Which of the following statements is the most accurate description of the Continuous Bag-of-Words (CBOW) model?'
@@ -245,24 +162,6 @@ question_Efficient_Word_Representations_3_3 = {
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 3'
 }
 
-question_Efficient_Word_Representations_3_4 = {
-    'question': (
-        'Regarding the projection matrix used in both CBOW and Skip-gram models, which of the following is least accurate?'
-    ),
-    'options_list': [
-        'A) The projection matrix in CBOW is shared across all words in the context.',
-        'B) Skip-gram uses multiple projection matrices depending on the distance of surrounding words.',
-        'C) The projection layer in CBOW assigns each word the same position when predicting the middle word.',
-        'D) Skip-gram predicts the next word using a different projection matrix for every word.',
-        'E) CBOW and Skip-gram both aim to minimize computational complexity by reducing dimensionality with projection matrices.'
-    ],
-    'correct_answer': 'D',
-    'explanation': (
-        'Option D is least accurate because the Skip-gram model does not use different projection matrices for each word; it uses the same projection matrix to predict all surrounding words. The other options accurately describe aspects of the CBOW and Skip-gram models.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 3'
-}
-
 question_Efficient_Word_Representations_3_5 = {
     'question': (
         'Which of the following is true about the training complexity of the Continuous Skip-gram model?'
@@ -294,23 +193,6 @@ question_Efficient_Word_Representations_3_6 = {
     'correct_answer': 'B',
     'explanation': (
         'Option B is correct because the CBOW model simplifies the NNLM by removing the non-linear hidden layer and using a linear projection layer shared across all context words, resulting in an averaged context vector.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 3'
-}
-
-question_Efficient_Word_Representations_3_7 = {
-    'question': (
-        'In the Skip-gram model, how is the training complexity affected compared to the CBOW model?'
-    ),
-    'options_list': [
-        'A) It remains the same because both models share the same architecture.',
-        'B) It increases as it requires predicting multiple context words given a single input word.',
-        'C) It decreases since it only focuses on past words instead of both past and future words.',
-        'D) It decreases because the projection layer is simplified.'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is correct because the Skip-gram model increases training complexity by attempting to predict multiple surrounding context words for each target word, leading to more computations.'
     ),
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 3'
 }
@@ -349,7 +231,7 @@ question_Efficient_Word_Representations_3_9 = {
 
 question_Efficient_Word_Representations_3_10 = {
     'question': (
-        'The training complexity of the CBOW model is given by Q = N×D + D×Xlog2(V). What does D represent in this equation?'
+        'The training complexity of the CBOW model is given by $Q = N×D + D×Xlog2(V)$. What does D represent in this equation?'
     ),
     'options_list': [
         'A) The dimensionality of the projection layer.',
@@ -411,25 +293,8 @@ question_Efficient_Word_Representations_4_1 = {
     'explanation': (
         'Option C is correct because the results in Tables 2 and 3 show that increasing the dimensionality of word vectors and using larger training datasets generally improve model accuracy on both semantic and syntactic tasks. However, the rate of improvement decreases at higher dimensionalities, indicating diminishing returns.'
     ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
-}
-
-question_Efficient_Word_Representations_4_2 = {
-    'question': (
-        'Regarding the performance of the models on the Microsoft Research Sentence Completion Challenge (Table 7), which of the following statements is the most misleading?'
-    ),
-    'options_list': [
-        'A) Skip-gram alone performs worse than the RNLM model on this challenge, likely due to its reliance on surrounding words for predictions.',
-        'B) The 4-gram model achieves the highest accuracy on this task because it effectively captures sentence structure and coherence.',
-        'C) Combining Skip-gram with RNLM achieves a higher accuracy than either model individually.',
-        'D) The log-bilinear model performs better than LSA similarity but worse than the RNLM.',
-        'E) The combination of RNLM and Skip-gram architectures suggests that complementary model features improve performance on sentence-level tasks.'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is misleading because, according to Table 7, the 4-gram model does not achieve the highest accuracy on the Microsoft Research Sentence Completion Challenge. In fact, the combination of RNLM and Skip-gram models achieves the highest accuracy, indicating that more advanced models outperform simple n-gram models on this task.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
+    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4',
+    'image': 'images/wv223.png'
 }
 
 question_Efficient_Word_Representations_4_3 = {
@@ -462,7 +327,8 @@ question_Efficient_Word_Representations_4_4 = {
     'explanation': (
         'Option A is correct because the Skip-gram model predicts multiple surrounding context words for each target word, allowing it to capture more detailed contextual information over time, which can lead to better performance, especially when trained over multiple epochs.'
     ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
+    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4',
+    'image': 'images/w2vt6.png'
 }
 
 question_Efficient_Word_Representations_4_5 = {
@@ -480,24 +346,8 @@ question_Efficient_Word_Representations_4_5 = {
     'explanation': (
         'Option A is correct because the results indicate that increasing the vector dimensionality up to 600 dimensions improves accuracy on both tasks. However, the rate of improvement decreases beyond 500 dimensions, showing diminishing returns.'
     ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
-}
-
-question_Efficient_Word_Representations_4_6 = {
-    'question': (
-        'In the task description, it is mentioned that achieving 100% accuracy is considered impossible. Why is this the case?'
-    ),
-    'options_list': [
-        'A) The model struggles with both semantic and syntactic questions equally.',
-        'B) The model cannot learn morphology, as it lacks any information about word structure.',
-        'C) Synonym choices are subjective, which complicates evaluation.',
-        'D) The dataset contains noise, leading to inaccurate word vectors.'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is correct because the models discussed lack explicit morphological analysis or information about word structure, limiting their ability to capture certain syntactic patterns fully. This makes achieving 100% accuracy on tasks that require understanding of morphology impossible.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
+    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4',
+    'image': 'images/w2vt4.png'
 }
 
 question_Efficient_Word_Representations_4_7 = {
@@ -514,7 +364,8 @@ question_Efficient_Word_Representations_4_7 = {
     'explanation': (
         'Option C is correct because the data shows that while increasing dimensionality improves accuracy, the gains become smaller at higher dimensions, indicating diminishing returns on both semantic and syntactic tasks.'
     ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
+    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4',
+    'image': 'images/wv223.png'
 }
 
 question_Efficient_Word_Representations_4_8 = {
@@ -528,74 +379,6 @@ question_Efficient_Word_Representations_4_8 = {
     'correct_answer': 'True',
     'explanation': (
         'According to the results in Tables 3 and 4, the CBOW model achieves higher accuracy than the NNLM on both semantic and syntactic tasks when trained on larger datasets, suggesting that CBOW benefits more from larger training vocabularies.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
-}
-
-question_Efficient_Word_Representations_4_9 = {
-    'question': (
-        'Which model achieves the highest combined accuracy on the Semantic-Syntactic Word Relationship Test Set as shown in Table 3?'
-    ),
-    'options_list': [
-        'A) Recurrent Neural Network Language Model (RNNLM)',
-        'B) Skip-gram Model',
-        'C) Continuous Bag-of-Words (CBOW) Model',
-        'D) Neural Network Language Model (NNLM)'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is correct because the Skip-gram model achieves the highest combined accuracy on the test set, outperforming the other models listed.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
-}
-
-question_Efficient_Word_Representations_4_10 = {
-    'question': (
-        'When comparing architectures for their performance on the Semantic-Syntactic Word Relationship Test Set, which factor most influences the training time of the Skip-gram model?'
-    ),
-    'options_list': [
-        'A) Vector dimensionality',
-        'B) Number of epochs',
-        'C) Vocabulary size',
-        'D) Number of CPU cores'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is correct because the number of epochs directly affects training time. As the number of epochs increases, the model processes the training data multiple times, leading to longer training times.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
-}
-
-question_Efficient_Word_Representations_4_11 = {
-    'question': (
-        'What is the most likely reason for using a distributed framework like DistBelief for training large models?'
-    ),
-    'options_list': [
-        'A) To minimize the memory usage during training.',
-        'B) To synchronize parameter updates across replicas running on different machines.',
-        'C) To reduce the size of the vocabulary needed for training.',
-        'D) To optimize the backpropagation algorithm for dense layers.'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is correct because distributed frameworks like DistBelief allow for parallel training across multiple machines or cores. They synchronize parameter updates from different replicas to ensure consistent model parameters during training.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
-}
-
-question_Efficient_Word_Representations_4_12 = {
-    'question': (
-        'Which model performs best on the Microsoft Research Sentence Completion Challenge?'
-    ),
-    'options_list': [
-        'A) 4-gram model',
-        'B) Skip-gram model',
-        'C) RNNLM + Skip-gram combination',
-        'D) Continuous Bag-of-Words (CBOW) model'
-    ],
-    'correct_answer': 'C',
-    'explanation': (
-        'Option C is correct because the combination of the Recurrent Neural Network Language Model (RNNLM) and the Skip-gram model achieves the highest accuracy on the challenge, outperforming individual models.'
     ),
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 4'
 }
@@ -615,6 +398,7 @@ question_Efficient_Word_Representations_6_1 = {
     'explanation': (
         'Option D is correct because the examples in Table 8 illustrate that vector arithmetic can capture both semantic relationships (e.g., "king - man + woman = queen") and geographic relationships (e.g., "Paris - France + Italy = Rome"). However, the models do not achieve perfect accuracy, and not all relationships are equally well represented.'
     ),
+        'image': 'images/w2vt8.png',
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
 }
 
@@ -633,27 +417,13 @@ question_Efficient_Word_Representations_6_2 = {
     'explanation': (
         'Option B is correct because the examples demonstrate that vector arithmetic can approximate complex relationships involving entities like political leaders and countries. However, the accuracy of these approximations is not guaranteed and depends on factors such as training data size and vector dimensionality.'
     ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
-}
-
-question_Efficient_Word_Representations_6_3 = {
-    'question': (
-        'True or False: The accuracy of the word vectors used in Table 8 is likely around 60%, based on the text\'s explanation of their performance.'
-    ),
-    'options_list': [
-        'True',
-        'False'
-    ],
-    'correct_answer': 'True',
-    'explanation': (
-        'The text mentions that the models would likely achieve about 60% accuracy on the examples from Table 8, indicating that while the vector operations can capture many relationships, they are not perfect and leave room for improvement.'
-    ),
+    'image': 'images/w2vt8.png',
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
 }
 
 question_Efficient_Word_Representations_6_4 = {
     'question': (
-        'In the conclusion (Section 6), which of the following most accurately captures the authors’ view on the future of word vector applications?'
+        'In the conclusion (Section 6 Efficient Estimation of Word Representations in Vector Space), which of the following most accurately captures the authors’ view on the future of word vector applications?'
     ),
     'options_list': [
         'A) The authors believe that word vectors are already fully optimized for NLP tasks like translation and sentiment analysis.',
@@ -683,29 +453,14 @@ question_Efficient_Word_Representations_6_5 = {
     'explanation': (
         'Option A is correct because the method involves computing vector relationships by performing arithmetic operations: subtracting one word vector from another and then adding a third. For example, "Paris - France + Italy" aims to find the word vector closest to the result, which ideally corresponds to "Rome."'
     ),
+    'image': 'images/w2vt8.png',
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
 }
 
-question_Efficient_Word_Representations_6_6 = {
-    'question': (
-        'What percentage of accuracy is mentioned for word pairs from Table 8 using current models trained on large datasets?'
-    ),
-    'options_list': [
-        'A) 70%',
-        'B) 60%',
-        'C) 50%',
-        'D) 80%'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is correct because the text states that models trained on current datasets would achieve around 60% accuracy on the word pair relationships exemplified in Table 8.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
-}
 
 question_Efficient_Word_Representations_6_7 = {
     'question': (
-        'True or False: The authors suggest that increasing the size of the dataset and using larger dimensionality for word vectors can improve accuracy in solving word pair relationships.'
+        'True or False: The authors of Efficient Estimation of Word Representations in Vector Space suggest that increasing the size of the dataset and using larger dimensionality for word vectors can improve accuracy in solving word pair relationships.'
     ),
     'options_list': [
         'True',
@@ -714,54 +469,6 @@ question_Efficient_Word_Representations_6_7 = {
     'correct_answer': 'True',
     'explanation': (
         'The authors mention that both increasing the size of the training dataset and using higher-dimensional word vectors can lead to significant improvements in accuracy, potentially surpassing the current 60% accuracy level.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
-}
-
-question_Efficient_Word_Representations_6_8 = {
-    'question': (
-        'Which of the following tasks do the authors believe word vectors can be effectively applied to, based on their ongoing work?'
-    ),
-    'options_list': [
-        'A) Automated essay scoring',
-        'B) Image captioning',
-        'C) Extension of facts in Knowledge Bases',
-        'D) Reinforcement learning for game AI'
-    ],
-    'correct_answer': 'C',
-    'explanation': (
-        'Option C is correct because the authors indicate they are working on applying word vectors to automatically extend facts in Knowledge Bases and verify the correctness of existing facts.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
-}
-
-question_Efficient_Word_Representations_6_9 = {
-    'question': (
-        'True or False: The models described in the paper are expected to perform better than publicly available Recurrent Neural Network (RNN) models when trained on smaller datasets.'
-    ),
-    'options_list': [
-        'True',
-        'False'
-    ],
-    'correct_answer': 'False',
-    'explanation': (
-        'The models discussed are designed to perform well on large datasets with extensive vocabularies. The text does not claim that they outperform RNN models when trained on smaller datasets.'
-    ),
-    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
-}
-question_Efficient_Word_Representations_6_10 = {
-    'question': (
-        'In the conclusion, what is one of the key advantages of the proposed CBOW and Skip-gram models?'
-    ),
-    'options_list': [
-        'A) They require fewer parameters than traditional feedforward networks.',
-        'B) They can be trained on large datasets with almost unlimited vocabulary.',
-        'C) They outperform convolutional networks in image-based tasks.',
-        'D) They generalize better across different languages without retraining.'
-    ],
-    'correct_answer': 'B',
-    'explanation': (
-        'Option B is correct because the CBOW and Skip-gram models are scalable and can efficiently handle very large datasets with vast vocabularies, making them suitable for training on corpora containing billions of words.'
     ),
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
 }
@@ -783,6 +490,40 @@ question_Efficient_Word_Representations_6_11 = {
     'chapter_information': 'Efficient Estimation of Word Representations in Vector Space 6'
 }
 
+question_Efficient_Word_Representations_3_13 = {
+    'question': (
+        'Regarding the projection matrices used in both the Continuous Bag-of-Words (CBOW) and Skip-gram models, which of the following statements is incorrect?'
+    ),
+    'options_list': [
+        'A) In the CBOW model, the projection matrix is shared among all context words.',
+        'B) The Skip-gram model uses multiple projection matrices depending on the distance of the context words.',
+        'C) In the CBOW model, all context words are projected into the same position in the projection layer.',
+        'D) The Skip-gram model uses a different projection matrix for predicting each context word.',
+        'E) Both CBOW and Skip-gram models aim to minimize computational complexity by reducing dimensionality with projection matrices.'
+    ],
+    'correct_answer': 'D',
+    'explanation': (
+        'Option D is incorrect because the Skip-gram model does not use a different projection matrix for each context word. Instead, it uses the same projection matrix to predict all surrounding context words. The other options accurately describe aspects of the CBOW and Skip-gram models.'
+    ),
+    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space, Section 3'
+}
+
+question_Efficient_Word_Representations_3_14 = {
+    'question': (
+        'Compared to the CBOW model, how does the training complexity of the Skip-gram model change?'
+    ),
+    'options_list': [
+        'A) It remains the same because both models have similar architectures.',
+        'B) It increases because the Skip-gram model predicts multiple context words for each target word.',
+        'C) It decreases since the Skip-gram model only focuses on past words instead of both past and future words.',
+        'D) It decreases because the projection layer in the Skip-gram model is simplified.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Option B is correct because the training complexity of the Skip-gram model increases compared to the CBOW model. This increase is due to the Skip-gram model\'s objective of predicting multiple surrounding context words for each target word, which requires more computations.'
+    ),
+    'chapter_information': 'Efficient Estimation of Word Representations in Vector Space, Section 3'
+}
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
