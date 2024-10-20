@@ -533,4 +533,4 @@ for name, value in global_items:
     if not name.startswith('_'):
         KC_MPC_QUESTIONS.append(value)
 
-WEEK_11_MPC = KC_MPC_QUESTIONS[:-1]
+WEEK_13_MPC = KC_MPC_QUESTIONS[:-1]
