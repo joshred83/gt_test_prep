@@ -721,6 +721,7 @@ question_UML15_1 = {
     'explanation': (
         'In the sliding window approach, the CNN classifier is applied to every possible sub-window in the image. High-resolution images contain an enormous number of possible windows (on the order of tens of millions), making it computationally infeasible to process each one.'
     ),
+    'image': 'images/wv223.png',
     'chapter_information': 'U Mich Lesson 15'
 }
 
