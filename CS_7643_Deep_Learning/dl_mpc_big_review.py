@@ -6,7 +6,7 @@ quiz_mapping = {
     "Quiz 1": [0, 1],  # Corresponds to Lesson 1 and Lesson 2
     "Quiz 2": [2, 4], # subtract 1
     "Quiz 3": [4, 5, 6, 8],  # subtract 1
-    "Quiz 4": [10,11,12, 14], # subtract 1
+    "Quiz 4": [10,12,13,14], # subtract 1
 } 
 
 def question_generator(label, options, question_key):
