@@ -41,8 +41,8 @@ def sa_questions():
         "Lesson 11: Introduction to Structured Data": '11',
         "Lesson 12: Language Models": '12',
         "Lesson 13: Embeddings": '13',
-        "Lesson 14: Neural Attention Models COMPUTATION": '14',
-        "Lesson 15: Neural Machine Translation": '15',
+        "Lesson 14: Neural Attention Models": '14',
+        "Lesson 15: Neural Machine Translation and COMPUTATION": '15',
     }
     
     topics = {
