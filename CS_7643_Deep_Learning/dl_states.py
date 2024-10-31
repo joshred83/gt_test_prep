@@ -51,7 +51,8 @@ class Token():
         # self.STATE = 'review'
         if self.STATE == 'all':
             if self.chapters_to_review is None:
-                self.chapters_to_review = [0,1,2]
+                print("chapters_to_review not set.")
+                return
             self.mpc_questions = []
             while len(self.mpc_questions)<self.num_questions :
                 chapters = np.random.choice(self.chapters_to_review, size=len(self.chapters_to_review), replace=False)
@@ -59,23 +60,26 @@ class Token():
                 for chapter in chapters:
                     print('chapter')
                     try:
-                        list_length = len(all[chapter])
-                    except:
-                        list_length = 1
-                    if list_length == 0:
-                        print('chapter missing:', chapter)
-                        continue 
-                    mpc_idx = np.random.choice(range(list_length), size=1, replace=False)
-                    # print(list_length, mpc_idx)
-                    self.mpc_questions.append(all[chapter][int(mpc_idx)])
-            # print('aloha')
+                        review_questions = questions_dictionary[chapter]
+                        list_length = len(review_questions)
+                        if list_length == 0:
+                            print('chapter missing:', chapter)
+                            continue
+                        mpc_idx = np.random.choice(range(list_length), size=1, replace=False)
+                        self.mpc_questions.append(review_questions[int(mpc_idx)])
+                    except KeyError:
+                        print(f"Chapter {chapter} not found in questions dictionary")
         else:
-            review_questions = questions_dictionary[self.STATE]
+            review_questions = review_questions = questions_dictionary.get(self.STATE, [])
             list_length = len(review_questions)
+
+            if list_length == 0:
+                print("No questions available for the specified STATE.")
+                return
             mpc_idxs = np.random.choice(range(list_length), size=self.num_questions, replace=False)
-            print('______________________________________________')
-            print('mpc_idxs: ',mpc_idxs, type(mpc_idxs))
-            print('______________________________________________')
+            # print('______________________________________________')
+            # print('mpc_idxs: ',mpc_idxs, type(mpc_idxs))
+            # print('______________________________________________')
             for idx in mpc_idxs:
                 self.mpc_questions.append(review_questions[idx])
 
