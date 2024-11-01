@@ -832,7 +832,333 @@ question_109 = {
     ),
     'chapter_information': 'Attention is All You Need'
 }
+#######################
+question_200 = {
+    'question': (
+        'What is the primary objective of StarSpace as a neural embedding model?'
+    ),
+    'options_list': [
+        'A) To provide a model focused solely on text classification.',
+        'B) To create embeddings that work only within single-task settings.',
+        'C) To embed a wide range of entities into a common space for tasks like classification, ranking, and recommendation.',  # Correct answer
+        'D) To use recurrent neural networks to improve classification results.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'StarSpace embeds various types of entities into a common space, enabling it to handle a range of tasks, including classification, ranking, and recommendation.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
 
+question_201 = {
+    'question': (
+        'In StarSpace, what role does the similarity function play?'
+    ),
+    'options_list': [
+        'A) It generates embeddings for new entities in the test set.',
+        'B) It defines how entities are compared in embedding space, influencing tasks like ranking and classification.',  # Correct answer
+        'C) It ensures that all embeddings lie within a fixed radius in the embedding space.',
+        'D) It computes the loss function by sampling negative pairs.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The similarity function in StarSpace is used to compare embeddings of entities, which is central to tasks like ranking and classification.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_202 = {
+    'question': (
+        'Which of the following describes a key feature of StarSpace’s approach to collaborative filtering with out-of-sample users?'
+    ),
+    'options_list': [
+        'A) It creates embeddings for new users based on their IDs.',
+        'B) It uses a fixed set of items to estimate preferences of new users.',
+        'C) It represents a user by the embeddings of items they like, allowing for new users without predefined embeddings.',  # Correct answer
+        'D) It requires pre-trained embeddings for all users and items in the dataset.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'StarSpace represents users by the sum of the embeddings of items they like, enabling it to handle new users who were not part of the training set.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_204 = {
+    'question': (
+        'In StarSpace, how is sentence similarity learned when training sentence embeddings?'
+    ),
+    'options_list': [
+        'A) By predicting a middle word within a sentence based on surrounding words.',
+        'B) By creating embeddings of words first and then summing them to form sentence embeddings.',
+        'C) By sampling sentence pairs from the same document as positive pairs and from different documents as negative pairs.',  # Correct answer
+        'D) By clustering sentences based on topic and training within clusters.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Sentence similarity is learned by using sentence pairs from the same document as positive pairs and from different documents as negative pairs.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_205 = {
+    'question': (
+        'What role do negative entities (b-) play during training in the StarSpace model?'
+    ),
+    'options_list': [
+        'A) They are compared directly with all possible positive pairs.',
+        'B) They provide contrast by being sampled randomly from all potential entity types.',  # Correct answer
+        'C) They contribute to optimizing the embeddings to differentiate between similar entities.',
+        'D) They are used exclusively in link prediction tasks.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Negative entities are sampled randomly to provide contrast during training.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_208 = {
+    'question': (
+        'Which type of task can be combined with other tasks in StarSpace’s multi-task learning framework?'
+    ),
+    'options_list': [
+        'A) Only unsupervised tasks such as word embeddings.',
+        'B) Only supervised tasks such as sentence matching.',
+        'C) Any task with shared features in the base dictionary.',  # Correct answer
+        'D) Only multi-relational graph tasks to improve collaborative filtering outcomes.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Any task with shared features in the base dictionary can be combined in multi-task learning.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+# True/False Questions
+
+question_209 = {
+    'question': (
+        'True or False: StarSpace’s embeddings can compare entities of different types, such as documents and labels, by learning a shared embedding space.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'StarSpace embeds different types of entities into a common space to enable cross-type comparisons.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+
+question_211 = {
+    'question': (
+        'True or False: StarSpace uses only cosine similarity as its similarity function, regardless of the specific task.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'StarSpace can use either cosine similarity or inner product, depending on the task.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_212 = {
+    'question': (
+        'True or False: StarSpace’s negative sampling strategy involves selecting random entities as negative examples for comparison during training.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Negative sampling helps the model distinguish between similar and dissimilar pairs.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_213 = {
+    'question': (
+        'True or False: StarSpace can handle both supervised and unsupervised tasks by varying the positive and negative pair generation strategy.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Adjusting the sampling strategy allows StarSpace to tackle different types of tasks.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_214 = {
+    'question': (
+        'True or False: Multi-task learning in StarSpace is possible by sharing base dictionary features across different tasks, which can enable semi-supervised learning setups.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Shared features facilitate multi-task and semi-supervised learning.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_215 = {
+    'question': (
+        'What distinguishes StarSpace from other embedding models when applied to a variety of tasks?'
+    ),
+    'options_list': [
+        'A) It requires minimal training data across different tasks due to its unsupervised nature.',
+        'B) It embeds entities of different types into a shared space, enabling meaningful cross-type comparisons.',  # Correct answer
+        'C) It relies exclusively on supervised data, resulting in faster training times.',
+        'D) It utilizes complex recurrent neural networks to improve entity comparisons.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'StarSpace embeds entities from different types in a shared space for meaningful comparisons.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_217 = {
+    'question': (
+        'In the text classification experiments, how was StarSpace configured to ensure a fair comparison with fastText?'
+    ),
+    'options_list': [
+        'A) By matching the embedding dimension and using an identical vocabulary and n-gram features.',  # Correct answer
+        'B) By increasing the embedding dimension and using different dictionaries to test robustness.',
+        'C) By incorporating recurrent layers to match the model complexity of fastText.',
+        'D) By employing unsupervised pre-training before supervised fine-tuning to improve accuracy.'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'StarSpace used the same embedding dimension and an identical dictionary with the same n-gram features.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_218 = {
+    'question': (
+        'In the context of document recommendation, what is the main purpose of embedding both documents and users in StarSpace?'
+    ),
+    'options_list': [
+        'A) To simplify user preferences by classifying them into a fixed set of labels.',
+        'B) To model user preferences as continuous profiles by aggregating embeddings of items they like.',  # Correct answer
+        'C) To represent the entire user-item interaction matrix with a single embedding vector.',
+        'D) To create immutable user embeddings that remain constant after initial training.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'StarSpace models user preferences as a continuous profile using embeddings of items they like.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_219 = {
+    'question': (
+        'What is a major difference between StarSpace and traditional collaborative filtering models in handling new users or items?'
+    ),
+    'options_list': [
+        'A) StarSpace trains unique embeddings for new users from scratch, requiring retraining.',
+        'B) StarSpace represents users by combining embeddings of items they interact with, accommodating new users dynamically.',  # Correct answer
+        'C) StarSpace ignores new items as out-of-sample data, focusing only on known items.',
+        'D) StarSpace is limited to collaborative filtering without the ability to incorporate content-based features.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'StarSpace can represent new users by summing embeddings of items they like, allowing for dynamic profiles.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_224 = {
+    'question': (
+        'In the Wikipedia Sentence Matching task, which training approach led StarSpace to achieve the best performance?'
+    ),
+    'options_list': [
+        'A) Training exclusively on individual words without considering sentence context.',
+        'B) Training on full articles without focusing on sentence-level embeddings.',
+        'C) Employing multi-task training that combines word-level and sentence-level embeddings.',  # Correct answer
+        'D) Utilizing a deep recurrent neural network to capture sequential dependencies.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Multi-task training with both word- and sentence-level embeddings led to the best performance.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+# True/False Questions
+
+question_225 = {
+    'question': (
+        'True or False: StarSpace can only be used with supervised training data, limiting its application in unsupervised tasks.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'StarSpace can handle both supervised and unsupervised tasks by adjusting its training strategy.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_226 = {
+    'question': (
+        'True or False: In StarSpace, embedding models can be directly applied to recommendation tasks for unseen users and items.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'StarSpace can represent new users and items through embeddings, enabling recommendations for unseen data.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_227 = {
+    'question': (
+        'True or False: One unique feature of StarSpace is its ability to handle multi-relational graphs, allowing it to perform link prediction in knowledge bases.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'StarSpace can work with multi-relational data for tasks like link prediction.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
+
+question_229 = {
+    'question': (
+        'True or False: During training, StarSpace’s similarity function is optimized specifically for document search and recommendation tasks, making it less adaptable to other domains.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The similarity function in StarSpace is general-purpose, allowing it to adapt to various tasks and domains.'
+    ),
+    'chapter_information': 'StarSpace Paper'
+}
 
 
 
