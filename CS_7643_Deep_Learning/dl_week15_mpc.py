@@ -922,6 +922,299 @@ uc_boulder_dl_attention_question_11 = {
     'chapter_information': 'Final Output of Multi-Head Attention in Decoder Self-Attention'
 }
 
+question_352 = {
+    'question': (
+        'What does the expression QK^T represent in the self-attention mechanism?'
+    ),
+    'options_list': [
+        'A) The value vectors for each token.',
+        'B) The raw attention scores between each pair of tokens.',  # Correct answer
+        'C) The final output of the self-attention mechanism.',
+        'D) The scaling factor used to normalize the attention scores.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The expression QK^T represents the raw attention scores, calculated as the dot product between query and key vectors for each token pair.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_353 = {
+    'question': (
+        'Why do we divide QK^T by d_k in the self-attention calculation?'
+    ),
+    'options_list': [
+        'A) To ensure that the attention scores sum to 1 for each token.',
+        'B) To prevent very high scores that would destabilize the softmax function, especially with large d_k.',  # Correct answer
+        'C) To simplify the calculation of the attention scores.',
+        'D) To directly compute the final self-attention output Z.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Dividing by d_k prevents high scores that could cause the softmax function to be overly concentrated on a single token, ensuring stability in the attention distribution.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_354 = {
+    'question': (
+        'Which of the following best describes the matrix Z in the context of the self-attention mechanism?'
+    ),
+    'options_list': [
+        'A) A matrix containing only the query vectors.',
+        'B) The final weighted sum of value vectors based on computed attention weights.',  # Correct answer
+        'C) The result of multiplying the query vectors with key vectors.',
+        'D) A collection of scaling factors for each input token.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The matrix Z is the final output of the self-attention mechanism, representing the weighted sum of value vectors determined by the attention weights.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_355 = {
+    'question': (
+        'What is the role of the softmax function in the self-attention formula softmax(QK^T/d_k)V?'
+    ),
+    'options_list': [
+        'A) To calculate raw attention scores by computing the dot product of queries and keys.',
+        'B) To normalize the values so that the final output sums to one.',
+        'C) To convert raw attention scores into a probability distribution that represents the focus of each token.',  # Correct answer
+        'D) To scale the values by a fixed constant.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'The softmax function converts the raw attention scores into a probability distribution, representing the focus each token should receive in the context.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_356 = {
+    'question': (
+        'In multi-head attention, why is it beneficial to have multiple sets of Q, K, and V vectors?'
+    ),
+    'options_list': [
+        'A) It allows the model to attend to different parts of the input simultaneously and capture diverse relationships.',  # Correct answer
+        'B) It decreases the complexity of the model by reducing the number of parameters.',
+        'C) It eliminates the need for positional encoding.',
+        'D) It avoids the necessity of residual connections in the Transformer.'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Multiple sets of Q, K, and V vectors allow the model to focus on different parts of the input sequence and capture various relationships across tokens.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+# True/False Questions
+
+question_357 = {
+    'question': (
+        'True or False: The output Z of the self-attention mechanism is a context-aware representation that incorporates information from other tokens in the sequence.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'The output Z represents a context-aware embedding of each token, enriched by the information from other tokens in the sequence.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_358 = {
+    'question': (
+        'True or False: The value matrix V in the self-attention mechanism is responsible for capturing attention scores between each pair of tokens.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The attention scores are computed using the product QK^T, while the value matrix V contains the values used to compute the final output.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_359 = {
+    'question': (
+        'True or False: In self-attention, each token has a unique "controller state," which represents the set of attention weights generated by comparing its query vector with all key vectors in the sequence.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Each token has its own query vector, which produces a unique set of attention weights by comparing with all key vectors in the sequence.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_360 = {
+    'question': (
+        'True or False: The purpose of scaling the product QK^T by d_k is to simplify the calculation of the softmax function.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The scaling by d_k is to prevent very large values in the attention scores, which stabilizes the softmax function by keeping scores within a manageable range.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+question_361 = {
+    'question': (
+        'True or False: Multi-head attention in Transformers enables the model to capture different types of dependencies between tokens by using multiple, independent attention mechanisms.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Multi-head attention allows the model to explore different dependencies and relationships between tokens, using multiple independent attention mechanisms.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+# Self-Attention Score Calculation
+
+question_362 = {
+    'question': (
+        'In a self-attention layer, you have:\n\n'
+        'Batch size = 16\n'
+        'Sequence length (seq_len) = 64\n'
+        'Model dimension (d_model) = 256\n'
+        'Number of heads (h) = 4\n\n'
+        'Each head has an attention mechanism that computes QK^T to produce the attention scores. '
+        'Determine the shape of QK^T across all heads and batches.'
+    ),
+    'options_list': [
+        'A) (16, 4, 64, 64)',  # Correct answer
+        'B) (16, 64, 64)',
+        'C) (4, 64, 64)',
+        'D) (16, 64, 256)'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Each head has a sequence length of 64, so the QK^T for one head has shape (64, 64). '
+        'With 4 heads, this becomes (4, 64, 64). Including the batch dimension of 16, the final shape is (16, 4, 64, 64).'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+# Feed-Forward Network Parameter Calculation
+
+question_363 = {
+    'question': (
+        'In a Transformer’s feed-forward network, each layer has two linear transformations with a ReLU activation in between. '
+        'If:\n\n'
+        'Model dimension (d_model) = 256\n'
+        'Inner layer dimension = 1,024\n\n'
+        'Calculate the total number of parameters in this feed-forward network layer.'
+    ),
+    'options_list': [
+        'A) 524,800',  # Correct answer
+        'B) 262,400',
+        'C) 526,400',
+        'D) 512,000'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'The feed-forward network consists of:\n'
+        '1) A linear transformation from 256 → 1,024, with 256×1,024=262,144 weights plus 1,024 biases.\n'
+        '2) A second linear transformation from 1,024 → 256, with 1,024×256=262,144 weights plus 256 biases.\n'
+        'Total parameters: 262,144 + 1,024 + 262,144 + 256 = 524,800.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+# Output Shape After Multi-Head Attention
+
+question_364 = {
+    'question': (
+        'In a multi-head attention layer of a Transformer encoder, you have:\n\n'
+        'Input sequence length = 128\n'
+        'Model dimension (d_model) = 512\n'
+        'Number of heads (h) = 8\n\n'
+        'What is the shape of the final output after concatenation of the heads and projection back to d_model, '
+        'and why does this shape remain consistent with the input?'
+    ),
+    'options_list': [
+        'A) (128, 512)',  # Correct answer
+        'B) (128, 64)',
+        'C) (128, 256)',
+        'D) (128, 1024)'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Each head produces an output of shape (128, 64), where 64 is the per-head dimension (d_k=64). '
+        'Concatenating the outputs of all 8 heads gives a shape of (128, 512). After this, a linear projection back to d_model=512 '
+        'maintains the final output shape as (128, 512), matching the input dimension for compatibility with subsequent layers.'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+# Dimensions of Q, K, and V Matrices in Self-Attention
+
+question_365 = {
+    'question': (
+        'Given a self-attention layer with:\n\n'
+        'Batch size = 10\n'
+        'Sequence length = 50\n'
+        'Model dimension (d_model) = 400\n'
+        'Number of heads = 5\n\n'
+        'Each head computes its own Q, K, and V matrices. What are the shapes of Q, K, and V for a single head?'
+    ),
+    'options_list': [
+        'A) (10, 50, 80)',  # Correct answer
+        'B) (50, 10, 80)',
+        'C) (10, 50, 400)',
+        'D) (10, 50, 50)'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'With d_model=400 and 5 heads, each head has a dimensionality of d_k=400/5=80. Therefore, each of Q, K, and V '
+        'for a single head will have shape (batch size, sequence length, per-head dimension), which is (10, 50, 80).'
+    ),
+    'chapter_information': 'General Understanding'
+}
+
+# Final Multi-Head Attention Output Dimension with a Different Batch Size
+
+question_366 = {
+    'question': (
+        'In a multi-head attention layer, you have:\n\n'
+        'Batch size = 32\n'
+        'Sequence length = 75\n'
+        'Model dimension (d_model) = 300\n'
+        'Number of heads = 6\n\n'
+        'What is the shape of the final output after concatenation and projection of the attention heads?'
+    ),
+    'options_list': [
+        'A) (32, 75, 300)',  # Correct answer
+        'B) (32, 75, 50)',
+        'C) (32, 75, 600)',
+        'D) (75, 32, 300)'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Each head has a dimension of d_k=300/6=50. After applying attention, each head produces an output of shape (32, 75, 50). '
+        'Concatenating the outputs of all 6 heads results in (32, 75, 300), and projecting it back to d_model=300 keeps the shape '
+        'as (32, 75, 300), consistent with the input.'
+    ),
+    'chapter_information': 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+}
+
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())

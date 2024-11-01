@@ -1721,7 +1721,270 @@ question_334 = {
     'chapter_information': 'GT Lesson 14 Facebook Lecture'
 }
 
+####################
+question_335 = {
+    'question': (
+        'Which of the following statements best describes the difference between hard attention and soft attention in a self-attention layer?'
+    ),
+    'options_list': [
+        'A) Hard attention uses gradient-based optimization, while soft attention does not.',
+        'B) Hard attention applies continuous softmax values to all positions, while soft attention discretely selects one.',
+        'C) Hard attention requires an argmax selection, making optimization non-differentiable, whereas soft attention retains differentiability with weighted summation.',  # Correct answer
+        'D) Hard attention is applied during training, but soft attention is only relevant during inference.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Hard attention uses an argmax operation, which introduces non-differentiability, making optimization difficult. Soft attention retains differentiability through weighted summation of attention scores.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
 
+question_336 = {
+    'question': (
+        'True or False: The concept of permutation equivariance in self-attention layers means that altering the order of inputs will change the order of the outputs without affecting their values.'
+    ),
+    'options_list': [
+        'A) True, because self-attention replicates the input order in the output, preserving the values.',  # Correct answer
+        'B) False, because self-attention ignores input order entirely, treating each token independently.'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Self-attention is permutation equivariant, meaning that if you change the order of inputs, the outputs will reflect that order change but with the same values.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_338 = {
+    'question': (
+        'In practice, what is the primary advantage of using multi-headed self-attention in transformers over a single self-attention head?'
+    ),
+    'options_list': [
+        'A) It allows multiple types of inputs to be processed concurrently, enabling simultaneous multi-modal data integration.',
+        'B) It ensures that the self-attention output values are masked by position to simulate RNN-style sequential processing.',
+        'C) It enables each head to query different aspects of the input, capturing multiple semantic relationships at once.',  # Correct answer
+        'D) It preserves the positional order across all sequences, maintaining coherence even after the positional encoding layer.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Multi-headed self-attention allows each head to focus on different aspects or relationships in the input, enabling the model to capture diverse semantic concepts simultaneously.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_339 = {
+    'question': (
+        'True or False: In a transformer model using BERT, positional encodings are required only during fine-tuning and not during pre-training, as the model inherently learns positional dependencies through masking.'
+    ),
+    'options_list': [
+        'A) True, as BERT’s masked language modeling provides inherent positional context.',
+        'B) False, positional encodings are essential throughout BERT’s pre-training to compensate for self-attention’s position-agnostic nature.'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Positional encodings are required throughout BERT’s pre-training because self-attention is position-agnostic; they ensure that the model can differentiate positional context, even during masking.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# Conceptual Questions
+
+question_340 = {
+    'question': (
+        'Which of the following best describes the main advantage of self-attention over a traditional fully connected neural network layer?'
+    ),
+    'options_list': [
+        'A) Self-attention allows for static weights to be applied to each input.',
+        'B) Self-attention learns input-dependent dynamic weights.',  # Correct answer
+        'C) Self-attention completely ignores the order of inputs.',
+        'D) Self-attention can only process data in a fixed sequence.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Self-attention learns input-dependent dynamic weights.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_341 = {
+    'question': (
+        'In a Transformer model, what is the role of positional encoding?'
+    ),
+    'options_list': [
+        'A) It determines the importance of each word in a sentence.',
+        'B) It adds information about the order of tokens in a sequence.',  # Correct answer
+        'C) It masks out certain words to avoid seeing future context.',
+        'D) It normalizes the values in the attention matrix.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'It adds information about the order of tokens in a sequence.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_342 = {
+    'question': (
+        'In the Transformer block structure introduced in “Attention is All You Need,” what purpose does layer normalization serve?'
+    ),
+    'options_list': [
+        'A) It reduces the computational complexity.',
+        'B) It masks out tokens to avoid looking ahead.',
+        'C) It helps stabilize and improve optimization during training.',  # Correct answer
+        'D) It calculates the similarity between query and key vectors.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'It helps stabilize and improve optimization during training.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_343 = {
+    'question': (
+        'Which of the following is true about multi-head self-attention?'
+    ),
+    'options_list': [
+        'A) Each head in multi-head self-attention performs the same attention calculation for redundancy.',
+        'B) Each head independently computes attention based on different projections of the input, allowing for diverse semantic interpretations.',  # Correct answer
+        'C) Multi-head attention reduces the complexity of the model by reducing the number of calculations.',
+        'D) Multi-head attention eliminates the need for positional encoding.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Each head independently computes attention based on different projections of the input, allowing for diverse semantic interpretations.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_344 = {
+    'question': (
+        'In the context of masked language modeling in BERT, what is the purpose of masking certain words during training?'
+    ),
+    'options_list': [
+        'A) To enforce the model to only consider future words in a sentence.',
+        'B) To allow the model to learn the dependency between surrounding words and the masked word.',  # Correct answer
+        'C) To prevent overfitting by ignoring randomly chosen words.',
+        'D) To reduce the number of parameters needed in training.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'To allow the model to learn the dependency between surrounding words and the masked word.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# Additional True/False Questions
+
+question_345 = {
+    'question': (
+        'True or False: In a Transformer model, the same learned weights are applied to all input tokens, regardless of input-specific information.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Transformers use dynamic, input-specific weights due to self-attention.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_346 = {
+    'question': (
+        'True or False: A self-attention layer is permutation equivariant, meaning that changing the input order results in the same change in output order.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Self-attention layers are permutation equivariant.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_347 = {
+    'question': (
+        'True or False: Masked self-attention is used in the Transformer encoder to prevent it from seeing future tokens.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Masked self-attention is used in the decoder to prevent it from seeing future tokens during training.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_348 = {
+    'question': (
+        'True or False: Hard attention involves computing a probability distribution for each possible attention weight and selecting the most probable one without backpropagating gradients.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Hard attention involves a non-differentiable selection process, typically using an argmax operation.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_349 = {
+    'question': (
+        'True or False: In a BERT model, the training objective includes predicting the masked words in a sentence, allowing the model to learn contextual relationships.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'BERT’s objective includes predicting masked words to learn contextual relationships.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# Computation Questions
+
+question_350 = {
+    'question': (
+        'In a multi-head attention layer with h=8 heads and a hidden dimension of d=512, what is the dimensionality of each head’s projection?'
+    ),
+    'options_list': [
+        'A) 8',
+        'B) 64',  # Correct answer
+        'C) 512',
+        'D) 128'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Each head’s dimensionality is d/h = 512/8 = 64.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_351 = {
+    'question': (
+        'When applying softmax to the attention scores in self-attention, which of the following is true about the resulting values?'
+    ),
+    'options_list': [
+        'A) They represent the normalized similarity scores, summing up to 1 for each query.',  # Correct answer
+        'B) They sum up to the dimensionality of the input.',
+        'C) They reflect the fixed static weights across all layers.',
+        'D) They are equal for all input tokens.'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'The softmax output represents normalized similarity scores, summing to 1 for each query.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
 
 
 
