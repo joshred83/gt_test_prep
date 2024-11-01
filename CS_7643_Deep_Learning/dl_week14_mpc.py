@@ -1160,6 +1160,571 @@ question_229 = {
     'chapter_information': 'StarSpace Paper'
 }
 
+question_300 = {
+    'question': (
+        'What is the main purpose of the Softmax function in neural attention models?'
+    ),
+    'options_list': [
+        'A) To ensure a differentiable process for selecting elements from a set based on relevance to a query vector',  # Correct answer
+        'B) To randomly select any element from a set regardless of relevance to a query',
+        'C) To enforce a one-to-one mapping between input and output elements',
+        'D) To convert all negative values in the set to positive values'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'The Softmax function is used to create a differentiable selection process where elements of the set are selected with probabilities based on their relevance to a query vector.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_301 = {
+    'question': (
+        'How does the Softmax function respond when the input values are scaled up (e.g., doubled)?'
+    ),
+    'options_list': [
+        'A) It scales up the output values proportionally.',
+        'B) It keeps the outputs unchanged but increases the certainty on the maximum value.',  # Correct answer
+        'C) It scales the output down by reducing all values.',
+        'D) It changes the order of values based on their size.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'When inputs are scaled up, Softmax increases the certainty by concentrating more probability mass on the highest value, without changing the sum of outputs.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_302 = {
+    'question': (
+        'In the context of attention, what does "hard attention" refer to?'
+    ),
+    'options_list': [
+        'A) Computing a summary over all inputs',
+        'B) Selecting only a subset of relevant inputs',
+        'C) Applying Softmax to compute weighted averages',
+        'D) Using a non-differentiable process to choose the input'  # Correct answer
+    ],
+    'correct_answer': 'D',
+    'explanation': (
+        'Hard attention refers to selecting an input in a non-differentiable manner, typically by choosing a single relevant item without computing a weighted summary.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_303 = {
+    'question': (
+        'What is the role of "position embedding" in neural networks that handle sequences?'
+    ),
+    'options_list': [
+        'A) It removes the dependency on the order of inputs in a sequence.',
+        'B) It provides a differentiable method for element selection in sets.',
+        'C) It encodes the position information of each element in the sequence.',  # Correct answer
+        'D) It acts as a controller state for attention layers.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Position embedding encodes each element’s position in the sequence, helping the network capture temporal or causal structures in ordered data.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_304 = {
+    'question': (
+        'In a multi-layer attention model, what role does the "controller state" (q) play?'
+    ),
+    'options_list': [
+        'A) It acts as a static reference across all layers of the model.',
+        'B) It updates at each layer based on weighted inputs, guiding subsequent attention layers.',  # Correct answer
+        'C) It computes the Softmax weights for the last layer only.',
+        'D) It remains unchanged throughout the layers to maintain consistency.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The controller state updates layer-by-layer, using weighted inputs to compute new attention layers, progressively focusing on different parts of the input set.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# True/False Questions
+
+question_305 = {
+    'question': (
+        'True or False: The Softmax function outputs a probability distribution by assigning each input a positive value and summing to 1.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Softmax exponentiates the inputs, normalizes them, and ensures they sum to 1, forming a probability distribution over the inputs.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_306 = {
+    'question': (
+        'True or False: In neural attention, the Softmax function is invariant to the order of elements within the input set.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Softmax is permutation-invariant, meaning it generates the same output distribution regardless of input order.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_307 = {
+    'question': (
+        'True or False: Position embeddings are applied in attention models to make the model completely independent of input order.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Position embeddings encode the order, allowing the model to take temporal or sequential information into account.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_308 = {
+    'question': (
+        'True or False: In a multi-layer attention network, the same initial controller state is used at each layer without modification.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The controller state is updated at each layer, using information from the weighted input to guide the focus of attention in subsequent layers.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_309 = {
+    'question': (
+        'True or False: In neural attention layers, using only the largest Softmax weight for selection would result in a non-differentiable process.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Selecting based on the highest weight alone is a non-differentiable action, which is why Softmax uses weighted probabilities for smooth, differentiable selection.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# Additional Multiple-Choice Questions
+
+question_310 = {
+    'question': (
+        'What is a primary reason for using the Softmax function in neural attention mechanisms?'
+    ),
+    'options_list': [
+        'A) It allows differentiable selection of inputs based on similarity to a query.',  # Correct answer
+        'B) It normalizes the outputs to a fixed value.',
+        'C) It eliminates the need for additional memory in neural networks.',
+        'D) It applies a threshold to ignore low-confidence outputs.'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Softmax allows for differentiable selection based on similarity to a query, making it useful for attention mechanisms.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_311 = {
+    'question': (
+        'In the Softmax function, how does scaling the inputs affect the output?'
+    ),
+    'options_list': [
+        'A) It results in a scaled output where all values increase proportionally.',
+        'B) It concentrates more weight on the largest input values.',  # Correct answer
+        'C) It applies a linear transformation to the outputs.',
+        'D) It spreads the output distribution more evenly across all inputs.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Scaling the inputs increases the proportion of the output weight assigned to the largest values.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_312 = {
+    'question': (
+        'In attention mechanisms, why is a query vector typically used in conjunction with Softmax?'
+    ),
+    'options_list': [
+        'A) To directly select the maximum input value.',
+        'B) To make the layer invariant to input permutations.',
+        'C) To compute similarity scores for weighting the inputs.',  # Correct answer
+        'D) To combine inputs based on temporal sequence order.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'The query vector computes similarity scores with the inputs, which Softmax then uses for weighting.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_313 = {
+    'question': (
+        'Which of the following best describes the purpose of position embeddings in an attention model?'
+    ),
+    'options_list': [
+        'A) They add a layer of randomness to improve model generalization.',
+        'B) They distinguish the sequence order or temporal structure of inputs.',  # Correct answer
+        'C) They eliminate the need for recurrent layers.',
+        'D) They increase the dimensionality of the input space for higher accuracy.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Position embeddings provide information on sequence order or temporal structure, which is useful in models dealing with ordered data.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_314 = {
+    'question': (
+        'What is the main benefit of using attention mechanisms over traditional recurrent neural networks for tasks like translation?'
+    ),
+    'options_list': [
+        'A) Attention models are less computationally demanding for small datasets.',
+        'B) They can capture long-range dependencies more effectively.',  # Correct answer
+        'C) Attention models do not require training on labeled data.',
+        'D) They avoid the need for a transformer architecture.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Attention mechanisms capture long-range dependencies more effectively, which is useful in tasks like translation.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# Additional True/False Questions
+
+question_315 = {
+    'question': (
+        'True or False: In a neural attention layer, hard attention is typically more commonly used than soft attention.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Soft attention, often implemented with Softmax, is more commonly used as it allows for differentiable selection.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_316 = {
+    'question': (
+        'True or False: The Softmax function respects the permutation of inputs, meaning the order of inputs does not affect the output distribution.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Softmax is permutation invariant, making it insensitive to the order of inputs.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_317 = {
+    'question': (
+        'True or False: In a multi-layer attention model, each layer updates the controller state based on weighted input vectors to guide the next layer’s attention.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Each attention layer refines the controller state by weighting input vectors, guiding the subsequent attention layers.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_318 = {
+    'question': (
+        'True or False: The controller state in an attention layer represents the output, while the weighted sum of inputs is used as the query vector.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'The controller state is often the query, while the weighted sum of inputs is the output.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_319 = {
+    'question': (
+        'True or False: Adding position embeddings to inputs in a transformer model is essential for encoding sequence information.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Position embeddings are added to encode sequence order, crucial for tasks with temporal or causal dependencies.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+
+question_320 = {
+    'question': (
+        'What is the primary purpose of "multi-head attention" in Transformer models?'
+    ),
+    'options_list': [
+        'A) To use different attention mechanisms on a single chunk of input data',
+        'B) To split the controller state into parts, apply attention separately to each, and then recombine the results',  # Correct answer
+        'C) To enhance computational efficiency by reducing the number of layers',
+        'D) To increase training speed by skipping certain input tokens'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Multi-head attention divides the controller state, applies attention to each segment independently, and then recombines them, allowing the model to capture different aspects of the input.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_321 = {
+    'question': (
+        'What role do position embeddings play in Transformers when applied to natural language processing (NLP) tasks?'
+    ),
+    'options_list': [
+        'A) They replace token embeddings to capture word order.',
+        'B) They add sequence information to each token, preserving the order of tokens.',  # Correct answer
+        'C) They help differentiate between words of similar meanings.',
+        'D) They mask irrelevant words in a sequence to focus on the main context.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Position embeddings add positional information to each token, preserving the sequence structure, which is essential for ordered data like language.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_322 = {
+    'question': (
+        'In the context of Transformer training for NLP, what is the purpose of causal attention?'
+    ),
+    'options_list': [
+        'A) To allow bidirectional context for each word in the sequence',
+        'B) To mask out tokens that come after the current token, enforcing a left-to-right structure',  # Correct answer
+        'C) To dynamically adjust attention weights based on token frequency',
+        'D) To ensure all tokens in the sequence are treated equally'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Causal attention masks future tokens, maintaining a left-to-right order, which is crucial in tasks like language modeling where future context should not influence predictions.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_323 = {
+    'question': (
+        'Why are residual connections important in Transformer models?'
+    ),
+    'options_list': [
+        'A) They enable parallel computation across multiple heads.',
+        'B) They simplify the model architecture by removing certain layers.',
+        'C) They help stabilize training by allowing gradients to flow more effectively through layers.',  # Correct answer
+        'D) They ensure each layer receives inputs only from the previous layer.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Residual connections help gradients propagate through layers, making training more stable and efficient, which is particularly important in deep architectures like Transformers.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_324 = {
+    'question': (
+        'How does multi-query attention differ from the standard attention mechanism in Transformers?'
+    ),
+    'options_list': [
+        'A) It creates a unique controller state for each input, enabling independent attention.',  # Correct answer
+        'B) It applies the same attention weights to each layer of the Transformer.',
+        'C) It reduces the computational complexity of self-attention by using a single controller state.',
+        'D) It applies attention only to specific, predefined queries rather than all inputs.'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Multi-query or self-attention provides each input token with its own controller state, allowing each token to compute its own attention weights independently, enhancing the model’s ability to capture contextual relationships.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# True/False Questions
+
+question_325 = {
+    'question': (
+        'True or False: In multi-head attention, each head computes attention independently on a segment of the controller state, which are then recombined through a fully connected layer.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Multi-head attention divides the controller state into segments, applies attention to each independently, and recombines the results through a fully connected layer.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_327 = {
+    'question': (
+        'True or False: Transformers can use causal attention to predict each token simultaneously, enhancing training speed for NLP tasks.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Causal attention allows Transformers to predict each token simultaneously, which increases training efficiency by outputting predictions for all tokens at once rather than sequentially.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_328 = {
+    'question': (
+        'True or False: LayerNorm in Transformers contributes primarily to stabilizing the learning rate across different parts of the model.'
+    ),
+    'options_list': [
+        'A) True',
+        'B) False'  # Correct answer
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'LayerNorm is used to stabilize training by normalizing inputs within each layer, helping gradients flow more smoothly, but it doesn’t specifically stabilize the learning rate.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_329 = {
+    'question': (
+        'True or False: Transformers operate well on unordered sets or sequences due to the structure of self-attention.'
+    ),
+    'options_list': [
+        'A) True',  # Correct answer
+        'B) False'
+    ],
+    'correct_answer': 'A',
+    'explanation': (
+        'Self-attention in Transformers allows them to work effectively on sets without a strict order, as it processes each input relative to all others without needing sequence order.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+# Additional Multiple-Choice Questions
+
+question_330 = {
+    'question': (
+        'What is the primary advantage of using self-attention in Transformers over a traditional multi-layer attention model?'
+    ),
+    'options_list': [
+        'A) It reduces computational costs for large inputs.',
+        'B) It assigns a unique controller state to each input, scaling with input size.',  # Correct answer
+        'C) It ensures that each input contributes equally to the output.',
+        'D) It simplifies the architecture by removing residual connections.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Self-attention in Transformers provides a controller state for each input, allowing the model’s representation to grow with input size.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_331 = {
+    'question': (
+        'What is the role of multi-head attention in the Transformer architecture?'
+    ),
+    'options_list': [
+        'A) To compute attention weights by combining multiple inputs into a single head.',
+        'B) To allow attention to focus on different aspects of the inputs by creating independent attention heads.',  # Correct answer
+        'C) To capture the inherent sequential order of language inputs, such as left-to-right context.',
+        'D) To sequentially compute attention across all inputs before recombining them.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Multi-head attention divides the input into chunks, enabling the model to attend to different input aspects independently.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_332 = {
+    'question': (
+        'Why are position embeddings used in Transformers for NLP tasks?'
+    ),
+    'options_list': [
+        'A) To speed up training by reducing the number of layers required.',
+        'B) To capture the inherent sequential order of language inputs, such as left-to-right context.',  # Correct answer
+        'C) To assign a unique embedding to each unique word in the vocabulary.',
+        'D) To increase model capacity by adding more parameters.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Position embeddings capture the sequential order in language, which is crucial in NLP tasks where the order of tokens matters.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_333 = {
+    'question': (
+        'In the context of Transformers, what does causal attention achieve?'
+    ),
+    'options_list': [
+        'A) It allows each token to attend to any other token, regardless of order.',
+        'B) It prevents tokens from attending to future positions, enforcing left-to-right information flow.',  # Correct answer
+        'C) It assigns a constant weight to all tokens regardless of relevance.',
+        'D) It speeds up training by ignoring context.'
+    ],
+    'correct_answer': 'B',
+    'explanation': (
+        'Causal attention prevents a token from attending to future tokens, enforcing a left-to-right order.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+question_334 = {
+    'question': (
+        'What implementation trick is commonly used to speed up Transformer training on NLP tasks?'
+    ),
+    'options_list': [
+        'A) Using multi-head attention only on the final layer.',
+        'B) Masking out the embeddings of less important tokens.',
+        'C) Outputting a prediction for each token in the sequence simultaneously.',  # Correct answer
+        'D) Replacing position embeddings with causal embeddings.'
+    ],
+    'correct_answer': 'C',
+    'explanation': (
+        'Outputting a prediction for each token simultaneously significantly speeds up Transformer training.'
+    ),
+    'chapter_information': 'GT Lesson 14 Facebook Lecture'
+}
+
+
+
+
+
 
 
 KC_MPC_QUESTIONS = []
