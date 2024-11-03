@@ -791,7 +791,7 @@ uc_boulder_dl_a1ttention_question_3 = {
 uc_boulder_dl_attention_question_4 = {
     'question': (
         "In an encoder self-attention layer, we have:\n"
-        "- Model dimension (d_model) = 512\n"
+        "- Model dimension $d_model$ = 512\n"
         "- Number of heads (h) = 8\n\n"
         "Each head has separate learned weight matrices for Q, K, and V of shape (512, 64). "
         "Calculate the total number of parameters required for Q, K, and V projections across all heads."
@@ -801,7 +801,7 @@ uc_boulder_dl_attention_question_4 = {
     'explanation': (
         "Each head has three projection matrices: W_Q, W_K, and W_V, each with shape (512, 64). "
         "Each matrix contains 512 × 64 = 32,768 parameters. "
-        "For 8 heads, the total number of parameters is 32,768 × 3 × 8 = 98,304."
+        "For 8 heads, the total number of parameters is 32,768 × 3 × 8 = 786,432."
     ),
     'chapter_information': 'Self-Attention Parameter Count'
 }
@@ -886,23 +886,23 @@ uc_boulder_dl_attention_question_9 = {
     'chapter_information': 'Attention Scores Calculation for One Batch'
 }
 
-uc_boulder_dl_attention_question_10 = {
-    'question': (
-        "In a transformer’s feed-forward network, each layer consists of two linear transformations with a ReLU activation in between. If:\n"
-        "- Model dimension (d_model) = 512\n"
-        "- Inner layer dimension = 2,048\n\n"
-        "Calculate the total number of parameters in this feed-forward network layer."
-    ),
-    'options_list': ["Calculate the total parameters in the feed-forward network layer"],
-    'correct_answer': "Total parameters = 2,621,440",
-    'explanation': (
-        "The feed-forward network consists of:\n"
-        "1. A linear transformation from 512 → 2,048, with 512 × 2,048 = 1,048,576 weights plus 2,048 biases.\n"
-        "2. A second linear transformation from 2,048 → 512, with 2,048 × 512 = 1,048,576 weights plus 512 biases.\n"
-        "Total parameters: 1,048,576 + 2,048 + 1,048,576 + 512 = 2,099,712 + 521,728 = 2,621,440."
-    ),
-    'chapter_information': 'Feed-Forward Network Parameter Calculation'
-}
+# uc_boulder_dl_attention_question_10 = {
+#     'question': (
+#         "In a transformer’s feed-forward network, each layer consists of two linear transformations with a ReLU activation in between. If:\n"
+#         "- Model dimension (d_model) = 512\n"
+#         "- Inner layer dimension = 2,048\n\n"
+#         "Calculate the total number of parameters in this feed-forward network layer."
+#     ),
+#     'options_list': ["Calculate the total parameters in the feed-forward network layer"],
+#     'correct_answer': "Total parameters = 2,621,440",
+#     'explanation': (
+#         "The feed-forward network consists of:\n"
+#         "1. A linear transformation from 512 → 2,048, with 512 × 2,048 = 1,048,576 weights plus 2,048 biases.\n"
+#         "2. A second linear transformation from 2,048 → 512, with 2,048 × 512 = 1,048,576 weights plus 512 biases.\n"
+#         "Total parameters: 1,048,576 + 2,048 + 1,048,576 + 512 = 2,099,712 + 521,728 = 2,621,440."
+#     ),
+#     'chapter_information': 'Feed-Forward Network Parameter Calculation'
+# }
 
 uc_boulder_dl_attention_question_11 = {
     'question': (
