@@ -13,7 +13,8 @@ quiz_mapping = {
     "Quiz 1": ['1', '2'],  # Directly corresponds to Lesson 1 and Lesson 2
     "Quiz 2": ['3', '5'],  # Lessons 3 and 5 (as specified)
     "Quiz 3": ['5', '6', '7', '9'],  # Lessons 5, 6, 7, and 9
-    "Quiz 4": ['11', '12', '13', '14', '15']  # Lessons 11 through 15
+    "Quiz 4": ['11', '12', '13', '14', '15'],  # Lessons 11 through 15
+    "Quiz 5": ['17', '18', '19']  # Lessons 11 through 15
 }
 
 

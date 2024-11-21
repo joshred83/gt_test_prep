@@ -43,6 +43,9 @@ def sa_questions():
         "Lesson 13: Embeddings": '13',
         "Lesson 14: Neural Attention Models": '14',
         "Lesson 15: Neural Machine Translation and COMPUTATION": '15',
+        "Lesson 17: Deep Reinforcement Learning": '17',
+        "Lesson 18: Unsupervised and Semi-Supervised Learning": '18',
+        "Lesson 19: Generative Models": '19'
     }
     
     topics = {
