@@ -2326,6 +2326,81 @@ question_Reinforcement_Learning_3 = {
 }
 
 
+question_RL_1 = {
+    'question': (
+        'True or False: Temporal Difference (TD) learning requires complete episodes to update the value function. (Probability of appearing on test: 0.812)'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': (
+        'TD learning can update the value function after every time step, as it uses bootstrapping to estimate the return.'
+    ),
+    'chapter_information': 'Reinforcement Learning - Temporal Difference Learning'
+}
+
+question_RL_2 = {
+    'question': (
+        'Which reinforcement learning algorithm updates the Q-value using the current policy and the action taken at the next step? (Probability of appearing on test: 0.875)'
+    ),
+    'options_list': ['SARSA', 'Q-Learning', 'TD(0)', 'Monte Carlo'],
+    'correct_answer': 'SARSA',
+    'explanation': (
+        'SARSA is an on-policy algorithm that updates the Q-value based on the current policy, using the action taken at the next step.'
+    ),
+    'chapter_information': 'Reinforcement Learning - SARSA'
+}
+
+question_RL_3 = {
+    'question': (
+        'True or False: Q-learning uses the maximum Q-value over all possible next actions, regardless of the policy being followed. (Probability of appearing on test: 0.921)'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': (
+        'Q-learning is an off-policy algorithm that uses the greedy action to update the Q-value, even if the agent does not follow this action.'
+    ),
+    'chapter_information': 'Reinforcement Learning - Q-Learning'
+}
+
+question_RL_4 = {
+    'question': (
+        'Which of the following algorithms explicitly considers the next action selected by the policy during the Q-value update? (Probability of appearing on test: 0.879)'
+    ),
+    'options_list': ['SARSA', 'Q-Learning', 'TD(0)', 'REINFORCE'],
+    'correct_answer': 'SARSA',
+    'explanation': (
+        'SARSA is an on-policy algorithm, so it updates the Q-value using the next action chosen by the current policy.'
+    ),
+    'chapter_information': 'Reinforcement Learning - SARSA'
+}
+
+question_RL_5 = {
+    'question': (
+        'True or False: Q-learning is always safer than SARSA in stochastic environments. (Probability of appearing on test: 0.788)'
+    ),
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': (
+        'SARSA tends to be safer because it updates the Q-value based on the policy’s chosen actions, accounting for exploration, whereas Q-learning optimizes for the maximum possible Q-value, which can lead to riskier decisions.'
+    ),
+    'chapter_information': 'Reinforcement Learning - Q-Learning vs. SARSA'
+}
+
+question_RL_6 = {
+    'question': (
+        'Which of the following methods explicitly evaluates the expected return for a given policy without attempting to find the optimal policy? (Probability of appearing on test: 0.806)'
+    ),
+    'options_list': ['Policy Evaluation', 'SARSA', 'Q-Learning', 'Policy Gradient'],
+    'correct_answer': 'Policy Evaluation',
+    'explanation': (
+        'Policy evaluation calculates the expected return for a fixed policy, but it does not modify the policy to maximize the return.'
+    ),
+    'chapter_information': 'Reinforcement Learning - Policy Evaluation'
+}
+
+
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
