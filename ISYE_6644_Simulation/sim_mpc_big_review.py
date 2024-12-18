@@ -119,7 +119,7 @@ def big_review():
             return
 
     if st.session_state.questions_initialized:
-        st.session_state.questions_initialized = False  
+        # st.session_state.questions_initialized = False  
 
         questions = st.session_state.questions
 
