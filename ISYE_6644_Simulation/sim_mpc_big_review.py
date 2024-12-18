@@ -108,7 +108,7 @@ def big_review():
     review_choice = st.radio("Choose a review type", options=list(review_mapping.keys()))
     selected_state = review_mapping[review_choice]
 
-    if st.button('Start Review'):
+    if st.button('Load Questions'):
         try:
             st.session_state.token = Token(STATE=selected_state)
             st.session_state.token.initialize_mpc_questions()

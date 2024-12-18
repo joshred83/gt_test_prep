@@ -40,7 +40,7 @@ def review_questions():
     # Module Selection
     selected_module = st.radio(label=' ', options=list(module_mapping.keys()), label_visibility="collapsed")
 
-    if st.button("Proceed"):
+    if st.button("Load Questions"):
         try:
             st.session_state.STATE = module_mapping[selected_module]
             st.session_state.token = Token(STATE=st.session_state.STATE)
