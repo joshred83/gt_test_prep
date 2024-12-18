@@ -37,16 +37,16 @@ def big_review():
     selected_state = review_mapping[review_choice]
 
     if st.button('Start Review') or st.session_state.questions_initialized:
-        if not st.session_state.questions_initialized:
-            try:
-                st.session_state.token = Token(STATE=selected_state)
-                st.session_state.token.initialize_mpc_questions()
-                st.session_state.questions = st.session_state.token.mpc_questions
-                st.session_state.questions_initialized = True
-            except ValueError as e:
-                st.error(f"Error: {e}")
-                return
-
+        # if not st.session_state.questions_initialized:
+        try:
+            st.session_state.token = Token(STATE=selected_state)
+            st.session_state.token.initialize_mpc_questions()
+            st.session_state.questions = st.session_state.token.mpc_questions
+            st.session_state.questions_initialized = True
+        except ValueError as e:
+            st.error(f"Error: {e}")
+            return
+    if st.session_state.questions_initialized:
         questions = st.session_state.questions
 
         for i, q in enumerate(questions):

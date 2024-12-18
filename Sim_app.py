@@ -33,7 +33,7 @@ Check out other review apps for related courses:
 
 def chapter_review():
     st.markdown("# ISYE 6739 Probability Module Review")
-    st.write('Reload App for new Questions')
+    st.write('Remember, the set of good songs and the set of Justin Bieber songs are disjoint.')
     review_questions()
 
 def module_review():
@@ -42,7 +42,7 @@ def module_review():
     sim_questions()
 
 def comprehensive_review():
-    st.markdown("Test Prep")
+    st.markdown("# Exam Prep")
     st.write('Reload App for new Questions')
     big_review()
 
