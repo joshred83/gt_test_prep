@@ -28,16 +28,14 @@ def big_review():
         "ISYE 6739 Midterm 1 (Modules 0-2)": "ISYE_6739_Midterm1",
         "ISYE 6739 Midterm 2 (Modules 0-5)": "ISYE_6739_Midterm2",
         "ISYE 6739 Final (All Modules)": "ISYE_6739_Final",
-        # "ISYE 6644 Midterm 1 (Modules 1-5)": "Midterm_1",
-        # "ISYE 6644 Midterm 2 (Modules 1-7)": "Midterm_2",
-        # "ISYE 6644 Final (All Modules)": "Final"
     }
 
     review_choice = st.radio("Choose a review type", options=list(review_mapping.keys()))
     selected_state = review_mapping[review_choice]
 
-    if st.button('Start Review') or st.session_state.questions_initialized:
-        # if not st.session_state.questions_initialized:
+    if st.button('Start Review'):
+        st.session_state.questions_initialized = False  
+        
         try:
             st.session_state.token = Token(STATE=selected_state)
             st.session_state.token.initialize_mpc_questions()
@@ -46,28 +44,31 @@ def big_review():
         except ValueError as e:
             st.error(f"Error: {e}")
             return
+
     if st.session_state.questions_initialized:
         questions = st.session_state.questions
 
         for i, q in enumerate(questions):
-            st.markdown('-------------------------------')
-            st.markdown(f"**{q['question']}**")
-            options = q['options_list']
-            correct_answer = q['correct_answer']
-            explanation = q.get('explanation', " ")
-            question_key = f"question_{i}"
+            with st.form(key=f'form_{i}'):
+                st.markdown('-------------------------------')
+                st.markdown(f"**{q['question']}**")
+                options = q['options_list']
+                correct_answer = q['correct_answer']
+                explanation = q.get('explanation', " ")
+                question_key = f"question_{i}"
 
-            selected_answer = question_generator(q['question'], options, question_key)
+                selected_answer = question_generator(q['question'], options, question_key)
+                submitted = st.form_submit_button('Submit')
 
-            if st.button('Submit', key=f"submit_{i}"):
-                if selected_answer == correct_answer:
-                    st.success('Great work!')
-                    st.info(f'Explanation: \n\n{explanation}')
-                else:
-                    st.error(f"The correct answer was {correct_answer}")
-                    st.info(f'Explanation: \n\n{explanation}')
-                if 'chapter_information' in q:
-                    st.write(f"You can review {q['chapter_information']}")
+                if submitted:
+                    if selected_answer == correct_answer:
+                        st.success('Great work!')
+                        st.info(f'Explanation: \n\n{explanation}')
+                    else:
+                        st.error(f"The correct answer was {correct_answer}")
+                        st.info(f'Explanation: \n\n{explanation}')
+                    if 'chapter_information' in q:
+                        st.write(f"You can review {q['chapter_information']}")
 
 if __name__ == "__main__":
     big_review()
