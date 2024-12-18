@@ -34,7 +34,6 @@ def big_review():
     selected_state = review_mapping[review_choice]
 
     if st.button('Start Review'):
-        st.session_state.questions_initialized = False  
         
         try:
             st.session_state.token = Token(STATE=selected_state)
@@ -46,6 +45,7 @@ def big_review():
             return
 
     if st.session_state.questions_initialized:
+        st.session_state.questions_initialized = False
         questions = st.session_state.questions
 
         for i, q in enumerate(questions):
