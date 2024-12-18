@@ -1,6 +1,5 @@
 import streamlit as st
-from sim_states import Token
-import os
+from .sim_states import Token
 
 def apply_custom_css():
     custom_css = """
@@ -20,27 +19,33 @@ def big_review():
     apply_custom_css()
 
     if 'token' not in st.session_state:
-        st.session_state.token = Token(STATE='all')
+        st.session_state.token = Token()
         st.session_state.questions_initialized = False
 
     st.title("Select a Review Type")
 
     review_mapping = {
-        "ISYE 6739 Final": ['0', '1', '2', '3', '4', '5', '6', '7', '8'],
-        "Midterm 1 (Modules 1-5)": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5'],
-        "Midterm 2 (Modules 1-7)": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7'],
-        "Final (All Modules)": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7', 'SIM_8', 'SIM_9', 'SIM_10']
+        "ISYE 6739 Midterm 1 (Modules 0-2)": "ISYE_6739_Midterm1",
+        "ISYE 6739 Midterm 2 (Modules 0-5)": "ISYE_6739_Midterm2",
+        "ISYE 6739 Final (All Modules)": "ISYE_6739_Final",
+        # "ISYE 6644 Midterm 1 (Modules 1-5)": "Midterm_1",
+        # "ISYE 6644 Midterm 2 (Modules 1-7)": "Midterm_2",
+        # "ISYE 6644 Final (All Modules)": "Final"
     }
 
     review_choice = st.radio("Choose a review type", options=list(review_mapping.keys()))
-    selected_lessons = review_mapping[review_choice]
+    selected_state = review_mapping[review_choice]
 
     if st.button('Start Review') or st.session_state.questions_initialized:
         if not st.session_state.questions_initialized:
-            st.session_state.token.chapters_to_review = selected_lessons
-            st.session_state.token.initialize_mpc_questions()
-            st.session_state.questions = st.session_state.token.mpc_questions
-            st.session_state.questions_initialized = True
+            try:
+                st.session_state.token = Token(STATE=selected_state)
+                st.session_state.token.initialize_mpc_questions()
+                st.session_state.questions = st.session_state.token.mpc_questions
+                st.session_state.questions_initialized = True
+            except ValueError as e:
+                st.error(f"Error: {e}")
+                return
 
         questions = st.session_state.questions
 
@@ -61,6 +66,8 @@ def big_review():
                 else:
                     st.error(f"The correct answer was {correct_answer}")
                     st.info(f'Explanation: \n\n{explanation}')
+                if 'chapter_information' in q:
+                    st.write(f"You can review {q['chapter_information']}")
 
 if __name__ == "__main__":
     big_review()

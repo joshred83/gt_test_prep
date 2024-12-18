@@ -32,18 +32,18 @@ Check out other review apps for related courses:
     """)
 
 def chapter_review():
-    st.markdown("# ISYE 6739 Probability Review")
-    st.write('Review key probability concepts from ISYE 6739.')
+    st.markdown("# ISYE 6739 Probability Module Review")
+    st.write('Reload App for new Questions')
     review_questions()
 
 def module_review():
-    st.markdown("# ISYE 6644 Module Review")
-    st.write('Review modules from ISYE 6644 Simulation and Modeling.')
+    st.markdown("# ISYE 6644 Simulation Module Review")
+    st.write('Reload App for new Questions')
     sim_questions()
 
 def comprehensive_review():
-    st.markdown("# Comprehensive Review")
-    st.write('In-depth review to prepare for midterms.')
+    st.markdown("Test Prep")
+    st.write('Reload App for new Questions')
     big_review()
 
 def reset_or_initialize_state():
@@ -54,9 +54,9 @@ def reset_or_initialize_state():
 
 page_names_to_funcs = {
     "—": intro,
-    "ISYE 6739 Prob Review": chapter_review,
+    "ISYE 6739 Prob Module Review": chapter_review,
     "ISYE 6644 Module Review": module_review,
-    "Midterm Practice": comprehensive_review
+    "Exam Practice (6739 & 6644)": comprehensive_review
 }
 
 if 'current_demo' not in st.session_state:
