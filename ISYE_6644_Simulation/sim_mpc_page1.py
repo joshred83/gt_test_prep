@@ -53,7 +53,7 @@ def review_questions():
 
 
     if st.session_state.questions_initialized:
-        st.session_state.questions_initialized = False  
+        # st.session_state.questions_initialized = False  
 
         questions = st.session_state.questions
 
