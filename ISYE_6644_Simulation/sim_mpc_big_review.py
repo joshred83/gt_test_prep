@@ -72,6 +72,7 @@
 
 # if __name__ == "__main__":
 #     big_review()
+
 import streamlit as st
 from .sim_states import Token
 
@@ -95,7 +96,6 @@ def big_review():
     if 'token' not in st.session_state:
         st.session_state.token = Token()
         st.session_state.questions_initialized = False
-        st.session_state.answers = {}
 
     st.title("Select a Review Type")
 
@@ -109,9 +109,6 @@ def big_review():
     selected_state = review_mapping[review_choice]
 
     if st.button('Start Review'):
-        st.session_state.questions_initialized = False
-        st.session_state.answers = {}
-
         try:
             st.session_state.token = Token(STATE=selected_state)
             st.session_state.token.initialize_mpc_questions()
@@ -122,6 +119,8 @@ def big_review():
             return
 
     if st.session_state.questions_initialized:
+        st.session_state.questions_initialized = False  
+
         questions = st.session_state.questions
 
         for i, q in enumerate(questions):
@@ -130,21 +129,11 @@ def big_review():
             options = q['options_list']
             correct_answer = q['correct_answer']
             explanation = q.get('explanation', " ")
-            question_key = f"answer_{i}"
+            question_key = f"question_{i}"
 
-            if question_key not in st.session_state.answers:
-                st.session_state.answers[question_key] = None
+            selected_answer = question_generator(q['question'], options, question_key)
 
-            selected_answer = st.radio(
-                label='Please select the correct answer',
-                options=options,
-                index=options.index(st.session_state.answers[question_key]) if st.session_state.answers[question_key] else 0,
-                key=question_key
-            )
-
-            if st.button('Submit', key=f"submit_{i}"):
-                st.session_state.answers[question_key] = selected_answer
-
+            if st.button('Submit', key=f"submit_{i}") and selected_answer:
                 if selected_answer == correct_answer:
                     st.success('Great work!')
                     st.info(f'Explanation: \n\n{explanation}')
