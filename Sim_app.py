@@ -16,6 +16,7 @@ I created this tool because active recall is an effective learning strategy.
 3. **Midterm Practice**: Comprehensive review covering multiple modules.
 
 ### Additional Resources:
+- [Seeing Theory - Probability Visuals](https://seeing-theory.brown.edu/)
 - [Harvard Stat 110 Problems](https://projects.iq.harvard.edu/stat110/strategic-practice-problems)
 - [Goldsman ISYE 6739 - Probability and Statistics](https://www2.isye.gatech.edu/~sman/courses/6739/)
 - [ISYE 6739 Lectures](https://www.kaltura.com/index.php/extwidget/preview/partner_id/2019031/uiconf_id/43497241/embed/iframe?flashvars[playlistAPI.kpl0Id]=1_g5xwvbde)
