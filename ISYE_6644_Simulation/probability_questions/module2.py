@@ -582,6 +582,159 @@ isye6739_lecture6_question_5 = {
     'chapter_information': 'ISYE 6739 Lecture 6'
 }
 
+pdf_continuous_question = {
+    'question': (
+        "Suppose that $X$ is continuous, with pdf $f(x) = cx^2$, $0 \\leq x \\leq 1$.\n\n"
+        "(a) Find the value of $c$ that will make the pdf integrate to 1.\n"
+        "(b) Calculate $P(0 \\leq X \\leq 1/2)$.\n"
+        "(c) Find the cdf $F(x)$ for all $x$.\n"
+        "(d) Calculate $E[X]$.\n"
+        "(e) Calculate $\\text{Var}(X)$."
+    ),
+    'options_list': ["Compute"],
+    'correct_answer': (
+        "(a) $c = 3$\n"
+        "(b) $P(0 \\leq X \\leq 1/2) = 1/8$\n"
+        "(c) $F(x) = \\begin{cases} "
+        "0 & \\text{if } x < 0 \\\\ "
+        "x^3 & \\text{if } 0 \\leq x \\leq 1 \\\\ "
+        "1 & \\text{if } x \\geq 1 \\end{cases}$\n"
+        "(d) $E[X] = 3/4$\n"
+        "(e) $\\text{Var}(X) = 3/80$"
+    ),
+    'explanation': (
+        "(a) To normalize the pdf, set $\\int_0^1 cx^2 dx = 1$, which implies $c = 3$.\n"
+        "(b) Integrate $\\int_0^{1/2} 3x^2 dx$ to get $1/8$.\n"
+        "(c) The cdf is computed as $F(x) = \\int_{-\\infty}^x f(t) dt$, yielding the piecewise function above.\n"
+        "(d) Compute $E[X] = \\int_0^1 x f(x) dx = 3/4$.\n"
+        "(e) Compute $\\text{Var}(X) = E[X^2] - (E[X])^2 = 3/5 - (3/4)^2 = 3/80$."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.5)"
+}
+
+
+binomial_die_toss = {
+    'question': (
+        "Suppose we toss a six-sided die five times. Let $X$ denote the number "
+        "of times that you see a 1, 2, or 3. Find $P(X = 4)$."
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': "$P(X = 4) = \\binom{5}{4}\\left(\\frac{1}{2}\\right)^4\\left(\\frac{1}{2}\\right)^{5-4} = 5/32$",
+    'explanation': (
+        "The number of times we see a 1, 2, or 3 follows a Binomial distribution with "
+        "$n = 5$ trials and $p = 1/2$ success probability. "
+        "Apply the Binomial PMF: $P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k}$."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.2)"
+}
+
+poisson_greater_than_3 = {
+    'question': (
+        "Suppose $X \\sim \\text{Poisson}(2)$. Find $P(X > 3)$."
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': (
+        "$P(X > 3) = 1 - P(X \\leq 3) = 1 - \\sum_{k=0}^{3} \\frac{e^{-2}2^k}{k!} \\approx 0.1429$"
+    ),
+    'explanation': (
+        "Using the complementary rule, $P(X > 3) = 1 - P(X \\leq 3)$. "
+        "The Poisson CDF is computed as $P(X \\leq 3) = \\sum_{k=0}^{3} P(X = k)$, "
+        "where $P(X = k) = \\frac{e^{-\\lambda}\\lambda^k}{k!}$."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.2)"
+}
+
+bayes_theorem_candy = {
+    'question': (
+        "My mom gives me candy from one of two boxes, A or B. Half of the candies in box A are yummy and half are icky. "
+        "Box B is worse, because only $1/4$ are yummy, while $3/4$ are icky. The only good news is that mom grabs candy "
+        "90\\% of the time from box A. Suppose that mom brings me 5 candies, and 3 are yummy. "
+        "What’s the probability they came from box A?"
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': (
+        "$P(A|X = 3) = \\frac{P(X = 3 | A)P(A)}{P(X = 3 | A)P(A) + P(X = 3 | B)P(B)} = \\frac{32/33} \\approx 0.9697$"
+    ),
+    'explanation': (
+        "Using Bayes' Theorem:\n"
+        "$P(A|X) = \\frac{P(X|A)P(A)}{P(X|A)P(A) + P(X|B)P(B)}$. "
+        "Compute $P(X|A)$ and $P(X|B)$ using the Binomial PMF."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.2)"
+}
+
+continuous_cdf = {
+    'question': (
+        "Suppose that the continuous random variable $X$ has pdf $f(x) = x^2/9$ for $0 \\leq x \\leq 3$. "
+        "What is its cdf?"
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': (
+        "$F(x) = \\begin{cases} "
+        "0 & \\text{if } x < 0 \\\\ "
+        "\\frac{x^3}{27} & \\text{if } 0 \\leq x \\leq 3 \\\\ "
+        "1 & \\text{if } x \\geq 3 "
+        "\\end{cases}$"
+    ),
+    'explanation': (
+        "The cdf is computed as $F(x) = P(X \\leq x) = \\int_{-\\infty}^x f(t) \\, dt$. "
+        "Evaluate the integral piecewise over the given domain."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.4)"
+}
+
+expected_cars_sold = {
+    'question': (
+        "I run a car dealership. Today, I’m going to sell no cars with probability 0.5, one car with probability 0.4, "
+        "and two cars with probability 0.1. How many cars will I be expected to sell?"
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': (
+        "$E[X] = \\sum_x x f(x) = (0)(0.5) + (1)(0.4) + (2)(0.1) = 0.6$"
+    ),
+    'explanation': (
+        "The expected value of a discrete random variable is computed as $E[X] = \\sum_x xP(X = x)$. "
+        "Substitute the given probabilities and sum over all outcomes."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.5)"
+}
+
+expected_value_continuous = {
+    'question': (
+        "Suppose that the continuous random variable $X$ has pdf $f(x) = x^2/9$ for $0 \\leq x \\leq 3$. "
+        "What is its expected value?"
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': (
+        "$E[X] = \\int_{-\\infty}^{\\infty} x f(x) \\, dx = \\int_0^3 x \\frac{x^2}{9} \\, dx = 2.25$"
+    ),
+    'explanation': (
+        "The expected value of a continuous random variable is computed as $E[X] = \\int_{-\\infty}^{\\infty} x f(x) \\, dx$. "
+        "Substitute the pdf $f(x)$ and evaluate the integral over the given domain."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.5)"
+}
+
+expectation_proof = {
+    'question': (
+        "Prove: If $X$ is a nonnegative continuous random variable (always $\\geq 0$), then "
+        "$E[X] = \\int_0^{\\infty} P(X > x) \\, dx$."
+    ),
+    'options_list': ['Prove'],
+    'correct_answer': (
+        "Using the given pdf $f(x)$ for $x > 0$, swap the order of integration: "
+        "$E[X] = \\int_0^{\\infty} x f(x) \\, dx = \\int_0^{\\infty} \\int_x^{\\infty} f(t) \\, dt \\, dx$. "
+        "After swapping and simplifying using Fubini’s Theorem, we have "
+        "$E[X] = \\int_0^{\\infty} P(X > x) \\, dx$."
+    ),
+    'explanation': (
+        "This result follows by swapping the order of integration via Fubini’s Theorem "
+        "and recognizing that the integral of the pdf over $[x, \\infty)$ gives $P(X > x)$."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 2.9 (§2.5)"
+}
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
