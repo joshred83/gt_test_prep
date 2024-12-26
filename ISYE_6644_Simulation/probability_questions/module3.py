@@ -186,7 +186,7 @@ joint_pdf_exercise = {
         "Evaluating $\\int_0^{1/2} \\int_0^y 6x \\, dx \\, dy$, the integral simplifies to $\\int_0^{1/2} 3y^2 \\, dy = 1/8$.\n\n"
         "(b) The marginal pdf of $X$ is obtained by integrating $f(x, y)$ over $y$, giving $f_X(x) = \\int_x^1 6x \\, dy = 6x(1 - x)$ for $0 \\leq x \\leq 1$."
     ),
-    'chapter_information': "Goldsman Probability Book Part 2.9 (§3.1)"
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.1)"
 }
 
 joint_pmf_table_exercise = {
@@ -231,7 +231,7 @@ joint_pmf_table_exercise = {
         "(c) The conditional probability $P(X = 5 | Y = 27)$ is calculated using the formula "
         "$P(X = 5 | Y = 27) = \\frac{f(5, 27)}{f_Y(27)}$, where $f_Y(27)$ is the marginal probability of $Y = 27$."
     ),
-    'chapter_information': "Goldsman Probability Book Part 2.9 (§3.8)"
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.8)"
 }
 
 joint_pdf_properties = {
@@ -279,7 +279,7 @@ joint_pdf_properties = {
         "- For (d) and (e), use the definitions of expected value with the marginal pdfs.\n"
         "- For (f), compute the ratio of $f(x, y)$ to $f_Y(y)$."
     ),
-    'chapter_information': "Goldsman Probability Book Part 2.9 (§3.2)"
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.2)"
 }
 
 joint_pmf_social_media = {
@@ -317,7 +317,7 @@ joint_pmf_social_media = {
         "- From the table, \\( f(2, 50) = 0.1 \\) and \\( f_X(2) = 0.5 \\).\n\n"
         "- Hence, \\( P(Y = 50 \\mid X = 2) = \\frac{0.1}{0.5} = 0.2 \\)."
     ),
-    'chapter_information': "Goldsman Probability Book Part 2.9 (§3.2)"
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.2)"
 }
 
 independence_check_joint_pmf = {
@@ -356,7 +356,7 @@ independence_check_joint_pmf = {
         "- Since \\( f(2, 40) \\neq f_X(2)f_Y(40) \\), \\( X \\) and \\( Y \\) are not independent.\n\n"
         "Thus, \\( X \\) and \\( Y \\) are dependent."
     ),
-    'chapter_information': "Goldsman Probability Book Part 2.9 (§3.3)"
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.3)"
 }
 
 exponential_lifetimes_comparison = {
@@ -439,9 +439,122 @@ exponential_lifetimes_comparison = {
         "**Final Answer:**\n"
         "The probability that \\( X \\) lasts longer than \\( Y \\) is \\( P(X > Y) = \\frac{1}{3} \\)."
     ),
-    'chapter_information': "Goldsman Probability Book Part 2.9 (§3.3)"
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.3)"
 }
 
+poisson_sample_mean_properties = {
+    'question': (
+        "Suppose that \\( X_1, \\dots, X_n \\) are independent and identically distributed (i.i.d.) random variables following a "
+        "Poisson distribution with mean \\( \\lambda = 5 \\). Let the sample mean \\( \\overline{X}_n = \\frac{1}{n} \\sum_{i=1}^n X_i \\).\n\n"
+        "What are \\( E[\\overline{X}_n] \\), \\( \\text{Var}(\\overline{X}_n) \\), "
+        "\\( \\lim_{n \\to \\infty} E[\\overline{X}_n] \\), and \\( \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) \\)?"
+    ),
+    'options_list': [
+        "\\( E[\\overline{X}_n] = 5, \\text{Var}(\\overline{X}_n) = \\frac{5}{n}, \\lim_{n \\to \\infty} E[\\overline{X}_n] = 5, \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) = 0 \\)",
+        "\\( E[\\overline{X}_n] = 5, \\text{Var}(\\overline{X}_n) = \\frac{5}{n^2}, \\lim_{n \\to \\infty} E[\\overline{X}_n] = 0, \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) = 0 \\)",
+        "\\( E[\\overline{X}_n] = 5, \\text{Var}(\\overline{X}_n) = \\frac{1}{5n}, \\lim_{n \\to \\infty} E[\\overline{X}_n] = 5, \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) = 1 \\)",
+        "\\( E[\\overline{X}_n] = 5, \\text{Var}(\\overline{X}_n) = \\frac{n}{5}, \\lim_{n \\to \\infty} E[\\overline{X}_n] = 0, \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) = 0 \\)"
+    ],
+    'correct_answer': (
+        "\\( E[\\overline{X}_n] = 5, \\text{Var}(\\overline{X}_n) = \\frac{5}{n}, \\lim_{n \\to \\infty} E[\\overline{X}_n] = 5, \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) = 0 \\)"
+    ),
+    'explanation': (
+        "**Expected Value of the Sample Mean \\( \\overline{X}_n \\):**\n"
+        "The sample mean is \\( \\overline{X}_n = \\frac{1}{n} \\sum_{i=1}^n X_i \\). Since the expectation operator is linear:\n"
+        "\\[\n"
+        "E[\\overline{X}_n] = E\\left[\\frac{1}{n} \\sum_{i=1}^n X_i \\right] = \\frac{1}{n} \\sum_{i=1}^n E[X_i].\n"
+        "\\]\n"
+        "For a Poisson distribution, \\( E[X_i] = \\lambda = 5 \\). Thus:\n"
+        "\\[\n"
+        "E[\\overline{X}_n] = \\frac{1}{n} \\cdot n \\cdot 5 = 5.\n"
+        "\\]\n\n"
+        "**Variance of the Sample Mean \\( \\overline{X}_n \\):**\n"
+        "The variance of the sample mean for i.i.d. variables is:\n"
+        "\\[\n"
+        "\\text{Var}(\\overline{X}_n) = \\text{Var}\\left(\\frac{1}{n} \\sum_{i=1}^n X_i\\right) = \\frac{1}{n^2} \\sum_{i=1}^n \\text{Var}(X_i).\n"
+        "\\]\n"
+        "For a Poisson distribution, \\( \\text{Var}(X_i) = \\lambda = 5 \\). Thus:\n"
+        "\\[\n"
+        "\\text{Var}(\\overline{X}_n) = \\frac{1}{n^2} \\cdot n \\cdot 5 = \\frac{5}{n}.\n"
+        "\\]\n\n"
+        "**Limiting Behavior as \\( n \\to \\infty \\):**\n"
+        "1. \\( \\lim_{n \\to \\infty} E[\\overline{X}_n] = 5 \\): The expected value remains constant as \\( n \\) increases.\n"
+        "2. \\( \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) = \\lim_{n \\to \\infty} \\frac{5}{n} = 0 \\): The variance decreases as \\( n \\) increases.\n\n"
+        "**Conclusion:**\n"
+        "\\( E[\\overline{X}_n] = 5 \\), \\( \\text{Var}(\\overline{X}_n) = \\frac{5}{n} \\), \\( \\lim_{n \\to \\infty} E[\\overline{X}_n] = 5 \\), and \\( \\lim_{n \\to \\infty} \\text{Var}(\\overline{X}_n) = 0 \\)."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.3)"
+}
+
+conditional_expectation_pdf = {
+    'question': (
+        "Suppose that \\( f(x, y) = 6x \\) for \\( 0 \\leq x \\leq y \\leq 1 \\). "
+        "The marginal PDF of \\( X \\) is \\( f_X(x) = 6x(1 - x) \\) for \\( 0 \\leq x \\leq 1 \\).\n\n"
+        "(a) Find the conditional PDF of \\( Y \\) given \\( X = x \\).\n"
+        "(b) Find \\( E[Y | X = x] \\).\n"
+        "(c) Find \\( E[E[Y | X]] \\)."
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': (
+        "(a) The conditional PDF is \\( f(y | x) = \\frac{f(x, y)}{f_X(x)} = \\frac{6x}{6x(1 - x)} = \\frac{1}{1 - x} \\), "
+        "for \\( 0 \\leq x \\leq y \\leq 1 \\).\n\n"
+        "(b) By the definition of conditional expectation:\n"
+        "\\[\n"
+        "E[Y | X = x] = \\int_x^1 y \\cdot f(y | x) \\, dy = \\int_x^1 \\frac{y}{1 - x} \\, dy = \\frac{1 + x}{2}, \\quad 0 \\leq x \\leq 1.\n"
+        "\\]\n\n"
+        "(c) Using the Law of the Unconscious Statistician:\n"
+        "\\[\n"
+        "E[E[Y | X]] = \\int_0^1 E[Y | X = x] \\cdot f_X(x) \\, dx = \\int_0^1 \\frac{1 + x}{2} \\cdot 6x(1 - x) \\, dx = \\frac{3}{4}.\n"
+        "\\]\n"
+        "We verify this by checking the marginal PDF of \\( Y \\):\n"
+        "\\[\n"
+        "f_Y(y) = \\int_0^y f(x, y) \\, dx = \\int_0^y 6x \\, dx = 3y^2, \\quad 0 \\leq y \\leq 1.\n"
+        "\\]\n"
+        "Thus, \\( E[Y] = \\int_0^1 y \\cdot f_Y(y) \\, dy = \\int_0^1 3y^3 \\, dy = \\frac{3}{4} \\), confirming \\( E[E[Y | X]] = E[Y] \\)."
+    ),
+    'explanation': (
+        "This exercise uses the properties of conditional PDFs and expectations:\n\n"
+        "1. The conditional PDF is found by dividing the joint PDF by the marginal PDF.\n"
+        "2. Conditional expectation is computed by integrating \\( y \\cdot f(y | x) \\).\n"
+        "3. The Law of the Unconscious Statistician confirms that \\( E[E[Y | X]] = E[Y] \\), "
+        "a result verified through integration of the marginal PDF of \\( Y \\)."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.4)"
+}
+
+conditional_and_double_expectation = {
+    'question': (
+        "Back to Question 3, which stated:\n\n"
+        "Suppose that \\( f(x, y) = cxy^2 \\), for \\( 0 \\leq x \\leq y^2 \\leq 1 \\) and \\( 0 \\leq y \\leq 1 \\):\n"
+        "(a) \\( c \\) was found to be 14.\n"
+        "(b) The marginal PDF of \\( X \\) was \\( f_X(x) = \\frac{14}{3} (x - x^{5/2}), \\ 0 \\leq x \\leq 1 \\).\n"
+        "(c) The marginal PDF of \\( Y \\) was \\( f_Y(y) = 7y^6, \\ 0 \\leq y \\leq 1 \\).\n"
+        "(d) \\( E[X] \\) was found to be \\( \\frac{14}{27} \\).\n"
+        "(e) \\( E[Y] \\) was found to be \\( \\frac{7}{8} \\).\n"
+        "(f) The conditional PDF of \\( X \\), given \\( Y = y \\), was \\( f(x | y) = \\frac{2x}{y^4}, \\ 0 \\leq x \\leq y^2 \\leq 1 \\).\n\n"
+        "Now, based on this information:\n"
+        "(a) Find the conditional expectation, \\( E[X | Y = y] \\).\n"
+        "(b) Find the double conditional expectation, \\( E[E[X | Y]] \\)."
+    ),
+    'options_list': ['Calculate'],
+    'correct_answer': (
+        "(a) The conditional expectation is:\n"
+        "\\[\n"
+        "E[X | Y = y] = \\int_{\\mathbb{R}} x f(x | y) \\, dx = \\int_0^{y^2} x \\cdot \\frac{2x}{y^4} \\, dx = \\frac{2y^2}{3}.\n"
+        "\\]\n\n"
+        "(b) The double conditional expectation is:\n"
+        "\\[\n"
+        "E[E[X | Y]] = \\int_{\\mathbb{R}} E[X | Y = y] \\cdot f_Y(y) \\, dy = \\int_0^1 \\frac{2y^2}{3} \\cdot 7y^6 \\, dy = \\frac{14}{27}.\n"
+        "\\]\n"
+        "This matches the value of \\( E[X] \\) from Question 3, which aligns with the double expectation theorem."
+    ),
+    'explanation': (
+        "1. To calculate \\( E[X | Y = y] \\), use the conditional PDF \\( f(x | y) \\), integrate over \\( x \\), and simplify.\n"
+        "2. For \\( E[E[X | Y]] \\), use the Law of Iterated Expectations. Integrate \\( E[X | Y = y] \\) with respect to the marginal PDF of \\( Y \\), "
+        "and confirm the result equals \\( E[X] \\), demonstrating the consistency of the double expectation theorem."
+    ),
+    'chapter_information': "Goldsman Probability Book Part 3.8 (§3.4)"
+}
 
 
 KC_MPC_QUESTIONS = []

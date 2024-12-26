@@ -304,6 +304,115 @@ isye6739_module4_question_15 = {
     ),
     'chapter_information': 'ISYE 6739 - Module 4'
 }
+probability_woman_taller_man = {
+    'question': (
+        "Select a man and a woman at random (independent heights). Let \\( W \\) represent the height of the woman and \\( M \\) the height of the man. "
+        "Find the probability that the woman is taller than the man, \\( P(W > M) \\)."
+    ),
+    'options_list': [
+        "\\( P(W > M) = 0.09 \\)",
+        "\\( P(W > M) = 0.05 \\)",
+        "\\( P(W > M) = 0.95 \\)",
+        "\\( P(W > M) = 0.91 \\)"
+    ],
+    'correct_answer': "\\( P(W > M) = 0.09 \\)",
+    'explanation': (
+        "### Step 1: Define the setup\n"
+        "The difference \\( W - M \\) follows a Normal distribution because it is a linear combination of independent normal random variables. "
+        "Given \\( W \\sim N(\\mu_W, \\sigma_W^2) \\) and \\( M \\sim N(\\mu_M, \\sigma_M^2) \\), we have:\n"
+        "\\[ W - M \\sim N(\\mu_W - \\mu_M, \\sigma_W^2 + \\sigma_M^2). \\]\n"
+        "Substituting \\( \\mu_W = 0 \\), \\( \\mu_M = -3 \\), \\( \\sigma_W^2 = 1 \\), and \\( \\sigma_M^2 = 4 \\):\n"
+        "\\[ W - M \\sim N(-3, 5). \\]\n\n"
+        "### Step 2: Standardize the variable\n"
+        "To find \\( P(W > M) \\), standardize \\( W - M \\) using the standard normal distribution:\n"
+        "\\[ P(W > M) = P\\left( \\frac{W - M - (-3)}{\\sqrt{5}} > \\frac{0 - (-3)}{\\sqrt{5}} \\right). \\]\n"
+        "This simplifies to:\n"
+        "\\[ P(W > M) = P\\left(Z > \\frac{3}{\\sqrt{5}} \\right), \\quad Z \\sim N(0, 1). \\]\n\n"
+        "### Step 3: Evaluate the probability\n"
+        "Using the cumulative distribution function (CDF) for the standard normal distribution, \\( \\Phi(\\cdot) \\):\n"
+        "\\[ P(Z > 3 / \\sqrt{5}) = 1 - \\Phi(3 / \\sqrt{5}). \\]\n"
+        "Substituting \\( \\Phi(3 / \\sqrt{5}) = 0.91 \\):\n"
+        "\\[ P(W > M) = 1 - 0.91 = 0.09. \\]"
+    ),
+    'chapter_information': "Module 4 Lecture 13"
+}
+
+question_sample_size_n = {
+    'question': (
+        "Find the sample size $n$ such that $P(|\\bar{X} - \\mu| \\leq 1) \\geq 0.95$, "
+        "where $\\bar{X} \\sim N(\\mu, \\frac{16}{n})$."
+    ),
+    'options_list': [
+        "n = 50",
+        "n = 62",
+        "n = 75",
+        "n = 100"
+    ],
+    'correct_answer': "n = 62",
+    'explanation': (
+        "To ensure $P(|\\bar{X} - \\mu| \\leq 1) \\geq 0.95$, standardize the probability: "
+        "$P\\left(-\\frac{1}{\\sqrt{16/n}} \\leq Z \\leq \\frac{1}{\\sqrt{16/n}}\\right) = 0.95$. "
+        "This leads to solving $2\\Phi(\\sqrt{n}/4) - 1 \\geq 0.95$. Using $\\Phi^{-1}(0.975) = 1.96$, "
+        "$\\sqrt{n}/4 \\geq 1.96$ implies $n \\geq 62$."
+    ),
+    'chapter_information': "Module 4, Lecture 13"
+}
+
+probability_sample_mean_range = {
+    'question': (
+        "Suppose \\( X_1, X_2, ..., X_{100} \\) are i.i.d. random variables following an exponential distribution "
+        "with rate parameter \\( \\lambda = \\frac{1}{1000} \\). Find the probability \\( P(950 \\leq \\bar{X} \\leq 1050) \\)."
+    ),
+    'options_list': ['Compute'],
+    'correct_answer': (
+        "The probability is calculated using standardization and the properties of the normal distribution:\n"
+        "\\[ P(950 \\leq \\bar{X} \\leq 1050) = 2\\Phi(0.5) - 1 \\approx 0.383 \\]."
+    ),
+    'explanation': (
+        "Step 1: Determine \\( \\mathbb{E}[X_i] \\) and \\( \\text{Var}(X_i) \\):\n"
+        "- For \\( X_i \\sim \\text{Exp}(\\lambda) \\), \\( \\mathbb{E}[X_i] = \\frac{1}{\\lambda} = 1000 \\) and "
+        "\\( \\text{Var}(X_i) = \\frac{1}{\\lambda^2} = 1000^2 \\).\n\n"
+        "Step 2: Compute \\( \\mathbb{E}[\\bar{X}] \\) and \\( \\text{Var}(\\bar{X}) \\):\n"
+        "- \\( \\mathbb{E}[\\bar{X}] = \\mathbb{E}[X_i] = 1000 \\).\n"
+        "- \\( \\text{Var}(\\bar{X}) = \\frac{\\text{Var}(X_i)}{n} = \\frac{1000^2}{100} = 10000 \\).\n\n"
+        "Step 3: Standardize the range \\( 950 \\leq \\bar{X} \\leq 1050 \\):\n"
+        "\\[ P(950 \\leq \\bar{X} \\leq 1050) = P\\left(\\frac{950 - 1000}{\\sqrt{10000}} \\leq Z \\leq "
+        "\\frac{1050 - 1000}{\\sqrt{10000}}\\right), \\]\n"
+        "where \\( Z \\sim N(0,1) \\).\n"
+        "\\[ P(950 \\leq \\bar{X} \\leq 1050) = P\\left(-0.5 \\leq Z \\leq 0.5\\right) = 2\\Phi(0.5) - 1 \\approx 0.383. \\]"
+    ),
+    'chapter_information': "Module 4 Lecture 13"
+}
+
+braves_win_probability = {
+    'question': (
+        "The Braves play 100 independent baseball games, each of which they have a probability of 0.8 of winning. "
+        "What is the probability that they win at least 84 games?"
+    ),
+    'options_list': ['Compute'],
+    'correct_answer': (
+        "Using the Central Limit Theorem and continuity correction, the probability is:\n"
+        "\\[ P(Y \\geq 84) = P(Y \\geq 83.5) \\approx P\\left(Z \\geq \\frac{83.5 - np}{\\sqrt{npq}}\\right) \\approx 0.1908. \\]"
+    ),
+    'explanation': (
+        "Step 1: Identify the parameters:\n"
+        "- \\( n = 100 \\), \\( p = 0.8 \\), \\( q = 1 - p = 0.2 \\).\n"
+        "- \\( np = 100(0.8) = 80 \\).\n"
+        "- \\( npq = 100(0.8)(0.2) = 16 \\).\n\n"
+        "Step 2: Apply the Central Limit Theorem:\n"
+        "The binomial random variable \\( Y \\sim \\text{Bin}(100, 0.8) \\) can be approximated by a normal distribution:\n"
+        "\\[ Y \\sim N(np, npq) = N(80, 16). \\]\n\n"
+        "Step 3: Continuity correction:\n"
+        "To find \\( P(Y \\geq 84) \\), apply the continuity correction:\n"
+        "\\[ P(Y \\geq 84) = P(Y \\geq 83.5). \\]\n\n"
+        "Step 4: Standardize and calculate:\n"
+        "Standardize using \\( Z = \\frac{Y - np}{\\sqrt{npq}} \\):\n"
+        "\\[ P(Y \\geq 83.5) = P\\left(Z \\geq \\frac{83.5 - 80}{\\sqrt{16}}\\right) = P(Z \\geq 0.875). \\]\n"
+        "Using the standard normal table, \\( P(Z \\geq 0.875) \\approx 0.1908. \\]"
+    ),
+    'chapter_information': "Module 4 Lecture 14"
+}
+
 
 
 KC_MPC_QUESTIONS = []
