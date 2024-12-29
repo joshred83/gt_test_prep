@@ -556,6 +556,72 @@ conditional_and_double_expectation = {
     'chapter_information': "Goldsman Probability Book Part 3.8 (§3.4)"
 }
 
+mgf_sum_exponentials = {
+    'question': (
+        "Suppose that $X$ and $Y$ are independent Exponential$(\\lambda)$ random variables. "
+        "What is the moment-generating function (m.g.f.) of $X + Y$?"
+    ),
+    'options_list': ['$(\\lambda / (\\lambda - t))^2$', '$(\\lambda / (\\lambda + t))^2$', '$(\\lambda - t)^2 / \\lambda$', '$(\\lambda + t)^2 / \\lambda$'],
+    'correct_answer': "$(\\lambda / (\\lambda - t))^2$",
+    'explanation': (
+        "The moment-generating function (m.g.f.) of a sum of independent random variables is the product of their individual m.g.f.s. "
+        "For an exponential random variable $X$ with rate $\\lambda$, the m.g.f. is given by:\n"
+        "\\[ M_X(t) = \\frac{\\lambda}{\\lambda - t}, \\text{ for } t < \\lambda. \\]\n"
+        "Since $X$ and $Y$ are identically distributed and independent, the m.g.f. of $X + Y$ is:\n"
+        "\\[ M_{X+Y}(t) = M_X(t)M_Y(t) = \\left(\\frac{\\lambda}{\\lambda - t}\\right)^2. \\]"
+    ),
+    'chapter_information': "exam 2 - 2015"
+}
+
+variance_product_exponentials = {
+    'question': (
+        "Suppose that $X$ and $Y$ are independent Exponential$(\\lambda)$ random variables. "
+        "Find $\\text{Var}(XY)$ (the variance of the product)."
+    ),
+    'options_list': ['Compute'],
+    'correct_answer': "$\\text{Var}(XY) = \\frac{3}{\\lambda^4}$",
+    'explanation': (
+        "To find $\\text{Var}(XY)$, first compute $E[XY]$ and $E[(XY)^2]$:\n"
+        "1. $E[XY] = E[X]E[Y] = \\frac{1}{\\lambda} \\cdot \\frac{1}{\\lambda} = \\frac{1}{\\lambda^2}.$\n"
+        "2. $E[X^2] = \\frac{2}{\\lambda^2}, E[Y^2] = \\frac{2}{\\lambda^2} \\Rightarrow E[(XY)^2] = E[X^2]E[Y^2] = \\frac{2}{\\lambda^2} \\cdot \\frac{2}{\\lambda^2} = \\frac{4}{\\lambda^4}.$\n\n"
+        "Now, calculate the variance:\n"
+        "\\[ \\text{Var}(XY) = E[(XY)^2] - (E[XY])^2 = \\frac{4}{\\lambda^4} - \\left(\\frac{1}{\\lambda^2}\\right)^2 = \\frac{4}{\\lambda^4} - \\frac{1}{\\lambda^4} = \\frac{3}{\\lambda^4}. \\]"
+    ),
+    'chapter_information': "exam 2 - 2015"
+}
+
+transformation_negative_exponential = {
+    'question': (
+        "Let $U \\sim \\text{Uniform}(0, 1)$ and define the variable $Y$ by the transformation:\n"
+        "\\[ Y = \\frac{1}{8} \\ln(1 - U). \\]\n"
+        "(a) Find the probability density function (PDF) of $Y$.\n"
+        "(b) Identify the distribution of $Y$."
+    ),
+    'options_list': [
+        "(a) $f_Y(y) = 8e^{8y}$ for $y \\leq 0$, (b) $Y \\sim -\\text{Exp}(8)$",
+        "(a) $f_Y(y) = \\frac{1}{8}e^{-y/8}$ for $y \\geq 0$, (b) $Y \\sim \\text{Exp}(8)$",
+        "(a) $f_Y(y) = 8e^{-8y}$ for $y \\geq 0$, (b) $Y \\sim \\text{Exp}(8)$",
+        "(a) $f_Y(y) = 8e^{8y}$ for $y \\leq 0$, (b) $Y \\sim \\text{Exp}(-8)$"
+    ],
+    'correct_answer': "(a) $f_Y(y) = 8e^{8y}$ for $y \\leq 0$, (b) $Y \\sim -\\text{Exp}(8)$",
+    'explanation': (
+        "### Part (a): Deriving the PDF\n"
+        "Given $Y = \\frac{1}{8} \\ln(1 - U)$, where $U \\sim \\text{Uniform}(0, 1)$, the inverse transformation is:\n"
+        "\\[ U = 1 - e^{8Y}. \\]\n"
+        "The derivative of $g^{-1}(y) = 1 - e^{8Y}$ is:\n"
+        "\\[ \\frac{d}{dy}g^{-1}(y) = -8e^{8y}. \\]\n"
+        "Using the transformation formula for PDFs, $f_Y(y)$ is:\n"
+        "\\[ f_Y(y) = f_U(g^{-1}(y)) \\cdot \\left|\\frac{d}{dy}g^{-1}(y)\\right| = 1 \\cdot 8e^{8y} = 8e^{8y}, \\]\n"
+        "for $y \\leq 0$.\n\n"
+        "### Part (b): Identifying the Distribution\n"
+        "The derived PDF, $f_Y(y) = 8e^{8y}$ for $y \\leq 0$, matches a negative exponential distribution. Therefore:\n"
+        "\\[ Y \\sim -\\text{Exp}(8). \\]"
+    ),
+    'chapter_information': "exam 2 - 2015"
+}
+
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())

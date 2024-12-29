@@ -413,6 +413,37 @@ braves_win_probability = {
     'chapter_information': "Module 4 Lecture 14"
 }
 
+uga_higher_iq_probability = {
+    'question': (
+        "Suppose that a random Georgia Tech student's IQ is $X \\sim N(115, 15)$ "
+        "and a random UGA student's IQ is $Y \\sim N(75, 20)$. Find the probability "
+        "that a random UGA student has a higher IQ than a random Georgia Tech student."
+    ),
+    'options_list': [
+        "$6.841 \\times 10^{-12}$",
+        "$0.001$",
+        "$0.05$",
+        "$0.10$"
+    ],
+    'correct_answer': "$6.841 \\times 10^{-12}$",
+    'explanation': (
+        "### Step 1: Define $Z = Y - X$\n"
+        "The difference $Z$ between the IQs of UGA and Georgia Tech students is:\n"
+        "\\[ Z \\sim N(\\mu_Z, \\sigma_Z^2), \\]\n"
+        "where the mean and variance of $Z$ are:\n"
+        "\\[ \\mu_Z = \\mu_Y - \\mu_X = 75 - 115 = -40, \\]\n"
+        "\\[ \\sigma_Z^2 = \\sigma_Y^2 + \\sigma_X^2 = 20^2 + 15^2 = 400 + 225 = 625, \\]\n"
+        "so $\\sigma_Z = \\sqrt{625} = 25$.\n\n"
+        "### Step 2: Standardize $Z$\n"
+        "To find $P(Z > 0)$, convert $Z$ to a standard normal variable $Z'$:\n"
+        "\\[ Z' = \\frac{Z - \\mu_Z}{\\sigma_Z} = \\frac{Z + 40}{25}. \\]\n"
+        "Thus:\n"
+        "\\[ P(Z > 0) = P\\left(Z' > \\frac{40}{25}\\right) = P(Z' > 1.6). \\]\n\n"
+        "### Step 3: Find the Probability\n"
+        "From standard normal tables, $P(Z' > 1.6) \\approx 6.841 \\times 10^{-12}$."
+    ),
+    'chapter_information': "Module 4"
+}
 
 
 KC_MPC_QUESTIONS = []
