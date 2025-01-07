@@ -445,6 +445,178 @@ uga_higher_iq_probability = {
     'chapter_information': "Module 4"
 }
 
+exercise_pdfs = {
+    'question': (
+        "Let $X$ be a continuous random variable with a PDF of the form:\n"
+        "\\[ f_X(x) = \\begin{cases} c(1 - x), & \\text{if } x \\in [0, 1], \\\\ 0, & \\text{otherwise}. \\end{cases} \\]\n"
+        "Find the following values:\n"
+        "1. $c$.\n"
+        "2. $P(X = 1/2)$.\n"
+        "3. $P(X \\in \\{1/k : k \\text{ integer, } k \\geq 2\\})$.\n"
+        "4. $P(X \\leq 1/2)$."
+    ),
+    'options_list': [
+        "1. $c = 2$, $P(X = 1/2) = 0$, $P(X \\in \\{1/k : k \\geq 2\\}) = 0$, $P(X \\leq 1/2) = 3/4$.",
+        "2. $c = 1$, $P(X = 1/2) = 1/4$, $P(X \\in \\{1/k : k \\geq 2\\}) = 1/2$, $P(X \\leq 1/2) = 1/2$.",
+        "3. $c = 2$, $P(X = 1/2) = 1$, $P(X \\in \\{1/k : k \\geq 2\\}) = 0$, $P(X \\leq 1/2) = 1/2$.",
+        "4. $c = 3$, $P(X = 1/2) = 0$, $P(X \\in \\{1/k : k \\geq 2\\}) = 1$, $P(X \\leq 1/2) = 3/4$."
+    ],
+    'correct_answer': (
+        "1. $c = 2$, $P(X = 1/2) = 0$, $P(X \\in \\{1/k : k \\geq 2\\}) = 0$, $P(X \\leq 1/2) = 3/4$."
+    ),
+    'explanation': (
+        "1. **Finding $c$**: Normalize the PDF such that the integral over all $x$ equals 1:\n"
+        "\\[ \\int_{-\\infty}^\\infty f_X(x) dx = \\int_0^1 c(1 - x) dx = c \\int_0^1 (1 - x) dx = c \\left[x - \\frac{x^2}{2} \\right]_0^1 = c \\cdot \\frac{1}{2}. \\]\n"
+        "Solving for $c$, we find $c = 2$.\n\n"
+        "2. **$P(X = 1/2)$**: For a continuous random variable, the probability of a specific point is zero:\n"
+        "\\[ P(X = 1/2) = 0. \\]\n\n"
+        "3. **$P(X \\in \\{1/k : k \\geq 2\\})$**: Using countable additivity and the fact that single points have zero probability:\n"
+        "\\[ P\\left(X \\in \\left\\{\\frac{1}{k} : k \\geq 2\\right\\}\\right) = \\sum_{k=2}^\\infty P\\left(X = \\frac{1}{k}\\right) = 0. \\]\n\n"
+        "4. **$P(X \\leq 1/2)$**: Compute the cumulative probability:\n"
+        "\\[ P(X \\leq 1/2) = \\int_{-\\infty}^{1/2} f_X(x) dx = \\int_0^{1/2} 2(1 - x) dx = 2 \\int_0^{1/2} (1 - x) dx = 2 \\left[x - \\frac{x^2}{2} \\right]_0^{1/2} = \\frac{3}{4}. \\]"
+    ),
+    'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
+}
+
+exercise_piecewise_constant_pdf = {
+    'question': (
+        "Consider a piecewise constant PDF of the form:\n"
+        "\\[\n"
+        "f_X(x) = \\begin{cases} "
+        "2c, & \\text{if } 0 \\leq x \\leq 1, \\\\ "
+        "c, & \\text{if } 1 < x \\leq 3, \\\\ "
+        "0, & \\text{otherwise}. "
+        "\\end{cases}\n"
+        "\\]\n"
+        "Find the following values:\n"
+        "(a) $c$.\n"
+        "(b) $P(1/2 \\leq X \\leq 3/2)$."
+    ),
+    'options_list': [
+        "(a) $c = 1/4$, (b) $P(1/2 \\leq X \\leq 3/2) = 3/8$.",
+        "(a) $c = 1/3$, (b) $P(1/2 \\leq X \\leq 3/2) = 1/4$.",
+        "(a) $c = 1/5$, (b) $P(1/2 \\leq X \\leq 3/2) = 1/2$.",
+        "(a) $c = 1/2$, (b) $P(1/2 \\leq X \\leq 3/2) = 1/3$."
+    ],
+    'correct_answer': (
+        "(a) $c = 1/4$, (b) $P(1/2 \\leq X \\leq 3/2) = 3/8$."
+    ),
+    'explanation': (
+        "1. **Finding $c$**: The total area under the PDF must be 1. This consists of two rectangles:\n"
+        "\\[\n"
+        "(2c) \\cdot 1 + c \\cdot 2 = 4c = 1 \\implies c = \\frac{1}{4}.\n"
+        "\\]\n"
+        "2. **Finding $P(1/2 \\leq X \\leq 3/2)$**: Compute the area over the interval:\n"
+        "\\[\n"
+        "P(1/2 \\leq X \\leq 3/2) = \\int_{1/2}^1 2c dx + \\int_1^{3/2} c dx = 2c \\cdot \\frac{1}{2} + c \\cdot \\frac{1}{2} = \\frac{3}{8}.\n"
+        "\\]"
+    ),
+    'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
+}
+
+exercise_normal_random_variables = {
+    'question': (
+        "Choose the correct answer below.\n"
+        "According to our conventions, a normal random variable $X \\sim N(\\mu, \\sigma^2)$ is a continuous random variable:\n"
+        "(a) always.\n"
+        "(b) if and only if $\\sigma \\neq 0$.\n"
+        "(c) if and only if $\\mu \\neq 0$ and $\\sigma \\neq 0$."
+    ),
+    'options_list': [
+        "(a) always.",
+        "(b) if and only if $\\sigma \\neq 0$.",
+        "(c) if and only if $\\mu \\neq 0$ and $\\sigma \\neq 0$."
+    ],
+    'correct_answer': "(b) if and only if $\\sigma \\neq 0$.",
+    'explanation': (
+        "When $\\sigma \\neq 0$, the distribution of $X$ is described by a PDF, and so $X$ is a continuous random variable. "
+        "When $\\sigma = 0$, all of the probability is assigned to a single point, and it is not a continuous random variable."
+    ),
+    'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
+}
+
+exercise_using_normal_tables = {
+    'question': (
+        "Let $X$ be a normal random variable with mean 4 and variance 9. Use the normal table to find the following probabilities "
+        "to an accuracy of 4 decimal places:\n"
+        "(a) $P(X \\leq 5.2)$.\n"
+        "(b) $P(X \\geq 2.8)$.\n"
+        "(c) $P(X \\leq 2.2)$."
+    ),
+    'options_list': [
+        "(a) $P(X \\leq 5.2) = 0.6554$, (b) $P(X \\geq 2.8) = 0.6554$, (c) $P(X \\leq 2.2) = 0.2743$.",
+        "(a) $P(X \\leq 5.2) = 0.5000$, (b) $P(X \\geq 2.8) = 0.7500$, (c) $P(X \\leq 2.2) = 0.2500$.",
+        "(a) $P(X \\leq 5.2) = 0.4000$, (b) $P(X \\geq 2.8) = 0.4000$, (c) $P(X \\leq 2.2) = 0.2000$."
+    ],
+    'correct_answer': (
+        "(a) $P(X \\leq 5.2) = 0.6554$, (b) $P(X \\geq 2.8) = 0.6554$, (c) $P(X \\leq 2.2) = 0.2743$."
+    ),
+    'explanation': (
+        "The standard deviation of $X$ is $\\sigma = 3$. Use standardization to compute probabilities:\n"
+        "1. $P(X \\leq 5.2) = P\\left(Z \\leq \\frac{5.2 - 4}{3}\\right) = \\Phi(0.4) = 0.6554$.\n"
+        "2. $P(X \\geq 2.8) = P\\left(Z \\geq \\frac{2.8 - 4}{3}\\right) = \\Phi(-0.4) = 1 - 0.6554 = 0.6554$.\n"
+        "3. $P(X \\leq 2.2) = P\\left(Z \\leq \\frac{2.2 - 4}{3}\\right) = \\Phi(-0.6) = 1 - 0.7257 = 0.2743$."
+    ),
+    'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
+}
+
+exercise_uniform_pdf = {
+    'question': (
+        "Let $X$ be uniform on the interval $[1, 3]$. Suppose that $1 < a < b < 3$. Then,\n"
+        "(a) $P(a \\leq X \\leq b)$.\n"
+        "(b) $E[X]$.\n"
+        "(c) $E[X^3]$."
+    ),
+    'options_list': [
+        "1. (a) $(b-a)/2$, (b) $2$, (c) $10$.",
+        "2. (a) $(b-a)$, (b) $3$, (c) $9$.",
+        "3. (a) $(b-a)/4$, (b) $2$, (c) $11$.",
+        "4. (a) $(b-a)/2$, (b) $3$, (c) $12$."
+    ],
+    'correct_answer': (
+        "1. (a) $(b-a)/2$, (b) $2$, (c) $10$."
+    ),
+    'explanation': (
+        "1. **$P(a \\leq X \\leq b)$**: The value of the PDF on the interval $[1, 3]$ must "
+        "be equal to $1/2$, so that it integrates to 1. Thus:\n"
+        "\\[ P(a \\leq X \\leq b) = \\int_a^b \\frac{1}{2} dx = \\frac{b-a}{2}. \\]\n\n"
+        "2. **$E[X]$**: The expected value of a uniform is the midpoint of its range:\n"
+        "\\[ E[X] = \\frac{1+3}{2} = 2. \\]\n\n"
+        "3. **$E[X^3]$**: Using the expected value rule:\n"
+        "\\[ E[X^3] = \\int_1^3 x^3 \\cdot \\frac{1}{2} dx = \\frac{1}{2} \\cdot \\frac{1}{4}x^4 \\bigg|_1^3 "
+        "= \\frac{1}{2} \\cdot \\frac{1}{4} (81 - 1) = 10. \\]"
+    ),
+    'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
+}
+
+exercise_exponential_pdf = {
+    'question': (
+        "Let $X$ be an exponential random variable with parameter $\\lambda = 2$. "
+        "Find the values of the following:\n"
+        "(a) $E[(3X + 1)^2]$.\n"
+        "(b) $P(1 \\leq X \\leq 2)$.\n"
+        "Use 'e' for the base of the natural logarithm (e.g., enter e^(-3) for $e^{-3}$)."
+    ),
+    'options_list': [
+        "1. (a) $8.5$, (b) $0.11702$.",
+        "2. (a) $9.5$, (b) $0.125$.",
+        "3. (a) $7.5$, (b) $0.12$.",
+        "4. (a) $10.5$, (b) $0.13$."
+    ],
+    'correct_answer': (
+        "1. (a) $8.5$, (b) $0.11702$."
+    ),
+    'explanation': (
+        "1. **$E[(3X + 1)^2]$**: By expanding the quadratic, using linearity of expectations, "
+        "and the facts that $E[X] = 1/\\lambda$ and $E[X^2] = 2/\\lambda^2$, we have:\n"
+        "\\[ E[(3X + 1)^2] = 9E[X^2] + 6E[X] + 1 = 9 \\cdot \\frac{2}{2^2} + 6 \\cdot \\frac{1}{2} + 1 = 8.5. \\]\n\n"
+        "2. **$P(1 \\leq X \\leq 2)$**: We have seen that for $a > 0$, $P(X \\geq a) = e^{-\\lambda a}$, so:\n"
+        "\\[ P(1 \\leq X \\leq 2) = P(X \\leq 2) - P(X \\leq 1) = (1 - e^{-4}) - (1 - e^{-2}) = e^{-2} - e^{-4}. \\]"
+    ),
+    'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
+}
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
