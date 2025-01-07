@@ -27,9 +27,10 @@ I began creating tools like this because I believe that actively recalling infor
 Check out my other review apps for:
 - [ISYE 6501 Introduction to Analytics Modeling](https://isye6501test-prep.streamlit.app/)
 - [MGT 6203 Analytics for Business](https://mgt-6203-mt-study-aid.streamlit.app/)
-- [ISYE 6740 Computational Data Analytics](https://cda-review-app.streamlit.app/)
-- [CS 7643 Deep Learning](https://deep-learning-practice.streamlit.app/)
-- [CS 7280 Network Science Review App](https://network-science-review.streamlit.app/)
+- [ISYE 6740 Computational Data Analytics](https://cda-review-app.streamlit.app/) (not updated)
+- [CS 7643 Deep Learning](https://deep-learning-practice.streamlit.app/) 
+- [CS 7280 Network Science Review App](https://network-science-review.streamlit.app/) (not updated)
+- [ISYE 6644 & 6739 Sim and Prob/Stats Review App](https://gt-sim-prob-prep.streamlit.app/) 
     """)
 
 def chapter_review():
