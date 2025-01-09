@@ -616,6 +616,33 @@ exercise_exponential_pdf = {
     'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
 }
 
+exercise_exponential_cdf = {
+    'question': (
+        "Let $X$ be an exponential random variable with parameter 2. "
+        "Find the CDF of $X$. Express your answer in terms of $x$ using standard notation. "
+        "Use 'e' for the base of the natural logarithm (e.g., enter e^(-3*x) for $e^{-3x}$).\n"
+        "(a) For $x \\leq 0, F_X(x) =$ ?\n"
+        "(b) For $x > 0, F_X(x) =$ ?"
+    ),
+    'options_list': [
+        "1. (a) $0$, (b) $1 - e^{-2x}$.",
+        "2. (a) $x$, (b) $1 - e^{-x}$.",
+        "3. (a) $e^x$, (b) $1 - e^{-2x}$.",
+        "4. (a) $0$, (b) $e^{-x}$."
+    ],
+    'correct_answer': (
+        "1. (a) $0$, (b) $1 - e^{-2x}$."
+    ),
+    'explanation': (
+        "1. **For $x \\leq 0$**: Since $X$ is a nonnegative random variable, "
+        "the CDF $F_X(x) = P(X \\leq x)$ is $0$ for $x \\leq 0$.\n\n"
+        "2. **For $x > 0$**: For an exponential random variable with parameter $\\lambda = 2$, "
+        "we know that $P(X \\geq a) = e^{-\\lambda a}$. Thus, the CDF is:\n"
+        "\\[ F_X(x) = P(X \\leq x) = 1 - P(X \\geq x) = 1 - e^{-2x}. \\]"
+    ),
+    'chapter_information': "MITx 6.431x Unit 5 Lesson 8"
+}
+
 
 
 KC_MPC_QUESTIONS = []

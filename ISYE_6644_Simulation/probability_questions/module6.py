@@ -274,6 +274,134 @@ isye6739_module6_question_9 = {
     'chapter_information': 'ISYE 6739 - Module 6'
 }
 
+exercise_confidence_interval_apples = {
+    'question': (
+        "I enjoy eating apples daily! Let's examine the weights of two types of apples — red and green. "
+        "Suppose we (somehow) know that the weights of both types have approximately the same standard deviation, "
+        "$\\sigma_r = \\sigma_g = 4$ grams. Two random samples of sizes $n_r = 30$ and $n_g = 20$, respectively, "
+        "are tested, and the sample mean weights are $\\overline{W}_r = 22$ grams for red apples and $\\overline{W}_g = 26$ grams for green apples. "
+        "Construct a 95% confidence interval on the mean difference in weights."
+    ),
+    'options_list': [
+        "1. $[-6.41, -1.59]$",
+        "2. $[-7.00, -1.00]$",
+        "3. $[-8.00, 0.00]$",
+        "4. $[-6.50, -1.50]$"
+    ],
+    'correct_answer': "1. $[-6.41, -1.59]$",
+    'explanation': (
+        "Since both variances are known, we use the following formula for the confidence interval of the difference between two means:\n"
+        "\\[ \\overline{W}_r - \\overline{W}_g - z_{\\alpha/2} \\sqrt{\\frac{\\sigma_r^2}{n_r} + \\frac{\\sigma_g^2}{n_g}} \\leq \\mu_r - \\mu_g \\leq \\overline{W}_r - \\overline{W}_g + z_{\\alpha/2} \\sqrt{\\frac{\\sigma_r^2}{n_r} + \\frac{\\sigma_g^2}{n_g}}. \\]\n\n"
+        "Here, $\\sigma_r^2 = \\sigma_g^2 = 16$ (as $\\sigma = 4$ grams squared), $n_r = 30$, and $n_g = 20$.\n\n"
+        "Plugging in the values:\n"
+        "\\[ 22 - 26 - 1.96 \\sqrt{\\frac{16}{30} + \\frac{16}{20}} \\leq \\mu_r - \\mu_g \\leq 22 - 26 + 1.96 \\sqrt{\\frac{16}{30} + \\frac{16}{20}}. \\]\n\n"
+        "This calculation yields the confidence interval $[-6.41, -1.59]$, indicating the difference in mean weights between red and green apples."
+    ),
+    'chapter_information': "User Created - Module 6"
+}
+
+exercise_confidence_interval_beer = {
+    'question': (
+        "Researchers at a food and beverage testing agency decided to compare the alcohol content of beers served at two popular restaurants, "
+        "Poco Loco and Casa Mexicana. The variability in alcohol content is assumed to be the same for both restaurants, with a standard deviation "
+        "of $4\\%$ alcohol by volume (ABV). After conducting an alcohol test on beers from both restaurants, the sample sizes were $30$ beers "
+        "from Poco Loco and $20$ beers from Casa Mexicana, with average alcohol contents of $22\\%$ ABV and $26\\%$ ABV, respectively. "
+        "Can you construct a 95\\% confidence interval for the difference in mean alcohol content between beers at Poco Loco and Casa Mexicana?"
+    ),
+    'options_list': [
+        "1. $[-6.26, -1.74]$",
+        "2. $[-7.00, -1.00]$",
+        "3. $[-8.00, -2.00]$",
+        "4. $[-5.00, 0.00]$"
+    ],
+    'correct_answer': "1. $[-6.26, -1.74]$",
+    'explanation': (
+        "We use the confidence interval formula for the difference in means when the population standard deviation is known:\n"
+        "\\[ \\overline{X}_1 - \\overline{X}_2 \\pm z_{\\alpha/2} \\sqrt{\\frac{\\sigma^2}{n_1} + \\frac{\\sigma^2}{n_2}}. \\]\n\n"
+        "Given $\\sigma = 4$, $n_1 = 30$, $n_2 = 20$, $\\overline{X}_1 = 22$, and $\\overline{X}_2 = 26$, we calculate:\n"
+        "\\[ -4 \\pm 1.96 \\sqrt{\\frac{16}{30} + \\frac{16}{20}}. \\]\n\n"
+        "This results in a confidence interval of $[-6.26, -1.74]$, indicating that on average, beers at Casa Mexicana have a higher alcohol content "
+        "than those at Poco Loco by about $1.74\\%$ to $6.26\\%$ ABV with 95\\% confidence."
+    ),
+    'chapter_information': "User Created M6"
+}
+
+exercise_confidence_interval_weight = {
+    'question': (
+        "The rivalry extends beyond the football field into a nutritional study comparing the average body weight of students from the University of Georgia (UGA) "
+        "and Georgia Tech (GT). Given that both student populations exhibit a weight variability with a standard deviation of $4$ kg, health researchers sampled "
+        "$30$ UGA students and $20$ GT students, finding their average weights to be $22$ kg and $26$ kg, respectively. "
+        "What is the 95\\% confidence interval for the difference in average body weights between UGA and GT students?"
+    ),
+    'options_list': [
+        "1. $[-6.26, -1.74]$",
+        "2. $[-7.00, -1.00]$",
+        "3. $[-8.00, -2.00]$",
+        "4. $[-5.00, 0.00]$"
+    ],
+    'correct_answer': "1. $[-6.26, -1.74]$",
+    'explanation': (
+        "Using the same formula for the confidence interval as above, the calculation follows:\n"
+        "\\[ \\overline{X}_1 - \\overline{X}_2 \\pm z_{\\alpha/2} \\sqrt{\\frac{\\sigma^2}{n_1} + \\frac{\\sigma^2}{n_2}}. \\]\n\n"
+        "Here, $\\sigma = 4$, $n_1 = 30$, $n_2 = 20$, $\\overline{X}_1 = 22$, and $\\overline{X}_2 = 26$, leading to:\n"
+        "\\[ -4 \\pm 1.96 \\sqrt{\\frac{16}{30} + \\frac{16}{20}}. \\]\n\n"
+        "This results in a confidence interval of $[-6.26, -1.74]$, indicating that Georgia Tech students, on average, weigh more than UGA students "
+        "by about $1.74$ kg to $6.26$ kg with 95\\% confidence."
+    ),
+    'chapter_information': "User Created M6"
+}
+
+exercise_confidence_interval_guinness = {
+    'question': (
+        "A local brewery enthusiast decides to test the difference in Guinness beer served at two renowned pubs—The Dragon's Lair and The Knight's Ale. "
+        "Unfortunately, the exact variability in alcohol content is unknown due to natural variations in each pub's keg storage and tapping process. "
+        "After collecting samples of $30$ glasses from The Dragon's Lair and $20$ glasses from The Knight's Ale, the average alcohol contents were found to be "
+        "$5.2\\%$ ABV and $5.8\\%$ ABV, respectively. Sample standard deviations were $0.4\\%$ ABV and $0.5\\%$ ABV for The Dragon's Lair and The Knight's Ale, respectively. "
+        "Construct a 95\\% confidence interval for the difference in mean alcohol content using the Student's t-distribution. What does this tell us about the alcohol content between the two pubs?"
+    ),
+    'options_list': [
+        "1. $[-0.87, -0.33]$",
+        "2. $[-1.00, -0.25]$",
+        "3. $[-0.70, -0.10]$",
+        "4. $[-1.20, -0.50]$"
+    ],
+    'correct_answer': "1. $[-0.87, -0.33]$",
+    'explanation': (
+        "We calculate the confidence interval for the difference in means using the Student's t-distribution because the population standard deviations are unknown:\n"
+        "\\[ \\overline{X}_1 - \\overline{X}_2 \\pm t_{\\alpha/2, \\nu} \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}. \\]\n\n"
+        "Here, $\\overline{X}_1 = 5.2$, $\\overline{X}_2 = 5.8$, $s_1 = 0.4$, $s_2 = 0.5$, $n_1 = 30$, $n_2 = 20$. Degrees of freedom ($\\nu$) are calculated using the Welch-Satterthwaite equation. "
+        "Using a $t$-critical value of approximately $2.086$, we compute the interval as:\n"
+        "\\[ -0.6 \\pm 2.086 \\sqrt{\\frac{0.4^2}{30} + \\frac{0.5^2}{20}}. \\]\n\n"
+        "This results in a confidence interval of $[-0.87, -0.33]$, indicating that on average, beers at The Knight's Ale have a higher alcohol content than those at The Dragon's Lair by about $0.33\\%$ to $0.87\\%$ ABV with 95\\% confidence."
+    ),
+    'chapter_information': "User Created M6"
+}
+
+exercise_confidence_interval_milk = {
+    'question': (
+        "In an experiment to understand preferences in tea preparation, researchers compare the average amount of milk added to tea at two different cafés, Tea Time and Daily Brew. "
+        "As the exact amount of variability in milk volume added is unknown, the standard deviations were estimated based on samples: $3$ mL for Tea Time and $4$ mL for Daily Brew. "
+        "Samples of $25$ cups from Tea Time and $15$ cups from Daily Brew were analyzed, with average milk volumes of $30$ mL and $35$ mL, respectively. "
+        "Calculate the 95\\% confidence interval for the difference in average milk volumes using the Student's t-distribution. What conclusions can be drawn about milk preferences at the two cafés?"
+    ),
+    'options_list': [
+        "1. $[-7.47, -2.53]$",
+        "2. $[-8.00, -3.00]$",
+        "3. $[-6.50, -1.50]$",
+        "4. $[-7.00, -2.00]$"
+    ],
+    'correct_answer': "1. $[-7.47, -2.53]$",
+    'explanation': (
+        "We calculate the confidence interval for the difference in means using the Student's t-distribution because the population standard deviations are unknown:\n"
+        "\\[ \\overline{X}_1 - \\overline{X}_2 \\pm t_{\\alpha/2, \\nu} \\sqrt{\\frac{s_1^2}{n_1} + \\frac{s_2^2}{n_2}}. \\]\n\n"
+        "Here, $\\overline{X}_1 = 30$, $\\overline{X}_2 = 35$, $s_1 = 3$, $s_2 = 4$, $n_1 = 25$, $n_2 = 15$. Degrees of freedom ($\\nu$) are calculated using the Welch-Satterthwaite equation. "
+        "Using a $t$-critical value of approximately $2.131$, we compute the interval as:\n"
+        "\\[ -5 \\pm 2.131 \\sqrt{\\frac{3^2}{25} + \\frac{4^2}{15}}. \\]\n\n"
+        "This results in a confidence interval of $[-7.47, -2.53]$, indicating that patrons at Daily Brew add more milk to their tea compared to patrons at Tea Time by about $2.53$ mL to $7.47$ mL with 95\\% confidence."
+    ),
+    'chapter_information': "User Created M6"
+}
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
