@@ -1,174 +1,235 @@
-module3_question1 = {
-    'question': (
-        "A refrigerator manufacturer subjects his finished products to a final inspection. Of interest are two categories of defects: scratches or flaws in the porcelain finish, and mechanical defects. "
-        "The number of each type of defect is a random variable. The results of inspecting 50 refrigerators are shown in the following joint pmf table, where $X$ represents the occurrence of finish defects and $Y$ represents the occurrence of mechanical defects:\n\n"
-        "| Y \\ X | 0  | 1  | 2  | 3  | 4  | 5  |\n"
-        "|--------|----|----|----|----|----|----|\n"
-        "| 0      | 11/50 | 4/50 | 2/50 | 1/50 | 1/50 | 1/50 |\n"
-        "| 1      | 8/50  | 3/50 | 2/50 | 1/50 | 1/50 |     |\n"
-        "| 2      | 4/50  | 3/50 | 2/50 | 1/50 |     |     |\n"
-        "| 3      | 3/50  | 1/50 |      |      |     |     |\n"
-        "| 4      | 1/50  |      |      |      |     |     |\n\n"
-        "Find the marginal probability mass functions of $X$ and $Y$."
-    ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "The marginal pmf for $X$ is:\n"
-        "$f_X(x) = \\{27/50, 11/50, 6/50, 3/50, 2/50, 1/50\\}$ for $x = 0, 1, 2, 3, 4, 5$\n\n"
-        "The marginal pmf for $Y$ is:\n"
-        "$f_Y(y) = \\{20/50, 15/50, 10/50, 4/50, 1/50\\}$ for $y = 0, 1, 2, 3, 4$."
-    ),
+
+isye6739_module2_discrete_rv_question_4 = {
+    'question': "Suppose $X \\sim \\text{Pois}(10)$. What is the probability that a cup of dough has at least 4 raisins?",
+    'options_list': [
+        'A) $1 - \\sum_{k=0}^3 \\frac{10^k e^{-10}}{k!}$',
+        'B) $\\sum_{k=4}^\\infty \\frac{10^k e^{-10}}{k!}$',
+        'C) $1 - \\frac{e^{-10} (10^0 + 10^1 + 10^2 + 10^3)}{3!}$',
+        'D) $\\frac{e^{-10} (10^4 + 10^5)}{4!}$'
+    ],
+    'correct_answer': 'A) $1 - \\sum_{k=0}^3 \\frac{10^k e^{-10}}{k!}$',
     'explanation': (
-        "To find the marginal pmf of $X$, sum over all values of $Y$ for each $X$. Similarly, to find the marginal pmf of $Y$, sum over all values of $X$ for each $Y$."
+        "The Poisson distribution probability mass function is:\n"
+        "$P(X = k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}$.\n"
+        "To find $P(X \\geq 4)$, use the complement rule:\n"
+        "$P(X \\geq 4) = 1 - P(X < 4) = 1 - P(X = 0, 1, 2, 3)$.\n"
+        "Expanding:\n"
+        "$P(X \\geq 4) = 1 - \\sum_{k=0}^3 \\frac{10^k e^{-10}}{k!}$."
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'ISYE 6739, Module 2'
 }
 
-module3_question2 = {
-    'question': (
-        "Find the conditional pmf of mechanical defects $Y$, given that there are no finish defects ($X=0$)."
-    ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "$f_{Y|X=0}(y) = \\frac{f(0, y)}{f_X(0)} = \\left\\{\n"
-        "\\begin{array}{ll}\n"
-        "11/27 & \\text{if } y = 0 \\\\\n"
-        "8/27 & \\text{if } y = 1 \\\\\n"
-        "4/27 & \\text{if } y = 2 \\\\\n"
-        "3/27 & \\text{if } y = 3 \\\\\n"
-        "1/27 & \\text{if } y = 4 \\\\\n"
-        "0 & \\text{otherwise.}\n"
-        "\\end{array}\n"
-        "\\right.$"
-    ),
+
+probability_theory_ucboulder_question_6 = {
+    'question': "A skilled worker requires at least 10 minutes, and no more than 20 minutes, to complete a certain task. The completion time $X$ is a continuous random variable with density function $f(x) = \\frac{c}{x^2}$ for $10 \\leq x \\leq 20$ and $f(x) = 0$ otherwise. What is the value of $c$?",
+    'options_list': [
+        'A) 20',
+        'B) 10',
+        'C) 0.5',
+        'D) 1'
+    ],
+    'correct_answer': 'A) 20',
     'explanation': (
-        "The conditional pmf is obtained by dividing the joint probability $f(0,y)$ by the marginal probability $f_X(0)$, which is $27/50$."
+        "To find the normalization constant $c$, ensure the total probability is 1:\n"
+        "$\\int_{10}^{20} \\frac{c}{x^2} dx = 1$\n"
+        "Solve:\n"
+        "$\\left[ -\\frac{c}{x} \\right]_{10}^{20} = 1$\n"
+        "$\\frac{c}{10} - \\frac{c}{20} = 1$\n"
+        "$\\frac{2c - c}{20} = 1$\n"
+        "$c = 20$."
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'Probability Theory - Coursera UC Boulder Course'
 }
 
-module3_question3 = {
-    'question': (
-        "Consider a situation in which the surface tension and acidity of a chemical product are measured. The variables are coded such that surface tension is measured on a scale $0 \\leq X \\leq 2$, and acidity is measured on a scale $2 \\leq Y \\leq 4$. The joint pdf of $(X, Y)$ is:\n\n"
-        "$f(x, y) = \\left\\{ \\begin{array}{ll} c(6 - x - y) & \\text{if } 0 \\leq x \\leq 2, 2 \\leq y \\leq 4 \\\\\n"
-        "0 & \\text{otherwise}. \\end{array} \\right.$\n\n"
-        "(a) Find the appropriate value of $c$."
-    ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "By integrating $f(x, y)$ over the given range and setting it equal to 1:\n\n"
-        "$\\int_{2}^{4} \\int_{0}^{2} c(6 - x - y) \\ dx \\ dy = 1$.\n\n"
-        "This gives $c = 1/8$."
-    ),
+probability_theory_ucboulder_question_7 = {
+    'question': "A skilled worker requires at least 10 minutes, and no more than 20 minutes, to complete a certain task. The completion time $X$ is a continuous random variable with density function $f(x) = \\frac{c}{x^2}$ for $10 \\leq x \\leq 20$ and $f(x) = 0$ otherwise. Find the probability that the worker completes the task in 15 minutes or less. Round your answer to three decimal places.",
+    'options_list': [
+        'A) 0.333',
+        'B) 0.667',
+        'C) 0.500',
+        'D) 0.250'
+    ],
+    'correct_answer': 'B) 0.667',
     'explanation': (
-        "The total probability must integrate to 1. Solving for $c$ involves evaluating the double integral of $c(6 - x - y)$ over the given region."
+        "The cumulative probability is:\n"
+        "$P(X \\leq 15) = \\int_{10}^{15} \\frac{20}{x^2} dx$\n"
+        "$= 20 \\left[ -\\frac{1}{x} \\right]_{10}^{15}$\n"
+        "$= 20 \\left(-\\frac{1}{15} + \\frac{1}{10}\\right)$\n"
+        "$= 20 \\cdot \\frac{1}{30} = 0.667$"
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'Probability Theory - Coursera UC Boulder Course'
 }
 
-module3_question4 = {
-    'question': (
-        "Consider the joint pdf $f(x, y) = c(6 - x - y)$ for $0 \\leq x \\leq 2$ and $2 \\leq y \\leq 4$. "
-        "Calculate the probability that $X < 1$ and $Y < 3$."
-    ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "The probability is:\n\n"
-        "$P(X < 1, Y < 3) = \\int_{2}^{3} \\int_{0}^{1} \\frac{1}{8} (6 - x - y) \\, dx \\, dy = \\frac{3}{8}$."
-    ),
+probability_theory_ucboulder_question_8 = {
+    'question': "A skilled worker requires at least 10 minutes, and no more than 20 minutes, to complete a certain task. The completion time $X$ is a continuous random variable with density function $f(x) = \\frac{c}{x^2}$ for $10 \\leq x \\leq 20$ and $f(x) = 0$ otherwise. Find the expected time for the worker to complete the task. Round your answer to three decimal places.",
+    'options_list': [
+        'A) 13.863',
+        'B) 15.000',
+        'C) 12.500',
+        'D) 10.000'
+    ],
+    'correct_answer': 'A) 13.863',
     'explanation': (
-        "Integrate the given joint pdf $f(x, y)$ over the region $0 \\leq x < 1$ and $2 \\leq y < 3$ to compute the desired probability."
+        "The expected value is given by:\n"
+        "$E[X] = \\int_{10}^{20} x \\cdot \\frac{20}{x^2} dx$\n"
+        "$= 20 \\int_{10}^{20} \\frac{1}{x} dx$\n"
+        "$= 20 \\left[ \\ln(x) \\right]_{10}^{20}$\n"
+        "$= 20 \\cdot (\\ln(20) - \\ln(10))$\n"
+        "$= 20 \\cdot \\ln(2) \\approx 13.863$"
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'Probability Theory - Coursera UC Boulder Course'
 }
 
-module3_question5 = {
-    'question': (
-        "For the joint pdf $f(x, y) = c(6 - x - y)$, calculate the probability that $X + Y \\leq 4$."
-    ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "The probability is:\n\n"
-        "$P(X + Y \\leq 4) = \\int_{2}^{4} \\int_{0}^{4 - y} \\frac{1}{8} (6 - x - y) \\, dx \\, dy = \\frac{2}{3}$."
-    ),
+probability_theory_ucboulder_question_9 = {
+    'question': "The number of eggs laid on a tree leaf by an insect of a certain type is a Poisson random variable $X$ with parameter $c$, where $E(X) = c$. However, the random variable can only be observed if it is positive. Let $Y$ denote the observed number of eggs, where $P(Y=i) = P(X=i \\mid X>0)$. Find $E(Y)$.",
+    'options_list': [
+        'A) $\\frac{c}{1 - e^{-c}}$',
+        'B) $\\frac{1 - e^{-c}}{c}$',
+        'C) $1 - e^{-c}$',
+        'D) $e^{-c}$'
+    ],
+    'correct_answer': 'A) $\\frac{c}{1 - e^{-c}}$',
     'explanation': (
-        "To find $P(X + Y \\leq 4)$, integrate the joint pdf over the appropriate triangular region defined by $0 \\leq x \\leq 2$, $2 \\leq y \\leq 4$, and $x + y \\leq 4$."
+        "The expected value of $Y$ is given by:\n"
+        "$E[Y] = \\frac{E[X \\mid X > 0]}{P(X > 0)}$\n"
+        "Since $P(X > 0) = 1 - e^{-c}$ for a Poisson random variable:\n"
+        "$E[Y] = \\frac{c}{1 - e^{-c}}$"
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'Probability Theory - Coursera UC Boulder Course'
 }
 
-module3_question6 = {
-    'question': (
-        "Find the marginal pdf of $X$ for the joint pdf $f(x, y) = c(6 - x - y)$ where $0 \\leq x \\leq 2$ and $2 \\leq y \\leq 4$."
-    ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "The marginal pdf of $X$ is:\n\n"
-        "$f_X(x) = \\int_{2}^{4} \\frac{1}{8} (6 - x - y) \\, dy = \\frac{3 - x}{4}, \\ 0 < x < 2$."
-    ),
+probability_theory_ucboulder_question_10 = {
+    'question': "Suppose $X$ is a random variable $X \\sim N(12, 4)$. Find the probability that $X$ is within 1.5 standard deviations of the mean. Round your answer to four decimal places.",
+    'options_list': [
+        'A) 0.9332',
+        'B) 0.8664',
+        'C) 0.0668',
+        'D) 0.5000'
+    ],
+    'correct_answer': 'B) 0.8664',
     'explanation': (
-        "To find the marginal pdf $f_X(x)$, integrate the joint pdf $f(x, y)$ over $y$ in the range $[2, 4]$."
+        "For a normal random variable $X$, the probability is:\n"
+        "$P(9 \\leq X \\leq 15) = P(-1.5 \\leq Z \\leq 1.5)$\n"
+        "$= \\Phi(1.5) - \\Phi(-1.5)$\n"
+        "$\\Phi(1.5) \\approx 0.9332$ and $\\Phi(-1.5) \\approx 0.0668$\n"
+        "$P(9 \\leq X \\leq 15) = 0.9332 - 0.0668 = 0.8664$"
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'Probability Theory - Coursera UC Boulder Course'
 }
 
-module3_question7 = {
-    'question': (
-        "Given the joint pdf $f(x, y) = cxy^2$ for $0 < x < y^2 < 1$, find the constant $c$."
-    ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "The constant $c$ is:\n\n"
-        "$1 = \\int_{0}^{1} \\int_{0}^{y^2} cxy^2 \\, dx \\, dy \\implies c = 14$."
-    ),
+
+isye6739_lecture6_question_5 = {
+    'question': "Suppose $X \\sim \\text{Exp}(\\lambda)$. What is the CDF $F(x)$ of $X$?",
+    'options_list': [
+        'A) $F(x) = 0$ for $x \\leq 0$, $F(x) = 1 - e^{-\\lambda x}$ for $x > 0$',
+        'B) $F(x) = e^{-\\lambda x}$ for $x > 0$',
+        'C) $F(x) = \\lambda x$ for $x > 0$',
+        'D) $F(x) = x^2$ for $x > 0$'
+    ],
+    'correct_answer': 'A) $F(x) = 0$ for $x \\leq 0$, $F(x) = 1 - e^{-\\lambda x}$ for $x > 0$',
     'explanation': (
-        "To determine $c$, integrate $f(x, y)$ over the given range $0 < x < y^2$ and $0 < y < 1$, and set the integral equal to 1."
+        "For an exponential random variable $X$ with rate parameter $\\lambda$, the CDF is:\n"
+        "$F(x) = \\int_{-\\infty}^x \\lambda e^{-\\lambda t} dt$\n"
+        "This gives:\n"
+        "$F(x) = \\begin{cases} 0 & x \\leq 0 \\\\ 1 - e^{-\\lambda x} & x > 0 \\end{cases}$."
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'ISYE 6739 Lecture 6'
 }
 
-module3_question8 = {
+
+problem_4_parking_lot_question = {
     'question': (
-        "For the joint pdf $f(x, y) = 14xy^2$ where $0 < x < y^2 < 1$, find the marginal pdf of $Y$, $f_Y(y)$."
+        "Mary and Tom park their cars in an empty parking lot with $n \\geq 2$ consecutive parking spaces "
+        "(i.e., $n$ spaces in a row, where only one car fits in each space). Mary and Tom pick parking spaces at random, "
+        "and to ensure privacy, they must each choose a different space. All pairs of distinct parking spaces are equally likely.\n\n"
+        "What is the probability that there is at most one empty parking space between them?"
     ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "The marginal pdf of $Y$ is:\n\n"
-        "$f_Y(y) = \\int_{0}^{y^2} 14xy^2 \\, dx = 7y^6, \\ 0 < y < 1$."
-    ),
+    'options_list': ['Do the Math'],
+    'correct_answer': "$P(A) = \\frac{4n - 6}{n(n-1)}$",
     'explanation': (
-        "To find $f_Y(y)$, integrate the joint pdf $f(x, y)$ with respect to $x$ over the range $0 < x < y^2$."
+        "1. Define the sample space as:\n"
+        "$$ \\Omega = \\{(i, j) : i \\neq j, 1 \\leq i, j \\leq n\\}, $$\n"
+        "where $(i, j)$ indicates that Mary and Tom parked in slots $i$ and $j$, respectively.\n\n"
+        "2. The size of $\\Omega$ is $n^2 - n = n(n-1)$ since there are $n^2$ pairs but we exclude outcomes where $i = j$.\n\n"
+        "3. Define the event of interest $A$ as:\n"
+        "$$ A = \\{(i, j) \\in \\Omega : |i - j| \\leq 2\\}. $$\n\n"
+        "4. If $n \\geq 3$, the event $A$ contains four lines (e.g., $i = j+1$, $i = j-1$, $i = j+2$, $i = j-2$). Each line contains $2(n-2) + 2 = 4n - 6$ outcomes.\n\n"
+        "5. The probability of the event $A$ is:\n"
+        "$$ P(A) = \\frac{|A|}{|\\Omega|} = \\frac{4n - 6}{n(n-1)}. $$"
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': 'MITx 6.431x Probability - The Science of Uncertainty and Data'
 }
 
-module3_question9 = {
+question_7_diastolic_blood_pressure = {
     'question': (
-        "Given the joint pdf $f(x, y) = 14xy^2$ for $0 < x < y^2 < 1$, find the conditional pdf of $X$ given $Y = y$, $f(x|y)$."
+        "Suppose that diastolic blood pressures (DBPs) for men aged 35–44 are normally distributed with a mean of 80 mm Hg "
+        "and a standard deviation of 10 mm Hg. What is the probability that a random 35–44-year-old has a DBP greater than 100 mm Hg?"
     ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "The conditional pdf is:\n\n"
-        "$f(x|y) = \\frac{f(x, y)}{f_Y(y)} = \\frac{2x}{y^4}, \\ 0 < x < y^2 < 1$."
-    ),
+    'options_list': [
+        "A. About 5%",
+        "B. About 2.5%",
+        "C. About 16%",
+        "D. About 1%",
+        "E. About 50%"
+    ],
+    'correct_answer': "B. About 2.5%",
     'explanation': (
-        "The conditional pdf $f(x|y)$ is obtained by dividing the joint pdf $f(x, y)$ by the marginal pdf $f_Y(y)$."
+        "First, calculate how many standard deviations 100 mm Hg is above the mean:\n"
+        "$$Z = \\frac{100 - 80}{10} = 2.$$"
+        "Using the standard normal distribution, the probability of being more than 2 standard deviations above the mean is 2.5%.\n"
+        "This can be computed using statistical software such as R with:\n"
+        "`pnorm(100, mean = 80, sd = 10, lower.tail = FALSE)` or equivalently `pnorm(2, lower.tail = FALSE)`."
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': "Mathematical Biostatistics Boot Camp 1, Johns Hopkins University"
 }
 
-module3_question10 = {
+question_8_brain_volume_percentile = {
     'question': (
-        "Given the joint pdf $g(x, y) = 4xye^{-(x^2 + y^2)}$, determine whether $X$ and $Y$ are independent."
+        "Brain volume for adult women is approximately normally distributed with a mean of 1,100 cc and a standard deviation of 75 cc. "
+        "What brain volume represents the 10th percentile of this distribution?"
     ),
-    'options_list': ['Independent', 'Not Independent'],
-    'correct_answer': "Independent",
+    'options_list': [
+        "A. 1020 cc",
+        "B. 950 cc",
+        "C. 980 cc",
+        "D. 1000 cc"
+    ],
+    'correct_answer': "D. 1000 cc",
     'explanation': (
-        "The joint pdf $g(x, y) = 4xye^{-(x^2 + y^2)}$ can be factored as $g(x, y) = (4xe^{-x^2})(ye^{-y^2})$, "
-        "showing that $X$ and $Y$ are independent."
+        "The 10th percentile corresponds to a Z-score of -1.28 from the standard normal distribution. Using the formula for a value in a normal distribution:\n"
+        "$$X = \\text{mean} + Z \\cdot \\text{SD}$$\n"
+        "Substitute the values:\n"
+        "$$X = 1100 + (-1.28) \\cdot 75 = 1100 - 96 = 1000 \\text{ cc}.$$"
+        "This can also be calculated using a statistical function like `qnorm(0.1, mean = 1100, sd = 75)`."
     ),
-    'chapter_information': 'ISYE 6739 - Module 3'
+    'chapter_information': "Mathematical Biostatistics Boot Camp 1, Johns Hopkins University"
 }
+
+question_9_sample_mean_percentile = {
+    'question': (
+        "Brain volume for adult women is approximately normally distributed with a mean of 1,100 cc and a standard deviation of 75 cc. "
+        "Consider the sample mean of 144 random adult women from this population. What is the 10th percentile "
+        "of the distribution of sample means for this sample size?"
+    ),
+    'options_list': [
+        "A. 1085 cc",
+        "B. 1090 cc",
+        "C. 1088 cc",
+        "D. 1092 cc"
+    ],
+    'correct_answer': "D. 1092 cc",
+    'explanation': (
+        "The standard deviation of the sample mean (standard error) is calculated as:\n"
+        "$$\\text{SE} = \\frac{\\text{SD}}{\\sqrt{n}} = \\frac{75}{\\sqrt{144}} = 6.25.$$"
+        "The 10th percentile corresponds to a Z-score of -1.28. Use the formula for the sample mean distribution:\n"
+        "$$X = \\text{mean} + Z \\cdot \\text{SE}.$$"
+        "Substitute the values:\n"
+        "$$X = 1100 + (-1.28) \\cdot 6.25 = 1100 - 8 = 1092 \\text{ cc}.$$"
+        "This can also be computed using a statistical function like `qnorm(0.1, mean = 1100, sd = 6.25)`."
+    ),
+    'chapter_information': "Mathematical Biostatistics Boot Camp 1, Johns Hopkins University"
+}
+
 
 
 KC_MPC_QUESTIONS = []
