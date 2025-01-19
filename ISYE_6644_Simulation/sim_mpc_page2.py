@@ -28,7 +28,7 @@ def sim_questions():
     module_mapping = {
         "Module 1: Whirlwind Tour of Simulation": 'SIM_1',
         "Module 2: Bootcamps": 'SIM_2',
-        "Module 3: Hand Simulations": 'SIM_3',
+        # "Module 3: Hand Simulations": 'SIM_3',
         # "Module 4: General Simulation Principles": 'SIM_4',
         # "Module 5: The Arena Simulation Language": 'SIM_5',
         # "Module 6: Random Number Generation": 'SIM_6',
