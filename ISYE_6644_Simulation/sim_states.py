@@ -53,7 +53,7 @@ REVIEW_SETS = {
     'SIM_7': ['SIM_7'], 'SIM_8': ['SIM_8'], 'SIM_9': ['SIM_9'], 'SIM_10': ['SIM_10'],
 
     # Simulation Exam-Level Reviews
-    "Midterm_1": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5'],
+    "Midterm_1": ['SIM_1', 'SIM_2'], # 'SIM_3', 'SIM_4', 'SIM_5'],
     "Midterm_2": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7'],
     "Final": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7', 'SIM_8', 'SIM_9', 'SIM_10']
 }
