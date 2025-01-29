@@ -322,6 +322,254 @@ question_4_eulers_method = {
     'chapter_information': "Module 3 - Differential Equations GPT Generated"
 }
 
+question_1_solving_differential_equation = {
+    'question': (
+        "Consider the initial value problem:\n"
+        "$$\n"
+        "y'(x) = (2x + 3)y(x), \\quad y(0) = 2.\n"
+        "$$\n"
+        "Which of the following is the exact solution for $y(x)$?"
+    ),
+    'options_list': [
+        "1. $y(x) = 2e^{2x}$",
+        "2. $y(x) = e^{2x + 3}$",
+        "3. $y(x) = 2\\exp(x^2 + 3x)$",
+        "4. $y(x) = \\exp(x^2 + 3x)$"
+    ],
+    'correct_answer': "3. $y(x) = 2\\exp(x^2 + 3x)$",
+    'explanation': (
+        "Separate variables:\n"
+        "$$\n"
+        "\\frac{dy}{y} = (2x + 3)dx \\quad \\Longrightarrow \\quad \\ln y = \\int (2x + 3)dx = x^2 + 3x + C.\n"
+        "$$\n"
+        "Exponentiating:\n"
+        "$$\n"
+        "y(x) = e^{x^2 + 3x + C} = e^C \\cdot e^{x^2 + 3x}.\n"
+        "$$\n"
+        "Using $y(0) = 2$, solve for $e^C = 2$:\n"
+        "$$\n"
+        "y(x) = 2\\exp(x^2 + 3x).\n"
+        "$$"
+    ),
+    'chapter_information': "Week 4 - GPT o1 Generated"
+}
+
+question_2_eulers_method = {
+    'question': (
+        "Use Euler’s method with step size $h = 0.05$ to approximate the solution at $x = 0.10$ for the ODE:\n"
+        "$$\n"
+        "f'(x) = (x+2)f(x), \\quad f(0) = 1.\n"
+        "$$\n"
+        "Which of these is closest to $f(0.10)$ using two Euler steps?"
+    ),
+    'options_list': [
+        "1. 1.10",
+        "2. 1.20",
+        "3. 1.23",
+        "4. 1.34"
+    ],
+    'correct_answer': "3. 1.23",
+    'explanation': (
+        "First step from $x=0$ to $x=0.05$:\n"
+        "$$\n"
+        "f(0.05) \\approx f(0) + h\\cdot((0)+2)f(0) = 1 + 0.05 \\cdot 2 \\cdot 1 = 1.10.\n"
+        "$$\n"
+        "Second step from $x=0.05$ to $x=0.10$:\n"
+        "$$\n"
+        "f(0.10) \\approx f(0.05) + h\\cdot((0.05)+2)f(0.05) = 1.10 + 0.05 \\cdot 2.05 \\cdot 1.10 = 1.10 + 0.11275 \\approx 1.23.\n"
+        "$$"
+    ),
+    'chapter_information': "Week 4 - GPT o1 Generated"
+}
+
+question_3_monte_carlo_setup = {
+    'question': (
+        "We want to estimate the integral:\n"
+        "$$\n"
+        "I = \\int_{2}^{5} \\frac{1}{1 + x^2}dx\n"
+        "$$\n"
+        "using Monte Carlo with $U_i \\sim \\text{Unif}(0,1)$. Which of the following is a correct MC estimator for $I$?"
+    ),
+    'options_list': [
+        "1. $\\frac{1}{n} \\sum_{i=1}^n \\frac{1}{1 + (2 + 3U_i)^2}$",
+        "2. $\\frac{1}{n} \\sum_{i=1}^n \\frac{1}{(1 + U_i)^2}$",
+        "3. $3 \\cdot \\frac{1}{n} \\sum_{i=1}^n \\frac{1}{1 + (2 + 3U_i)}$",
+        "4. $3 \\cdot \\frac{1}{n} \\sum_{i=1}^n \\frac{1}{1 + (2 + 3U_i)^2}$"
+    ],
+    'correct_answer': "4. $3 \\cdot \\frac{1}{n} \\sum_{i=1}^n \\frac{1}{1 + (2 + 3U_i)^2}$",
+    'explanation': (
+        "For a general integral $\\int_{a}^{b} f(x)dx$, the MC estimator is:\n"
+        "$$\n"
+        "(b-a) \\cdot \\frac{1}{n} \\sum_{i=1}^n f(a + (b-a)U_i).\n"
+        "$$\n"
+        "Here $a=2$, $b=5$, so $b-a=3$ and $a+(b-a)U_i = 2 + 3U_i$. The estimator becomes:\n"
+        "$$\n"
+        "I_n = 3 \\cdot \\frac{1}{n} \\sum_{i=1}^n \\frac{1}{1 + (2 + 3U_i)^2}.\n"
+        "$$"
+    ),
+    'chapter_information': "Week 4 - GPT o1 Generated"
+}
+
+question_4_monte_carlo_example = {
+    'question': (
+        "Using the integral:\n"
+        "$$\n"
+        "I = \\int_{2}^{5} \\frac{1}{1 + x^2}dx,\n"
+        "$$\n"
+        "suppose you draw $n=4$ uniform samples: $U_1=0.0$, $U_2=0.5$, $U_3=0.8$, $U_4=0.2$. Estimate $I$ using the MC formula:\n"
+        "$$\n"
+        "\\widehat{I}_4 = 3 \\cdot \\frac{1}{4} \\sum_{i=1}^4 \\frac{1}{1 + \\bigl(2 + 3U_i\\bigr)^2}.\n"
+        "$$\n"
+        "Which of these is closest to the resulting estimate?"
+    ),
+    'options_list': [
+        "1. 0.25",
+        "2. 0.37",
+        "3. 0.42",
+        "4. 0.51"
+    ],
+    'correct_answer': "2. 0.37",
+    'explanation': (
+        "Compute $x_i = 2 + 3U_i$ for $i=1,\\dots,4$:\n"
+        "$$\n"
+        "x_1 = 2.0, \\quad x_2 = 3.5, \\quad x_3 = 4.4, \\quad x_4 = 2.6.\n"
+        "$$\n"
+        "Evaluate $\\frac{1}{1 + x_i^2}$:\n"
+        "$$\n"
+        "\\frac{1}{1 + 2.0^2} = 0.2, \\quad \\frac{1}{1 + 3.5^2} \\approx 0.0758,\n"
+        "\\frac{1}{1 + 4.4^2} \\approx 0.0490, \\quad \\frac{1}{1 + 2.6^2} \\approx 0.1299.\n"
+        "$$\n"
+        "Average these values and multiply by 3:\n"
+        "$$\n"
+        "\\widehat{I}_4 = 3 \\cdot \\frac{1}{4}(0.2 + 0.0758 + 0.0490 + 0.1299) \\approx 0.37.\n"
+        "$$"
+    ),
+    'chapter_information': "Week 4 - GPT o1 Generated"
+}
+
+question_1_solving_differential_equation = {
+    'question': (
+        "Consider the initial value problem:\n"
+        "$$\n"
+        "y'(x) = (4x - 1)y(x), \\quad y(0) = 3.\n"
+        "$$\n"
+        "Which of the following is the exact solution?"
+    ),
+    'options_list': [
+        "1. $y(x) = 3e^{2x^2 - x}$",
+        "2. $y(x) = e^{4x^2 - x}$",
+        "3. $y(x) = 3\\exp(2x^2 - x)$",
+        "4. $y(x) = \\exp(4x^2 - 3x)$"
+    ],
+    'correct_answer': "3. $y(x) = 3\\exp(2x^2 - x)$",
+    'explanation': (
+        "Separate variables:\n"
+        "$$\n"
+        "\\frac{dy}{y} = (4x - 1)dx \\quad \\implies \\quad \\ln y = 2x^2 - x + C.\n"
+        "$$\n"
+        "Exponentiate:\n"
+        "$$\n"
+        "y(x) = e^{C} e^{2x^2 - x}.\n"
+        "$$\n"
+        "Using $y(0) = 3$, solve for $e^{C} = 3$:\n"
+        "$$\n"
+        "y(x) = 3\\exp(2x^2 - x).\n"
+        "$$"
+    ),
+    'chapter_information': "Week 4 - Deepseek Generated"
+}
+
+question_2_eulers_method = {
+    'question': (
+        "Use Euler’s method with step size $h = 0.25$ to approximate $f(0.5)$ for the ODE:\n"
+        "$$\n"
+        "f'(x) = (x - 1)f(x), \\quad f(0) = 2.\n"
+        "$$\n"
+        "Which is closest to the approximation after two steps?"
+    ),
+    'options_list': [
+        "1. 1.25",
+        "2. 1.50",
+        "3. 1.75",
+        "4. 2.00"
+    ],
+    'correct_answer': "1. 1.25",
+    'explanation': (
+        "**Step 1** ($x = 0 \\to 0.25$):\n"
+        "$$\n"
+        "f(0.25) \\approx 2 + 0.25 \\cdot (0 - 1) \\cdot 2 = 2 - 0.5 = 1.5.\n"
+        "$$\n"
+        "**Step 2** ($x = 0.25 \\to 0.5$):\n"
+        "$$\n"
+        "f(0.5) \\approx 1.5 + 0.25 \\cdot (0.25 - 1) \\cdot 1.5 = 1.5 - 0.25 \\cdot 0.75 \\cdot 1.5 = 1.5 - 0.28125 = 1.21875.\n"
+        "$$\n"
+        "Closest to **1.25**."
+    ),
+    'chapter_information': "Week 4 - Deepseek Generated"
+}
+
+question_3_monte_carlo_integration_setup = {
+    'question': (
+        "To estimate $I = \\int_{1}^{3} e^{x}\\,dx$ via Monte Carlo with $U_i \\sim \\text{Unif}(0,1)$, which is the correct estimator?"
+    ),
+    'options_list': [
+        "1. $\\frac{1}{n} \\sum_{i=1}^n e^{1 + 2U_i}$",
+        "2. $2 \\cdot \\frac{1}{n} \\sum_{i=1}^n e^{1 + 2U_i}$",
+        "3. $\\frac{1}{n} \\sum_{i=1}^n e^{U_i}$",
+        "4. $2 \\cdot \\frac{1}{n} \\sum_{i=1}^n e^{U_i}$"
+    ],
+    'correct_answer': "2. $2 \\cdot \\frac{1}{n} \\sum_{i=1}^n e^{1 + 2U_i}$",
+    'explanation': (
+        "For $\\int_{a}^{b} f(x)dx$, the Monte Carlo estimator is:\n"
+        "$$\n"
+        "(b-a) \\cdot \\frac{1}{n}\\sum f(a + (b-a)U_i).\n"
+        "$$\n"
+        "Here $a=1$, $b=3$, so $b-a=2$ and $a + (b-a)U_i = 1 + 2U_i$. The estimator becomes:\n"
+        "$$\n"
+        "I_n = 2 \\cdot \\frac{1}{n} \\sum_{i=1}^n e^{1 + 2U_i}.\n"
+        "$$"
+    ),
+    'chapter_information': "Week 4 - Deepseek Generated"
+}
+
+question_4_monte_carlo_integration_example = {
+    'question': (
+        "Using $I = \\int_{1}^{3} e^{x}\\,dx$, suppose $U_1=0.1$, $U_2=0.6$, $U_3=0.7$, $U_4=0.3$. Compute the MC estimate:\n"
+        "$$\n"
+        "\\widehat{I}_4 = 2 \\cdot \\frac{1}{4} \\sum_{i=1}^4 e^{1 + 2U_i}.\n"
+        "$$\n"
+        "Which value is closest?"
+    ),
+    'options_list': [
+        "1. 8.0",
+        "2. 9.5",
+        "3. 10.2",
+        "4. 11.3"
+    ],
+    'correct_answer': "3. 10.2",
+    'explanation': (
+        "Compute $x_i = 1 + 2U_i$ for $i=1,\\dots,4$:\n"
+        "$$\n"
+        "x_1 = 1.2, \\quad x_2 = 2.2, \\quad x_3 = 2.4, \\quad x_4 = 1.6.\n"
+        "$$\n"
+        "Evaluate $e^{x_i}$:\n"
+        "$$\n"
+        "e^{1.2} \\approx 3.32, \\quad e^{2.2} \\approx 9.03, \\quad e^{2.4} \\approx 11.02, \\quad e^{1.6} \\approx 4.95.\n"
+        "$$\n"
+        "Average:\n"
+        "$$\n"
+        "\\frac{3.32 + 9.03 + 11.02 + 4.95}{4} \\approx 7.08.\n"
+        "$$\n"
+        "Multiply by 2:\n"
+        "$$\n"
+        "2 \\cdot 7.08 \\approx 10.16 \\approx 10.2.\n"
+        "$$"
+    ),
+    'chapter_information': "Week 4 - Deepseek Generated"
+}
+
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
