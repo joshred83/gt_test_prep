@@ -10,6 +10,7 @@ from ISYE_6644_Simulation.probability_questions.module7 import MODULE_7_MPC
 from ISYE_6644_Simulation.probability_questions.module8 import MODULE_8_MPC
 
 from ISYE_6644_Simulation.simulation_questions.module1 import SIM_MODULE_1_MPC
+from ISYE_6644_Simulation.simulation_questions.midterm import SIM_MIDTERM_1_MPC
 from ISYE_6644_Simulation.simulation_questions.module2 import SIM_MODULE_2_MPC
 from ISYE_6644_Simulation.simulation_questions.module3 import SIM_MODULE_3_MPC
 from ISYE_6644_Simulation.simulation_questions.module4 import SIM_MODULE_4_MPC
@@ -32,7 +33,8 @@ questions_dictionary = {
     'SIM_3': SIM_MODULE_3_MPC, 'SIM_4': SIM_MODULE_4_MPC, 
     'SIM_5': SIM_MODULE_5_MPC, 'SIM_6': SIM_MODULE_6_MPC, 
     'SIM_7': SIM_MODULE_7_MPC, 'SIM_8': SIM_MODULE_8_MPC, 
-    'SIM_9': SIM_MODULE_9_MPC, 'SIM_10': SIM_MODULE_10_MPC
+    'SIM_9': SIM_MODULE_9_MPC, 'SIM_10': SIM_MODULE_10_MPC,
+    'MIDTERM_1':SIM_MIDTERM_1_MPC
 }
 
 # Updated Review Sets
@@ -53,7 +55,7 @@ REVIEW_SETS = {
     'SIM_7': ['SIM_7'], 'SIM_8': ['SIM_8'], 'SIM_9': ['SIM_9'], 'SIM_10': ['SIM_10'],
 
     # Simulation Exam-Level Reviews
-    "Midterm_1": ['SIM_1', 'SIM_2'], # 'SIM_3', 'SIM_4', 'SIM_5'],
+    "Midterm_1": ['MIDTERM_1','SIM_1', 'SIM_2'], # 'SIM_3', 'SIM_4', 'SIM_5'],
     "Midterm_2": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7'],
     "Final": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7', 'SIM_8', 'SIM_9', 'SIM_10']
 }
