@@ -421,7 +421,263 @@ question_4_transformation_non_monotonic = {
 }
 
 
+question_23_lcg = {
+    'question': (
+        "Consider the linear congruential generator (LCG):\n"
+        "$$ X_{i+1} = (5X_i + 3) \\mod 12. $$\n"
+        "(a) Using \( X_0 = 2 \), calculate the first pseudo‐random number \( U_1 \).\n"
+        "(b) Still with \( X_0 = 2 \), calculate the pseudo‐random number \( U_{25} \)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "Both \( U_1 \) and \( U_{25} \) are approximately 0.0833.",
+    'explanation': (
+        "1. Compute \( X_1 \):\n"
+        "   $$ X_1 = (5 \cdot 2 + 3) \\mod 12 = 13 \\mod 12 = 1. $$\n"
+        "   $$ U_1 = \\frac{X_1}{12} = \\frac{1}{12} \\approx 0.0833. $$\n"
+        "2. Identify the repeating cycle length by generating a few terms. The sequence cycles with period 4: "
+        "   $$ (X_0, X_1, X_2, X_3) = (2, 1, 8, 7). $$\n"
+        "3. Since \( 25 \\equiv 1 \\mod 4 \), it follows that \( X_{25} = X_1 = 1 \), so \( U_{25} = U_1 = 0.0833 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
 
+question_24_exponential_transformation = {
+    'question': (
+        "Let \( U \\sim \\text{Unif}(0,1) \). Determine the distribution of:\n"
+        "$$ Y = -4\\ln(U). $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( Y \\sim \\text{Exp}(1/4) \).",
+    'explanation': (
+        "1. Since \( U \\sim \\text{Unif}(0,1) \), we know that \( -\\ln(U) \\sim \\text{Exp}(1) \).\n"
+        "2. Scaling by 4 transforms this into \( Y = 4(-\\ln(U)) \sim \\text{Exp}(1/4) \), "
+        "with the pdf:\n"
+        "   $$ f_Y(y) = \\frac{1}{4} e^{-y/4}, \\quad y \\geq 0. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_25_gamma_sum = {
+    'question': (
+        "Suppose \( U_1, U_2 \\sim \\text{i.i.d. Unif}(0,1) \). What is the distribution of:\n"
+        "$$ Z = -2\\ln(U_1 U_2)? $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( Z \\sim \\text{Gamma}(2, 1/2) \).",
+    'explanation': (
+        "1. Since \( -\\ln(U) \\sim \\text{Exp}(1) \), it follows that \( -2\\ln(U) \\sim \\text{Exp}(1/2) \).\n"
+        "2. Since \( \\ln(U_1U_2) = \\ln(U_1) + \\ln(U_2) \), the sum follows a Gamma distribution:\n"
+        "   $$ Z \\sim \\text{Gamma}(2, 1/2), $$\n"
+        "   with pdf:\n"
+        "   $$ f_Z(z) = \\frac{1}{4} z e^{-z/2}, \\quad z \\geq 0. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_26_box_muller = {
+    'question': (
+        "Let \( U_1, U_2 \\sim \\text{i.i.d. Unif}(0,1) \). What is the distribution of:\n"
+        "$$ W = 3 + \\sqrt{-2\\ln(U_1)} \\sin(2\\pi U_2)? $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( W \\sim \\mathcal{N}(3,1) \).",
+    'explanation': (
+        "1. By the Box–Muller transform, \( \\sqrt{-2\\ln(U_1)} \\sin(2\\pi U_2) \sim \\mathcal{N}(0,1) \).\n"
+        "2. Adding 3 shifts the mean, so the final distribution is:\n"
+        "   $$ W \\sim \\mathcal{N}(3,1). $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_27_monte_carlo_integral = {
+    'question': (
+        "Estimate the integral:\n"
+        "$$ I = \\int_{0}^{1} (e^x + x^2)dx $$\n"
+        "using Monte Carlo integration with 5 samples drawn from \( \\text{Unif}(0,1) \):\n"
+        "   \( \\{0.25, 0.50, 0.75, 0.10, 0.90\\} \).\n"
+        "Use the estimator:\n"
+        "$$ I_5 = \\frac{1}{5} \\sum_{i=1}^{5} (e^{U_i} + U_i^2). $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "Monte Carlo estimate \( I_5 \\approx 2.062 \).",
+    'explanation': (
+        "1. Compute function values at each \( U_i \):\n"
+        "   $$ e^{0.25} + 0.25^2 \\approx 1.3465, $$\n"
+        "   $$ e^{0.50} + 0.50^2 \\approx 1.8987, $$\n"
+        "   $$ e^{0.75} + 0.75^2 \\approx 2.6795, $$\n"
+        "   $$ e^{0.10} + 0.10^2 \\approx 1.1152, $$\n"
+        "   $$ e^{0.90} + 0.90^2 \\approx 3.2696. $$\n"
+        "2. Compute:\n"
+        "   $$ I_5 = \\frac{1}{5} (1.3465 + 1.8987 + 2.6795 + 1.1152 + 3.2696) \\approx 2.062. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_28_euler_method = {
+    'question': (
+        "Consider the differential equation:\n"
+        "$$ f'(x) = (4 - x) f(x), \\quad f(0) = 2. $$\n"
+        "Use Euler’s method with step \( h=0.05 \) to approximate \( f(0.1) \)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( f(0.1) \\approx 2.874 \).",
+    'explanation': (
+        "1. Euler's method formula:\n"
+        "   $$ f(x+h) \\approx f(x) + h f'(x). $$\n"
+        "2. Compute:\n"
+        "   - \( f(0.05) \\approx 2.4 \)\n"
+        "   - \( f(0.1) \\approx 2.874 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_29_queue_fifo = {
+    'question': (
+        "A coffee shop has customers arriving at times \( 5, 8, 12, 14 \) minutes, ordering \( 2, 1, 3, 1 \) coffees respectively.\n"
+        "Each coffee takes **2 minutes** to prepare, and every minute a customer waits costs **\$0.30**.\n"
+        "Each coffee sells for **\$3**.\n\n"
+        "(a) When does the first customer leave?\n"
+        "(b) What is the average number of customers in the system during the first 15 minutes?\n"
+        "(c) Compute the net profit (total revenue minus waiting cost)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "(a) First customer leaves at \( t=9 \). (b) Average number of customers is \( 0.73 \). "
+                      "(c) Net profit is **\$19.50**.",
+    'explanation': (
+        "1. Compute customer departures using FIFO service.\n"
+        "2. Track system size over time.\n"
+        "3. Compute revenue as \( 21 \), waiting cost as \( 1.50 \), so net profit is \( 19.50 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_16_lcg = {
+    'question': (
+        "Consider the linear congruential generator:\n"
+        "$$ X_{i+1} = (5X_i + 3) \\mod 10. $$\n"
+        "1. Using \(X_0 = 2\), compute the first pseudo‐random number \(U_1\).\n"
+        "2. Using \(X_0 = 2\), compute \(U_{501}\). (Hint: Look for a repeating cycle.)"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "Both \( U_1 \) and \( U_{501} \) are 0.3.",
+    'explanation': (
+        "1. Compute \(X_1\):\n"
+        "   $$ X_1 = (5 \\cdot 2 + 3) \\mod 10 = 13 \\mod 10 = 3. $$\n"
+        "   $$ U_1 = \\frac{X_1}{10} = 0.3. $$\n"
+        "2. Since the sequence repeats, \( X_{501} = X_1 \) (as \(501 \\equiv 1 \\mod p\)), giving:\n"
+        "   $$ U_{501} = U_1 = 0.3. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_17_exp_transformation = {
+    'question': (
+        "Let \( U \\sim \\text{Unif}(0,1) \). Consider the transformation:\n"
+        "$$ Y = -5\\ln(U). $$\n"
+        "What is the distribution (name and parameter) of \( Y \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( Y \\sim \\text{Exp}(1/5) \).",
+    'explanation': (
+        "1. Since \( -\\ln(U) \\sim \\text{Exp}(1) \), multiplying by 5 scales the rate by \( 1/5 \), giving:\n"
+        "   $$ Y \\sim \\text{Exp}(1/5). $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_18_hypoexp_sum = {
+    'question': (
+        "Let \( U_1, U_2 \\sim \\text{i.i.d. Unif}(0,1) \). Define:\n"
+        "$$ Z = -5\\ln(U_1) + (-2\\ln(U_2)). $$\n"
+        "What is the distribution of \( Z \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "Hypoexponential with rates \( 1/5 \) and \( 1/2 \).",
+    'explanation': (
+        "1. \( -5\\ln(U_1) \\sim \\text{Exp}(1/5) \) and \( -2\\ln(U_2) \\sim \\text{Exp}(1/2) \).\n"
+        "2. The sum of two independent exponentials with different rates follows a hypoexponential distribution."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_19_box_muller = {
+    'question': (
+        "Let \( U_1, U_2 \\sim \\text{i.i.d. Unif}(0,1) \). Define:\n"
+        "$$ W = 1 + \\sqrt{-2\\ln(U_1)}\\sin(2\\pi U_2). $$\n"
+        "What is the distribution of \( W \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( W \\sim \\mathcal{N}(1,1) \).",
+    'explanation': (
+        "1. By the Box–Muller transform, \( \\sqrt{-2\\ln(U_1)}\\sin(2\\pi U_2) \\sim \\mathcal{N}(0,1) \).\n"
+        "2. Shifting by 1 gives \( W \\sim \\mathcal{N}(1,1) \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_20_monte_carlo = {
+    'question': (
+        "Estimate the integral:\n"
+        "$$ I = \\int_{0}^{1} e^{-x^2}dx $$\n"
+        "using Monte Carlo integration with 4 uniform samples \( \\{0.12, 0.44, 0.58, 0.93\\} \)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( \\hat{I}_4 \\approx 0.7366 \).",
+    'explanation': (
+        "1. Compute \( e^{-U_i^2} \) for each \( U_i \):\n"
+        "   - \( e^{-0.12^2} \\approx 0.9857 \),\n"
+        "   - \( e^{-0.44^2} \\approx 0.8241 \),\n"
+        "   - \( e^{-0.58^2} \\approx 0.7147 \),\n"
+        "   - \( e^{-0.93^2} \\approx 0.4218 \).\n"
+        "2. Compute Monte Carlo estimator:\n"
+        "   $$ \\hat{I}_4 = \\frac{1}{4} (0.9857 + 0.8241 + 0.7147 + 0.4218) \\approx 0.7366. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_21_euler_method = {
+    'question': (
+        "Use Euler’s method with step \( h=0.02 \) to approximate \( f(0.04) \) for:\n"
+        "$$ f'(x) = (5 - x) f(x), \\quad f(0) = 2. $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( f(0.04) \\approx 2.4191 \).",
+    'explanation': (
+        "1. Euler’s update formula:\n"
+        "   $$ f(x+h) \\approx f(x) + h f'(x). $$\n"
+        "2. Compute step-by-step:\n"
+        "   - \( f(0.02) \\approx 2.2 \),\n"
+        "   - \( f(0.04) \\approx 2.4191 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_22_queue_lifo = {
+    'question': (
+        "A shop has 4 customers arriving at times \( 10, 13, 15, 19 \) minutes.\n"
+        "They are served **LIFO** (last-in, first-out) and request:\n"
+        "   - 4, 1, 5, 2 items (each takes **2 minutes** to prepare).\n"
+        "Each item sells for **\$3** and each minute waiting costs **\$0.40**.\n"
+        "1. When does the **first** customer (arrived at \( t=10 \)) leave?\n"
+        "2. What is the **average number of customers** in the system over [0,25]?\n"
+        "3. Compute the **net profit** (total revenue minus waiting cost)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': (
+        "1. First customer leaves around \( t=27 \).\n"
+        "2. Average number in system is about \( 1.2 \).\n"
+        "3. Net profit is **approximately**:\n"
+        "   $$ \\text{Revenue} = 12 \\times 3 = 36, $$\n"
+        "   $$ \\text{Waiting cost} = 0.40 \\times \\text{total wait time}, $$\n"
+        "   $$ \\text{Net Profit} \\approx 36 - \\text{waiting penalty}. $$"
+    ),
+    'explanation': (
+        "1. Track LIFO service, ensuring new arrivals jump the queue.\n"
+        "2. Count the number in system at each minute, compute average.\n"
+        "3. Compute net profit using revenue and waiting cost formulas."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
 
 
 
