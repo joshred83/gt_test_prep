@@ -679,6 +679,70 @@ question_22_queue_lifo = {
     'chapter_information': "DeepSeek Generated"
 }
 
+question_A_geometric_distribution = {
+    'question': (
+        "Suppose the Los Angeles Lakers play independent games where the probability of a win in each game is 0.7. Let:\n"
+        "$$ Y = \\text{the number of games until the Lakers achieve their first win}. $$\n"
+        "Find the smallest positive integer \( y \) such that:\n"
+        "$$ P(Y \\leq y) \\geq 0.95. $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The smallest \( y \) satisfying \( P(Y \\leq y) \\geq 0.95 \) is \( 3 \).",
+    'explanation': (
+        "1. Model \( Y \) as a geometric random variable: \( Y \\sim \\text{Geom}(0.7) \).\n"
+        "2. The cumulative distribution function (CDF) is:\n"
+        "   $$ P(Y \\leq y) = 1 - (0.3)^y. $$\n"
+        "3. Solve for \( y \) in:\n"
+        "   $$ 1 - (0.3)^y \\geq 0.95. $$\n"
+        "   $$ (0.3)^y \\leq 0.05. $$\n"
+        "4. Taking the natural logarithm:\n"
+        "   $$ y \\geq \\frac{\\ln(0.05)}{\\ln(0.3)} \\approx 2.487. $$\n"
+        "5. The smallest integer satisfying this is \( y = 3 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_B_clt_sample_mean = {
+    'question': (
+        "Suppose \( X_1, X_2, \\dots, X_n \) are independent and identically distributed (i.i.d.) random variables "
+        "with finite mean \( \\mu \) and finite variance \( \\sigma^2 \). Which theorem guarantees that the sample mean:\n"
+        "$$ \\bar{X} = \\frac{1}{n} \\sum_{i=1}^{n} X_i $$\n"
+        "is approximately normally distributed for large \( n \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The Central Limit Theorem (CLT).",
+    'explanation': (
+        "The Central Limit Theorem (CLT) states that if \( X_i \) are i.i.d. with finite mean \( \\mu \) and variance \( \\sigma^2 \), "
+        "then for large \( n \), the standardized sample mean:\n"
+        "   $$ \\frac{\\bar{X} - \\mu}{\\sigma / \\sqrt{n}} \\to \\mathcal{N}(0,1) $$\n"
+        "in distribution, meaning the sample mean is approximately normal for large \( n \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_C_clt_sum_binary = {
+    'question': (
+        "Suppose \( X_1, X_2, \\dots, X_{100} \) are independent random variables taking values \( 2 \) and \( -2 \) "
+        "with equal probability 0.5. Define:\n"
+        "$$ S = \\sum_{i=1}^{100} X_i. $$\n"
+        "Using the Central Limit Theorem, find an approximate value for:\n"
+        "$$ P(S \\geq 6). $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "\( P(S \\geq 6) \\approx 0.3821 \).",
+    'explanation': (
+        "1. Compute the mean and variance of each \( X_i \):\n"
+        "   - Mean: \( E[X_i] = 0 \).\n"
+        "   - Variance: \( \\text{Var}(X_i) = 4 \).\n"
+        "2. The sum \( S \) follows:\n"
+        "   $$ S \\sim \\mathcal{N}(0, 400). $$\n"
+        "3. Standardize \( S \) using the normal approximation:\n"
+        "   $$ P(S \\geq 6) = P \\left( Z \\geq \\frac{6 - 0}{20} \\right) = P(Z \\geq 0.3). $$\n"
+        "4. Using a standard normal table:\n"
+        "   $$ P(Z \\geq 0.3) = 1 - \\Phi(0.3) \\approx 1 - 0.6179 = 0.3821. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
 
 
 KC_MPC_QUESTIONS = []
