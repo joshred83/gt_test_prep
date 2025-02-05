@@ -741,6 +741,8 @@ question_C_clt_sum_binary = {
     ),
     'chapter_information': "DeepSeek Generated"
 }
+
+
 question_1_cat_laser_pointer = {
     'question': (
         "Whiskers the cat is on a mission. Every time she pounces on a laser pointer’s red dot, "
@@ -768,7 +770,7 @@ question_1_cat_laser_pointer = {
 question_2_bieber_clt = {
     'question': (
         "Justin Bieber releases a new album, where each song gets an average of 1,200,000 streams with variance "
-        "\( 9 \\times 10^{10} \) streams². Suppose he releases 64 songs. By the Central Limit Theorem, approximate the "
+        "$ 9 \\times 10^{10} $ streams². Suppose he releases 64 songs. By the Central Limit Theorem, approximate the "
         "probability that his total album streams exceed 80,000,000."
     ),
     'options_list': ["Solution not required"],
@@ -817,9 +819,9 @@ question_4_cat_transformation = {
         "1. Express the transformation: \( x = e^{-y} \).\n"
         "2. Compute the Jacobian determinant: \( \\frac{dx}{dy} = -e^{-y}, \\quad \\left| \\frac{dx}{dy} \\right| = e^{-y}. \)\n"
         "3. Apply the change-of-variable formula:\n"
-        "   $$ f_Y(y) = f_X(x) \\left| \\frac{dx}{dy} \\right|, \\quad x = e^{-y}. $$\n"
+        "$$ f_Y(y) = f_X(x) \\left| \\frac{dx}{dy} \\right|, \\quad x = e^{-y}. $$\n"
         "4. Compute:\n"
-        "   $$ f_Y(y) = 3(e^{-y})^2 \\cdot e^{-y} = 3e^{-3y}, \\quad y \\geq 0. $$"
+        "$$ f_Y(y) = 3(e^{-y})^2 \\cdot e^{-y} = 3e^{-3y}, \\quad y \\geq 0. $$"
     ),
     'chapter_information': "DeepSeek Generated"
 }
@@ -837,16 +839,331 @@ question_5_math_safety_expectation = {
     'correct_answer': "The expected street safety score is 2.",
     'explanation': (
         "1. Express expectation in terms of \( X \):\n"
-        "   $$ E[Y] = 3E\\left[ \\frac{1}{X} \\right] - 2. $$\n"
+        "$$ E[Y] = 3E\\left[ \\frac{1}{X} \\right] - 2. $$\n"
         "2. Compute \( E\\left[ \\frac{1}{X} \\right] \):\n"
-        "   $$ E\\left[ \\frac{1}{X} \\right] = \\int_0^1 \\frac{1}{x} \\cdot 4x^3 dx. $$\n"
+        "$$ E\\left[ \\frac{1}{X} \\right] = \\int_0^1 \\frac{1}{x} \\cdot 4x^3 dx. $$\n"
         "3. Solve the integral:\n"
-        "   $$ \\int_0^1 x^2 dx = \\frac{1}{3}, \\quad E\\left[ \\frac{1}{X} \\right] = 4 \\times \\frac{1}{3} = \\frac{4}{3}. $$\n"
+        "$$ \\int_0^1 x^2 dx = \\frac{1}{3}, \\quad E\\left[ \\frac{1}{X} \\right] = 4 \\times \\frac{1}{3} = \\frac{4}{3}. $$\n"
         "4. Compute \( E[Y] \):\n"
-        "   $$ E[Y] = 3 \\times \\frac{4}{3} - 2 = 2. $$"
+        "$$ E[Y] = 3 \\times \\frac{4}{3} - 2 = 2. $$"
     ),
     'chapter_information': "DeepSeek Generated"
 }
+
+question_1_sample_mean_distribution = {
+    'question': (
+        "Suppose a group of 100 Justin Bieber fans are randomly surveyed, and they report how much they hate his worst song 'Baby' "
+        "on a scale from 1 (most hated) to 10 (most loved). The average rating is 3 with a variance of 4. "
+        "What is the distribution of the sample mean of these ratings? What is the mean and standard deviation of the sample mean?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The sample mean follows a normal distribution with mean \( \mu_{\bar{X}} = 3 \) and standard deviation \( \sigma_{\bar{X}} = 0.2 \).",
+    'explanation': (
+        "The sample mean follows a normal distribution because the population (the ratings) is considered to be normally distributed. "
+        "The mean of the sample mean is the same as the population mean (\( \mu = 3 \)). "
+        "The standard deviation of the sample mean is the population standard deviation divided by the square root of the sample size. "
+        "For the sample of size 100, we get:\n"
+        "- \( \mu_{\bar{X}} = \mu = 3 \)\n"
+        "- \( \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{2}{\sqrt{100}} = 0.2 \)"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_2_variance_of_sum = {
+    'question': (
+        "A group of 5 University of Georgia students, each with an intelligence score (measured on a 1–10 scale), are randomly selected. "
+        "The students' scores are independent with a mean of 6 and a variance of 4. What is the variance of the sum of their intelligence scores?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The variance of the sum of their intelligence scores is 20.",
+    'explanation': (
+        "The variance of the sum of independent random variables is the sum of their individual variances. So:\n"
+        "- \( \text{Var}(S) = \text{Var}(X_1) + \text{Var}(X_2) + \dots + \text{Var}(X_5) = 5 \times 4 = 20 \)"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_3_central_limit_theorem = {
+    'question': (
+        "A group of 64 kids in a neighborhood study math to stay off the streets. The average score on their math test is 80, with a standard deviation of 12. "
+        "According to the Central Limit Theorem, what is the probability that the average score of a random sample of 64 kids will be greater than 85?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The probability is approximately 0.04%.",
+    'explanation': (
+        "The sample mean will follow a normal distribution due to the Central Limit Theorem. The mean of the sample mean is \( \mu = 80 \), "
+        "and the standard deviation of the sample mean is:\n"
+        "- \( \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{12}{\sqrt{64}} = 1.5 \).\n"
+        "To find \( P(\bar{X} > 85) \), we use the Z-score formula:\n"
+        "- \( Z = \frac{85 - 80}{1.5} = 3.33 \).\n"
+        "Using the standard normal table, \( P(Z > 3.33) \approx 0.0004 \), which is about 0.04%."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_4_scaled_variable = {
+    'question': (
+        "Suppose the number of times people listened to Justin Bieber's 'Baby' on repeat in one week follows an exponential distribution with rate \( \lambda = 2 \). "
+        "Let \( Y = 5X + 1 \), where \( X \) is the number of listens. What are the mean and standard deviation of \( Y \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The mean is 3.5 and the standard deviation is 2.5.",
+    'explanation': (
+        "For a scaled and shifted variable \( Y = aX + b \), the mean and standard deviation are:\n"
+        "- \( \mu_Y = a\mu_X + b \)\n"
+        "- \( \sigma_Y = |a|\sigma_X \)\n"
+        "Given \( X \sim \text{Exp}(2) \), we know:\n"
+        "- \( \mu_X = \frac{1}{\lambda} = 0.5 \)\n"
+        "- \( \sigma_X = \frac{1}{\lambda} = 0.5 \).\n"
+        "So, for \( Y = 5X + 1 \):\n"
+        "- \( \mu_Y = 5(0.5) + 1 = 3.5 \)\n"
+        "- \( \sigma_Y = |5| \times 0.5 = 2.5 \)"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_5_normal_approximation = {
+    'question': (
+        "A group of 200 students from the University of Georgia each randomly spend between 0 and 10 hours per week watching Justin Bieber videos. "
+        "The total sum of hours spent by all the students is being tracked. What is the probability that the total sum is less than 1800 hours?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The probability is essentially 1 (very close to 1).",
+    'explanation': (
+        "The sum of the random variables \( S = \sum X_i \) can be approximated by a normal distribution using the Central Limit Theorem. "
+        "The mean of each \( X_i \) is \( \mu = \frac{10 + 0}{2} = 5 \), and the variance is \( \sigma^2 = \frac{(10 - 0)^2}{12} \approx 8.33 \).\n"
+        "The mean of the sum is \( \mu_S = 200 \times 5 = 1000 \). The variance of the sum is \( \sigma_S^2 = 200 \times 8.33 \approx 1666.67 \), so the standard deviation is \( \sigma_S \approx 40.82 \).\n"
+        "Now, we find \( P(S < 1800) \) using the Z-score formula:\n"
+        "- \( Z = \frac{1800 - 1000}{40.82} \approx 19.64 \).\n"
+        "Since \( Z = 19.64 \) is very large, the probability is essentially 1."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_6_variance_sample_mean_sum = {
+    'question': (
+        "Suppose 25 kids from the neighborhood, each studying math, score on average 75 on their math test, with a variance of 16. "
+        "Calculate the variance of the sum of their scores and the variance of the sample mean."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The variance of the sum is 400, and the variance of the sample mean is 0.64.",
+    'explanation': (
+        "For the sum of independent random variables:\n"
+        "- \( \text{Var}(S) = \text{Var}(X_1) + \dots + \text{Var}(X_{25}) = 25 \times 16 = 400 \)\n"
+        "For the sample mean:\n"
+        "- \( \text{Var}(\bar{X}) = \frac{\text{Var}(X)}{n} = \frac{16}{25} = 0.64 \)"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_1_sample_mean_distribution = {
+    'question': (
+        "Suppose you have a random sample of 50 observations, \( X_1, X_2, \dots, X_{50} \), from a population that follows a normal distribution with mean \( \mu = 20 \) and variance \( \sigma^2 = 16 \).\n\n"
+        "What is the distribution of the sample mean \( \bar{X} \)? What is the mean and standard deviation of \( \bar{X} \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': (
+        "The sample mean \( \bar{X} \) follows a normal distribution with mean \( \mu_{\bar{X}} = \mu = 20 \) and standard deviation \( \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{4}{\sqrt{50}} \approx 0.566 \)."
+    ),
+    'explanation': (
+        "The sample mean follows a normal distribution because the population is normally distributed.\n"
+        "The mean of the sample mean is the same as the population mean \( \mu = 20 \).\n"
+        "The variance of the sample mean is \( \frac{\sigma^2}{n} = \frac{16}{50} = 0.32 \), and the standard deviation is \( \sqrt{0.32} \approx 0.566 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_2_variance_of_sum = {
+    'question': (
+        "Let \( X_1, X_2, \dots, X_5 \) be i.i.d. random variables with mean \( \mu = 10 \) and variance \( \sigma^2 = 25 \). What is the variance of the sum \( S = X_1 + X_2 + X_3 + X_4 + X_5 \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The variance of the sum \( S \) is 125.",
+    'explanation': (
+        "The variance of a sum of independent random variables is the sum of their individual variances.\n"
+        "For the sum \( S = X_1 + X_2 + X_3 + X_4 + X_5 \):\n"
+        "$$ \text{Var}(S) = \text{Var}(X_1) + \text{Var}(X_2) + \dots + \text{Var}(X_5) = 5 \times 25 = 125. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_3_central_limit_theorem = {
+    'question': (
+        "Suppose you have a population where the random variable \( X \) has a mean \( \mu = 50 \) and a standard deviation \( \sigma = 10 \). "
+        "You take a random sample of size \( n = 64 \). Using the Central Limit Theorem, what is the probability that the sample mean \( \bar{X} \) is greater than 52?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The probability is approximately 0.0548.",
+    'explanation': (
+        "According to the Central Limit Theorem, the sample mean \( \bar{X} \) will be approximately normally distributed.\n"
+        "The mean of \( \bar{X} \) is \( \mu_{\bar{X}} = \mu = 50 \), and the standard deviation of \( \bar{X} \) is:\n"
+        "$$ \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} = \frac{10}{\sqrt{64}} = 1.25. $$\n"
+        "Now, we want to find \( P(\bar{X} > 52) \):\n"
+        "$$ Z = \frac{52 - 50}{1.25} = 1.6. $$\n"
+        "Using the standard normal table, \( P(Z > 1.6) \approx 0.0548 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_4_scaled_variable = {
+    'question': (
+        "Suppose \( X \sim \text{Exp}(\lambda = 1) \), where \( X \) follows an exponential distribution with rate \( \lambda = 1 \). "
+        "Let \( Y = 3X + 2 \). What are the mean and standard deviation of \( Y \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The mean is 5 and the standard deviation is 3.",
+    'explanation': (
+        "For a scaled and shifted variable \( Y = aX + b \), the mean and standard deviation are given by:\n"
+        "$$ \mu_Y = a\mu_X + b, \quad \sigma_Y = |a|\sigma_X. $$\n"
+        "For \( X \sim \text{Exp}(1) \), we know:\n"
+        "- \( \mu_X = \frac{1}{\lambda} = 1 \),\n"
+        "- \( \sigma_X = \frac{1}{\lambda} = 1 \).\n"
+        "So for \( Y = 3X + 2 \):\n"
+        "- \( \mu_Y = 3(1) + 2 = 5 \),\n"
+        "- \( \sigma_Y = |3| \times 1 = 3 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_5_normal_approximation = {
+    'question': (
+        "Suppose \( X_1, X_2, \dots, X_{200} \) are i.i.d. random variables from a uniform distribution \( \text{Unif}(0,10) \). "
+        "What is the probability that the sum \( \sum_{i=1}^{200} X_i \) is less than 1800?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The probability is essentially 1 (very close to 1).",
+    'explanation': (
+        "The sum of the random variables \( S = \sum_{i=1}^{200} X_i \) can be approximated by a normal distribution using the Central Limit Theorem.\n"
+        "For \( X_i \sim \text{Unif}(0,10) \), we know:\n"
+        "- \( \mu_X = \frac{0 + 10}{2} = 5 \),\n"
+        "- \( \sigma_X^2 = \frac{(10 - 0)^2}{12} = \frac{100}{12} \approx 8.33 \).\n"
+        "Now for the sum \( S = \sum_{i=1}^{200} X_i \):\n"
+        "- \( \mu_S = 200 \times 5 = 1000 \),\n"
+        "- \( \sigma_S^2 = 200 \times 8.33 \approx 1666.67 \), so \( \sigma_S \approx 40.82 \).\n"
+        "To find \( P(S < 1800) \), we use the Z-score formula:\n"
+        "$$ Z = \frac{1800 - 1000}{40.82} \approx 19.64. $$\n"
+        "Since \( Z = 19.64 \) is very large, the probability is essentially 1."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_6_variance_sample_mean_sum = {
+    'question': (
+        "Suppose \( X_1, X_2, \dots, X_{25} \) are i.i.d. random variables with variance \( \sigma^2 = 4 \). "
+        "Calculate the variance of the sum \( S = \sum_{i=1}^{25} X_i \) and the variance of the sample mean \( \bar{X} \)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The variance of the sum is 100, and the variance of the sample mean is 0.16.",
+    'explanation': (
+        "The variance of the sum of independent random variables is the sum of their individual variances.\n"
+        "For the sum \( S = \sum_{i=1}^{25} X_i \):\n"
+        "$$ \text{Var}(S) = 25 \times 4 = 100. $$\n"
+        "The variance of the sample mean is:\n"
+        "$$ \text{Var}(\bar{X}) = \frac{\text{Var}(X)}{n} = \frac{4}{25} = 0.16. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_1_tiktok_dance_variance = {
+    'question': (
+        "Suppose 100 UGA students attempt Justin Bieber's 'Baby' TikTok dance. Their coordination scores follow a normal distribution with mean \( \mu = 15 \) and variance \( \sigma^2 = 25 \). What is the distribution, mean, and standard deviation of the average score?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': (
+        "Distribution: Normal\n"
+        "Mean = 15\n"
+        "Standard Deviation = \( \sqrt{\frac{25}{100}} = 0.5 \)"
+    ),
+    'explanation': (
+        "The sample mean follows a normal distribution. The mean of the sample mean is the same as the population mean (\( \mu = 15 \)), "
+        "while the standard deviation is scaled by the sample size \( \sqrt{\frac{\sigma^2}{n}} = \sqrt{\frac{25}{100}} = 0.5 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_2_campus_prank_sum_variance = {
+    'question': (
+        "Let \( X_1, X_2, \dots, X_7 \) represent daily pranks by UGA students with mean \( \mu = 5 \) pranks/day and variance \( \sigma^2 = 9 \). What is the variance of the total number of pranks over a week?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "Variance of weekly pranks = \( 7 \times 9 = 63 \).",
+    'explanation': (
+        "The variance of the sum of independent random variables is the sum of their individual variances. "
+        "Thus, for the weekly pranks: \( \text{Var}(S) = 7 \times 9 = 63 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_3_math_study_escape_clt = {
+    'question': (
+        "Kids study math 8 hours/day to avoid trouble (with a standard deviation of \( \sigma = 2.5 \) hours). If 49 kids are sampled, what is the probability that the average study time is greater than 8.5 hours?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': (
+        "New standard deviation = \( \frac{2.5}{\sqrt{49}} \approx 0.357 \)\n"
+        "Z = \( \frac{8.5 - 8}{0.357} \approx 1.4 \)\n"
+        "Probability: \( P(Z > 1.4) \approx 0.0808 \)"
+    ),
+    'explanation': (
+        "By the Central Limit Theorem, the sample mean is approximately normally distributed. "
+        "The standard deviation of the sample mean is \( \frac{\sigma}{\sqrt{n}} = \frac{2.5}{\sqrt{49}} \approx 0.357 \). "
+        "We then calculate the Z-score and use the standard normal table to find \( P(Z > 1.4) \approx 0.0808 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_4_bieber_video_time_scaling = {
+    'question': (
+        "Time spent watching Justin Bieber's cringe compilation videos follows an exponential distribution with rate \( \lambda = 0.25 \). Let \( Y = 3X + 5 \), where \( X \) is the number of hours. What are the mean and standard deviation of \( Y \)?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': (
+        "Mean of \( Y \): \( \mu_Y = 3 \times 4 + 5 = 17 \)\n"
+        "Standard deviation of \( Y \): \( \sigma_Y = 3 \times 1 = 12 \)"
+    ),
+    'explanation': (
+        "For a scaled and shifted random variable \( Y = aX + b \), the mean and standard deviation are given by:\n"
+        "$$ \mu_Y = a\mu_X + b, \quad \sigma_Y = |a|\sigma_X. $$\n"
+        "For \( X \sim \text{Exp}(0.25) \), \( \mu_X = 4 \) and \( \sigma_X = 4 \), so for \( Y = 3X + 5 \), we get \( \mu_Y = 17 \) and \( \sigma_Y = 12 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_5_math_app_marathon_probability = {
+    'question': (
+        "150 kids use a math app, where each kid's score follows a uniform distribution \( \text{Unif}(0, 20) \). What is the probability that the total score of all 150 kids is less than 2500?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The probability is approximately 1.",
+    'explanation': (
+        "The sum of the scores can be approximated by a normal distribution using the Central Limit Theorem. "
+        "For \( X_i \sim \text{Unif}(0, 20) \), the mean is \( \mu_X = 10 \) and the variance is \( \sigma_X^2 = \frac{400}{12} \approx 33.33 \). "
+        "The mean of the total score is \( \mu_{\text{total}} = 150 \times 10 = 1500 \), and the standard deviation is \( \sigma_{\text{total}} \approx 70.71 \). "
+        "We calculate the Z-score for \( S < 2500 \):\n"
+        "$$ Z = \frac{2500 - 1500}{70.71} \approx 14.14 $$\n"
+        "Since the Z-score is extremely large, the probability is essentially 1."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_6_concert_attendance_variability = {
+    'question': (
+        "Let \( X_1, X_2, \dots, X_{30} \) represent the number of Bieber concerts attended by 30 students, with \( \sigma^2 = 16 \). What is the variance of the total number of concerts attended and the variance of the sample mean?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': (
+        "Variance of sum: \( \text{Var}(S) = 30 \times 16 = 480 \)\n"
+        "Variance of sample mean: \( \text{Var}(\bar{X}) = \frac{16}{30} \approx 0.533 \)"
+    ),
+    'explanation': (
+        "The variance of the sum of independent random variables is the sum of their individual variances. "
+        "Thus, for the sum \( S = X_1 + X_2 + \dots + X_{30} \), we have \( \text{Var}(S) = 30 \times 16 = 480 \). "
+        "For the sample mean, the variance is \( \text{Var}(\bar{X}) = \frac{\sigma^2}{n} = \frac{16}{30} \approx 0.533 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+
 
 
 KC_MPC_QUESTIONS = []
