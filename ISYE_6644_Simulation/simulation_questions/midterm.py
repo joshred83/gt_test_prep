@@ -743,6 +743,112 @@ question_C_clt_sum_binary = {
     ),
     'chapter_information': "DeepSeek Generated"
 }
+question_1_cat_laser_pointer = {
+    'question': (
+        "Whiskers the cat is on a mission. Every time she pounces on a laser pointer’s red dot, "
+        "she succeeds with probability 0.65 (and otherwise misses). Let:\n"
+        "$$ X = \\text{the number of pounces until Whiskers catches the red dot.} $$\n"
+        "Find the smallest number \( x \) such that:\n"
+        "$$ P(X \\leq x) \\geq 0.90. $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The smallest \( x \) satisfying \( P(X \\leq x) \\geq 0.90 \) is \( 3 \).",
+    'explanation': (
+        "1. Model \( X \) as a geometric random variable: \( X \\sim \\operatorname{Geom}(0.65) \).\n"
+        "2. The cumulative distribution function (CDF) is:\n"
+        "   $$ P(X \\leq x) = 1 - (0.35)^x. $$\n"
+        "3. Solve for \( x \) in:\n"
+        "   $$ 1 - (0.35)^x \\geq 0.90. $$\n"
+        "   $$ (0.35)^x \\leq 0.10. $$\n"
+        "4. Taking natural logarithms:\n"
+        "   $$ x \\geq \\frac{\\ln(0.10)}{\\ln(0.35)} \\approx 2.193. $$\n"
+        "5. The smallest integer satisfying this is \( x=3 \)."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_2_bieber_clt = {
+    'question': (
+        "Justin Bieber releases a new album, where each song gets an average of 1,200,000 streams with variance "
+        "\( 9 \\times 10^{10} \) streams². Suppose he releases 64 songs. By the Central Limit Theorem, approximate the "
+        "probability that his total album streams exceed 80,000,000."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The probability of exceeding 80,000,000 streams is approximately 9.2%.",
+    'explanation': (
+        "1. Compute mean and variance of total streams:\n"
+        "   - \( E[S] = 64 \\times 1,200,000 = 76,800,000. \)\n"
+        "   - \( \\operatorname{Var}(S) = 64 \\times 9 \\times 10^{10} = 5.76 \\times 10^{12}. \)\n"
+        "   - Standard deviation: \( \\sigma_S = \\sqrt{5.76 \\times 10^{12}} = 2.4 \\times 10^6. \)\n"
+        "2. Standardize and compute:\n"
+        "   $$ Z = \\frac{80,000,000 - 76,800,000}{2,400,000} \\approx 1.33. $$\n"
+        "3. From normal tables, \( P(Z > 1.33) \\approx 0.0918. \)"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_3_cornell_poisson = {
+    'question': (
+        "At Cornell University, the Math Department runs problem‐solving workshops to keep kids off the street. "
+        "Kids arrive following a Poisson process with rate \( \\lambda = 2 \) per hour. "
+        "What is the probability that at least 5 kids show up in the next 3 hours?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The probability that at least 5 kids arrive is approximately 71.5%.",
+    'explanation': (
+        "1. The number of arrivals in 3 hours follows a Poisson distribution with parameter:\n"
+        "   $$ \\lambda t = 2 \\times 3 = 6, \\quad N \\sim \\operatorname{Poisson}(6). $$\n"
+        "2. Compute \( P(N \\geq 5) = 1 - P(N \\leq 4). \)\n"
+        "3. Using the Poisson mass function, compute \( P(N=0), P(N=1), ..., P(N=4) \), sum them, and subtract from 1.\n"
+        "4. The result gives \( P(N \\geq 5) \\approx 0.715. \)"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_4_cat_transformation = {
+    'question': (
+        "A curious cat’s curiosity level \( X \) follows the density:\n"
+        "$$ f_X(x) = 3x^2, \\quad 0 < x < 1. $$\n"
+        "A 'mystery measure' of curiosity is defined as:\n"
+        "$$ Y = -\\ln(x). $$\n"
+        "Find the pdf of \( Y \)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The pdf of \( Y \) is \( f_Y(y) = 3e^{-3y}, \\quad y \\geq 0. \)",
+    'explanation': (
+        "1. Express the transformation: \( x = e^{-y} \).\n"
+        "2. Compute the Jacobian determinant: \( \\frac{dx}{dy} = -e^{-y}, \\quad \\left| \\frac{dx}{dy} \\right| = e^{-y}. \)\n"
+        "3. Apply the change-of-variable formula:\n"
+        "   $$ f_Y(y) = f_X(x) \\left| \\frac{dx}{dy} \\right|, \\quad x = e^{-y}. $$\n"
+        "4. Compute:\n"
+        "   $$ f_Y(y) = 3(e^{-y})^2 \\cdot e^{-y} = 3e^{-3y}, \\quad y \\geq 0. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_5_math_safety_expectation = {
+    'question': (
+        "At a community center near Cornell, students study math to stay off the streets. "
+        "The number of study hours per day \( X \) follows:\n"
+        "$$ f_X(x) = 4x^3, \\quad 0 < x < 1. $$\n"
+        "A 'street safety score' is given by:\n"
+        "$$ Y = \\frac{3}{X} - 2. $$\n"
+        "Find \( E[Y] \)."
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The expected street safety score is 2.",
+    'explanation': (
+        "1. Express expectation in terms of \( X \):\n"
+        "   $$ E[Y] = 3E\\left[ \\frac{1}{X} \\right] - 2. $$\n"
+        "2. Compute \( E\\left[ \\frac{1}{X} \\right] \):\n"
+        "   $$ E\\left[ \\frac{1}{X} \\right] = \\int_0^1 \\frac{1}{x} \\cdot 4x^3 dx. $$\n"
+        "3. Solve the integral:\n"
+        "   $$ \\int_0^1 x^2 dx = \\frac{1}{3}, \\quad E\\left[ \\frac{1}{X} \\right] = 4 \\times \\frac{1}{3} = \\frac{4}{3}. $$\n"
+        "4. Compute \( E[Y] \):\n"
+        "   $$ E[Y] = 3 \\times \\frac{4}{3} - 2 = 2. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
 
 
 KC_MPC_QUESTIONS = []

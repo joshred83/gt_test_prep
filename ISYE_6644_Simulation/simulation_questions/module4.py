@@ -1,308 +1,310 @@
-#Distributions + Central Limit Theorem (updated 8/5/20)
-
-isye6739_module4_question_1 = {
+question_1_simulation_phases = {
     'question': (
-        "A company manufactures six independent projects, each with an estimated success probability of 0.9. "
-        "What is the probability that at least five of the projects will be successful?"
+        "Which of the following is not a standard phase in conducting a simulation study?\n\n"
+        "A. Defining the research problem\n"
+        "B. Building and verifying the simulation model\n"
+        "C. Running computer experiments and analyzing results\n"
+        "D. Overlooking data collection procedures"
     ),
-    'options_list': [
-        "A) 0.729",
-        "B) 0.886",
-        "C) 0.657",
-        "D) 0.943"
-    ],
-    'correct_answer': "B) 0.886",
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "D. Overlooking data collection procedures",
     'explanation': (
-        "Since the number of successful projects follows a binomial distribution $X \\sim \\text{Bin}(6, 0.9)$, we calculate:\n"
-        "$\\Pr(X \\geq 5) = \\sum_{x=5}^6 \\binom{6}{x} (0.9)^x (0.1)^{6-x}$.\n"
-        "This gives $\\Pr(X \\geq 5) = 0.9^5 \\cdot 6(0.1) + 0.9^6 = 0.886$."
+        "Every successful simulation study requires careful data collection to ensure that the model reflects the real "
+        "system accurately. Ignoring data collection would compromise the study, making option D the correct choice as "
+        "the non-essential (in fact, harmful) step."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_2 = {
+question_2_simulation_state = {
     'question': (
-        "Assume you can make 80% of your basketball free throws. If the shots are independent, "
-        "what is the probability that your first missed shot occurs on the fourth toss?"
+        "TRUE or FALSE: In simulation modeling, the 'state' of the system includes all the information needed to determine "
+        "its future behavior without additional external data.\n\n"
+        "A. True\n"
+        "B. False"
     ),
-    'options_list': [
-        "A) 0.0512",
-        "B) 0.1024",
-        "C) 0.2048",
-        "D) 0.2560"
-    ],
-    'correct_answer': "B) 0.1024",
+    'options_list': ["A", "B"],
+    'correct_answer': "A. True",
     'explanation': (
-        "The number of shots before the first miss follows a geometric distribution $X \\sim \\text{Geom}(0.2)$.\n"
-        "The probability that the first miss occurs on the fourth toss is:\n"
-        "$\\Pr(X = 4) = (0.8)^3 (0.2) = 0.1024$."
+        "The system state in a simulation is defined as the complete set of variables that describes the current condition "
+        "of the system. This comprehensive snapshot ensures that, together with future events, the system's evolution can be "
+        "determined without needing extra external information."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_3 = {
+question_3_simulation_attributes = {
     'question': (
-        "Customers arrive at a bakery according to a Poisson process with a rate of 10 customers per hour. "
-        "The bakery can handle up to 15 customers in an hour. What is the probability of an overload (more than 15 customers) "
-        "in the next hour?"
+        "In the context of simulation, characteristics such as processing speed, customer priority, or reliability are best "
+        "described as:\n\n"
+        "A. Parameters\n"
+        "B. Attributes\n"
+        "C. Variables\n"
+        "D. States"
     ),
-    'options_list': [
-        "A) 0.0287",
-        "B) 0.0487",
-        "C) 0.0584",
-        "D) 0.0763"
-    ],
-    'correct_answer': "B) 0.0487",
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "B. Attributes",
     'explanation': (
-        "The number of customers arriving follows a Poisson distribution $X \\sim \\text{Pois}(10)$. We need:\n"
-        "$\\Pr(X > 15) = 1 - \\Pr(X \\leq 15) = 1 - \\sum_{x=0}^{15} \\frac{e^{-10} 10^x}{x!}$.\n"
-        "Using cumulative probability, we get $\\Pr(X > 15) \\approx 0.0487$."
+        "Attributes are the inherent characteristics or properties of entities within the simulation. They help define "
+        "differences among entities (e.g., varying speeds or priorities) and are essential for modeling behavior accurately."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_4 = {
+question_4_discrete_event_components = {
     'question': (
-        "The time to failure of an air conditioner is exponentially distributed with a mean of four years. "
-        "What is the probability that the air conditioner will fail before the four-year mark?"
+        "TRUE or FALSE: In discrete-event simulation, the simulation clock and the event calendar are the central components "
+        "that drive the execution of the model.\n\n"
+        "A. True\n"
+        "B. False"
     ),
-    'options_list': [
-        "A) 0.632",
-        "B) 0.432",
-        "C) 0.368",
-        "D) 0.500"
-    ],
-    'correct_answer': "A) 0.632",
+    'options_list': ["A", "B"],
+    'correct_answer': "A. True",
     'explanation': (
-        "The time to failure $X$ is exponentially distributed with rate $\\lambda = 1/4$ (mean is 4 years). We compute:\n"
-        "$\\Pr(X \\leq 4) = 1 - e^{-\\lambda x} = 1 - e^{-(1/4)(4)} = 1 - e^{-1} \\approx 0.632$."
+        "The simulation clock keeps track of time progression, while the event calendar (or future event list) schedules and "
+        "organizes events in chronological order. Together, they form the core mechanism that advances the simulation."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_5 = {
+question_5_event_calendar_operations = {
     'question': (
-        "Suppose the air conditioner from the previous question has already lasted 2 years. "
-        "What is the probability that it will fail before the six-year mark?"
+        "Which operations can be performed on the event calendar (future event list) in a discrete-event simulation?\n\n"
+        "A. Adding new events as they are scheduled\n"
+        "B. Removing events once they occur\n"
+        "C. Rescheduling events if system conditions change\n"
+        "D. All of the above"
     ),
-    'options_list': [
-        "A) 0.368",
-        "B) 0.432",
-        "C) 0.632",
-        "D) 0.500"
-    ],
-    'correct_answer': "C) 0.632",
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "D. All of the above",
     'explanation': (
-        "Using the memoryless property of the exponential distribution:\n"
-        "$\\Pr(X \\leq 6 \\mid X > 2) = \\Pr(X \\leq 4) = 0.632$ (as computed in the previous question)."
+        "The event calendar is dynamic; simulation software allows you to insert new events, delete events that have already "
+        "been processed, and update (or reschedule) events as needed. Therefore, all the listed operations are valid."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_6 = {
+question_6_simulation_technique = {
     'question': (
-        "Let $X$ and $Y$ be independent and identically distributed exponential random variables with rate $\\lambda = 1/3$. "
-        "Find $\\Pr(1 \\leq X + Y \\leq 2)$."
+        "What is the primary simulation technique typically used in software like Arena?\n\n"
+        "A. Continuous Simulation\n"
+        "B. Monte Carlo Simulation\n"
+        "C. Discrete-Event Simulation\n"
+        "D. Hybrid Simulation"
     ),
-    'options_list': [
-        "A) 0.0497",
-        "B) 0.0997",
-        "C) 0.1497",
-        "D) 0.1997"
-    ],
-    'correct_answer': "B) 0.0997",
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "C. Discrete-Event Simulation",
     'explanation': (
-        "The sum of two independent exponential random variables with rate $\\lambda$ follows an Erlang distribution:\n"
-        "$X + Y \\sim \\text{Erlang}(k=2, \\lambda=1/3)$.\n"
-        "The cumulative distribution function is:\n"
-        "$\\Pr(a \\leq X+Y \\leq b) = \\left[1 - \\sum_{i=0}^1 \\frac{e^{-\\lambda b}(\\lambda b)^i}{i!}\\right] - \\left[1 - \\sum_{i=0}^1 \\frac{e^{-\\lambda a}(\\lambda a)^i}{i!}\\right].$\n"
-        "Plugging in $\\lambda = 1/3$, $a = 1$, and $b = 2$:\n"
-        "We get $\\Pr(1 \\leq X + Y \\leq 2) \\approx 0.0997$."
+        "Arena and similar simulation tools primarily use discrete-event simulation, which focuses on modeling systems where "
+        "changes occur at distinct points in time (events), rather than continuously over time."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_7 = {
+question_7_simulation_software_selection = {
     'question': (
-        "Suppose $Z$ is a standard normal random variable. Find the following probabilities:\n"
-        "(a) $\\Pr(-2 < Z < 0)$\n"
-        "(b) $\\Pr(-1 < Z < 1)$\n"
-        "(c) $\\Pr(Z > 1.65)$\n"
-        "(d) $\\Pr(Z > -1.96)$\n"
-        "(e) $\\Pr(|Z| > 1.2)$."
+        "When selecting a simulation software package, which of the following factors is most important to consider?\n\n"
+        "A. The overall cost of the software\n"
+        "B. Its ease of use and learning curve\n"
+        "C. Its compatibility with your modeling approach and random variate generation capabilities\n"
+        "D. Its output analysis and reporting features\n"
+        "E. All of the above"
     ),
-    'options_list': ['Calculate'],
-    'correct_answer': (
-        "(a) $0.4773$; (b) $0.6827$; (c) $0.0495$; (d) $0.9750$; (e) $0.2301$."
-    ),
+    'options_list': ["A", "B", "C", "D", "E"],
+    'correct_answer': "E. All of the above",
     'explanation': (
-        "Using the cumulative distribution function (CDF) $\\Phi(z)$ for the standard normal distribution:\n\n"
-        "(a) $\\Pr(-2 < Z < 0) = \\Phi(0) - \\Phi(-2) = 0.5 - (1 - \\Phi(2)) = 0.4773$.\n\n"
-        "(b) $\\Pr(-1 < Z < 1) = \\Phi(1) - \\Phi(-1) = 2\\Phi(1) - 1 = 0.6827$.\n\n"
-        "(c) $\\Pr(Z > 1.65) = 1 - \\Phi(1.65) = 0.0495$.\n\n"
-        "(d) $\\Pr(Z > -1.96) = \\Phi(1.96) = 0.9750$.\n\n"
-        "(e) $\\Pr(|Z| > 1.2) = 2(1 - \\Phi(1.2)) = 0.2301$."
+        "A comprehensive evaluation of simulation software should include cost, usability, alignment with the chosen modeling "
+        "approach (such as discrete-event simulation), robust random number generation for stochastic modeling, and effective "
+        "output analysis features. All these factors together determine the software’s suitability for your needs."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_8 = {
+question_1_simulation_tasks = {
     'question': (
-        "Find $z$ such that $\\Phi(z) = 0.92$, where $\\Phi$ is the cumulative distribution function of the standard normal distribution."
+        "In developing a simulation model, which of the following is not a fundamental task? (Select all that apply.)\n\n"
+        "A. Clearly defining the problem and objectives\n"
+        "B. Establishing the system’s state variables\n"
+        "C. Running unplanned random code without testing\n"
+        "D. Designing experiments for output analysis\n"
+        "E. Ensuring that the model is verified and validated\n"
+        "F. Taking an unscheduled break to check social media"
     ),
-    'options_list': [
-        "A) 1.405",
-        "B) 1.325",
-        "C) 1.645",
-        "D) 1.282"
-    ],
-    'correct_answer': "A) 1.405",
+    'options_list': ["A", "B", "C", "D", "E", "F"],
+    'correct_answer': ["C", "F"],
     'explanation': (
-        "To find $z$ such that $\\Phi(z) = 0.92$, we use tables or software to find the corresponding quantile:\n"
-        "$z = \\Phi^{-1}(0.92) = 1.405$."
+        "Successful simulation model development involves structured steps like problem definition, state variable "
+        "identification, experimental design, and model verification/validation. Options C and F represent ad hoc "
+        "or irrelevant actions that do not contribute to a robust simulation study."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_9 = {
+question_2_state_variables = {
     'question': (
-        "A manager requires job applicants to score at least 1000 on a test that is normally distributed with a mean of 960 and a standard deviation of 80. "
-        "What percentage of applicants will pass?"
+        "True or False: In simulation modeling, state variables are the minimal set of parameters required to completely "
+        "describe the system at any given time.\n\n"
+        "A. True\n"
+        "B. False"
     ),
-    'options_list': [
-        "A) 30.854%",
-        "B) 40.125%",
-        "C) 50.000%",
-        "D) 25.946%"
-    ],
-    'correct_answer': "A) 30.854%",
+    'options_list': ["A", "B"],
+    'correct_answer': "A",
     'explanation': (
-        "Let $X$ be the test score, $X \\sim N(960, 80^2)$. We need $\\Pr(X \\geq 1000)$:\n"
-        "Standardize to find $Z$: $Z = \\frac{1000 - 960}{80} = 0.5$.\n"
-        "$\\Pr(X \\geq 1000) = 1 - \\Phi(0.5) = 1 - 0.6915 = 0.30854$ (or 30.854%)."
+        "State variables capture all necessary information about the system at a specific moment, ensuring that the "
+        "future evolution of the system can be determined solely based on these variables and scheduled events."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_10 = {
+question_3_entity_attributes = {
     'question': (
-        "If $W$, $X$, $Y$, and $Z$ are independent standard normal random variables, find $\\Pr(W + X + Y + Z \\leq 2)$."
+        "Which term best describes the inherent properties (such as size, priority, or type) of an entity within a simulation model?\n\n"
+        "A. Attributes\n"
+        "B. Parameters\n"
+        "C. Variables\n"
+        "D. Events"
     ),
-    'options_list': [
-        "A) 0.8413",
-        "B) 0.7580",
-        "C) 0.9200",
-        "D) 0.6915"
-    ],
-    'correct_answer': "A) 0.8413",
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "A",
     'explanation': (
-        "The sum of four independent standard normal random variables follows a normal distribution:\n"
-        "$W + X + Y + Z \\sim N(0, 4)$ (mean $0$ and variance $4$).\n"
-        "Standardize: $Z = \\frac{A - 0}{\\sqrt{4}} = \\frac{2}{2} = 1$.\n"
-        "$\\Pr(W + X + Y + Z \\leq 2) = \\Phi(1) = 0.8413$."
+        "Attributes are the defining characteristics of entities. They differentiate one entity from another and "
+        "influence how the entity interacts with the system. Parameters and variables may also influence the model, "
+        "but the inherent qualities of an entity are best called attributes."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_11 = {
+question_4_discrete_event_clock = {
     'question': (
-        "Suppose that $X_1, X_2, \\dots, X_{600}$ are iid with values 1, 0, and -1, each with probability $1/3$. "
-        "Find the approximate probability that the sum $\\sum_{i=1}^{600} X_i$ will be at most 40 using the Central Limit Theorem."
+        "True or False: In a discrete-event simulation, the simulation clock is a programmed variable that advances only "
+        "when scheduled events occur, and it does not necessarily correlate with real-world elapsed time.\n\n"
+        "A. True\n"
+        "B. False"
     ),
-    'options_list': [
-        'A) 0.9773',
-        'B) 0.8413',
-        'C) 0.3270',
-        'D) 0.6826'
-    ],
-    'correct_answer': 'A) 0.9773',
+    'options_list': ["A", "B"],
+    'correct_answer': "A",
     'explanation': (
-        "Using the Central Limit Theorem, the sum $\\sum_{i=1}^{600} X_i$ is approximately normally distributed. "
-        "The mean and variance of $X_i$ are:\n"
-        "$E[X_i] = 0, \\; E[X_i^2] = \\sum x^2 \\Pr(X = x) = 2/3, \\; \\text{Var}(X_i) = 2/3.$\n"
-        "Thus, $\\sum_{i=1}^{600} X_i \\sim \\text{Nor}(0, 600(2/3)) \\sim \\text{Nor}(0, 400)$.\n"
-        "Standardize to find $P(Z \\leq 2)$:\n"
-        "$P\\left(\\frac{\\sum X_i - 0}{\\sqrt{400}} \\leq \\frac{40 - 0}{\\sqrt{400}}\\right) = P(Z \\leq 2) = 0.9773$."
+        "The simulation clock is used to track the progress of simulation time rather than real time. It “jumps” "
+        "from one event time to the next, meaning its advancement is determined by the occurrence of events in the model."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_12 = {
+question_5_simulation_state_events = {
     'question': (
-        "A production process produces items, 6% of which are defective. A random sample of 200 items is selected daily, "
-        "and the number of defective items $X$ is counted. Using the normal approximation to the binomial, find $P(X \\leq 10)$."
+        "Which of the following events would typically trigger a change in the simulation state? (Select all that apply.)\n\n"
+        "A. A customer arriving at a service counter\n"
+        "B. The completion of a transaction\n"
+        "C. A scheduled maintenance event for equipment\n"
+        "D. A decorative banner changing color on the simulation background"
     ),
-    'options_list': [
-        'A) 0.327',
-        'B) 0.475',
-        'C) 0.182',
-        'D) 0.682'
-    ],
-    'correct_answer': 'A) 0.327',
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': ["A", "B", "C"],
     'explanation': (
-        "For $p = 0.06$, $n = 200$, $\\mu = np = 12$ and $\\sigma = \\sqrt{npq} = \\sqrt{200 \\cdot 0.06 \\cdot 0.94} = 3.359$.\n"
-        "Using continuity correction, $P(X \\leq 10) \\approx P(Z \\leq \\frac{10.5 - 12}{3.359}) = P(Z \\leq -0.447) = 0.327$."
+        "Events that affect the system’s dynamics (like arrivals, service completions, and equipment breakdowns/maintenance) "
+        "change the simulation state. A decorative banner changing color is cosmetic and does not impact the underlying process."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_13 = {
+question_6_fixed_time_step = {
     'question': (
-        "Suppose that $Y$ has a $\\text{Nor}(50, 25)$ distribution, and $X = e^Y$. Find the mean, variance of $X$, and $P(X \\leq E[X])$."
+        "True or False: A fixed time-step advancement method is especially common in simulations that solve differential "
+        "equations describing continuous processes.\n\n"
+        "A. True\n"
+        "B. False"
     ),
-    'options_list': [
-        'A) $E[X] = e^{62.5}, P(X \\leq E[X]) = 0.9938$',
-        'B) $E[X] = e^{50}, P(X \\leq E[X]) = 0.8413$',
-        'C) $E[X] = e^{75}, P(X \\leq E[X]) = 0.9990$',
-        'D) $E[X] = e^{55}, P(X \\leq E[X]) = 0.9000$'
-    ],
-    'correct_answer': 'A) $E[X] = e^{62.5}, P(X \\leq E[X]) = 0.9938$',
+    'options_list': ["A", "B"],
+    'correct_answer': "A",
     'explanation': (
-        "For a lognormal distribution with $Y \\sim \\text{Nor}(50, 25)$, $X = e^Y$ has:\n"
-        "$E[X] = \\exp(\\mu + \\sigma^2 / 2) = e^{50 + 25/2} = e^{62.5}$.\n"
-        "Using standardization to compute $P(X \\leq E[X])$:\n"
-        "$P(Y \\leq 62.5) = P\\left(Z \\leq \\frac{62.5 - 50}{\\sqrt{25}}\\right) = P(Z \\leq 2.5) = 0.9938$."
+        "Fixed time-step methods are widely used in continuous simulations (e.g., for solving differential equations) where "
+        "the model state is updated at regular, predetermined intervals."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_14 = {
+question_7_next_event_advance = {
     'question': (
-        "Suppose IBM stock is currently $134 per share, and I want to guarantee the ability to buy a share for $145 on Nov 15, 2019. "
-        "What is the corresponding stock option price?"
+        "Which statement best describes the next-event time advancement strategy in discrete-event simulation?\n\n"
+        "A. The clock advances in fixed increments regardless of event timings.\n"
+        "B. The clock leaps directly to the time of the next scheduled event.\n"
+        "C. The clock continuously ticks in real time alongside the simulation.\n"
+        "D. The clock remains stationary until the user manually advances it."
     ),
-    'options_list': [
-        'A) $2.02',
-        'B) $3.50',
-        'C) $1.75',
-        'D) $2.50'
-    ],
-    'correct_answer': 'A) $2.02',
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "B",
     'explanation': (
-        "Using the normal/lognormal properties of stock prices, the option price on the market at the time was $2.02. "
-        "This may change depending on market conditions, but this price reflects the given date."
+        "The next-event mechanism updates the simulation clock by jumping directly to the time of the next event in the list, "
+        "thus efficiently simulating systems where events occur at irregular intervals."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
-isye6739_module4_question_15 = {
+question_8_future_events_list = {
     'question': (
-        "Suppose $U_1 = 0.6$ and $U_2 = 0.9$ are iid $\\text{Unif}(0,1)$ random variables. "
-        "Use the Box-Muller method to generate two iid $\\text{Nor}(0,1)$ RVs, $Z_1$ and $Z_2$."
+        "True or False: The future events list (FEL) in a discrete-event simulation holds only events scheduled to occur in "
+        "the future and is updated dynamically as events occur or new ones are scheduled.\n\n"
+        "A. True\n"
+        "B. False"
     ),
-    'options_list': [
-        'A) $Z_1 = -0.594, Z_2 = 0.817$',
-        'B) $Z_1 = -0.817, Z_2 = 0.594$',
-        'C) $Z_1 = -1.0, Z_2 = 1.0$',
-        'D) $Z_1 = 0.594, Z_2 = -0.817$'
-    ],
-    'correct_answer': 'A) $Z_1 = -0.594, Z_2 = 0.817$',
+    'options_list': ["A", "B"],
+    'correct_answer': "A",
     'explanation': (
-        "Using the Box-Muller method:\n"
-        "$Z_1 = \\sqrt{-2 \\ln(U_1)} \\sin(2 \\pi U_2) = \\sqrt{-2 \\ln(0.6)} \\sin(2 \\pi \\cdot 0.9) = -0.594,$\n"
-        "$Z_2 = \\sqrt{-2 \\ln(U_1)} \\cos(2 \\pi U_2) = \\sqrt{-2 \\ln(0.6)} \\cos(2 \\pi \\cdot 0.9) = 0.817.$"
+        "The FEL is a key data structure that keeps track of all upcoming events in the simulation. It is continually "
+        "updated—events are inserted, deleted, or rescheduled—as the simulation state changes."
     ),
-    'chapter_information': 'ISYE 6739 - Module 4'
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
+}
+
+question_9_process_interaction = {
+    'question': (
+        "In simulation modeling, which approach is characterized by defining the behavior of individual entities as they "
+        "interact with various processes in the system?\n\n"
+        "A. Next-Event Scheduling\n"
+        "B. Process-Interaction Modeling\n"
+        "C. Fixed-Increment Simulation\n"
+        "D. Differential Equation Modeling"
+    ),
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "B",
+    'explanation': (
+        "Process-interaction modeling focuses on describing how individual entities (such as customers or parts) flow through "
+        "processes in the system, with the simulation software managing the sequence of events automatically."
+    ),
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
+}
+
+question_10_process_interaction_tools = {
+    'question': (
+        "True or False: In simulation tools based on the process-interaction paradigm, the underlying engine automatically "
+        "manages the sequencing and timing of events for you.\n\n"
+        "A. True\n"
+        "B. False"
+    ),
+    'options_list': ["A", "B"],
+    'correct_answer': "A",
+    'explanation': (
+        "Process-interaction simulation environments (like many commercial tools) provide built-in mechanisms that handle "
+        "event scheduling and sequencing, allowing modelers to focus on defining processes and entity behaviors."
+    ),
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
+}
+
+question_11_simulation_software_evaluation = {
+    'question': (
+        "Which of the following factors is least relevant when evaluating a simulation software package?\n\n"
+        "A. The cost of the software\n"
+        "B. The compatibility with your chosen modeling approach\n"
+        "C. The available documentation and support\n"
+        "D. The aesthetic design of the software’s icon"
+    ),
+    'options_list': ["A", "B", "C", "D"],
+    'correct_answer': "D",
+    'explanation': (
+        "Key factors in selecting simulation software include cost, ease of use, compatibility with the intended modeling "
+        "approach, and the quality of documentation/support. The aesthetic design of the software’s icon is trivial by comparison."
+    ),
+    'chapter_information': "Week 5 - GPT 03-mini Generated"
 }
 
 
