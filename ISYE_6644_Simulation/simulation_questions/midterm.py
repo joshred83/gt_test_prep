@@ -17,21 +17,21 @@ question_1_geometric_distribution = {
     'chapter_information': "Deepseek Generated"
 }
 
-question_2_poisson_process = {
-    'question': (
-        "At a coffee shop, customers arrive according to a Poisson process with rate $\\lambda = 4$ customers per hour. What is the distribution of time between the 7th and 8th customer arrivals?"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': "The time between the 7th and 8th customer arrivals follows an Exponential(4) distribution.",
-    'explanation': (
-        "For a Poisson process with rate $\\lambda$, the time between consecutive arrivals follows an exponential distribution with parameter $\\lambda$:\n"
-        "$$\n"
-        f"f(t) = \\lambda e^{-\\lambda t}, \\quad t \\geq 0.\n"
-        "$$\n"
-        "Here, $\\lambda = 4$, so the time between arrivals follows an $\\text{Exp}(4)$ distribution."
-    ),
-    'chapter_information': "Deepseek Generated"
-}
+# question_2_poisson_process = {
+#     'question': (
+#         "At a coffee shop, customers arrive according to a Poisson process with rate $\\lambda = 4$ customers per hour. What is the distribution of time between the 7th and 8th customer arrivals?"
+#     ),
+#     'options_list': ["Solution not required"],
+#     'correct_answer': "The time between the 7th and 8th customer arrivals follows an Exponential(4) distribution.",
+#     'explanation': (
+#         "For a Poisson process with rate $\\lambda$, the time between consecutive arrivals follows an exponential distribution with parameter $\\lambda$:\n"
+#         "$$\n"
+#         f"f(t) = \\lambda e^{-\\lambda t}, \\quad t \\geq 0.\n"
+#         "$$\n"
+#         "Here, $\\lambda = 4$, so the time between arrivals follows an $\\text{Exp}(4)$ distribution."
+#     ),
+#     'chapter_information': "Deepseek Generated"
+# }
 
 question_3_random_variable_transformation = {
     'question': (
