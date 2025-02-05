@@ -56,7 +56,7 @@ REVIEW_SETS = {
     'SIM_7': ['SIM_7'], 'SIM_8': ['SIM_8'], 'SIM_9': ['SIM_9'], 'SIM_10': ['SIM_10'],
 
     # Simulation Exam-Level Reviews
-    "Midterm_1": ['MIDTERM_1','MIDTERM_1B'], # 'SIM_3', 'SIM_4', 'SIM_5'],
+    "Midterm_1": ['MIDTERM_1'] #,'MIDTERM_1B'], # 'SIM_3', 'SIM_4', 'SIM_5'],
     "Midterm_2": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7'],
     "Final": ['SIM_1', 'SIM_2', 'SIM_3', 'SIM_4', 'SIM_5', 'SIM_6', 'SIM_7', 'SIM_8', 'SIM_9', 'SIM_10']
 }
@@ -66,7 +66,7 @@ class Token:
     def __init__(self, STATE="1"):
         self.STATE = STATE
         self.mpc_questions = []
-        self.num_questions = 8
+        self.num_questions = 10
         self.chapters_to_review = []
 
     def initialize_mpc_questions(self):
