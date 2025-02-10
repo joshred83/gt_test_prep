@@ -1301,11 +1301,11 @@ question_3_inver1se_transform_method = {
         "Use the inverse transform method with $U = 0.75$ to generate one observation of $X$."
     ),
     'options_list': ["Solution not required"],
-    'correct_answer': "The generated observation is $X = 1$.",
+    'correct_answer': "The generated observation is $X = 2$.",
     'explanation': (
         "The CDF of $X$ is:\n"
         "$F(0) = 0.2, F(1) = 0.7, F(2) = 1.0$.\n"
-        "Given $U = 0.75$, we find that $U$ lies in the range $[0.7, 1.0)$, corresponding to $X = 1$."
+        "Given $U = 0.75$, we find that $U$ lies in the range $[0.7, 1.0)$, corresponding to $X = 2$."
     ),
     'chapter_information': "GPT 04 Generated"
 }
@@ -1344,11 +1344,186 @@ question_5_relationshi1p_between_distributions = {
     'chapter_information': "GPT 04 Generated"
 }
 
+question_2_simulating_random_variables = {
+    'question': (
+        "Suppose $U$ and $V$ are independent $\\text{Uniform}(0,1)$ random variables. Consider the random variable: "
+        "$$ Z = \\sqrt{-2\\ln(U)} \\sin(2\\pi V). $$ "
+        "What distribution does $Z$ follow?"
+    ),
+    'options_list': ["a. Normal(0,1)", "b. Exponential(1)", "c. Uniform(-√2, √2)", "d. Weibull"],
+    'correct_answer': "a. Normal(0,1)",
+    'explanation': (
+        "The formula $Z = \\sqrt{-2\\ln(U)} \\sin(2\\pi V)$ is part of the **Box-Muller transform**, which generates "
+        "standard normal random variables from independent uniform random variables. Specifically:\n"
+        "- $U \\sim \\text{Uniform}(0,1)$ determines the 'radius' of a point in polar coordinates: $R = \\sqrt{-2\\ln(U)}$.\n"
+        "- $V \\sim \\text{Uniform}(0,1)$ determines the 'angle' in polar coordinates: $\\Theta = 2\\pi V$.\n"
+        "- Transforming these into Cartesian coordinates gives two independent standard normal random variables:\n"
+        "  - $Z = R\\sin(\\Theta)$\n"
+        "  - (Another variable, not shown here: $W = R\\cos(\\Theta)$).\n"
+        "Thus, $Z \\sim N(0,1)$."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_3_co22222nfidence_intervals = {
+    'question': (
+        "Suppose we collect the following observations: $3, 5, 7, 9$. Assume these are i.i.d. from a normal distribution with "
+        "unknown variance $\\sigma^2$. Construct a two-sided 95% confidence interval for the mean $\\mu$."
+    ),
+    'options_list': ["a. [3.5, 8.5]", "b. [4.5, 7.5]", "c. [1.89, 10.11]", "d. [3, 9]"],
+    'correct_answer': "c. [1.89, 10.11]",
+    'explanation': (
+        "1. Compute the sample mean:\n"
+        "$$ \\overline{X} = \\frac{3 + 5 + 7 + 9}{4} = 6. $$\n"
+        "2. Compute the sample variance:\n"
+        "   - First calculate deviations from the mean:\n"
+        "     $$ (3 - 6)^2 = 9, (5 - 6)^2 = 1, (7 - 6)^2 = 1, (9 - 6)^2 = 9. $$\n"
+        "   - Sum of squared deviations:\n"
+        "     $$ \\sum (X_i - \\overline{X})^2 = 9 + 1 + 1 + 9 = 20. $$\n"
+        "   - Sample variance:\n"
+        "     $$ S^2 = \\frac{\\sum (X_i - \\overline{X})^2}{n-1} = \\frac{20}{3} \\approx 6.67. $$\n"
+        "3. Compute the standard error of the mean:\n"
+        "$$ SE = \\sqrt{\\frac{S^2}{n}} = \\sqrt{\\frac{6.67}{4}} \\approx 1.29. $$\n"
+        "4. Use the t-distribution for a two-sided confidence interval:\n"
+        "   - Degrees of freedom: $df = n-1 = 4-1 = 3$.\n"
+        "   - Critical value for a two-sided 95% confidence interval:\n"
+        "     $$ t_{3,0.025} \\approx 3.182. $$\n"
+        "5. Construct the confidence interval:\n"
+        "$$ CI = \\overline{X} \\pm t_{df,0.025} \\cdot SE. $$\n"
+        "   - Substitute values:\n"
+        "     $$ CI = 6 \\pm (3.182)(1.29) = [1.89, 10.11]. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_4_confi23dence_intervals = {
+    'question': (
+        "Suppose you observe a sample mean of $\\overline{X} = 10$ and a sample variance of $S^2 = 4$ from a sample of size $n = 25$. "
+        "Construct an approximate two-sided 95% confidence interval for the population mean $\\mu$."
+    ),
+    'options_list': ["a. [9, 11]", "b. [9.17, 10.83]", "c. [8, 12]", "d. [8.5, 11]"],
+    'correct_answer': "b. [9.17, 10.83]",
+    'explanation': (
+        "Since the population variance is unknown (we're given sample variance), we use the **t-distribution**:\n"
+        "1. Compute the standard error of the mean:\n"
+        "$$ SE = \\sqrt{\\frac{S^2}{n}} = \\sqrt{\\frac{4}{25}} = \\sqrt{0.16} = 0.4. $$\n"
+        "2. Use the t-distribution for a two-sided confidence interval:\n"
+        "   - Degrees of freedom: $df = n-1 = 25-1=24$.\n"
+        "   - Critical value for a two-sided 95% confidence interval:\n"
+        "     $$ t_{24,0.025} \\approx 2.064. $$\n"
+        "3. Construct the confidence interval:\n"
+        "$$ CI = \\overline{X} \\pm t_{df,0.025} \\cdot SE. $$\n"
+        "   - Substitute values:\n"
+        "     $$ CI = 10 \\pm (2.064)(0.4) = [9.17, 10.83]. $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_5_clt23_with_exponential_distribution = {
+    'question': (
+        "You simulate $n=100$ samples from an Exponential($\\lambda=2$) distribution and compute the sample mean $\\overline{X}_n$. "
+        "Using the Central Limit Theorem (CLT), approximate the probability that $\\overline{X}_n$ lies between $0.45$ and $0.55$."
+    ),
+    'options_list': ["a. About 68%", "b. About 95%", "c. About 99%", "d. About 50%"],
+    'correct_answer': "b. About 95%",
+    'explanation': (
+        "For an Exponential($\\lambda=2$) distribution:\n"
+        "- Mean $\\mu_X = \\frac{1}{\\lambda} = 0.5$.\n"
+        "- Variance $\\sigma_X^2 = \\frac{1}{\\lambda^2} = 0.25$.\n"
+        "By the Central Limit Theorem (CLT), the sample mean $\\overline{X}_n$ will be approximately normal:\n"
+        "- $\\mu_{\\overline{X}} = \\mu_X = 0.5$\n"
+        "- $\\sigma_{\\overline{X}} = \\frac{\\sigma_X}{\\sqrt{n}} = \\frac{0.5}{\\sqrt{100}} = 0.05$.\n"
+        "Thus, the probability that $\\overline{X}_n$ lies between $0.45$ and $0.55$ is about 95%, corresponding to a **two standard deviation** range."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
 
 
+question_7_mle_exponential = {
+    'question': (
+        "Suppose that $X_1, X_2, \\dots, X_n$ are i.i.d. from an Exponential($\\lambda$) distribution. "
+        "Find the maximum likelihood estimator (MLE) for $\\lambda$ based on observed data."
+    ),
+    'options_list': [
+        "a. $\\hat{\\lambda} = \\frac{n}{\\sum X_i}$",
+        "b. $\\hat{\\lambda} = \\frac{\\sum X_i}{n}$",
+        "c. $\\hat{\\lambda} = \\overline{X}$",
+        "d. $\\hat{\\lambda} = \\frac{n^2}{\\sum X_i}$"
+    ],
+    'correct_answer': "a. $\\hat{\\lambda} = \\frac{n}{\\sum X_i}$",
+    'explanation': (
+        "The probability density function (PDF) of an Exponential($\\lambda$) random variable is:\n"
+        "$$ f(x | \\lambda) = \\lambda e^{-\\lambda x}, \\quad x > 0. $$\n"
+        "The likelihood function for a sample of size $n$ is:\n"
+        "$$ L(\\lambda) = \\prod_{i=1}^n f(X_i | \\lambda) = \\prod_{i=1}^n \\lambda e^{-\\lambda X_i}. $$\n"
+        "Simplify the likelihood function:\n"
+        "$$ L(\\lambda) = \\lambda^n e^{-\\lambda \\sum X_i}. $$\n"
+        "Take the log-likelihood:\n"
+        "$$ \\ln L(\\lambda) = n \\ln \\lambda - \\lambda \\sum X_i. $$\n"
+        "Differentiate with respect to $\\lambda$ and set it to zero:\n"
+        "$$ \\frac{d}{d\\lambda} \\left( \\ln L(\\lambda) \\right) = \\frac{n}{\\lambda} - \\sum X_i = 0. $$\n"
+        "Solve for $\\hat{\\lambda}$:\n"
+        "$$ \\hat{\\lambda} = \\frac{n}{\\sum X_i}. $$\n"
+        "Thus, the MLE for $\\lambda$ is $\\hat{\\lambda} = \\frac{n}{\\sum X_i}$."
+    ),
+    'chapter_information': "GPT 04 Generated"
+}
 
+question_8_monte_carlo_simulation = {
+    'question': (
+        "Suppose you simulate random darts in a unit square to estimate $\\pi$ using Monte Carlo simulation with the formula: "
+        "$$ \\hat{\\pi}_n = \\frac{4 \\cdot (\\text{Number of darts in circle})}{\\text{Total number of darts}}. $$ "
+        "If you throw 10,000 darts and find that 7,850 land inside the circle, what is your estimate for $\\pi$?"
+    ),
+    'options_list': [
+        "a. 3",
+        "b. 3.14",
+        "c. 3.18",
+        "d. 3.25"
+    ],
+    'correct_answer': "c. 3.18",
+    'explanation': (
+        "The formula for estimating $\\pi$ using Monte Carlo simulation is: $\\hat{\\pi}_n = 4 \\hat{p}_n$, where:\n"
+        "$$ \\hat{p}_n = \\frac{\\text{Number of darts in circle}}{\\text{Total number of darts}}. $$\n"
+        "Substitute the given values:\n"
+        "- Total darts: 10,000,\n"
+        "- Darts in circle: 7,850,\n"
+        "Proportion:\n"
+        "$$ \\hat{p}_n = \\frac{7,850}{10,000} = 0.785. $$\n"
+        "Estimate for $\\pi$:\n"
+        "$$ \\hat{\\pi}_n = 4(0.785) = 3.14. $$\n"
+        "Thus, the estimate for $\\pi$ is 3.14."
+    ),
+    'chapter_information': "GPT 04 Generated"
+}
 
-
+question_8_monte_carlo_simulation = {
+    'question': (
+        "Suppose you simulate random darts in a unit square to estimate $\\pi$ using Monte Carlo simulation with the formula: "
+        "$$ \\hat{\\pi}_n = \\frac{4 \\cdot (\\text{Number of darts in circle})}{\\text{Total number of darts}}. $$ "
+        "If you throw 10,000 darts and find that 7,850 land inside the circle, what is your estimate for $\\pi$?"
+    ),
+    'options_list': [
+        "a. 3",
+        "b. 3.14",
+        "c. 3.18",
+        "d. 3.25"
+    ],
+    'correct_answer': "c. 3.18",
+    'explanation': (
+        "The formula for estimating $\\pi$ using Monte Carlo simulation is: $\\hat{\\pi}_n = 4 \\hat{p}_n$, where:\n"
+        "$$ \\hat{p}_n = \\frac{\\text{Number of darts in circle}}{\\text{Total number of darts}}. $$\n"
+        "Substitute the given values:\n"
+        "- Total darts: 10,000,\n"
+        "- Darts in circle: 7,850,\n"
+        "Proportion:\n"
+        "$$ \\hat{p}_n = \\frac{7,850}{10,000} = 0.785. $$\n"
+        "Estimate for $\\pi$:\n"
+        "$$ \\hat{\\pi}_n = 4(0.785) = 3.14. $$\n"
+        "Thus, the estimate for $\\pi$ is 3.14."
+    ),
+    'chapter_information': "GPT 04 Generated"
+}
 
 
 KC_MPC_QUESTIONS = []
