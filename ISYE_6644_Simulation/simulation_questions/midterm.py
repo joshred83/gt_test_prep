@@ -187,7 +187,7 @@ question_5_expectation_transformation = {
         "Evaluating the integral, we obtain:\n"
         "$$ E[Y] = \\frac{1}{2}. $$\n"
         "Thus,\n"
-        "$$ E[3Y + 2] = 3 \\cdot \\frac{1}{2} + 2 = 11. $$"
+        "$$ E[3Y + 2] = 3 \\cdot \\frac{1}{2} + 2 = 3.5. $$"
     ),
     'chapter_information': "GPT 03-mini Generated"
 }
@@ -338,6 +338,7 @@ question_1_one_to_one_transformation = {
     'chapter_information': "DeepSeek Generated"
 }
 
+
 question_2_transformation_nonlinear = {
     'question': (
         "Let $X$ be a continuous random variable with pdf:\n"
@@ -345,7 +346,7 @@ question_2_transformation_nonlinear = {
         "Define $Y = 1 - x$. Find the pdf of $Y$."
     ),
     'options_list': ["Solution not required"],
-    'correct_answer': "The pdf of $Y$ is $f_Y(y) = 4y(1 - y^2), \quad 0 < y < 1.$",
+    'correct_answer': "The pdf of $Y$ is $f_Y(y) = 2(1 - y), \quad 0 < y < 1.$",
     'explanation': (
         "1. **Determine the range of $Y$:**\n"
         "- When $x = 0$, we get $Y = 1$.\n"
@@ -358,11 +359,12 @@ question_2_transformation_nonlinear = {
         "Taking the absolute value: $|dx/dy| = 1$.\n\n"
         "3. **Apply the transformation formula:**\n"
         "$$ f_Y(y) = f_X(x) |dx/dy| \text{ with } x = 1 - y. $$\n"
-        "Substituting $f_X(x) = 2(1 - y)$, we get:\n"
-        "$$ f_Y(y) = 2(1 - y) \cdot 1 = 4y(1 - y^2). $$"
+        "Substitute $f_X(x) = 2(1 - y)$, we get:\n"
+        "$$ f_Y(y) = 2(1 - y) \cdot 1 = 2(1 - y). $$"
     ),
     'chapter_information': "DeepSeek Generated"
 }
+
 
 question_3_joint_transformation = {
     'question': (
@@ -454,22 +456,6 @@ question_24_exponential_transformation = {
     'chapter_information': "DeepSeek Generated"
 }
 
-question_25_gamma_sum = {
-    'question': (
-        "Suppose \( U_1, U_2 \\sim \\text{i.i.d. Unif}(0,1) \). What is the distribution of:\n"
-        "$$ Z = -2\\ln(U_1 U_2)? $$"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': "\( Z \\sim \\text{Gamma}(2, 1/2) \).",
-    'explanation': (
-        "1. Since \( -\\ln(U) \\sim \\text{Exp}(1) \), it follows that \( -2\\ln(U) \\sim \\text{Exp}(1/2) \).\n"
-        "2. Since \( \\ln(U_1U_2) = \\ln(U_1) + \\ln(U_2) \), the sum follows a Gamma distribution:\n"
-        "   $$ Z \\sim \\text{Gamma}(2, 1/2), $$\n"
-        "   with pdf:\n"
-        "   $$ f_Z(z) = \\frac{1}{4} z e^{-z/2}, \\quad z \\geq 0. $$"
-    ),
-    'chapter_information': "DeepSeek Generated"
-}
 
 question_26_box_muller = {
     'question': (
@@ -552,8 +538,8 @@ question_16_lcg = {
     'question': (
         "Consider the linear congruential generator:\n"
         "$$ X_{i+1} = (5X_i + 3) \\mod 10. $$\n"
-        "1. Using \(X_0 = 2\), compute the first pseudo‐random number \(U_1\).\n"
-        "2. Using \(X_0 = 2\), compute \(U_{501}\). (Hint: Look for a repeating cycle.)"
+        "1. Using $$X_0 = 2$$, compute the first pseudo‐random number $$U_1$$.\n"
+        "2. Using $$X_0 = 2$$, compute $$U_{501}$$. (Hint: Look for a repeating cycle.)"
     ),
     'options_list': ["Solution not required"],
     'correct_answer': "Both \( U_1 \) and \( U_{501} \) are 0.3.",
@@ -561,26 +547,13 @@ question_16_lcg = {
         "1. Compute \(X_1\):\n"
         "   $$ X_1 = (5 \\cdot 2 + 3) \\mod 10 = 13 \\mod 10 = 3. $$\n"
         "   $$ U_1 = \\frac{X_1}{10} = 0.3. $$\n"
-        "2. Since the sequence repeats, \( X_{501} = X_1 \) (as \(501 \\equiv 1 \\mod p\)), giving:\n"
+        "2. Since the sequence repeats, $$ X_{501} = X_1 $$ as $$ 501 \\equiv 1 \\mod p\ $$, giving:\n"
         "   $$ U_{501} = U_1 = 0.3. $$"
     ),
     'chapter_information': "DeepSeek Generated"
 }
 
-question_17_exp_transformation = {
-    'question': (
-        "Let \( U \\sim \\text{Unif}(0,1) \). Consider the transformation:\n"
-        "$$ Y = -5\\ln(U). $$\n"
-        "What is the distribution (name and parameter) of \( Y \)?"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': "\( Y \\sim \\text{Exp}(1/5) \).",
-    'explanation': (
-        "1. Since \( -\\ln(U) \\sim \\text{Exp}(1) \), multiplying by 5 scales the rate by \( 1/5 \), giving:\n"
-        "   $$ Y \\sim \\text{Exp}(1/5). $$"
-    ),
-    'chapter_information': "DeepSeek Generated"
-}
+
 
 question_18_hypoexp_sum = {
     'question': (
@@ -677,28 +650,7 @@ question_22_queue_lifo = {
     'chapter_information': "DeepSeek Generated"
 }
 
-question_A_geometric_distribution = {
-    'question': (
-        "Suppose the Los Angeles Lakers play independent games where the probability of a win in each game is 0.7. Let:\n"
-        "$$ Y = \\text{the number of games until the Lakers achieve their first win}. $$\n"
-        "Find the smallest positive integer \( y \) such that:\n"
-        "$$ P(Y \\leq y) \\geq 0.95. $$"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': "The smallest \( y \) satisfying \( P(Y \\leq y) \\geq 0.95 \) is \( 3 \).",
-    'explanation': (
-        "1. Model \( Y \) as a geometric random variable: \( Y \\sim \\text{Geom}(0.7) \).\n"
-        "2. The cumulative distribution function (CDF) is:\n"
-        "   $$ P(Y \\leq y) = 1 - (0.3)^y. $$\n"
-        "3. Solve for \( y \) in:\n"
-        "   $$ 1 - (0.3)^y \\geq 0.95. $$\n"
-        "   $$ (0.3)^y \\leq 0.05. $$\n"
-        "4. Taking the natural logarithm:\n"
-        "   $$ y \\geq \\frac{\\ln(0.05)}{\\ln(0.3)} \\approx 2.487. $$\n"
-        "5. The smallest integer satisfying this is \( y = 3 \)."
-    ),
-    'chapter_information': "DeepSeek Generated"
-}
+
 
 question_B_clt_sample_mean = {
     'question': (
@@ -767,25 +719,64 @@ question_1_cat_laser_pointer = {
     'chapter_information': "DeepSeek Generated"
 }
 
+question_17_exp_transformation = {
+    'question': (
+        "Let $U \sim \text{Unif}(0,1)$. Consider the transformation:\n"
+        "$$ Y = -5 \ln(U). $$\n"
+        "What is the distribution (name and parameter) of $Y$?"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "$Y \sim \text{Exp}(1/5)$",
+    'explanation': (
+        "1. Since $-\ln(U) \sim \text{Exp}(1)$, multiplying by 5 scales the rate by $1/5$, giving:\n"
+        "$$ Y \sim \text{Exp}(1/5). $$"
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
+question_A_geometric_distribution = {
+    'question': (
+        "Suppose the Los Angeles Lakers play independent games where the probability of a win in each game is 0.7. Let:\n"
+        "$$ Y = \text{the number of games until the Lakers achieve their first win}. $$\n"
+        "Find the smallest positive integer $y$ such that:\n"
+        "$$ P(Y \leq y) \geq 0.95. $$"
+    ),
+    'options_list': ["Solution not required"],
+    'correct_answer': "The smallest $y$ satisfying $P(Y \leq y) \geq 0.95$ is 3.",
+    'explanation': (
+        "1. Model $Y$ as a geometric random variable: $Y \sim \text{Geom}(0.7)$.\n"
+        "2. The cumulative distribution function (CDF) is:\n"
+        "$$ P(Y \leq y) = 1 - (0.3)^y. $$\n"
+        "3. Solve for $y$ in:\n"
+        "$$ 1 - (0.3)^y \geq 0.95. $$\n"
+        "$$ (0.3)^y \leq 0.05. $$\n"
+        "4. Taking the natural logarithm:\n"
+        "$$ y \geq \\frac{\ln(0.05)}{\ln(0.3)} \approx 2.487. $$\n"
+        "5. The smallest integer satisfying this is $y = 3$."
+    ),
+    'chapter_information': "DeepSeek Generated"
+}
+
 question_2_bieber_clt = {
     'question': (
         "Justin Bieber releases a new album, where each song gets an average of 1,200,000 streams with variance "
-        "$ 9 \\times 10^{10} $ streams². Suppose he releases 64 songs. By the Central Limit Theorem, approximate the "
+        "$9 \times 10^{10}$ streams². Suppose he releases 64 songs. By the Central Limit Theorem, approximate the "
         "probability that his total album streams exceed 80,000,000."
     ),
     'options_list': ["Solution not required"],
     'correct_answer': "The probability of exceeding 80,000,000 streams is approximately 9.2%.",
     'explanation': (
         "1. Compute mean and variance of total streams:\n"
-        "   - \( E[S] = 64 \\times 1,200,000 = 76,800,000. \)\n"
-        "   - \( \\operatorname{Var}(S) = 64 \\times 9 \\times 10^{10} = 5.76 \\times 10^{12}. \)\n"
-        "   - Standard deviation: \( \\sigma_S = \\sqrt{5.76 \\times 10^{12}} = 2.4 \\times 10^6. \)\n"
+        "   - $E[S] = 64 \times 1,200,000 = 76,800,000.$\n"
+        "   - $\\operatorname{Var}(S) = 64 \times 9 \times 10^{10} = 5.76 \times 10^{12}.$\n"
+        "   - Standard deviation: $\\sigma_S = \\sqrt{5.76 \times 10^{12}} = 2.4 \times 10^6.$\n"
         "2. Standardize and compute:\n"
-        "   $$ Z = \\frac{80,000,000 - 76,800,000}{2,400,000} \\approx 1.33. $$\n"
-        "3. From normal tables, \( P(Z > 1.33) \\approx 0.0918. \)"
+        "$$ Z = \\frac{80,000,000 - 76,800,000}{2,400,000} \\approx 1.33. $$\n"
+        "3. From normal tables, $P(Z > 1.33) \\approx 0.0918$."
     ),
     'chapter_information': "DeepSeek Generated"
 }
+
 
 question_3_cornell_poisson = {
     'question': (
@@ -1094,74 +1085,11 @@ question_2_campus_prank_sum_variance = {
     'chapter_information': "DeepSeek Generated"
 }
 
-question_3_math_study_escape_clt = {
-    'question': (
-        "Kids study math 8 hours/day to avoid trouble (with a standard deviation of \( \sigma = 2.5 \) hours). If 49 kids are sampled, what is the probability that the average study time is greater than 8.5 hours?"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': (
-        "New standard deviation = \( \frac{2.5}{\sqrt{49}} \approx 0.357 \)\n"
-        "Z = \( \frac{8.5 - 8}{0.357} \approx 1.4 \)\n"
-        "Probability: \( P(Z > 1.4) \approx 0.0808 \)"
-    ),
-    'explanation': (
-        "By the Central Limit Theorem, the sample mean is approximately normally distributed. "
-        "The standard deviation of the sample mean is \( \frac{\sigma}{\sqrt{n}} = \frac{2.5}{\sqrt{49}} \approx 0.357 \). "
-        "We then calculate the Z-score and use the standard normal table to find \( P(Z > 1.4) \approx 0.0808 \)."
-    ),
-    'chapter_information': "DeepSeek Generated"
-}
 
-question_4_bieber_video_time_scaling = {
-    'question': (
-        "Time spent watching Justin Bieber's cringe compilation videos follows an exponential distribution with rate \( \lambda = 0.25 \). Let \( Y = 3X + 5 \), where \( X \) is the number of hours. What are the mean and standard deviation of \( Y \)?"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': (
-        "Mean of \( Y \): \( \mu_Y = 3 \times 4 + 5 = 17 \)\n"
-        "Standard deviation of \( Y \): \( \sigma_Y = 3 \times 1 = 12 \)"
-    ),
-    'explanation': (
-        "For a scaled and shifted random variable \( Y = aX + b \), the mean and standard deviation are given by:\n"
-        "$$ \mu_Y = a\mu_X + b, \quad \sigma_Y = |a|\sigma_X. $$\n"
-        "For \( X \sim \text{Exp}(0.25) \), \( \mu_X = 4 \) and \( \sigma_X = 4 \), so for \( Y = 3X + 5 \), we get \( \mu_Y = 17 \) and \( \sigma_Y = 12 \)."
-    ),
-    'chapter_information': "DeepSeek Generated"
-}
 
-question_5_math_app_marathon_probability = {
-    'question': (
-        "150 kids use a math app, where each kid's score follows a uniform distribution \( \text{Unif}(0, 20) \). What is the probability that the total score of all 150 kids is less than 2500?"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': "The probability is approximately 1.",
-    'explanation': (
-        "The sum of the scores can be approximated by a normal distribution using the Central Limit Theorem. "
-        "For \( X_i \sim \text{Unif}(0, 20) \), the mean is \( \mu_X = 10 \) and the variance is \( \sigma_X^2 = \frac{400}{12} \approx 33.33 \). "
-        "The mean of the total score is \( \mu_{\text{total}} = 150 \times 10 = 1500 \), and the standard deviation is \( \sigma_{\text{total}} \approx 70.71 \). "
-        "We calculate the Z-score for \( S < 2500 \):\n"
-        "$$ Z = \frac{2500 - 1500}{70.71} \approx 14.14 $$\n"
-        "Since the Z-score is extremely large, the probability is essentially 1."
-    ),
-    'chapter_information': "DeepSeek Generated"
-}
 
-question_6_concert_attendance_variability = {
-    'question': (
-        "Let \( X_1, X_2, \dots, X_{30} \) represent the number of Bieber concerts attended by 30 students, with \( \sigma^2 = 16 \). What is the variance of the total number of concerts attended and the variance of the sample mean?"
-    ),
-    'options_list': ["Solution not required"],
-    'correct_answer': (
-        "Variance of sum: \( \text{Var}(S) = 30 \times 16 = 480 \)\n"
-        "Variance of sample mean: \( \text{Var}(\bar{X}) = \frac{16}{30} \approx 0.533 \)"
-    ),
-    'explanation': (
-        "The variance of the sum of independent random variables is the sum of their individual variances. "
-        "Thus, for the sum \( S = X_1 + X_2 + \dots + X_{30} \), we have \( \text{Var}(S) = 30 \times 16 = 480 \). "
-        "For the sample mean, the variance is \( \text{Var}(\bar{X}) = \frac{\sigma^2}{n} = \frac{16}{30} \approx 0.533 \)."
-    ),
-    'chapter_information': "DeepSeek Generated"
-}
+
+
 
 
 
