@@ -1,4 +1,4 @@
-question_1_geometric_distribution = {
+question_1_geom2etric_distribution = {
     'question': (
         "A student plays a video game level until completing it successfully. If the probability of completing the level on any attempt is $p = \\frac{1}{12}$, what is the expected number of attempts needed?"
     ),
@@ -17,7 +17,7 @@ question_1_geometric_distribution = {
     'chapter_information': "Deepseek Generated"
 }
 
-question_3_random_variable_transformation = {
+question_3_random_variable_transfor2mation = {
     'question': (
         "Let $X$ have pdf $f(x) = 3x^2$ for $0 \\leq x \\leq 1$. Find the pdf of $Y = \\ln(X)$."
     ),

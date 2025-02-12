@@ -1,23 +1,23 @@
 import streamlit as st
 from .sim_states import Token
 
-def apply_custom_css():
-    custom_css = """
-    <style>
-        .question-style {
-            font-size: 20px; 
-            font-weight: bold; 
-        }
-    </style>
-    """
-    st.markdown(custom_css, unsafe_allow_html=True)
+# def apply_custom_css():
+#     custom_css = """
+#     <style>
+#         .question-style {
+#             font-size: 20px; 
+#             font-weight: bold; 
+#         }
+#     </style>
+#     """
+#     st.markdown(custom_css, unsafe_allow_html=True)
 
 def question_generator(label, options, question_key):
     return st.radio(label='Please select the correct answer', options=options, key=question_key)
 
 def sim_questions():
     # st.write('Comimg Soon!')
-    apply_custom_css()
+    # apply_custom_css()
 
     if 'token' not in st.session_state:
         st.session_state.token = Token()
