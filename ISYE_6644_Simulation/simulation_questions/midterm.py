@@ -1525,6 +1525,82 @@ question_8_monte_carlo_simulation = {
     'chapter_information': "GPT 04 Generated"
 }
 
+question_3_lcg_cycle_length = {
+    'question': (
+        "Consider a linear congruential generator (LCG) defined as:\n"
+        "$$ X_{i+1} = (3X_i + 2) \mod 7 $$\n"
+        "with seed $X_0 = 1$. What is the period of this generator?"
+    ),
+    'options_list': ["3", "4", "6", "7", "8"],
+    'correct_answer': "6",
+    'explanation': (
+        "Computing the sequence:\n"
+        "- $X_0 = 1$\n"
+        "- $X_1 = (3(1) + 2) \mod 7 = 5$\n"
+        "- $X_2 = (3(5) + 2) \mod 7 = 3$\n"
+        "- $X_3 = (3(3) + 2) \mod 7 = 4$\n"
+        "- $X_4 = (3(4) + 2) \mod 7 = 0$\n"
+        "- $X_5 = (3(0) + 2) \mod 7 = 2$\n"
+        "- $X_6 = (3(2) + 2) \mod 7 = 1$\n\n"
+        "Since $X_6 = X_0$, the cycle length is **6**."
+    ),
+    'chapter_information': "GPT-4 Generated"
+}
+
+question_4_expectation_cdf_transformation = {
+    'question': (
+        "Let $X$ be a continuous random variable with cumulative distribution function $F(x)$. "
+        "Find $E[F(X)]$."
+    ),
+    'options_list': ["1/3", "1/2", "2/3", "e^{-2}", "e"],
+    'correct_answer': "1/2",
+    'explanation': (
+        "Since $F(X) \sim \text{Unif}(0,1)$, we have:\n"
+        "$$ E[F(X)] = E[U] = \\frac{1}{2}. $$"
+    ),
+    'chapter_information': "GPT-4 Generated"
+}
+
+question_5_probability_transformation = {
+    'question': (
+        "Let $X$ and $Y$ be independent $\\text{Unif}(0,1)$ random variables. Define:\n"
+        "$$ W = \\frac{X}{X + Y}. $$\n"
+        "Find $E[W]$."
+    ),
+    'options_list': ["1/4", "1/3", "1/2", "2/3", "3/4"],
+    'correct_answer': "1/2",
+    'explanation': (
+        "Since $W$ and $1 - W$ have the same distribution due to symmetry, we have:\n"
+        "$$ E[W] + E[1 - W] = 1. $$\n"
+        "Thus, $E[W] = \\frac{1}{2}$. "
+    ),
+    'chapter_information': "GPT-4 Generated"
+}
+
+question_6_monte_carlo_estimation = {
+    'question': (
+        "Suppose you want to estimate the integral:\n"
+        "$$ I = \\int_0^1 e^{-x^2} \\, dx $$\n"
+        "using the Monte Carlo method. If you generate $n = 10,000$ independent $\\text{Unif}(0,1)$ samples "
+        "$X_1, X_2, \\dots, X_n$, which of the following would be a valid Monte Carlo estimator for $I$?"
+    ),
+    'options_list': [
+        "$\\frac{1}{n} \\sum_{i=1}^{n} e^{-X_i^2}$",
+        "$\\frac{1}{n} \\sum_{i=1}^{n} X_i e^{-X_i^2}$",
+        "$\\frac{1}{n} \\sum_{i=1}^{n} e^{-X_i}$",
+        "$\\frac{1}{n} \\sum_{i=1}^{n} X_i^2 e^{-X_i}$",
+        "None of the above"
+    ],
+    'correct_answer': "$\\frac{1}{n} \\sum_{i=1}^{n} e^{-X_i^2}$",
+    'explanation': (
+        "Monte Carlo integration estimates:\n"
+        "$$ \\int_0^1 f(x) \\, dx \\approx \\frac{1}{n} \\sum_{i=1}^{n} f(X_i), $$\n"
+        "where $X_i \\sim \\text{Unif}(0,1)$. Here, $f(x) = e^{-x^2}$, so the correct estimator is:\n"
+        "$$ \\frac{1}{n} \\sum_{i=1}^{n} e^{-X_i^2}. $$"
+    ),
+    'chapter_information': "GPT-4 Generated"
+}
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
