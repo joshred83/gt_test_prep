@@ -155,6 +155,7 @@ question_2_first_order_linear = {
     'chapter_information': "Module 3 - Differential Equations GPT Generated"
 }
 
+
 question_3_first_order_linear_with_initial_condition = {
     'question': (
         "Solve the equation:\n"
