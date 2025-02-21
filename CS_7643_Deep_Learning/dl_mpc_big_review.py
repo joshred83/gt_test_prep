@@ -12,8 +12,8 @@ import os
 quiz_mapping = {
     "Quiz 1: Neural Nets": ['1', '2'],  # Directly corresponds to Lesson 1 and Lesson 2
     "Quiz 2: Vision Models": ['3', '5'],  # Lessons 3 and 5 (as specified)
-    # "Quiz 3": ['5', '6', '7', '9'],  # Lessons 5, 6, 7, and 9
-    "Quiz 3: RNN - LSTM - Transformers - Attention": ['11', '12', '13', '14', '15'],  # Lessons 11 through 15
+    "Quiz 3 GradCAM YOLO CNN architectures": ['5', '6', '7', '9'],  # Lessons 5, 6, 7, and 9
+    "Quiz 4: RNN - LSTM - Transformers - Attention": ['11', '12', '13', '14', '15'],  # Lessons 11 through 15
     "Quiz 5: RL VAE GAN": ['17', '18', '19']  # Lessons 11 through 15
 }
 
@@ -31,7 +31,8 @@ def big_review():
     # Select Quiz
     st.title("Select a Quiz")
     quiz_choice = st.radio("Choose a quiz", options=["Quiz 1: Neural Nets", "Quiz 2: Vision Models",
-                                                     "Quiz 3: RNN - LSTM - Transformers - Attention",
+                                                     "Quiz 3 GradCAM YOLO CNN architectures",
+                                                     "Quiz 4: RNN - LSTM - Transformers - Attention",
                                                      "Quiz 5: RL VAE GAN" ])
 
     # Get lessons for the selected quiz
