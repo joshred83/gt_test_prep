@@ -75,15 +75,16 @@ module_2_convolutional_backprop_oh_tf_question_1 = {
 }
 
 module_2_convolutional_backprop_oh_tf_question_2 = {
-    'question': "In a convolutional layer, the dimensions of the gradient of the loss with respect to the input always match the dimensions of the input image, regardless of padding or stride.",
+    'question': "In a convolutional layer, does the gradient of the loss with respect to the input always have the same dimensions as the input image, regardless of padding or stride?",
     'options_list': [
         "True",
         "False"
     ],
-    'correct_answer': 'False',
-    'explanation': "The dimensions of the gradient with respect to the input depend on the padding and stride used during the forward pass.",
+    'correct_answer': 'True',
+    'explanation': "The dimensions of the gradient of the loss with respect to the input will always match the input image's dimensions. Padding and stride affect the sum of the gradients for each input element but do not change the dimensions of the gradient itself.",
     'chapter_information': 'Convolutional Module 2: Backprop OH'
 }
+
 
 module_2_convolutional_backprop_oh_tf_question_3 = {
     'question': "In backpropagation through a convolutional layer, if the input image has padding, the resulting gradient with respect to the input must include the padded elements.",
