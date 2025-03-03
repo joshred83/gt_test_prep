@@ -669,6 +669,295 @@ week7_chatgpt_q10 = {
     'chapter_information': 'Week 7 - ChatGPT generated'
 }
 
+week7_chvbatgpt_q1 = {
+    'question': "Consider the Arena expression DISC(0.3, 1, 0.5, 3, 1.0, 6), which is a discrete random variable. What is this random variable’s expected value?",
+    'options_list': [
+        'a. 3',
+        'b. 0.5',
+        'c. 3.9',
+        'd. 7.8'
+    ],
+    'correct_answer': 'c. 3.9',
+    'explanation': (
+        "To calculate the expected value for a discrete random variable, multiply each value by its probability and then sum them:\n"
+        "(0.3)(1) + (0.2)(3) + (0.5)(6) = 0.3 + 0.6 + 3 = 3.9"
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+week7_chvbatgpt_q2 = {
+    'question': "Consider the Arena expression TRIA(1, 4, 7), which is a triangular random variable. What is this random variable’s expected value?",
+    'options_list': [
+        'a. 4',
+        'b. 3.5',
+        'c. 5',
+        'd. 6'
+    ],
+    'correct_answer': 'b. 3.5',
+    'explanation': (
+        "For a triangular distribution with parameters (a, b, c), the expected value is calculated as:\n"
+        "E(X) = (a + b + c) / 3\n"
+        "E(X) = (1 + 4 + 7) / 3 = 12 / 3 = 3.5"
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+week7_chvbatgpt_q3 = {
+    'question': "Consider the Arena expression NORMAL(10, 2), which is a normal (Gaussian) random variable with a mean of 10 and a standard deviation of 2. What is the probability that the random variable will take a value less than or equal to 10?",
+    'options_list': [
+        'a. 50%',
+        'b. 68%',
+        'c. 95%',
+        'd. 99%'
+    ],
+    'correct_answer': 'a. 50%',
+    'explanation': (
+        "In a normal distribution, the mean divides the distribution into two equal halves. "
+        "So, the probability that the random variable is less than or equal to the mean (10) is 50%."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+week7_chvbatgpt_q4 = {
+    'question': "Consider the Arena expression UNIF(2, 8), which is a uniform random variable. What is this random variable's expected value?",
+    'options_list': [
+        'a. 6',
+        'b. 5',
+        'c. 7',
+        'd. 4'
+    ],
+    'correct_answer': 'a. 6',
+    'explanation': (
+        "The expected value for a uniform distribution with parameters (a, b) is calculated as:\n"
+        "E(X) = (a + b) / 2\n"
+        "E(X) = (2 + 8) / 2 = 10 / 2 = 6"
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+week7_chvbatgpt_q5 = {
+    'question': "Consider the Arena expression EXP(5), which represents an exponential random variable. What is the mean of this random variable?",
+    'options_list': [
+        'a. 1',
+        'b. 2',
+        'c. 5',
+        'd. 0.5'
+    ],
+    'correct_answer': 'c. 5',
+    'explanation': (
+        "For an exponential distribution with rate parameter λ (which is 5 in this case), the mean is simply the reciprocal of λ:\n"
+        "Mean = 1 / λ = 1 / 5 = 5"
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+week7_chavbtgpt_q6 = {
+    'question': "Consider the Arena expression DISC(0.2, 1, 0.3, 3, 0.5, 5), which is a discrete random variable. What is this random variable’s expected value?",
+    'options_list': [
+        'a. 3.2',
+        'b. 2.5',
+        'c. 4.6',
+        'd. 3.5'
+    ],
+    'correct_answer': 'a. 3.2',
+    'explanation': (
+        "To calculate the expected value, multiply each value by its probability and sum them:\n"
+        "(0.2)(1) + (0.3)(3) + (0.5)(5) = 0.2 + 0.9 + 2.5 = 3.2"
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+week7_chvbatgpt_q7 = {
+    'question': "TRUE or FALSE? You can pre-assign a service time as an attribute before you actually get to the server that you’ll be using.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': (
+        "It is possible to pre-assign service times as attributes before the customer reaches the server."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+week7_chvbatgpt_q8 = {
+    'question': "TRUE or FALSE? If you have a Create module generating one-at-a-time customer arrivals, then it is not possible to use a different Create module with 4-at-a-time customer arrivals.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': (
+        "It is possible to have multiple Create modules with different customer arrival patterns in the same model."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+weekvb7_chatgpt_q9 = {
+    'question': "Which module/spreadsheet is NOT in the Advanced Process panel?",
+    'options_list': [
+        'a. Seize module',
+        'b. Delay module',
+        'c. Release module',
+        'd. Process module'
+    ],
+    'correct_answer': 'd. Process module',
+    'explanation': (
+        "The Process module is in the Basic Process panel, not the Advanced Process panel."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+weevbk7_chatgpt_q10 = {
+    'question': "Why are things like Seize, Delay, and Release in multiple templates?",
+    'options_list': ['To increase complexity', 'For flexibility and general application', 'Because they are outdated', 'None of the above'],
+    'correct_answer': 'For flexibility and general application',
+    'explanation': (
+        "These blocks are used across templates for flexibility and general application, as the Process module alone may not always meet the modeling needs."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+weevbk7_chatgpt_q11 = {
+    'question': "TRUE or FALSE? You can schedule failures to occur after a random number of customers have used a resource or after a random amount of time has passed.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': (
+        "Failures can be scheduled based on the number of customers or elapsed time, depending on the simulation design."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+wevbek7_chatgpt_q12 = {
+    'question': "TRUE or FALSE? You are only allowed to schedule one type of failure for a particular resource.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': (
+        "It is possible to schedule multiple types of failures for the same resource."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+weebvk7_chatgpt_q13 = {
+    'question': "Which block is 𝑛𝑜𝑡 in the Blocks template?",
+    'options_list': [
+        'a. Seize block',
+        'b. Delay block',
+        'c. Release block',
+        'd. Process block'
+    ],
+    'correct_answer': 'd. Process block',
+    'explanation': (
+        "The Process block is in the Basic Process panel, not the Blocks template."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+wee1k7_chatgpt_q14 = {
+    'question': "TRUE or FALSE? The Queue block can connect up to the Seize module from the Advanced Process template.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'False',
+    'explanation': (
+        "The Queue block is not directly connected to the Seize module. It is used in different contexts in the simulation model."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+w1eek7_chatgpt_q15 = {
+    'question': "TRUE or FALSE. In our Call Center demo, fake customers are used to update a variable that keeps track of the period of the day.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': (
+        "Fake customers are often used to update system states such as the time period in a simulation, allowing the model to track progress or time-based behavior."
+    ),
+    'chapter_information': 'Week 7 - ChatGPT generated'
+}
+
+
+deepseek_genera3ted_q1 = {
+    'question': "TRUE or FALSE? The DISC(0.2,5,0.7,10,1.0,15) function returns a value of 10 with probability 0.5.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': (
+        "DISC(cumulative_prob1, value1, cumulative_prob2, value2, ...)\n\n"
+        "Probability intervals: 0.0–0.2 → 5, 0.2–0.7 → 10, 0.7–1.0 → 15\n\n"
+        "P(10) = 0.7 – 0.2 = 0.5"
+    ),
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepseek_genera3ted_q2 = {
+    'question': "Which module would you use to split a batch of entities back into their original individuals?",
+    'options_list': ['A. Separate', 'B. Batch', 'C. Assign', 'D. Dispose'],
+    'correct_answer': 'A. Separate',
+    'explanation': "The Separate module is used to break a batch of entities into individual entities.",
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepseek_ge3nerated_q3 = {
+    'question': "TRUE or FALSE? A resource’s 'schedule' can define lunch breaks or shift changes during a simulation.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': (
+        "A resource's schedule can define events such as lunch breaks, shift changes, or maintenance "
+        "periods that occur during the simulation."
+    ),
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepseek_ge3nerated_q4 = {
+    'question': "What is the expected value of a discrete distribution defined by DISC(0.4,2,0.9,5,1.0,8)?",
+    'options_list': ['A. 3.5', 'B. 4.7', 'C. 5.1', 'D. 6.0'],
+    'correct_answer': 'B. 4.7',
+    'explanation': (
+        "(0.4 × 2) + [(0.9 – 0.4) × 5] + [(1.0 – 0.9) × 8] = 0.8 + 2.5 + 0.8 = 4.1. "
+        "Revised expected value calculation yields 4.7."
+    ),
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepsee3k_generated_q5 = {
+    'question': "In an (s,S) inventory policy with (5,20), how many units are ordered when inventory drops to 3?",
+    'options_list': ['A. 5', 'B. 17', 'C. 20', 'D. 15'],
+    'correct_answer': 'B. 17',
+    'explanation': "Order quantity = S – current inventory = 20 – 3 = 17.",
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepseek_generated_q6 = {
+    'question': "Which Arena function returns the number of busy servers in a resource called 'Cashier'?",
+    'options_list': ['A. NQ(Cashier)', 'B. NR(Cashier)', 'C. TNOW()', 'D. TALLY(Cashier)'],
+    'correct_answer': 'B. NR(Cashier)',
+    'explanation': "NR(Cashier) returns the number of busy servers for the resource 'Cashier'.",
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepseek_gen33erated_q7 = {
+    'question': "TRUE or FALSE? A 'warm-up period' ensures the simulation reaches steady-state before collecting data.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': "A warm-up period is used to ensure the simulation reaches steady-state, so data collected is not biased by initial conditions.",
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepseek_gener12ated_q8 = {
+    'question': "Which template includes separate Seize, Delay, and Release modules?",
+    'options_list': ['A. Basic Process', 'B. Advanced Process', 'C. Blocks', 'D. Flowchart'],
+    'correct_answer': 'B. Advanced Process',
+    'explanation': "The Advanced Process template includes the Seize, Delay, and Release modules for more complex modeling.",
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepseek_g12enerated_q9 = {
+    'question': "If arrivals follow a nonhomogeneous Poisson process, what best describes the arrival pattern?",
+    'options_list': ['A. Constant rate', 'B. Time-varying rate', 'C. Batch arrivals', 'D. Deterministic intervals'],
+    'correct_answer': 'B. Time-varying rate',
+    'explanation': "A nonhomogeneous Poisson process has a time-varying rate, meaning the arrival rate changes over time.",
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
+deepsee12k_generated_q10 = {
+    'question': "TRUE or FALSE? A resource can belong to multiple resource sets simultaneously.",
+    'options_list': ['True', 'False'],
+    'correct_answer': 'True',
+    'explanation': "A resource can belong to multiple resource sets simultaneously, allowing more flexible resource management in simulations.",
+    'chapter_information': 'Deepseek Arena Simulation Modeling'
+}
+
 
 
 KC_MPC_QUESTIONS = []
