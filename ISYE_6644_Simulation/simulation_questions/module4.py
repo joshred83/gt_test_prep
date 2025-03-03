@@ -308,6 +308,113 @@ question_11_simulation_software_evaluation = {
 }
 
 
+simulation_question_1 = {
+    'question': "Which of the following is not a critical step in a simulation study?",
+    'options_list': ['A. Data collection', 'B. Model verification', 'C. Hiring a graphic designer', 'D. Scenario analysis'],
+    'correct_answer': "C. Hiring a graphic designer",
+    'explanation': (
+        "Correct! Graphic design is generally not a part of the core simulation steps like data collection, "
+        "verification, or scenario analysis."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_2 = {
+    'question': "TRUE or FALSE?\nThe system state includes all information needed to resume a simulation from a saved point.",
+    'options_list': ['True', 'False'],
+    'correct_answer': "True",
+    'explanation': (
+        "Correct! The system state captures all necessary variables (e.g., queue lengths, resource statuses) "
+        "to restart the simulation from a specific point."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_3 = {
+    'question': "Properties like a customer’s age or an order’s type are examples of:",
+    'options_list': ['A. Variables', 'B. Resources', 'C. Activities', 'D. Attributes'],
+    'correct_answer': "D. Attributes",
+    'explanation': (
+        "Correct! Attributes are properties specific to entities (e.g., a customer's age or an order's type), "
+        "whereas variables are system-wide."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_4 = {
+    'question': "Which two components drive discrete-event simulation execution?",
+    'options_list': ['A. Resource spreadsheet and Process module', 'B. Simulation clock and Future Event List', 
+                     'C. Create module and Dispose module', 'D. Variables and Attributes'],
+    'correct_answer': "B. Simulation clock and Future Event List",
+    'explanation': (
+        "Correct! The simulation clock keeps track of time, while the Future Event List schedules future events. "
+        "Together, they are the backbone of discrete-event simulation."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_5 = {
+    'question': "TRUE or FALSE?\nThe Future Event List only allows adding new events, not modifying existing ones.",
+    'options_list': ['True', 'False'],
+    'correct_answer': "False",
+    'explanation': (
+        "Correct! Events can be added, modified, or removed in the Future Event List based on their priority or scheduled time."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_6 = {
+    'question': "Which modeling approach focuses on entity flow and resource interactions?",
+    'options_list': ['A. Event-Scheduling', 'B. Activity-Centric', 'C. Process-Interaction', 'D. Continuous Modeling'],
+    'correct_answer': "C. Process-Interaction",
+    'explanation': (
+        "Correct! Process-Interaction (used in Arena) focuses on the flow of entities and their interactions with resources."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_7 = {
+    'question': "When choosing simulation software, which factor is least important?",
+    'options_list': ['A. Cost', 'B. Built-in statistical tools', 'C. Brand of the developer’s laptop', 'D. Ease of animation'],
+    'correct_answer': "C. Brand of the developer’s laptop",
+    'explanation': (
+        "Correct! Hardware specifications (e.g., the brand of the laptop) are less important than software features like statistical tools, cost, or animation quality."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_8 = {
+    'question': "TRUE or FALSE?\nA “customer type” (e.g., VIP vs. regular) is best modeled as an attribute.",
+    'options_list': ['True', 'False'],
+    'correct_answer': "True",
+    'explanation': (
+        "Correct! A customer type is an entity-specific trait and should be modeled as an attribute (e.g., VIP, regular)."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_9 = {
+    'question': "Which term refers to global values that affect the entire simulation?",
+    'options_list': ['A. Attributes', 'B. Variables', 'C. Resources', 'D. Queues'],
+    'correct_answer': "B. Variables",
+    'explanation': (
+        "Correct! Variables are global values that affect the entire system (e.g., total revenue or system-wide statistics), "
+        "unlike attributes, which belong to individual entities."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+simulation_question_10 = {
+    'question': "TRUE or FALSE?\nThe primary goal of model validation is to ensure the simulation matches real-world behavior.",
+    'options_list': ['True', 'False'],
+    'correct_answer': "True",
+    'explanation': (
+        "Correct! The purpose of model validation is to ensure the simulation accurately reflects the real-world system it is modeling."
+    ),
+    'chapter_information': 'Week 5 - Module 4 DeepSeek'
+}
+
+
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
 # print(global_items)
