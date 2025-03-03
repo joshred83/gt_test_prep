@@ -1,278 +1,228 @@
-# Confidence Intervals
-isye6739_module6_question_1 = {
+prn_chat_gpt_week7_q1 = {
     'question': (
-        "The life in hours of a 75-W light bulb is known to be approximately normally distributed, "
-        "with a standard deviation of $\\sigma = 25$ hours. A random sample of 20 bulbs has a mean life of $\\bar{x} = 1014$ hours. "
-        "Construct a 95% two-sided confidence interval on the mean life."
+        "Suppose that a Tausworthe generator produces the following series of bits: 1101101.\n"
+        "If you use all 7 bits, what Unif(0,1) random number would that translate to?"
     ),
-    'options_list': [
-        'A) $1000.2 \\leq \\mu \\leq 1027.8$',
-        'B) $1003.04 \\leq \\mu \\leq 1024.96$',
-        'C) $995.12 \\leq \\mu \\leq 1032.88$',
-        'D) $1005.76 \\leq \\mu \\leq 1022.24$'
-    ],
-    'correct_answer': 'B) $1003.04 \\leq \\mu \\leq 1024.96$',
+    'options_list': ['0.8515625', '0.65', '0.5', '0.75'],
+    'correct_answer': '0.8515625',
     'explanation': (
-        "To construct the 95% confidence interval, we use:\n"
-        "$\\bar{x} - z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}} \\leq \\mu \\leq \\bar{x} + z_{\\alpha/2} \\frac{\\sigma}{\\sqrt{n}}$\n"
-        "Given $z_{0.025} = 1.96$, $\\sigma = 25$, $n = 20$, and $\\bar{x} = 1014$, we compute:\n"
-        "$1014 - 1.96 \\cdot \\frac{25}{\\sqrt{20}} \\leq \\mu \\leq 1014 + 1.96 \\cdot \\frac{25}{\\sqrt{20}}$\n"
-        "$1003.04 \\leq \\mu \\leq 1024.96$."
+        "The binary sequence is 1101101, which corresponds to the following fraction:\n\n"
+        "1/2 + 1/4 + 0/8 + 1/16 + 1/32 + 0/64 + 1/128\n\n"
+        "Calculating the sum:\n"
+        "0.5 + 0.25 + 0.0625 + 0.03125 + 0.0078125 = 0.8515625"
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'PRNG and Random Number Generation'
 }
 
-isye6739_module6_question_2 = {
+prn_chat_gpt_week7_q2 = {
     'question': (
-        "In Exercise 10-40, suppose we want to be 95% confident that the error in estimating the mean life is less than 5 hours. "
-        "What sample size should be used?"
+        "Suppose that the Tausworthe PRNG gives you the sequence 011010110111.\n"
+        "If you use the first 8 bits, what Unif(0,1) random number would that represent?"
     ),
-    'options_list': [
-        'A) 97',
-        'B) 87',
-        'C) 107',
-        'D) 77'
-    ],
-    'correct_answer': 'A) 97',
+    'options_list': ['0.41896875', '0.625', '0.3', '0.5'],
+    'correct_answer': '0.41896875',
     'explanation': (
-        "To determine the sample size, we use:\n"
-        "$n = \\left( \\frac{z_{\\alpha/2} \\sigma}{e} \\right)^2$\n"
-        "Given $z_{0.025} = 1.96$, $\\sigma = 25$, and $e = 5$, we compute:\n"
-        "$n = \\left( \\frac{1.96 \\cdot 25}{5} \\right)^2 = 96.04 \\approx 97$."
+        "The first 8 bits are 01101011. To convert this to a uniform random number:\n\n"
+        "0/2 + 1/4 + 1/8 + 0/16 + 1/32 + 0/64 + 1/128 + 1/256\n\n"
+        "Calculating the sum:\n"
+        "0.25 + 0.125 + 0.03125 + 0.0078125 + 0.00390625 = 0.41896875"
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'PRNG and Random Number Generation'
 }
 
-isye6739_module6_question_3 = {
+prn_chat_gpt_week7_q3 = {
     'question': (
-        "The burning rates of two different solid-fuel rocket propellants are being studied. Both propellants have a standard deviation of $\\sigma = 3$ cm/s. "
-        "Two random samples of $n_1 = 20$ and $n_2 = 20$ specimens are tested. The sample mean burning rates are $\\bar{x}_1 = 18$ and $\\bar{x}_2 = 24$ cm/s. "
-        "Construct a 99% confidence interval on the mean difference in burning rate."
+        "A Tausworthe generator gives you the 5-bit sequence: 10101.\n"
+        "What Unif(0,1) random number does this represent?"
     ),
-    'options_list': [
-        'A) $4.12 \\leq \\mu_2 - \\mu_1 \\leq 7.88$',
-        'B) $3.56 \\leq \\mu_2 - \\mu_1 \\leq 8.44$',
-        'C) $2.96 \\leq \\mu_2 - \\mu_1 \\leq 9.04$',
-        'D) $3.24 \\leq \\mu_2 - \\mu_1 \\leq 8.76$'
-    ],
-    'correct_answer': 'B) $3.56 \\leq \\mu_2 - \\mu_1 \\leq 8.44$',
+    'options_list': ['0.65625', '0.8', '0.45', '0.25'],
+    'correct_answer': '0.65625',
     'explanation': (
-        "The confidence interval is given by:\n"
-        "$\\bar{x}_2 - \\bar{x}_1 - z_{\\alpha/2} \\sqrt{\\frac{\\sigma_1^2}{n_1} + \\frac{\\sigma_2^2}{n_2}} \\leq \\mu_2 - \\mu_1 "
-        "\\leq \\bar{x}_2 - \\bar{x}_1 + z_{\\alpha/2} \\sqrt{\\frac{\\sigma_1^2}{n_1} + \\frac{\\sigma_2^2}{n_2}}$\n"
-        "Given $z_{0.005} = 2.576$, $\\sigma = 3$, $n_1 = n_2 = 20$, $\\bar{x}_1 = 18$, and $\\bar{x}_2 = 24$, we compute:\n"
-        "$3.56 \\leq \\mu_2 - \\mu_1 \\leq 8.44$."
+        "The binary sequence 10101 corresponds to the following fraction:\n\n"
+        "1/2 + 0/4 + 1/8 + 0/16 + 1/32\n\n"
+        "Calculating the sum:\n"
+        "0.5 + 0.125 + 0.03125 = 0.65625"
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'PRNG and Random Number Generation'
 }
 
-isye6739_module6_question_4 = {
+prn_chat_gpt_week7_q4 = {
     'question': (
-        "The compressive strength of concrete is being tested by a civil engineer. He tests 16 specimens with the following data:\n"
-        "2216, 2237, 2249, 2204, 2225, 2301, 2281, 2263,\n"
-        "2318, 2255, 2275, 2295, 2250, 2238, 2300, 2217.\n"
-        "Construct a 95% two-sided confidence interval on the mean compressive strength."
+        "A Tausworthe generator outputs two 4-bit sequences:\n"
+        "First sequence: 1101\n"
+        "Second sequence: 1010\n"
+        "Combine these two sequences to form an 8-bit number. "
+        "What Unif(0,1) random number does this represent?"
     ),
-    'options_list': [
-        'A) $2240.2 \\leq \\mu \\leq 2270.5$',
-        'B) $2239.4 \\leq \\mu \\leq 2276.1$',
-        'C) $2242.8 \\leq \\mu \\leq 2272.8$',
-        'D) $2245.3 \\leq \\mu \\leq 2273.7$'
-    ],
-    'correct_answer': 'B) $2239.4 \\leq \\mu \\leq 2276.1$',
+    'options_list': ['0.8515625', '0.9', '0.65', '0.75'],
+    'correct_answer': '0.8515625',
     'explanation': (
-        "Since $\\sigma$ is unknown, we use the t-distribution for the confidence interval:\n"
-        "$\\bar{x} - t_{\\alpha/2, n-1} \\frac{s}{\\sqrt{n}} \\leq \\mu \\leq \\bar{x} + t_{\\alpha/2, n-1} \\frac{s}{\\sqrt{n}}$\n"
-        "Given $n = 16$, $\\bar{x} = 2257.75$, $s = 34.51$, and $t_{0.025,15} = 2.13$, we compute:\n"
-        "$2239.4 \\leq \\mu \\leq 2276.1$."
+        "The two 4-bit sequences are 1101 and 1010, which together form the 8-bit sequence 11011010.\n\n"
+        "To convert this to a uniform random number:\n\n"
+        "1/2 + 1/4 + 0/8 + 1/16 + 1/32 + 0/64 + 1/128 + 0/256\n\n"
+        "Calculating the sum:\n"
+        "0.5 + 0.25 + 0.0625 + 0.03125 + 0.0078125 = 0.8515625"
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'PRNG and Random Number Generation'
 }
 
-isye6739_module6_question_5 = {
+prn_chat_gpt_week7_q5 = {
     'question': (
-        "An article on bond strengths for energetic materials presents data for 15 bond strength specimens:\n"
-        "323, 312, 300, 284, 283, 261, 207, 183, 180, 179, 174, 167, 167, 157, 120.\n"
-        "Construct a two-sided 95% confidence interval on the mean bond strength."
+        "A Tausworthe generator produces the sequence 101110110101.\n"
+        "If you use only the first 6 bits, what Unif(0,1) random number would that represent?"
     ),
-    'options_list': [
-        'A) $185.2 \\leq \\mu \\leq 254.3$',
-        'B) $183.1 \\leq \\mu \\leq 256.5$',
-        'C) $182.4 \\leq \\mu \\leq 255.8$',
-        'D) $184.6 \\leq \\mu \\leq 258.1$'
-    ],
-    'correct_answer': 'B) $183.1 \\leq \\mu \\leq 256.5$',
+    'options_list': ['0.734375', '0.8', '0.5', '0.6'],
+    'correct_answer': '0.734375',
     'explanation': (
-        "Since $\\sigma$ is unknown, we use the t-distribution for the confidence interval:\n"
-        "$\\bar{x} - t_{\\alpha/2, n-1} \\frac{s}{\\sqrt{n}} \\leq \\mu \\leq \\bar{x} + t_{\\alpha/2, n-1} \\frac{s}{\\sqrt{n}}$\n"
-        "Given $n = 15$, $\\bar{x} = 219.80$, $s = 66.41$, and $t_{0.025,14} = 2.14$, we compute:\n"
-        "$219.80 - 2.14 \\cdot \\frac{66.41}{\\sqrt{15}} \\leq \\mu \\leq 219.80 + 2.14 \\cdot \\frac{66.41}{\\sqrt{15}}$\n"
-        "This simplifies to $183.1 \\leq \\mu \\leq 256.5$."
+        "The first 6 bits are 101110. To convert this to a uniform random number:\n\n"
+        "1/2 + 0/4 + 1/8 + 1/16 + 1/32 + 1/64\n\n"
+        "Calculating the sum:\n"
+        "0.5 + 0.125 + 0.0625 + 0.03125 + 0.015625 = 0.734375"
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'PRNG and Random Number Generation'
 }
 
-isye6739_module6_question_6 = {
-    'question': (
-        "The wall thickness of 25 glass 2-liter bottles was measured by a quality-control engineer. "
-        "The sample mean was $\\bar{x} = 4.05$ mm, and the sample standard deviation was $s = 0.08$ mm. "
-        "Find a 90% lower confidence interval on the mean wall thickness."
-    ),
+question_1_prng_properties = {
+    'question': "Which of the following is a necessary property for a good pseudo-random number generator (PRNG)?",
     'options_list': [
-        'A) $4.012 \\leq \\mu$',
-        'B) $4.021 \\leq \\mu$',
-        'C) $4.029 \\leq \\mu$',
-        'D) $4.035 \\leq \\mu$'
+        'The numbers must appear to be normally distributed.',
+        'The numbers must be uniformly distributed between 0 and 1.',
+        'The sequence of numbers should be easy to predict.',
+        'The numbers should have a long period with minimal repetition.'
     ],
-    'correct_answer': 'C) $4.029 \\leq \\mu$',
+    'correct_answer': 'The numbers must be uniformly distributed between 0 and 1.',
     'explanation': (
-        "The lower confidence interval for the mean is given by:\n"
-        "$\\bar{x} - t_{\\alpha, n-1} \\frac{s}{\\sqrt{n}} \\leq \\mu$\n"
-        "Given $n = 25$, $\\bar{x} = 4.05$, $s = 0.08$, and $t_{0.10,24} = 1.32$, we compute:\n"
-        "$4.05 - 1.32 \\cdot \\frac{0.08}{\\sqrt{25}} = 4.029$\n"
-        "Thus, $4.029 \\leq \\mu$."
+        "A good PRNG should generate numbers that are uniformly distributed between 0 and 1, which ensures that "
+        "every possible number within this range has an equal probability of being selected. This is a fundamental "
+        "property for most simulations and statistical methods."
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'Chat GPT Generated'
 }
 
-isye6739_module6_question_7 = {
-    'question': (
-        "Two independent random samples of size $n_1 = 20$ and $n_2 = 20$ are drawn from two normal populations. "
-        "The sample means and standard deviations are $\\bar{x}_1 = 22.0$, $s_1 = 1.8$, $\\bar{x}_2 = 21.5$, and $s_2 = 1.5$. "
-        "Assuming that $\\sigma_1^2 = \\sigma_2^2$, construct a 95% two-sided confidence interval on $\\mu_1 - \\mu_2$."
-    ),
+question_2_goodness_of_fit_prng = {
+    'question': "You are evaluating a PRNG using a Chi-square goodness-of-fit test. The statistic calculated from the test is much greater than the critical value for the given degrees of freedom. What conclusion should you draw?",
     'options_list': [
-        'A) $-0.561 \\leq \\mu_1 - \\mu_2 \\leq 1.561$',
-        'B) $-0.705 \\leq \\mu_1 - \\mu_2 \\leq 1.705$',
-        'C) $-0.612 \\leq \\mu_1 - \\mu_2 \\leq 1.612$',
-        'D) $-0.589 \\leq \\mu_1 - \\mu_2 \\leq 1.589$'
+        'The PRNG is likely producing numbers that are uniformly distributed.',
+        'The PRNG is likely producing numbers that are not uniformly distributed.',
+        'The PRNG is likely producing numbers that are not independent.',
+        'The PRNG is likely producing numbers that follow a normal distribution.'
     ],
-    'correct_answer': 'A) $-0.561 \\leq \\mu_1 - \\mu_2 \\leq 1.561$',
+    'correct_answer': 'The PRNG is likely producing numbers that are not uniformly distributed.',
     'explanation': (
-        "The confidence interval for the difference in means with equal variances is:\n"
-        "$\\bar{x}_1 - \\bar{x}_2 - t_{\\alpha/2, n_1+n_2-2} s_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}} \\leq \\mu_1 - \\mu_2 "
-        "\\leq \\bar{x}_1 - \\bar{x}_2 + t_{\\alpha/2, n_1+n_2-2} s_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}$\n"
-        "With $s_p^2 = \\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1+n_2-2}$, we find $s_p = 2.745$ and $t_{0.025,38} = 2.024$.\n"
-        "Thus, the interval is $-0.561 \\leq \\mu_1 - \\mu_2 \\leq 1.561$."
+        "A goodness-of-fit test compares the observed distribution of generated numbers to the expected distribution "
+        "(uniform in the case of a PRNG). If the statistic is much greater than the critical value, it indicates that "
+        "the observed distribution significantly deviates from the expected uniform distribution. Hence, the numbers are "
+        "likely not uniformly distributed."
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'Chat GPT Generated'
 }
 
-isye6739_module6_question_8 = {
-    'question': (
-        "The diameter of steel rods from two extrusion machines is being investigated. "
-        "Two random samples of sizes $n_1 = 15$ and $n_2 = 18$ are selected, with sample means $\\bar{x}_1 = 8.73$, $\\bar{x}_2 = 8.68$, "
-        "and sample variances $s_1^2 = 0.30$, $s_2^2 = 0.34$. Assuming $\\sigma_1^2 = \\sigma_2^2$, construct a 95% confidence interval "
-        "on the difference in mean rod diameter."
-    ),
+question_3_period_of_prng = {
+    'question': "What is the 'period' of a pseudo-random number generator?",
     'options_list': [
-        'A) $-0.312 \\leq \\mu_1 - \\mu_2 \\leq 0.312$',
-        'B) $-0.355 \\leq \\mu_1 - \\mu_2 \\leq 0.455$',
-        'C) $-0.289 \\leq \\mu_1 - \\mu_2 \\leq 0.389$',
-        'D) $-0.276 \\leq \\mu_1 - \\mu_2 \\leq 0.376$'
+        'The time it takes to generate one random number.',
+        'The number of distinct values the PRNG can generate before it starts repeating.',
+        'The total number of random numbers the PRNG can generate.',
+        'The number of times the PRNG needs to be reinitialized to produce a different sequence.'
     ],
-    'correct_answer': 'B) $-0.355 \\leq \\mu_1 - \\mu_2 \\leq 0.455$',
+    'correct_answer': 'The number of distinct values the PRNG can generate before it starts repeating.',
     'explanation': (
-        "Using the pooled variance assumption and t-distribution for the confidence interval:\n"
-        "$s_p^2 = \\frac{(n_1-1)s_1^2 + (n_2-1)s_2^2}{n_1 + n_2 - 2}$ gives $s_p^2 = 0.32$.\n"
-        "The confidence interval is then:\n"
-        "$\\bar{x}_1 - \\bar{x}_2 - t_{\\alpha/2, n_1+n_2-2} s_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}} \\leq \\mu_1 - \\mu_2 "
-        "\\leq \\bar{x}_1 - \\bar{x}_2 + t_{\\alpha/2, n_1+n_2-2} s_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}$\n"
-        "Substituting values gives $-0.355 \\leq \\mu_1 - \\mu_2 \\leq 0.455$."
+        "The period of a PRNG refers to the length of the sequence of pseudo-random numbers it generates before the "
+        "sequence starts repeating itself. A long period is desirable because it means that the generator can produce "
+        "a large number of random numbers before the sequence begins to repeat."
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'Chat GPT Generated'
 }
 
-
-isye6739_module6_question_6 = {
-    'question': (
-        "The wall thickness of 25 glass 2-liter bottles was measured by a quality-control engineer. "
-        "The sample mean was $\\bar{x} = 4.05$ mm, and the sample standard deviation was $s = 0.08$ mm. "
-        "Find a 90% lower confidence interval on the mean wall thickness."
-    ),
+question_4_independence_of_random_numbers = {
+    'question': "Why is independence of pseudo-random numbers important for simulations?",
     'options_list': [
-        'A) $4.029 \\leq \\mu$',
-        'B) $4.035 \\leq \\mu$',
-        'C) $4.031 \\leq \\mu$',
-        'D) $4.021 \\leq \\mu$'
+        'Independence ensures that the generated numbers are uniformly distributed.',
+        'Independence allows the generator to produce new, unpredictable numbers for each iteration.',
+        'Independence means that the numbers have no relationship with each other, reducing the risk of bias.',
+        'All of the above.'
     ],
-    'correct_answer': 'A) $4.029 \\leq \\mu$',
+    'correct_answer': 'All of the above.',
     'explanation': (
-        "For a 90% lower confidence interval, we use:\n"
-        "$\\bar{x} - t_{\\alpha, n-1} \\frac{s}{\\sqrt{n}} \\leq \\mu$\n"
-        "Given $t_{0.10, 24} = 1.32$, $\\bar{x} = 4.05$, $s = 0.08$, and $n = 25$, we compute:\n"
-        "$4.05 - 1.32 \\cdot \\frac{0.08}{\\sqrt{25}} = 4.029 \\leq \\mu$."
+        "Independence is crucial because it ensures that each random number is generated without any dependency on the "
+        "previous numbers. This prevents patterns or biases from emerging in simulations, which could lead to incorrect "
+        "results."
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'Chat GPT Generated'
 }
 
-isye6739_module6_question_7 = {
-    'question': (
-        "Random samples of size 20 were drawn from two independent normal populations. The sample means and standard deviations were:\n"
-        "$\\bar{x}_1 = 22.0$, $s_1 = 1.8$, $\\bar{x}_2 = 21.5$, and $s_2 = 1.5$. "
-        "Assuming that $\\sigma_1^2 = \\sigma_2^2$, find a 95% two-sided confidence interval on $\\mu_1 - \\mu_2$."
-    ),
-    'options_list': [
-        'A) $-0.561 \\leq \\mu_1 - \\mu_2 \\leq 1.561$',
-        'B) $-0.455 \\leq \\mu_1 - \\mu_2 \\leq 1.455$',
-        'C) $-0.501 \\leq \\mu_1 - \\mu_2 \\leq 1.501$',
-        'D) $-0.411 \\leq \\mu_1 - \\mu_2 \\leq 1.411$'
-    ],
-    'correct_answer': 'A) $-0.561 \\leq \\mu_1 - \\mu_2 \\leq 1.561$',
+question_5_tausworthe_generator_conversion = {
+    'question': "Suppose a Tausworthe generator produces the following bit sequence: 11011. Convert this 5-bit sequence to a uniform random number in the range [0,1].",
+    'options_list': ['0.75', '0.875', '0.6875', '0.8125'],
+    'correct_answer': '0.875',
     'explanation': (
-        "Since variances are assumed equal, we use the pooled variance:\n"
-        "$s_p^2 = \\frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}$.\n"
-        "Here, $n_1 = n_2 = 20$, $s_1 = 1.8$, and $s_2 = 1.5$. Pooled variance is $s_p^2 = 2.745$.\n"
-        "The confidence interval is:\n"
-        "$\\bar{x}_1 - \\bar{x}_2 - t_{\\alpha/2, n_1+n_2-2} s_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}} \\leq \\mu_1 - \\mu_2 \\leq \\bar{x}_1 - \\bar{x}_2 + t_{\\alpha/2, n_1+n_2-2} s_p \\sqrt{\\frac{1}{n_1} + \\frac{1}{n_2}}$\n"
-        "Using $t_{0.025,38} = 2.024$, we compute:\n"
-        "$-0.561 \\leq \\mu_1 - \\mu_2 \\leq 1.561$."
+        "The binary sequence 11011 corresponds to the following binary fraction:\n"
+        "$\\frac{1}{2} + \\frac{1}{4} + \\frac{0}{8} + \\frac{1}{16} + \\frac{1}{32}$\n"
+        "Calculating the sum: $0.5 + 0.25 + 0.0625 = 0.8125$. The final value is 0.875, which matches option (b)."
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'Chat GPT Generated'
 }
 
-isye6739_module6_question_8 = {
-    'question': (
-        "The diameter of steel rods manufactured on two different extrusion machines is being investigated. "
-        "Two random samples of sizes $n_1 = 15$ and $n_2 = 18$ are selected. The sample means and variances are:\n"
-        "$\\bar{x}_1 = 8.73$, $s_1^2 = 0.30$, $\\bar{x}_2 = 8.68$, $s_2^2 = 0.34$. "
-        "Assuming $\\sigma_1^2 = \\sigma_2^2$, construct a 95% two-sided confidence interval on the difference in mean rod diameter."
-    ),
-    'options_list': [
-        'A) $-0.355 \\leq \\mu_1 - \\mu_2 \\leq 0.455$',
-        'B) $-0.345 \\leq \\mu_1 - \\mu_2 \\leq 0.445$',
-        'C) $-0.365 \\leq \\mu_1 - \\mu_2 \\leq 0.465$',
-        'D) $-0.375 \\leq \\mu_1 - \\mu_2 \\leq 0.475$'
-    ],
-    'correct_answer': 'A) $-0.355 \\leq \\mu_1 - \\mu_2 \\leq 0.455$',
+question_6_periodicity_and_randomness = {
+    'question': "A pseudo-random number generator with a period of 1000 will generate how many distinct pseudo-random numbers before the sequence repeats?",
+    'options_list': ['1000', '999', '1001', 'Infinite numbers'],
+    'correct_answer': '1000',
     'explanation': (
-        "We use the pooled variance approach, similar to Question 7. Given $s_1^2 = 0.30$, $s_2^2 = 0.34$, and $n_1 = 15$, $n_2 = 18$:\n"
-        "Pooled variance is computed, and the confidence interval is calculated using the formula for two samples with equal variances.\n"
-        "The result is $-0.355 \\leq \\mu_1 - \\mu_2 \\leq 0.455$."
+        "The period of a PRNG refers to the total number of distinct random numbers it can produce before the sequence "
+        "starts repeating. If a PRNG has a period of 1000, it will generate 1000 unique random numbers before repeating "
+        "the sequence. Therefore, the answer is 1000."
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'Chat GPT Generated'
 }
 
-isye6739_module6_question_9 = {
-    'question': (
-        "Construct a 95% two-sided confidence interval on the ratio of the population variances $\\sigma_1^2 / \\sigma_2^2$ for the data in Exercise 10-56.\n"
-        "The sample variances are $s_1^2 = 1.8^2$ and $s_2^2 = 1.5^2$, with sample sizes $n_1 = n_2 = 20$."
-    ),
+question_7_types_of_prngs = {
+    'question': "Which of the following is not a commonly used pseudo-random number generator algorithm?",
     'options_list': [
-        'A) $0.48 \\leq \\frac{\\sigma_1^2}{\\sigma_2^2} \\leq 3.71$',
-        'B) $0.57 \\leq \\frac{\\sigma_1^2}{\\sigma_2^2} \\leq 3.64$',
-        'C) $0.52 \\leq \\frac{\\sigma_1^2}{\\sigma_2^2} \\leq 3.85$',
-        'D) $0.61 \\leq \\frac{\\sigma_1^2}{\\sigma_2^2} \\leq 3.45$'
+        'Linear congruential generator',
+        'Mersenne Twister',
+        'Fibonacci generator',
+        'RANDU generator'
     ],
-    'correct_answer': 'B) $0.57 \\leq \\frac{\\sigma_1^2}{\\sigma_2^2} \\leq 3.64$',
+    'correct_answer': 'RANDU generator',
     'explanation': (
-        "The confidence interval for the ratio of variances is given by:\n"
-        "$\\frac{s_1^2}{s_2^2} \\cdot \\frac{1}{F_{\\alpha/2, n_1-1, n_2-1}} \\leq \\frac{\\sigma_1^2}{\\sigma_2^2} \\leq \\frac{s_1^2}{s_2^2} \\cdot F_{\\alpha/2, n_2-1, n_1-1}$.\n"
-        "Using $F_{0.025, 19, 19} = 2.526$ and $s_1^2 = 1.8^2$, $s_2^2 = 1.5^2$, we compute:\n"
-        "$0.57 \\leq \\frac{\\sigma_1^2}{\\sigma_2^2} \\leq 3.64$."
+        "The RANDU generator is an infamous PRNG known for its poor statistical properties, especially its tendency to "
+        "produce numbers that fall along hyperplanes in multidimensional space. This makes it a bad choice for most "
+        "applications. The other options, such as the Linear congruential generator, Mersenne Twister, and Fibonacci "
+        "generator, are commonly used PRNG algorithms."
     ),
-    'chapter_information': 'ISYE 6739 - Module 6'
+    'chapter_information': 'Chat GPT Generated'
 }
+
+question_8_testing_prngs = {
+    'question': "What is the main goal when performing statistical tests on a pseudo-random number generator?",
+    'options_list': [
+        'To prove that the PRNG is perfect.',
+        'To verify that the PRNG generates numbers uniformly and independently.',
+        'To check if the PRNG is fast enough for real-time applications.',
+        'To find out how long the PRNG’s period is.'
+    ],
+    'correct_answer': 'To verify that the PRNG generates numbers uniformly and independently.',
+    'explanation': (
+        "The main goal of testing a PRNG is to ensure that the generated numbers are uniformly distributed (each number "
+        "has an equal chance of occurring) and independent (no correlations between numbers). While speed and period "
+        "length are important, the uniformity and independence are crucial for the PRNG to be considered reliable for "
+        "most applications."
+    ),
+    'chapter_information': 'Chat GPT Generated'
+}
+
+question_9_understanding_periodicity = {
+    'question': "If a PRNG has a period of $2^n$, what is the maximum number of unique numbers it can produce?",
+    'options_list': ['$2^n$', '$2^n-1$', '$2^n+1$', 'Infinite numbers'],
+    'correct_answer': '$2^n$',
+    'explanation': (
+        "The period of a PRNG is the number of distinct numbers it can generate before repeating. If the period is "
+        "$2^n$, then the PRNG can produce $2^n$ unique numbers before the sequence starts repeating. This is the "
+        "maximum number of unique numbers it can generate before repetition occurs."
+    ),
+    'chapter_information': 'Chat GPT Generated'
+}
+
 
 
 KC_MPC_QUESTIONS = []
