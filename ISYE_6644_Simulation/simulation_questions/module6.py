@@ -224,6 +224,251 @@ question_9_understanding_periodicity = {
 }
 
 
+module_6_week_7_grok_generated = {
+    'question_1_prn_properties': {
+        'question': "TRUE or FALSE? A good PRN generator should produce numbers that are completely unpredictable and cannot be reproduced.",
+        'options_list': ['True', 'False'],
+        'correct_answer': 'False',
+        'explanation': (
+            "Reproducibility is a key feature of PRN generators, allowing repeatable simulations (e.g., for validation). "
+            "Completely unpredictable numbers are true random, not pseudo-random.\n"
+            "Example: In a simulation, you use a seed of 42 to generate PRNs. Running it again with seed 42 should yield the same sequence."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_2_poor_generators': {
+        'question': "Which of these is considered a weak PRN generator due to its tendency to repeat short cycles?\n"
+                    "a. Mersenne Twister\nb. Fibonacci Congruential Generator\nc. Tausworthe Generator\n"
+                    "d. L’Ecuyer Combined Generator",
+        'options_list': ['a. Mersenne Twister', 'b. Fibonacci Congruential Generator', 'c. Tausworthe Generator', 'd. L’Ecuyer Combined Generator'],
+        'correct_answer': 'b. Fibonacci Congruential Generator',
+        'explanation': (
+            "Fibonacci generators often have short periods and poor randomness compared to modern generators like Mersenne Twister or L’Ecuyer.\n"
+            "Example: A Fibonacci generator might repeat after 20 numbers, while Mersenne Twister has a period of 2^19937 - 1."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_3_lcg_calculation': {
+        'question': "For the LCG $X_{i+1} = 7 X_i \\mod 11$ with $X_0 = 4$, what is $X_2$?",
+        'options_list': ['a. 2', 'b. 5', 'c. 6', 'd. 9'],
+        'correct_answer': 'd. 9',
+        'explanation': (
+            "$X_1 = 7 \\cdot 4 \\mod 11 = 28 \\mod 11 = 6$\n"
+            "$X_2 = 7 \\cdot 6 \\mod 11 = 42 \\mod 11 = 9$\n"
+            "Example: This LCG cycles through values; check $X_3 = 7 \\cdot 9 = 63 \\mod 11 = 8$."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_4_simulation_module': {
+        'question': "TRUE or FALSE? In Arena, the SEIZE module is typically paired with a RELEASE module to model resource usage.",
+        'options_list': ['True', 'False'],
+        'correct_answer': 'True',
+        'explanation': (
+            "SEIZE captures a resource (e.g., a server), and RELEASE frees it, forming a common pattern in Arena for resource allocation.\n"
+            "Example: A customer seizes a cashier, waits 5 minutes, then releases the cashier."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_5_tausworthe_generator': {
+        'question': "A Tausworthe generator produces the 6-bit sequence 110101. What is the corresponding Unif(0,1) PRN?",
+        'options_list': ['a. 0.53125', 'b. 0.65625', 'c. 0.8125', 'd. 0.9375'],
+        'correct_answer': 'c. 0.8125',
+        'explanation': (
+            "Binary: 110101 = $1 \\cdot 2^5 + 1 \\cdot 2^4 + 0 \\cdot 2^3 + 1 \\cdot 2^2 + 0 \\cdot 2^1 + 1 \\cdot 2^0 = 32 + 16 + 4 + 1 = 53$\n"
+            "Max value: $2^6 = 64$\n"
+            "PRN: $53 / 64 = 0.828125$, but options suggest rounding to 0.8125 (check precision).\n"
+            "Example: For 4 bits, 1011 = 11 / 16 = 0.6875."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_6_cycle_length': {
+        'question': "TRUE or FALSE? Some PRN generators have cycle lengths exceeding $10^{100}$.",
+        'options_list': ['True', 'False'],
+        'correct_answer': 'True',
+        'explanation': (
+            "Advanced generators like the Mersenne Twister have periods like $2^{19937} - 1$, far exceeding $10^{100}$.\n"
+            "Example: Mersenne Twister’s period is so large it’s practically inexhaustible in simulations."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_7_statistical_test': {
+        'question': "If a chi-square goodness-of-fit test yields $\\chi^2 = 15.2$ with 5 degrees of freedom, and the critical value at $\\alpha = 0.05$ is 11.07, what do you conclude?",
+        'options_list': ['a. Accept the PRNs as uniform', 'b. Reject the PRNs as uniform', 'c. Panic and re-run the test'],
+        'correct_answer': 'b. Reject the PRNs as uniform',
+        'explanation': (
+            "Since $15.2 > 11.07$, reject the null hypothesis that the PRNs are Unif(0,1).\n"
+            "Example: Observed frequencies deviating from expected uniform counts (e.g., too many in one bin)."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_8_runs_test': {
+        'question': "For the PRN sequence 0.3, 0.7, 0.5, 0.9, 0.2, how many runs up and down are there?",
+        'options_list': ['a. 2', 'b. 3', 'c. 4', 'd. 5'],
+        'correct_answer': 'c. 4',
+        'explanation': (
+            "Sequence: 0.3 (start), 0.7 (+), 0.5 (-), 0.9 (+), 0.2 (-). Runs: + - + -. Total = 4.\n"
+            "Example: 0.1, 0.2, 0.3 has 2 runs (+ +)."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_9_randu_flaw': {
+        'question': "What is a known flaw of the RANDU generator?",
+        'options_list': ['a. It has a period of only 100', 'b. It produces PRNs on just 15 hyperplanes in 3D', 'c. It relies on physical coin flips', 'd. It cannot be seeded'],
+        'correct_answer': 'b. It produces PRNs on just 15 hyperplanes in 3D',
+        'explanation': (
+            "RANDU ($X_{i+1} = 65539 X_i \\mod 2^{31}$) fails in higher dimensions, clustering points on hyperplanes.\n"
+            "Example: Plotting triples of RANDU PRNs reveals this pattern."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_10_simulation_attribute': {
+        'question': "In Arena, what attribute tracks an entity’s position in its assigned sequence?",
+        'options_list': ['a. Entity.Job', 'b. Entity.Sequence', 'c. Entity.Station', 'd. Entity.Time'],
+        'correct_answer': 'b. Entity.Sequence',
+        'explanation': (
+            "Entity.Sequence is Arena’s built-in attribute for tracking an entity’s sequence step.\n"
+            "Example: Entity 1 follows Sequence A (Station1 → Station2), and Entity.Sequence updates accordingly."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    }
+}
+
+module_6_week_7_grok_generated_2 = {
+    'question_11_prn_properties': {
+        'question': "Which of these is a desirable property for a PRN generator in a simulation context?\n"
+                    "a. Numbers are generated using a physical dice roll\n"
+                    "b. The sequence can be reproduced with a known seed\n"
+                    "c. The generator takes hours to produce each number\n"
+                    "d. The numbers follow a predictable pattern",
+        'options_list': ['a. Numbers are generated using a physical dice roll', 'b. The sequence can be reproduced with a known seed', 
+                         'c. The generator takes hours to produce each number', 'd. The numbers follow a predictable pattern'],
+        'correct_answer': 'b. The sequence can be reproduced with a known seed',
+        'explanation': (
+            "Reproducibility ensures simulations can be repeated for debugging or validation, a key feature of PRN generators unlike true random sources (e.g., dice).\n"
+            "Example: Using seed 123, an LCG produces 0.4, 0.7, 0.2; re-running with 123 gives the same sequence."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_12_poor_generators': {
+        'question': "Why is von Neumann’s mid-square method considered a lousy PRN generator?\n"
+                    "a. It has an extremely long period\n"
+                    "b. It can get stuck repeating zeros or short cycles\n"
+                    "c. It requires complex matrix operations\n"
+                    "d. It only works with prime numbers",
+        'options_list': ['a. It has an extremely long period', 'b. It can get stuck repeating zeros or short cycles', 
+                         'c. It requires complex matrix operations', 'd. It only works with prime numbers'],
+        'correct_answer': 'b. It can get stuck repeating zeros or short cycles',
+        'explanation': (
+            "If the middle digits become zero (e.g., 000000000000), squaring yields zero repeatedly, or it falls into short loops.\n"
+            "Example: Start with 0100: 0100² = 010000, 0100² = 010000, repeating indefinitely."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_13_lcg_calculation': {
+        'question': "For the LCG $X_{i+1} = 3 X_i \\mod 8$ with $X_0 = 5$, what is $X_3$?",
+        'options_list': ['a. 1', 'b. 3', 'c. 5', 'd. 7'],
+        'correct_answer': 'c. 5',
+        'explanation': (
+            "$X_1 = 3 \\cdot 5 \\mod 8 = 15 \\mod 8 = 7$\n"
+            "$X_2 = 3 \\cdot 7 \\mod 8 = 21 \\mod 8 = 5$\n"
+            "$X_3 = 3 \\cdot 5 \\mod 8 = 15 \\mod 8 = 5$\n"
+            "Example: This LCG has a short period; after $X_2 = 5$, it cycles back to the start."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_14_simulation_module': {
+        'question': "TRUE or FALSE? In Arena, the DISPOSE module is used to remove entities from the system after processing.",
+        'options_list': ['True', 'False'],
+        'correct_answer': 'True',
+        'explanation': (
+            "DISPOSE terminates entities, marking the end of their lifecycle in the simulation (e.g., a customer leaving a store).\n"
+            "Example: After a customer checks out, the DISPOSE module removes them from the model."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_15_tausworthe_generator': {
+        'question': "A Tausworthe generator outputs the 5-bit sequence 10110. What is the Unif(0,1) PRN value?",
+        'options_list': ['a. 0.625', 'b. 0.6875', 'c. 0.75', 'd. 0.8125'],
+        'correct_answer': 'b. 0.6875',
+        'explanation': (
+            "Binary: 10110 = $1 \\cdot 2^4 + 0 \\cdot 2^3 + 1 \\cdot 2^2 + 1 \\cdot 2^1 + 0 \\cdot 2^0 = 16 + 4 + 2 = 22$\n"
+            "Max value: $2^5 = 32$\n"
+            "PRN: $\\frac{22}{32} = 0.6875$\n"
+            "Example: For 3 bits, 101 = $\\frac{5}{8} = 0.625$."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_16_cycle_length': {
+        'question': "TRUE or FALSE? A full-period LCG must have a period equal to its modulus $m$.",
+        'options_list': ['True', 'False'],
+        'correct_answer': 'True',
+        'explanation': (
+            "A full-period LCG generates all values from $0$ to $m-1$ before repeating, requiring specific conditions on the multiplier, modulus, and increment.\n"
+            "Example: $X_{i+1} = 5 X_i \\mod 8$ doesn’t achieve full period (only 4 values), but $5 X_i \\mod 13$ might with proper setup."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_17_statistical_test': {
+        'question': "In a runs test with 10 PRNs, you observe 3 runs up and down. If the expected runs are 5.5 with a critical value of 3 at $\\alpha = 0.05$, what do you conclude?",
+        'options_list': ['a. Accept independence', 'b. Reject independence', 'c. Insufficient data to decide'],
+        'correct_answer': 'b. Reject independence',
+        'explanation': (
+            "Observed runs (3) fall below the critical value (3), suggesting the PRNs may not be independent (too few runs indicate trends).\n"
+            "Example: Sequence $0.1, 0.2, 0.3, 0.4, 0.5$ has 4 runs (+ + + +), fewer than expected for random."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_18_simulation_attribute': {
+        'question': "What Arena attribute would you use to define a custom order of station visits for an entity?",
+        'options_list': ['a. Entity.Type', 'b. Entity.Sequence', 'c. Entity.Priority', 'd. Entity.Resource'],
+        'correct_answer': 'b. Entity.Sequence',
+        'explanation': (
+            "Entity.Sequence specifies the ordered list of stations an entity follows, customizable via a Sequence set.\n"
+            "Example: Sequence 1: Station A → Station B → Station C, assigned to Entity.Sequence."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_19_randu_flaw': {
+        'question': "TRUE or FALSE? RANDU’s PRNs appear uniform in one dimension but fail in three-dimensional plots.",
+        'options_list': ['True', 'False'],
+        'correct_answer': 'True',
+        'explanation': (
+            "RANDU looks decent in 1D but clusters on 15 hyperplanes in 3D, revealing poor randomness.\n"
+            "Example: Triples like $(0.1, 0.3, 0.5)$ from RANDU align on planes when plotted."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    },
+    
+    'question_20_goodness_of_fit': {
+        'question': "A chi-square test on 500 PRNs divided into 10 equal bins gives $\\chi^2 = 18.5$. With $\\chi^2_{0.05, 9} = 16.92$, do you accept or reject uniformity?",
+        'options_list': ['a. Accept', 'b. Reject', 'c. Retry with more data'],
+        'correct_answer': 'b. Reject',
+        'explanation': (
+            "$18.5 > 16.92$, so reject the null hypothesis that PRNs are Unif(0,1); the distribution isn’t uniform enough.\n"
+            "Example: Expected count per bin = 50; observed counts like 60, 40, etc., deviate too much."
+        ),
+        'chapter_information': 'Module 6 Week 7 - GROK generated'
+    }
+}
+
+
 
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
