@@ -28,8 +28,8 @@ def big_review():
         "ISYE 6739 Midterm 1 (Modules 0-2)": "ISYE_6739_Midterm1",
         "ISYE 6739 Midterm 2 (Modules 0-5)": "ISYE_6739_Midterm2",
         "ISYE 6739 Final (All Modules)": "ISYE_6739_Final",
-        "Simulation Midterm_1": "Midterm_1",
-        "Simulation Midterm_2": "Midterm_2"
+        "Simulation Midterm 1 (Modules 1-5)": "Midterm_1",
+        "Simulation Midterm 2 (Modules 1-7)": "Midterm_2"
     }
 
     review_choice = st.radio("Choose a review type", options=list(review_mapping.keys()))
