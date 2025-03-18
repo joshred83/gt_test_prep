@@ -31,8 +31,8 @@ def sim_questions():
         "Module 3: Hand Simulations": 'SIM_3',
         "Module 4: General Simulation Principles": 'SIM_4',
         "Module 5: The Arena Simulation Language": 'SIM_5',
-        # "Module 6: Random Number Generation": 'SIM_6',
-        # "Module 7: Random Variate Generation": 'SIM_7',
+        "Module 6: Random Number Generation": 'SIM_6',
+        "Module 7: Random Variate Generation": 'SIM_7',
         # "Module 8: Input Analysis": 'SIM_8',
         # "Module 9: Output Analysis": 'SIM_9',
         # "Module 10: Comparing Systems": 'SIM_10'
