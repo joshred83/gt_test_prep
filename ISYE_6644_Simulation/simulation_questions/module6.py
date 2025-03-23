@@ -471,6 +471,8 @@ question_10_simulation_attribute = {
 ###
 
 
+
+
 question_lcg_period = {
     'question': (
         "Consider the following LCG:\n"

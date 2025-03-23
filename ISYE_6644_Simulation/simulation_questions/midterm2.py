@@ -531,6 +531,336 @@ question_lcg_properties = {
 }
 
 
+# Reformatting each question into separate Python dictionaries following the quiz app structure
+
+question_1_gamma_1transformation = {
+    'question': (
+        "If $X \\sim \\text{Gamma}(\\alpha, \\beta)$ and $Y = X/\\beta$, what is the distribution of $Y$?"
+    ),
+    'options_list': ['Gamma(α, 1)', 'Gamma(1, β)', 'Exponential(β)', 'Uniform(0,1)'],
+    'correct_answer': 'Gamma(α, 1)',
+    'explanation': (
+        "Transforming $Y = X/\\beta$, apply change of variable with Jacobian $1/\\beta$.\n"
+        "PDF becomes: $f_Y(y) = \\frac{1}{\\Gamma(\\alpha)} y^{\\alpha - 1} e^{-y}$, which is Gamma$(\\alpha, 1)$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_2_ln_unifo1rm = {
+    'question': (
+        "Let $U_1 \\sim \\text{Unif}(0,1)$. What is the distribution of $Z = -\\ln(U_1)$?"
+    ),
+    'options_list': ['Exponential(1)', 'Gamma(2,1)', 'Uniform(0,1)', 'Normal(0,1)'],
+    'correct_answer': 'Exponential(1)',
+    'explanation': (
+        "CDF of $Z$ is $P(-\\ln(U_1) \\le x) = P(U_1 \\ge e^{-x}) = 1 - e^{-x}$ for $x > 0$, "
+        "which matches the CDF of Exp(1)."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_3_expected_inv11erse_pdf = {
+    'question': (
+        "Suppose $X$ has CDF $F(x)$ and PDF $f(x)$, and $Y = F(X)$. What is $\\mathbb{E}[1/f(X)]$?"
+    ),
+    'options_list': ['1', '0', 'Depends on $f$', 'Cannot be determined'],
+    'correct_answer': '1',
+    'explanation': (
+        "$Y = F(X) \\sim \\text{Unif}(0,1)$. Then:\n"
+        "$\\mathbb{E}[1/f(X)] = \\int_0^1 \\frac{1}{f(x)} f(x) dx = \\int_0^1 dx = 1$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_4_inverse_t1212ransform = {
+    'question': (
+        "You want to generate a random variable from $f(x) = 3x^2$ for $0 \\le x \\le 1$. "
+        "If $U = 0.729$, what is the generated value using inverse transform?"
+    ),
+    'options_list': ['0.9', '0.81', '0.6', '0.27'],
+    'correct_answer': '0.9',
+    'explanation': (
+        "CDF: $F(x) = x^3$. Solve $x^3 = 0.729$ gives $x = 0.9$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_5_clt_exp12onential_sum = {
+    'question': (
+        "Let $X_1, ..., X_{12}$ be i.i.d. Exponential(1). What is the approximate distribution of "
+        "$Y = (\\sum X_i - 12)/\\sqrt{12}$?"
+    ),
+    'options_list': ['Normal(0,1)', 'Gamma(12,1)', 'Uniform(0,1)', 'Exponential(1)'],
+    'correct_answer': 'Normal(0,1)',
+    'explanation': (
+        "By CLT, $\\sum X_i \\approx \\mathcal{N}(12, 12)$. Standardizing gives $Y \\sim \\mathcal{N}(0,1)$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_6_acceptan12ce_rejection_c = {
+    'question': (
+        "You want to use the acceptance-rejection method to generate from Beta(2,3) using Unif(0,1) proposal. "
+        "What is the minimum value of constant $c$?"
+    ),
+    'options_list': ['16/9', '4/3', '2', '1'],
+    'correct_answer': '16/9',
+    'explanation': (
+        "Beta(2,3) has $f(x) = 12x(1-x)^2$. Max at $x = 1/3$ gives $f(1/3) = 16/9$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_7_ln_pr1oduct_uniforms = {
+    'question': (
+        "Let $U_1, U_2, U_3 \\sim \\text{Unif}(0,1)$. What is the distribution of "
+        "$X = -\\ln(U_1 U_2 U_3)$?"
+    ),
+    'options_list': ['Gamma(3,1)', 'Exponential(1)', 'Normal(0,1)', 'Beta(3,1)'],
+    'correct_answer': 'Gamma(3,1)',
+    'explanation': (
+        "$X = -\\ln(U_1) - \\ln(U_2) - \\ln(U_3)$ is the sum of 3 Exp(1) RVs → Gamma(3,1)."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_8_acc1eptance_rate = {
+    'question': (
+        "You are using acceptance-rejection with $c = \\sup f(x)/g(x) = 4$. "
+        "How many proposals needed to get 100 accepted values (approximately)?"
+    ),
+    'options_list': ['400', '100', '25', '300'],
+    'correct_answer': '400',
+    'explanation': (
+        "Acceptance probability = $1/4$. Expected proposals = $100 / (1/4) = 400$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_9_weibul1l_inverse = {
+    'question': (
+        "If $X$ follows Weibull with $F(x) = 1 - e^{-(x/\\lambda)^k}$ and $U \\sim \\text{Unif}(0,1)$, what is the inverse transform expression?"
+    ),
+    'options_list': ['X = λ[-ln(1-U)]^{1/k}', 'X = λU^{1/k}', 'X = -ln(U)/λ', 'X = λU^k'],
+    'correct_answer': 'X = λ[-ln(1-U)]^{1/k}',
+    'explanation': (
+        "Set $F(x) = U$, solve: $1 - e^{-(x/\\lambda)^k} = U$ → $x = \\lambda[-\\ln(1 - U)]^{1/k}$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+question_10_clt_prob1ability_interval = {
+    'question': (
+        "Let $X_1, ..., X_{100}$ be i.i.d. with $\\mathbb{E}[X] = 5$, $\\text{Var}(X) = 9$. "
+        "Approximate $P(490 < \\sum X_i < 510)$ using CLT."
+    ),
+    'options_list': ['0.2586', '0.6826', '0.9544', '0.3413'],
+    'correct_answer': '0.2586',
+    'explanation': (
+        "Sum has $\\mu = 500$, $\\sigma = \\sqrt{900} = 30$.\n"
+        "Standardize: $P(-1/3 < Z < 1/3) = \\Phi(1/3) - \\Phi(-1/3) = 0.6293 - 0.3707 = 0.2586$."
+    ),
+    'chapter_information': 'Module 7 (Claude 3.7 generated - deepseek checked)'
+}
+
+# Reformatting the new set with updated chapter info: Module 7 (ChatGPT generated - deepseek checked)
+
+question_1_gamma_transform_chatgpt = {
+    'question': (
+        "If $X \\sim \\text{Gamma}(\\alpha, \\beta)$ and $Y = X/\\beta$, what is the distribution of $Y$?"
+    ),
+    'options_list': ['Gamma(α, 1)', 'Gamma(1, β)', 'Exponential(β)', 'Normal(α, β²)'],
+    'correct_answer': 'Gamma(α, 1)',
+    'explanation': (
+        "PDF of $X$: $f(x) = \\frac{\\beta^\\alpha}{\\Gamma(\\alpha)} x^{\\alpha-1} e^{-\\beta x}$. "
+        "Let $Y = X/\\beta$, apply change of variable:\n"
+        "$f_Y(y) = (1/\\Gamma(\\alpha)) y^{\\alpha-1} e^{-y}$ → Gamma$(\\alpha,1)$."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_2_ln_uniform_chatgpt = {
+    'question': (
+        "Let $U_1 \\sim \\text{Unif}(0,1)$. What is the distribution of $Z = -\\ln(U_1)$?"
+    ),
+    'options_list': ['Exponential(1)', 'Normal(0,1)', 'Gamma(2,1)', 'Uniform(0,1)'],
+    'correct_answer': 'Exponential(1)',
+    'explanation': (
+        "CDF: $P(-\\ln(U_1) \\le x) = P(U_1 \\ge e^{-x}) = 1 - e^{-x}$, which is the CDF of Exp(1)."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_3_expected_inverse_pdf_chatgpt = {
+    'question': (
+        "Let $X$ have CDF $F(x)$ and PDF $f(x)$. If $Y = F(X)$, what is $\\mathbb{E}[1/f(X)]$?"
+    ),
+    'options_list': ['1', '0', 'Depends on $f$', 'Cannot determine'],
+    'correct_answer': '1',
+    'explanation': (
+        "$Y = F(X) \\sim \\text{Unif}(0,1)$, so $\\mathbb{E}[1/f(X)] = \\int_0^1 \\frac{1}{f(x)} f(x) dx = 1$."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_4_inverse_transform_chatgpt = {
+    'question': (
+        "Given $f(x) = 3x^2$ for $0 \\le x \\le 1$, and $U = 0.729$, what value is generated using the inverse transform method?"
+    ),
+    'options_list': ['0.9', '0.81', '0.6', '0.3'],
+    'correct_answer': '0.9',
+    'explanation': (
+        "CDF: $F(x) = x^3$. Solve $x^3 = 0.729$ → $x = 0.9$."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_5_clt_exponential_sum_chatgpt = {
+    'question': (
+        "Let $X_1, ..., X_{12}$ be i.i.d. Exp(1). What is the approximate distribution of "
+        "$Y = (\\sum X_i - 12)/\\sqrt{12}$?"
+    ),
+    'options_list': ['Normal(0,1)', 'Gamma(12,1)', 'Uniform(0,1)', 'Exponential(1)'],
+    'correct_answer': 'Normal(0,1)',
+    'explanation': (
+        "By CLT, $\\sum X_i \\sim \\mathcal{N}(12, 12)$. Standardizing gives $Y \\sim \\mathcal{N}(0,1)$."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_6_acceptance_rejection_c_chatgpt = {
+    'question': (
+        "Using acceptance-rejection to simulate Beta(2,3) with Uniform(0,1) proposal, what is the minimum constant $c$?"
+    ),
+    'options_list': ['16/9', '2', '1.5', '4'],
+    'correct_answer': '16/9',
+    'explanation': (
+        "Beta(2,3) has $f(x) = 12x(1-x)^2$. Maximum at $x = 1/3$ gives $f(1/3) = 16/9$."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_7_ln_product_uniforms_chatgpt = {
+    'question': (
+        "Let $U_1, U_2, U_3 \\sim \\text{Unif}(0,1)$. What is the distribution of $X = -\\ln(U_1 U_2 U_3)$?"
+    ),
+    'options_list': ['Gamma(3,1)', 'Exponential(1)', 'Normal(0,1)', 'Beta(3,1)'],
+    'correct_answer': 'Gamma(3,1)',
+    'explanation': (
+        "Using log properties: $X = -\\ln(U_1) - \\ln(U_2) - \\ln(U_3)$ → sum of 3 Exp(1) RVs → Gamma(3,1)."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_8_acceptance_rate_chatgpt = {
+    'question': (
+        "In acceptance-rejection with $c = 4$, how many proposals are needed to get 100 accepted values (approx)?"
+    ),
+    'options_list': ['400', '100', '25', '200'],
+    'correct_answer': '400',
+    'explanation': (
+        "Acceptance probability = $1/4$. Expect $100 / (1/4) = 400$ proposals."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_9_weibull_inverse_chatgpt = {
+    'question': (
+        "If $X$ follows Weibull with CDF $F(x) = 1 - e^{-(x/\\lambda)^k}$ and $U \\sim \\text{Unif}(0,1)$, what is the inverse transform expression?"
+    ),
+    'options_list': ['X = λ[-ln(1-U)]^{1/k}', 'X = -λ ln(U)', 'X = λU^k', 'X = λ[-ln(U)]^k'],
+    'correct_answer': 'X = λ[-ln(1-U)]^{1/k}',
+    'explanation': (
+        "Solve $F(x) = U$: $x = \\lambda[-\\ln(1 - U)]^{1/k}$."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+question_10_clt_probability_interval_chatgpt = {
+    'question': (
+        "Let $X_1, ..., X_{100}$ be i.i.d. with $\\mathbb{E}[X] = 5$, $\\text{Var}(X) = 9$. "
+        "Approximate $P(490 < \\sum X_i < 510)$ using CLT."
+    ),
+    'options_list': ['0.2586', '0.6826', '0.8413', '0.3413'],
+    'correct_answer': '0.2586',
+    'explanation': (
+        "Mean = 500, SD = $\\sqrt{900} = 30$.\n"
+        "$P(-1/3 < Z < 1/3) = \\Phi(1/3) - \\Phi(-1/3) = 0.6293 - 0.3707 = 0.2586$."
+    ),
+    'chapter_information': 'Module 7 (ChatGPT generated - deepseek checked)'
+}
+
+# Reformatting Grok-generated Module 7 questions (Deepseek checked)
+# All will use ['do the math'] as options_list
+
+question_1_exponential_transformation = {
+    'question': (
+        "If $Y \\sim \\text{Exp}(2)$ and $Z = e^{-2Y}$, what is the distribution of $Z$?"
+    ),
+    'options_list': ['do the math'],
+    'correct_answer': 'Unif(0,1)',
+    'explanation': (
+        "$F_Y(y) = 1 - e^{-2y} \\Rightarrow Z = e^{-2Y} \\Rightarrow P(Z \\le z) = P(Y \\ge -\\frac{1}{2}\\ln(z)) = z$ "
+        "for $0 < z < 1$. So $Z \\sim \\text{Unif}(0,1)$."
+    ),
+    'chapter_information': 'Module 7 (Grok generated - Deepseek checked)'
+}
+
+question_2_sum_of_exponentials_corrected = {
+    'question': (
+        "Let $W_i = -3\\ln(U_i)$ where $U_i \\sim \\text{Unif}(0,1)$. Let $S = \\sum_{i=1}^{100} W_i$. "
+        "What is the approximate distribution of $S$?"
+    ),
+    'options_list': ['do the math'],
+    'correct_answer': 'Nor(300, 900)',
+    'explanation': (
+        "$-\\ln(U_i) \\sim \\text{Exp}(1)$, so $W_i = 3 \\cdot \\text{Exp}(1) \\sim \\text{Exp}(1/3)$. "
+        "Mean = 3, Variance = 9. For $S = \\sum W_i$: Mean = $300$, Variance = $900$.\n"
+        "By CLT, $S \\approx \\text{Nor}(300, 900)$."
+    ),
+    'chapter_information': 'Module 7 (Grok generated - Deepseek checked)'
+}
+
+question_3_inverse_transform_quadratic = {
+    'question': (
+        "Use inverse transform to sample from $F(x) = x^2 / 9$ with $U = 0.25$. What is the value of $x$?"
+    ),
+    'options_list': ['do the math'],
+    'correct_answer': '1.5',
+    'explanation': (
+        "Set $F(x) = 0.25 \\Rightarrow x^2 / 9 = 0.25 \\Rightarrow x = 3 \\sqrt{0.25} = 1.5$."
+    ),
+    'chapter_information': 'Module 7 (Grok generated - Deepseek checked)'
+}
+
+question_4_erlang_scaling = {
+    'question': (
+        "Let $U_1, U_2 \\sim \\text{Unif}(0,1)$ and $T = -4\\ln(U_1 U_2)$. What is the distribution of $T$?"
+    ),
+    'options_list': ['do the math'],
+    'correct_answer': 'Erlang(2, 1/4)',
+    'explanation': (
+        "$-\\ln(U_1 U_2) = -\\ln(U_1) - \\ln(U_2)$ is the sum of 2 Exp(1) RVs → Erlang(2,1). "
+        "Scaling by 4: $T \\sim \\text{Erlang}(2, 1/4)$."
+    ),
+    'chapter_information': 'Module 7 (Grok generated - Deepseek checked)'
+}
+
+question_5_ar_method_simulation = {
+    'question': (
+        "Using the acceptance-rejection method to sample from $f(x) = 3x^2$ with $c = 3$, "
+        "you draw $U_1 = 0.4$ and $U_2 = 0.7$. Is the sample accepted?"
+    ),
+    'options_list': ['do the math'],
+    'correct_answer': 'Rejected',
+    'explanation': (
+        "$f(0.4) = 3(0.4)^2 = 0.48$, so $U_2 = 0.7 > 0.48$ → reject sample."
+    ),
+    'chapter_information': 'Module 7 (Grok generated - Deepseek checked)'
+}
+
+
+
 KC_MPC_QUESTIONS = []
 global_items = list(globals().items())
 # print(global_items)
